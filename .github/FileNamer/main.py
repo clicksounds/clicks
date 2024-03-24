@@ -13,7 +13,7 @@ def sanitize_filename(filename):
     # Remove any characters that are not letters, numbers, underscores, or periods
     return ((''.join(c for c in filename if c.isalnum() or c in ['.'] or c in [' '] or c in ['_'] or c in ['-']))).replace(" ", "_")
 
-def rename_files(folder_path2, prefix, ffmpeg_path):
+def rename_files(folder_path2, prefix):
     folder_path = shutil.copytree("Update", "Output")
     shutil.rmtree("Update")
     os.mkdir("Update")
