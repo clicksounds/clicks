@@ -19,7 +19,9 @@ jobs:
           uses: FedericoCarboni/setup-ffmpeg@v3
           id: setup-ffmpeg
         - name: Install Packages
-          run: .github/FileNamer/install.sh
+          run: |
+            python -m pip install ffmpeg
+            python -m pip install pydub
         - name: Run Sounds Copier
           run: python ./.github/CopySoundsForRename.py
         - name: Run File Namer
