@@ -34,3 +34,17 @@ jobs:
             git config user.email github-actions@github.com
             git add .
             git commit -m "Update Sounds (renames all multiple click files)" && git push || echo "Nothing to commit, there's no changes."
+    trigger:
+        name: Trigger site build
+        runs-on: ubuntu-latest
+        steps:
+        - uses: actions/github-script@v6
+          with:
+            github-token: ${{ secrets.COOP_BOT_PUSH_BIN_TOKEN }}
+            script: |
+                await github.rest.actions.createWorkflowDispatch({
+                    owner: 'clicksounds',
+                    repo: 'geode-clicksounds',
+                    workflow_id: 'update-sound-module.yml',
+                    ref: 'main'
+                })
