@@ -21,7 +21,7 @@ def rename_files(folder_path2, prefix):
         for i, file in enumerate(files, start=1):
             filename, file_extension = os.path.splitext(file)
             # Get the directory name for the file
-            #name = root.split("/")[2]
+            name = root.split("/")[1]
             moru = root.split("/")[1]
             if name == filename.split("-")[0]:
                 print("not doing " + filename)
@@ -30,7 +30,8 @@ def rename_files(folder_path2, prefix):
                 #clicksOrRelease2 = root.split("/")[2]
                 #if clicksOrRelease2 == "Releases":
                 #clicksOrRelease2 = "Release"
-                os.mkdir("/Output")
+                os.mkdir("/Output/" + moru)
+                os.mkdir("/Output/" + moru+ "/Clicks")
                 directory_name = os.path.basename(root)
                 ee = root.split("/")[1]
                 #if directory_name == clicksOrRelease:
@@ -40,6 +41,7 @@ def rename_files(folder_path2, prefix):
                     #new_filename = f"{ee}-{clicksOrRelease2}-{moru}-{i}-{directory_name}{file_extension}"
                 # Sanitize the new file name
                 new_filename = sanitize_filename(new_filename)
+                #os.rename(os.path.join(root, file), os.path.join(root, new_filename))
                 os.rename(os.path.join(root, file), os.path.join(root, new_filename))
                 # Convert the renamed file to ogg
                 convert_to_ogg(os.path.join(root, new_filename))
