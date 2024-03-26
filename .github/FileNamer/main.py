@@ -30,8 +30,8 @@ def rename_files(folder_path2, prefix):
                 #clicksOrRelease2 = root.split("/")[2]
                 #if clicksOrRelease2 == "Releases":
                 #clicksOrRelease2 = "Release"
-                os.mkdir("Output/" + moru)
-                os.mkdir("Output/" + moru+ "/Clicks")
+                os.mkdir("Output/" + moru + filename.replace("-", "_"))
+                os.mkdir("Output/" + moru + filename.replace("-", "_") + "/Clicks")
                 directory_name = os.path.basename(root)
                 ee = root.split("/")[1]
                 #if directory_name == clicksOrRelease:
@@ -42,7 +42,7 @@ def rename_files(folder_path2, prefix):
                 # Sanitize the new file name
                 new_filename = sanitize_filename(new_filename)
                 #os.rename(os.path.join(root, file), os.path.join(root, new_filename))
-                os.rename(os.path.join(root, file), os.path.join("Output/" + moru+ "/Clicks", new_filename))
+                os.rename(os.path.join(root, file), os.path.join("Output/" + moru + filename.replace("-", "_") + "/Clicks", new_filename))
                 # Convert the renamed file to ogg
                 convert_to_ogg(os.path.join(root, new_filename))
 
