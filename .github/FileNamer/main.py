@@ -34,7 +34,7 @@ def rename_files(folder_path2, prefix):
                 ee = root.split("/")[1]
                 #if directory_name == clicksOrRelease:
                 #   new_filename = f"{ee}-{clicksOrRelease2}-{moru}-{i}{file_extension}"
-                new_filename = f"{filename}-{name}--{i}{file_extension}"
+                new_filename = f"{filename}-Clicks-{name}-{i}{file_extension}"
                 #else:
                     #new_filename = f"{ee}-{clicksOrRelease2}-{moru}-{i}-{directory_name}{file_extension}"
                 # Sanitize the new file name
