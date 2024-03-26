@@ -32,11 +32,12 @@ def rename_files(folder_path2, prefix):
                 #clicksOrRelease2 = "Release"
                 os.mkdir("Output/" + moru + "/" + filename.replace("-", "_"))
                 os.mkdir("Output/" + moru + "/" + filename.replace("-", "_") + "/Clicks")
+                filename2 = filename.replace("-", "_")
                 directory_name = os.path.basename(root)
                 ee = root.split("/")[1]
                 #if directory_name == clicksOrRelease:
                 #   new_filename = f"{ee}-{clicksOrRelease2}-{moru}-{i}{file_extension}"
-                new_filename = f"{filename.replace("-", "_")}-Clicks-{moru}-{i}{file_extension}"
+                new_filename = f"{filename2}-Clicks-{moru}-{i}{file_extension}"
                 #else:
                     #new_filename = f"{ee}-{clicksOrRelease2}-{moru}-{i}-{directory_name}{file_extension}"
                 # Sanitize the new file name
