@@ -22,14 +22,14 @@ def rename_files(folder_path2, prefix):
             filename, file_extension = os.path.splitext(file)
             # Get the directory name for the file
             name = root.split("/")[0]
-            moru = root.split("/")[1]
+            moru = root.split("/")[0]
             if name == filename.split("-")[0]:
                 print("not doing " + filename)
             else:
-                clicksOrRelease = root.split("/")[2]
-                clicksOrRelease2 = root.split("/")[2]
-                if clicksOrRelease2 == "Releases":
-                    clicksOrRelease2 = "Release"
+                #clicksOrRelease = root.split("/")[2]
+                #clicksOrRelease2 = root.split("/")[2]
+                #if clicksOrRelease2 == "Releases":
+                #clicksOrRelease2 = "Release"
                 directory_name = os.path.basename(root)
                 ee = root.split("/")[1]
                 #if directory_name == clicksOrRelease:
