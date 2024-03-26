@@ -23,24 +23,24 @@ def rename_files(folder_path2, prefix):
             # Get the directory name for the file
             name = root.split("/")[2]
             moru = root.split("/")[1]
-            if name == filename.split("-")[0]:
-                print("not doing " + filename)
+            #if name == filename.split("-")[0]:
+                #print("not doing " + filename)
+            #else:
+            clicksOrRelease = root.split("/")[3]
+            clicksOrRelease2 = root.split("/")[3]
+            if clicksOrRelease2 == "Releases":
+                clicksOrRelease2 = "Release"
+            directory_name = os.path.basename(root)
+            ee = root.split("/")[2]
+            if directory_name == clicksOrRelease:
+                new_filename = f"{ee}-{clicksOrRelease2}-{moru}-{i}{file_extension}"
             else:
-                clicksOrRelease = root.split("/")[3]
-                clicksOrRelease2 = root.split("/")[3]
-                if clicksOrRelease2 == "Releases":
-                    clicksOrRelease2 = "Release"
-                directory_name = os.path.basename(root)
-                ee = root.split("/")[2]
-                if directory_name == clicksOrRelease:
-                   new_filename = f"{ee}-{clicksOrRelease2}-{moru}-{i}{file_extension}"
-                else:
-                    new_filename = f"{ee}-{clicksOrRelease2}-{moru}-{i}-{directory_name}{file_extension}"
-                # Sanitize the new file name
-                new_filename = sanitize_filename(new_filename)
-                os.rename(os.path.join(root, file), os.path.join(root, new_filename))
-                # Convert the renamed file to ogg
-                convert_to_ogg(os.path.join(root, new_filename))
+                new_filename = f"{ee}-{clicksOrRelease2}-{moru}-{i}-{directory_name}{file_extension}"
+            # Sanitize the new file name
+            new_filename = sanitize_filename(new_filename)
+            os.rename(os.path.join(root, file), os.path.join(root, new_filename))
+            # Convert the renamed file to ogg
+            convert_to_ogg(os.path.join(root, new_filename))
 
 def convert_to_ogg(input_file):
     try:
