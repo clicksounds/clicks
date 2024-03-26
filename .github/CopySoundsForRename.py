@@ -1,3 +1,4 @@
 import shutil
 import os
-shutil.copytree("OneClick", ".github/FileNamer/Update")
+shutil.copytree("Meme", ".github/FileNamer/Update/Meme")
+shutil.copytree("Useful", ".github/FileNamer/Update/Useful")
