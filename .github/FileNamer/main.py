@@ -20,25 +20,29 @@ def rename_files(folder_path2, prefix):
     for root, dirs, files in os.walk(folder_path):
         for i, file in enumerate(files, start=1):
             filename, file_extension = os.path.splitext(file)
-            # Get the directory name for the file
-            name = root.split("/")[2]
-            moru = root.split("/")[1]
-            if name == filename.split("-")[0]:
-                print("not doing " + filename)
+            parts = root.split("/")
+            # Ensure there are enough parts in the list to prevent IndexError
+            if len(parts) > 3:
+                name = parts[2]
+                moru = parts[1]
+                if name == filename.split("-")[0]:
+                    print("not doing " + filename)
+                else:
+                    clicksOrRelease = parts[3]
+                    clicksOrRelease2 = parts[3]
+                    if clicksOrRelease2 == "Releases":
+                        clicksOrRelease2 = "Release"
+                    directory_name = os.path.basename(root)
+                    ee = parts[2]
+                    new_filename = f"{ee}-{clicksOrRelease2}-{moru}-{i}{file_extension}"
+                    # Sanitize the new file name
+                    new_filename = sanitize_filename(new_filename)
+                    root2 = '/'.join(parts[0:3])
+                    os.rename(os.path.join(root, file), os.path.join(root2, new_filename))
+                    # Convert the renamed file to ogg
+                    convert_to_ogg(os.path.join(root, new_filename))
             else:
-                clicksOrRelease = root.split("/")[3]
-                clicksOrRelease2 = root.split("/")[3]
-                if clicksOrRelease2 == "Releases":
-                    clicksOrRelease2 = "Release"
-                directory_name = os.path.basename(root)
-                ee = root.split("/")[2]
-                new_filename = f"{ee}-{clicksOrRelease2}-{moru}-{i}{file_extension}"
-                # Sanitize the new file name
-                new_filename = sanitize_filename(new_filename)
-                root2 = '/'.join(root.split("/")[0:3])
-                os.rename(os.path.join(root, file), os.path.join(root2, new_filename))
-                # Convert the renamed file to ogg
-                convert_to_ogg(os.path.join(root, new_filename))
+                print(f"Error: The path '{root}' does not contain enough elements to proceed with renaming.")
 
 def convert_to_ogg(input_file):
     try:
