@@ -36,8 +36,13 @@ jobs:
             git commit -m "Update Sounds (renames all multiple click files)" && git push || echo "Nothing to commit, there's no changes."
         - name: Compress Into Zip for pages
           run: |
-            for dir in ./*/
+            for dir in Meme/*/
             do
                 dir=${dir%*/}
-                echo "${dir##*/}"
+                7z a ${dir}.zip ${dir}
+            done
+            for dir in Useful/*/
+            do
+                dir=${dir%*/}
+                7z a ${dir}.zip ${dir}
             done
