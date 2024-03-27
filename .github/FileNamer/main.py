@@ -35,7 +35,7 @@ def rename_files(folder_path2, prefix):
                 new_filename = f"{ee}-{clicksOrRelease2}-{moru}-{i}{file_extension}"
                 # Sanitize the new file name
                 new_filename = sanitize_filename(new_filename)
-                root2 = root.split("/")[0:3].join("/")
+                root2 = '/'.join(root.split("/")[0:3])
                 os.rename(os.path.join(root, file), os.path.join(root2, new_filename))
                 # Convert the renamed file to ogg
                 convert_to_ogg(os.path.join(root, new_filename))
