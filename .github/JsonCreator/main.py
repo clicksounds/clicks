@@ -81,7 +81,7 @@ if __name__ == "__main__":
 
     jsonshitall = {"Reg":jsonshit,"Back":jsonshit2, "Len": jsonshit3}
 
-    with open("../../src/utils/Clicks.hpp", "w") as file:
+    with open("../../list.json", "w") as file:
         for line in jsonshitall.dumps():
             file.write(f'{line}\n')
     
