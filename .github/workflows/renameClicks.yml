@@ -34,6 +34,8 @@ jobs:
             git config user.email github-actions@github.com
             git add .
             git commit -m "Update Sounds (renames all multiple click files)" && git push || echo "Nothing to commit, there's no changes."
+        - name: Run json creator
+          run: cd .github/JsonCreator/; python main.py
         - name: Compress Into Zip for pages
           run: |
             for dir in Meme/*/
@@ -46,3 +48,14 @@ jobs:
                 dir=${dir%*/}
                 7z a ${dir}.zip ${dir}
             done
+            rm .github
+        - name: Setup Pages
+          uses: actions/configure-pages@v4
+        - name: Upload artifact
+          uses: actions/upload-pages-artifact@v3
+          with:
+            path: '.'
+        - name: Deploy to GitHub Pages
+          id: deployment
+          uses: actions/deploy-pages@v4
+    
