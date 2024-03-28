@@ -82,7 +82,7 @@ if __name__ == "__main__":
     jsonshitall = {"Reg":jsonshit,"Back":jsonshit2, "Len": jsonshit3}
 
     with open("../../list.json", "w") as file:
-        for line in json.dumps(jsonshitall):
+        for line in [json.dumps(jsonshitall)]:
             file.write(f'{line}\n')
     
     shutil.rmtree("Output")
