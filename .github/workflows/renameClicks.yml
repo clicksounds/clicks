@@ -49,12 +49,12 @@ jobs:
                 dir=${dir%*/}
                 dir=${dir##*/}
                 output="${output}, \"${dir}\": {\"c\": ["
-                for file in "Meme/$dir/Clicks/*"
+                for file in Meme/$dir/Clicks/*
                 do
                     output="${output}, \"${file}\""
                 done
                 output="${output}], \"r\": ["
-                for file in "Meme/$dir/Releases/*"
+                for file in Meme/$dir/Releases/*
                 do
                     output="${output}, \"${file}\""
                 done
@@ -64,13 +64,13 @@ jobs:
             do
                 dir=${dir%*/}
                 dir=${dir##*/}
-                output="${output}, \"${dir}\": {\"c\": ["
-                for file in "Useful/$dir/Clicks/*"
+                output="${output}, \"${dir}\": {\"c\"": ["
+                for file in Useful/$dir/Clicks/*
                 do
                     output="${output}, \"${file}\""
                 done
                 output="${output}], \"r\": ["
-                for file in "Useful/$dir/Releases/*"
+                for file in Useful/$dir/Releases/*
                 do
                     output="$output, \"${file}\""
                 done
