@@ -29,7 +29,7 @@ def rename_files():
             # check if click name exists in json
             if file == "pack.json":
                 pack = {}
-                with open(root + file, "r") as file:
+                with open(os.path.join(root, file), "r") as file:
                     lines = file.readlines()
                     pack = json.loads('\n'.join(lines))
                 pack["click-files"] = filecrap[name]["c"]
