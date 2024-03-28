@@ -11,14 +11,9 @@
       "description": "The click pack metadata schema URL."
     },
     "id": {
-      "description": "The ID of the click pack. goes in the format of \"<username>.<name>,\" (excluding the comma at the end). username being the name you go by online, and name being the name of this click pack. There is a pattern you have to match which is: lowercase letters allowed, numbers are allowed, hyphens/dashes allowed, and one period (as a seperator from the author and name).",
+      "description": "The ID of the click pack. goes in the format of \"{username}.{name},\" (excluding the comma at the end). username being the name you go by online, and name being the name of this click pack. There is a pattern you have to match which is: lowercase letters allowed, numbers are allowed, hyphens/dashes allowed, and one period (as a seperator from the author and name).",
       "examples": [
-        "coopeeo.coopersclicks",
-        "beat.soda",
-        "viper.spacebar",
-        "uproxide.my-clicks",
-        "dankmeme01.clicks",
-        "weebify.wkey"
+        "myname.myclickpack"
       ],
       "type": "string",
       "pattern": "[a-z0-9\\-]+\\.[a-z0-9\\-]+"
@@ -48,7 +43,7 @@
           "gdAccountID": {
             "description": "If you put a Geometry Dash **Account ID** here, people will be able to click your name to open up for Geometry Dash profile.",
             "type": "number",
-            "exclusiveMaximum": 0
+            "exclusiveMinimum": 0
           }
         },
         "required": ["name"]
