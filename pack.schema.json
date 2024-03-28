@@ -21,7 +21,7 @@
     "type": {
       "description": "Is this click pack a **Meme**, or is it **Useful**. Only allows \"Useful\" or \"Meme\" to be typed. (**CASE SENSITIVE**)",
       "type": "string",
-      "pattern": "(Meme|Useful)"
+      "pattern": "^(Meme|Useful)$"
     },
     "name": {
       "description": "The name of the click pack. Should not include the words clicks, releases, or pack. Also special characters **execpt** ' are blocked.",
