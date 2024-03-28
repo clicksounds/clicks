@@ -75,7 +75,7 @@ jobs:
                 output="${output}]}"
             done
             output="${output}}"
-            echo "files=${output}\n" >> "$GITHUB_OUTPUT"
+            echo "files=\"${output}\"\n" >> "$GITHUB_OUTPUT"
         - name: Run json creator
           run: cd .github/JsonCreator/; python main.py
           env:
