@@ -51,14 +51,14 @@ jobs:
                 output="${output}, \"${dir}\": {\"c\": ["
                 for file in Meme/$dir/Clicks/*
                 do
-                    if file != "Meme/$dir/Clicks/*"; then
+                    if [ "$file" != "Meme/$dir/Clicks/*" ]; then
                       output="${output}, \"${file}\""
                     fi
                 done
                 output="${output}], \"r\": ["
                 for file in Meme/$dir/Releases/*
                 do
-                    if file != "Meme/$dir/Releases/*"; then
+                    if [ "$file" != "Meme/$dir/Releases/*" ]; then
                       output="${output}, \"${file}\""
                     fi
                 done
@@ -71,14 +71,14 @@ jobs:
                 output="${output}, \"${dir}\": {\"c\": ["
                 for file in Useful/$dir/Clicks/*
                 do
-                    if file != "Useful/$dir/Clicks/*"; then
+                    if [ "$file" != "Useful/$dir/Clicks/*" ]; then
                       output="${output}, \"${file}\""
                     fi
                 done
                 output="${output}], \"r\": ["
                 for file in Useful/$dir/Releases/*
                 do
-                    if file != "Useful/$dir/Releases/*"; then
+                    if [ "$file" != "Useful/$dir/Releases/*" ]; then
                       output="$output, \"${file}\""
                     fi
                 done
