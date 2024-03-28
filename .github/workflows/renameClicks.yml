@@ -40,8 +40,50 @@ jobs:
             git config user.email github-actions@github.com
             git add .
             git commit -m "Update Sounds (renames all multiple click files)" && git push || echo "Nothing to commit, there's no changes."
+        - name: Get Click and Release files
+          id: get-files
+          run: |
+            output="{\"e\": {"
+            for dir in Meme/*/
+            do
+                dir=${dir%*/}
+                output="${output}, \"${dir}\": {\"c\": ["
+                for file in Meme/${dir}/Clicks/*
+                do
+                    output="${output}, \"${file}\""
+                done
+                output="${output}], \"r\": ["
+                for file in Meme/${dir}/Releases/*
+                do
+                    output="${output}, \"${file}\""
+                done
+                output="${output}]}"
+            done
+            for dir in Useful/*/
+            do
+                dir=${dir%*/}
+                output="${output}, \"${dir}\": {\"c\": ["
+                for file in Useful/${dir}/Clicks/*
+                do
+                    output="${output}, \"${file}\""
+                done
+                output="${output}], \"r\": ["
+                for file in Useful/${dir}/Releases/*
+                do
+                    output="${output}, \"${file}\""
+                done
+                output="${output}]}"
+            done
+            output="${output}}"
+            {
+              echo "files<<$EOF"
+              echo ${output}
+              echo "$EOF"
+            } >> "$GITHUB_OUTPUT"
         - name: Run json creator
           run: cd .github/JsonCreator/; python main.py
+          env:
+            ALL_FILES: ${{ steps.get-files.outputs.files }}
         - name: Compress Into Zip for pages
           run: |
             for dir in Meme/*/
