@@ -48,12 +48,12 @@ jobs:
             do
                 dir=${dir%*/}
                 output="${output}, \"${dir}\": {\"c\": ["
-                for file in Meme/${dir}/Clicks/*
+                for file in "Meme/$dir/Clicks/*"
                 do
                     output="${output}, \"${file}\""
                 done
                 output="${output}], \"r\": ["
-                for file in Meme/${dir}/Releases/*
+                for file in "Meme/$dir/Releases/*"
                 do
                     output="${output}, \"${file}\""
                 done
@@ -63,19 +63,19 @@ jobs:
             do
                 dir=${dir%*/}
                 output="${output}, \"${dir}\": {\"c\": ["
-                for file in Useful/${dir}/Clicks/*
+                for file in "Useful/$dir/Clicks/*"
                 do
                     output="${output}, \"${file}\""
                 done
                 output="${output}], \"r\": ["
-                for file in Useful/${dir}/Releases/*
+                for file "in Useful/$dir/Releases/*"
                 do
-                    output="${output}, \"${file}\""
+                    output="$output, \"${file}\""
                 done
-                output="${output}]}"
+                output="$output]}"
             done
-            output="${output}}"
-            echo "files=\"${output}\"\n" >> "$GITHUB_OUTPUT"
+            output="$output}"
+            echo "files=\"${output}\"" >> "$GITHUB_OUTPUT"
         - name: Run json creator
           run: cd .github/JsonCreator/; python main.py
           env:
