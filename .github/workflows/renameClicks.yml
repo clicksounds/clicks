@@ -64,7 +64,7 @@ jobs:
             do
                 dir=${dir%*/}
                 dir=${dir##*/}
-                output="${output}, \"${dir}\": {\"c\"": ["
+                output="${output}, \"${dir}\": {\"c\": ["
                 for file in Useful/$dir/Clicks/*
                 do
                     output="${output}, \"${file}\""
@@ -77,7 +77,7 @@ jobs:
                 output="$output]}"
             done
             output="$output}"
-            echo "files=\"${output}\"" >> "$GITHUB_OUTPUT"
+            echo "files=\"$output\"" >> "$GITHUB_OUTPUT"
         - name: Run json creator
           run: cd .github/JsonCreator/; python main.py
           env:
