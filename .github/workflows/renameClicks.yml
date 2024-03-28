@@ -47,6 +47,7 @@ jobs:
             for dir in Meme/*/
             do
                 dir=${dir%*/}
+                dir=${dir##*/}
                 output="${output}, \"${dir}\": {\"c\": ["
                 for file in "Meme/$dir/Clicks/*"
                 do
@@ -62,6 +63,7 @@ jobs:
             for dir in Useful/*/
             do
                 dir=${dir%*/}
+                dir=${dir##*/}
                 output="${output}, \"${dir}\": {\"c\": ["
                 for file in "Useful/$dir/Clicks/*"
                 do
