@@ -16,7 +16,7 @@
         "myname.myclickpack"
       ],
       "type": "string",
-      "pattern": "^[a-z0-9\\-]+\\.[a-z0-9\\-]+$"
+      "pattern": "^([a-z0-9\\-]+\\.[a-z0-9\\-]+)$"
     },
     "type": {
       "description": "Is this click pack a **Meme**, or is it **Useful**. Only allows \"Useful\" or \"Meme\" to be typed. (**CASE SENSITIVE**)",
