@@ -84,7 +84,7 @@ jobs:
                 done
                 output="$output]}"
             done
-            output="$output}"
+            output="$output}}"
             echo "files=$output" >> "$GITHUB_OUTPUT"
         - name: Run json creator
           run: cd .github/JsonCreator/; python main.py
