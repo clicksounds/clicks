@@ -48,7 +48,7 @@ jobs:
                 dir=${dir%*/}
                 7z a ${dir}.zip ${dir}
             done
-            rm .github
+            rmdir .github
         - name: Setup Pages
           uses: actions/configure-pages@v4
         - name: Upload artifact
