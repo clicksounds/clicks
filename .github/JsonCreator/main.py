@@ -34,7 +34,7 @@ def rename_files():
                     pack = json.loads('\n'.join(lines))
                 pack["click-files"] = filecrap[name]["c"]
                 pack["release-files"] = filecrap[name]["v"]
-                with open(root + file, "w") as file:
+                with open(os.path.join(root, file), "w") as file:
                     for line in [json.dumps(pack)]:
                         file.write(f'{line}\n')
                 jsonshit["everything"].append(pack)
