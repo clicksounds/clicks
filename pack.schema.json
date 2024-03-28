@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://clicksounds.github.io/clicks/pack.schema.json",
+  "title": "Click Pack",
+  "description": "A Pack of Clicks!",
+  "type": "object",
+  "properties": {
+    "$schema": {
+      "$comment": "Shows what options are possible, and what options are required. Do not delete this",
+      "type": "string",
+      "description": "The click pack metadata schema URL."
+    },
+    "id": {
+      "description": "The ID of the click pack. goes in the format of \"<username>.<name>,\" (excluding the comma at the end). username being the name you go by online, and name being the name of this click pack. There is a pattern you have to match which is: lowercase letters allowed, numbers are allowed, hyphens/dashes allowed, and one period (as a seperator from the author and name).",
+      "examples": [
+        "coopeeo.coopersclicks",
+        "beat.soda",
+        "viper.spacebar",
+        "uproxide.my-clicks",
+        "dankmeme01.clicks",
+        "weebify.wkey"
+      ],
+      "type": "string",
+      "pattern": "[a-z0-9\\-]+\\.[a-z0-9\\-]+"
+    },
+    "name": {
+      "description": "The name of the click pack. Should not include the words clicks, releases, or pack. Also special characters **execpt** ' are blocked.",
+      "type": "string",
+      "minLength": 2,
+      "pattern": "^(?!click|pack|release)[a-zA-Z0-9 ']*?$"
+    },
+    "authors": {
+      "description": "The authors of the click pack. First author listed is considered the main author.",
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "description": "Name of the author",
+            "type": "string"
+          },
+          "gdAccountID": {
+            "description": "If you put a Geometry Dash **Account ID** here, people will be able to click your name to open up for Geometry Dash profile.",
+            "type": "number",
+            "exclusiveMaximum": 0
+          }
+        },
+        "required": ["name"]
+      }
+    },
+    "click-files": {
+      "description": "All of the click file names for the pack (without the folder name nor the file extension), fills out automaticly if it's accepted on to the clicks index.",
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "releases-files": {
+      "description": "All of the release file names for the pack (without the folder name nor the file extension), fills out automaticly if it's accepted on to the clicks index.",
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "additionalProperties": false
+  },
+  "required": ["id", "name", "author"]
+}

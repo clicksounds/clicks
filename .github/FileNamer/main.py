@@ -22,7 +22,7 @@ def rename_files(folder_path2, prefix):
             filename, file_extension = os.path.splitext(file)
             parts = root.split("/")
             # Ensure there are enough parts in the list to prevent IndexError
-            if len(parts) > 1:
+            if len(parts) > 1 and file != "click.json":
                 name = parts[2]
                 moru = parts[1]
                 if name == filename.split("-")[0]:
