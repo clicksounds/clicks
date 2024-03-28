@@ -68,7 +68,7 @@ jobs:
                     output="${output}, \"${file}\""
                 done
                 output="${output}], \"r\": ["
-                for file "in Useful/$dir/Releases/*"
+                for file in "Useful/$dir/Releases/*"
                 do
                     output="$output, \"${file}\""
                 done
