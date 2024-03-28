@@ -7,7 +7,11 @@ import time
 jsonshit = {
     "everything": []
 }
-filecrap = json.loads(os.environ['ALL_FILES'])
+print("----- WITHOUT MODIFY -----")
+print(os.environ['ALL_FILES'])
+print("------ WITH MODIFY ------")
+print(os.environ['ALL_FILES'].replace("[,", "[").replace("{,", "{"))
+filecrap = json.loads(os.environ['ALL_FILES'].replace("[,", "[").replace("{,", "{"))
 
 
 def rename_files():
