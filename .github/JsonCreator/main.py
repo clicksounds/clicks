@@ -29,12 +29,12 @@ def rename_files():
             # check if click name exists in json
             if file == "pack.json":
                 pack = {}
-                with open(root + "/" + file, "r") as file:
+                with open(os.path.join(root + "/pack.json"), "r") as file:
                     lines = file.readlines()
                     pack = json.loads('\n'.join(lines))
                 pack["click-files"] = filecrap["e"][name]["c"]
                 pack["release-files"] = filecrap["e"][name]["r"]
-                with open(root + "/" + file, "w") as file:
+                with open(os.path.join(root + "/pack.json"), "w") as file:
                     for line in [json.dumps(pack)]:
                         file.write(f'{line}\n')
                 jsonshit["everything"].append(pack)
