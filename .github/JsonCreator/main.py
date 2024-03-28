@@ -7,7 +7,7 @@ import time
 jsonshit = {
     "everything": []
 }
-filecrap = json.reads(os.environ['ALL_FILES'])
+filecrap = json.loads(os.environ['ALL_FILES'])
 
 
 def rename_files():
@@ -27,7 +27,7 @@ def rename_files():
                 pack = {}
                 with open(root + file, "r") as file:
                     lines = file.readlines()
-                    pack = json.reads('\n'.join(lines))
+                    pack = json.loads('\n'.join(lines))
                 pack["click-files"] = filecrap[name]["c"]
                 pack["release-files"] = filecrap[name]["v"]
                 with open(root + file, "w") as file:
