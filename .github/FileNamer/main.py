@@ -28,6 +28,7 @@ def rename_files(folder_path2, prefix):
                 if name == filename.split("-")[0]:
                     print("not doing " + filename)
                 else:
+                    print("doing " + filename)
                     clicksOrRelease = parts[3]
                     clicksOrRelease2 = parts[3]
                     if clicksOrRelease2 == "Releases":
