@@ -35,7 +35,7 @@ def rename_files():
                 pack["click-files"] = filecrap["e"][name]["c"]
                 pack["release-files"] = filecrap["e"][name]["r"]
                 for thing in pack["authors"]:
-                    if not thing["type"]:
+                    if "type" not in thing:
                         thing["type"] = "Main"
                 with open(os.path.join(root + "/pack.json"), "w") as file:
                     for line in [json.dumps(pack)]:
