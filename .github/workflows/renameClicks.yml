@@ -52,7 +52,7 @@ jobs:
                 for file in Meme/$dir/Clicks/*
                 do
                     file=${file##*/}
-                    if [ "$file" != "Meme/$dir/Clicks/*" ]; then
+                    if [ "$file" != "*" ]; then
                       output="${output}, \"${file}\""
                     fi
                 done
@@ -60,7 +60,7 @@ jobs:
                 for file in Meme/$dir/Releases/*
                 do
                     file=${file##*/}
-                    if [ "$file" != "Meme/$dir/Releases/*" ]; then
+                    if [ "$file" != "*" ]; then
                       output="${output}, \"${file}\""
                     fi
                 done
@@ -74,7 +74,7 @@ jobs:
                 for file in Useful/$dir/Clicks/*
                 do
                     file=${file##*/}
-                    if [ "$file" != "Useful/$dir/Clicks/*" ]; then
+                    if [ "$file" != "*" ]; then
                       output="${output}, \"${file}\""
                     fi
                 done
@@ -82,7 +82,7 @@ jobs:
                 for file in Useful/$dir/Releases/*
                 do
                     file=${file##*/}
-                    if [ "$file" != "Useful/$dir/Releases/*" ]; then
+                    if [ "$file" != "*" ]; then
                       output="$output, \"${file}\""
                     fi
                 done
