@@ -8,7 +8,7 @@
     "$schema": {
       "$comment": "Shows what options are possible, and what options are required. Do not delete this",
       "type": "string",
-      "description": "The click pack metadata schema URL."
+      "description": "The click pack metadata schema URL. Please do NOT remove this."
     },
     "id": {
       "description": "The ID of the click pack. goes in the format of \"{username}.{name},\" (excluding the comma at the end). username being the name you go by online, and name being the name of this click pack. There is a pattern you have to match which is: lowercase letters allowed, numbers are allowed, hyphens/dashes allowed, and one period (as a seperator from the author and name).",
@@ -44,7 +44,13 @@
             "description": "If you put a Geometry Dash **Account ID** here, people will be able to click your name to open up for Geometry Dash profile.",
             "type": "number",
             "exclusiveMinimum": 0
-          }
+          },
+          "type": {
+            "description": "The type of author. Currently can by \"Main\" (default), or \"Provider\".\nREAD: if you are just providing the sounds, and it's not made by you, then put yourself as the provider and list the author that made the original sound first, AND EITHER PUT \"Main\" FOR THEM OR DON'T USE TYPE FOR THEM.",
+            "type": "string",
+            "pattern": "^(Main|Provider)$"
+          },
+          "additionalProperties": false
         },
         "required": ["name"]
       }
