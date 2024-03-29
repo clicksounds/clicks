@@ -1,0 +1,14 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "ballball.bonk",
+    "type": "Meme",
+    "name": "Bonk",
+    "authors": [
+        {
+            "name": "Cheems (Balltze/Ball Ball)"
+        },
+        {
+            "name": "snootboopes"
+        }
+    ]
+}
