@@ -1,0 +1,14 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "tiktok.tiktok",
+    "type": "Meme",
+    "name": "Tiktok",
+    "authors": [
+        {
+            "name": "TikTok"
+        },
+        {
+            "name": "TikTok TTS"
+        }
+    ]
+}

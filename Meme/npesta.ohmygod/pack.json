@@ -1,0 +1,12 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "npesta.ohmygod",
+    "type": "Meme",
+    "name": "oh my god",
+    "authors": [
+        {
+            "name": "npesta",
+            "gdAccountID": 1507703
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "alanwalker.spectre",
+    "type": "Meme",
+    "name": "Spectre",
+    "authors": [
+        {
+            "name": "Alan Walker"
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "coop.cardoorslam",
+    "type": "Meme",
+    "name": "Car Door Slam",
+    "authors": [
+        {
+            "name": "Cooper"
+        }
+    ]
+}

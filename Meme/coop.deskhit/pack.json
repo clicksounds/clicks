@@ -1,0 +1,12 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "coop.deskhit",
+    "type": "Meme",
+    "name": "Desk Hit",
+    "authors": [
+        {
+            "name": "Cooper",
+            "gdAccountID": 21207551
+        }
+    ]
+}

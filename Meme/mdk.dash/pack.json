@@ -1,0 +1,15 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "mdk.dash",
+    "type": "Meme",
+    "name": "Dash",
+    "authors": [
+        {
+            "name": "Mogan David King (MDK)"
+        },
+        {
+            "name": "RobTop",
+            "gdAccountID": 71
+        }
+    ]
+}

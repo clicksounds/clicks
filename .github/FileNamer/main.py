@@ -25,7 +25,7 @@ def rename_files(folder_path2, prefix):
             if len(parts) > 1 and file != "pack.json":
                 name = parts[2]
                 moru = parts[1]
-                if name == filename.split("-")[0]:
+                if name == filename.split("_")[0]:
                     print("not doing " + filename)
                 else:
                     print("doing " + filename)
@@ -35,7 +35,7 @@ def rename_files(folder_path2, prefix):
                         clicksOrRelease2 = "Release"
                     directory_name = os.path.basename(root)
                     ee = parts[2]
-                    new_filename = f"{ee}-{clicksOrRelease2}-{moru}-{i}{file_extension}"
+                    new_filename = f"{ee}_{clicksOrRelease2}_{moru}_{i}{file_extension}"
                     # Sanitize the new file name
                     new_filename = sanitize_filename(new_filename)
                     root2 = '/'.join(parts[0:4])

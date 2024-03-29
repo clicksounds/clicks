@@ -1,0 +1,11 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "unknown.plate",
+    "type": "Meme",
+    "name": "Plate Breaking",
+    "authors": [
+        {
+            "name": "Unknown"
+        }
+    ]
+}
