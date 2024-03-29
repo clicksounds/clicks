@@ -19,12 +19,12 @@
       "pattern": "^([a-z0-9\\-]+\\.[a-z0-9\\-]+)$"
     },
     "type": {
-      "description": "Is this click pack a **Meme**, or is it **Useful**. Only allows \"Useful\" or \"Meme\" to be typed. (**CASE SENSITIVE**)",
+      "description": "Is this click pack a **Meme**, or is it **Useful**. Only allows \"Useful\" or \"Meme\" to be typed. (CASE SENSITIVE)",
       "type": "string",
       "pattern": "^(Meme|Useful)$"
     },
     "name": {
-      "description": "The name of the click pack. Should not include the words clicks, releases, or pack. Also special characters **execpt** ' are blocked.",
+      "description": "The name of the click pack. Should not include the words clicks, releases, or pack. Also special characters EXCEPT ' and - are blocked.",
       "type": "string",
       "minLength": 2,
       "pattern": "^(?![a-zA-Z0-9 '-]*?click|[a-zA-Z0-9 '-]*?pack|[a-zA-Z0-9 '-]*?release)[a-zA-Z0-9 '-]*?$"
@@ -41,7 +41,7 @@
             "type": "string"
           },
           "gdAccountID": {
-            "description": "If you put a Geometry Dash **Account ID** here, people will be able to click your name to open up for Geometry Dash profile.",
+            "description": "If you put a Geometry Dash ACCOUNT ID here, people will be able to click your name to open up for Geometry Dash profile.",
             "type": "number",
             "exclusiveMinimum": 0
           },
