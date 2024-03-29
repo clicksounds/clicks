@@ -1,0 +1,11 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "aceofspades.logitech-g502",
+    "type": "Meme",
+    "name": "Logitech - G502",
+    "authors": [
+        {
+            "name": "aceofspades"
+        }
+    ]
+}

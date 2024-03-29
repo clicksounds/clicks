@@ -1,0 +1,11 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "aceofspades.bloody",
+    "type": "Useful",
+    "name": "Bloody Mouse",
+    "authors": [
+        {
+            "name": "aceofspades"
+        }
+    ]
+}
