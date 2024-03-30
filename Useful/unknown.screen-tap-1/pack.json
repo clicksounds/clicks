@@ -1,0 +1,11 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "unknown.screen-tap-1",
+    "type": "Useful",
+    "name": "Screen Tap 1",
+    "authors": [
+        {
+            "name": "Unknown"
+        }
+    ]
+}

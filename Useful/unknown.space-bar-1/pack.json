@@ -1,0 +1,11 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "unknown.space-bar-1",
+    "type": "Useful",
+    "name": "Space Bar 1",
+    "authors": [
+        {
+            "name": "Unknown"
+        }
+    ]
+}

@@ -1,0 +1,12 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "viper.spacebar",
+    "type": "Useful",
+    "name": "Viper's Spacebar",
+    "authors": [
+        {
+            "name": "Viper",
+            "gdAccountID": 14284530
+        }
+    ]
+}

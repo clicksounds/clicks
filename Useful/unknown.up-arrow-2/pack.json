@@ -1,0 +1,11 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "unknown.up-arrow-2",
+    "type": "Useful",
+    "name": "Up Arrow 2",
+    "authors": [
+        {
+            "name": "Unknown"
+        }
+    ]
+}

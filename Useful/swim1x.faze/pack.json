@@ -1,0 +1,11 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "swim1x.faze",
+    "type": "Useful",
+    "name": "Faze Clicks",
+    "authors": [
+        {
+            "name": "swim1x"
+        }
+    ]
+}

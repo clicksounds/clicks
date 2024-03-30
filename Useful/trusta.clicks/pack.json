@@ -1,0 +1,11 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "trusta.clicks",
+    "type": "Useful",
+    "name": "TrusTa (Player)",
+    "authors": [
+        {
+            "name": "TrusTa"
+        }
+    ]
+}

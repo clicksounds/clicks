@@ -1,0 +1,11 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "lofracotestinogd.electro-mouse",
+    "type": "Useful",
+    "name": "Electro Mouse",
+    "authors": [
+        {
+            "name": "LofracotestinoGD"
+        }
+    ]
+}

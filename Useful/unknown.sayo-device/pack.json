@@ -1,0 +1,11 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "unknown.sayo-device",
+    "type": "Useful",
+    "name": "Sayo Device",
+    "authors": [
+        {
+            "name": "Unknown"
+        }
+    ]
+}

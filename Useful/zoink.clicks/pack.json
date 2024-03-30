@@ -1,0 +1,12 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "zoink.clicks",
+    "type": "Useful",
+    "name": "Zoink",
+    "authors": [
+        {
+            "name": "Zoink",
+            "gdAccountID": 14273934
+        }
+    ]
+}

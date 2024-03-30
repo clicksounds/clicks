@@ -1,0 +1,11 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "spaceuk.clicks",
+    "type": "Useful",
+    "name": "SpaceUK",
+    "authors": [
+        {
+            "name": "SpaceUK"
+        }
+    ]
+}

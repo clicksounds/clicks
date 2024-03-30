@@ -1,0 +1,11 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "unknown.mouse-click-6",
+    "type": "Useful",
+    "name": "Mouse Click 6",
+    "authors": [
+        {
+            "name": "Unknown"
+        }
+    ]
+}
