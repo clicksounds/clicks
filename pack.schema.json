@@ -48,7 +48,12 @@
           "type": {
             "description": "The type of author. Currently can by \"Main\" (default), \"Provider\", or \"Requester\".\nREAD: if you are just providing the sounds, and it's not made by you, then put yourself as the provider and list the author that made the original sound first, AND EITHER PUT \"Main\" FOR THEM OR DON'T USE TYPE FOR THEM.",
             "type": "string",
-            "pattern": "^(Main|Provider|Requester)$"
+            "pattern": "^(Main|Provider|Requester)$",
+            "examples": [
+              "Main",
+              "Provider",
+              "Requester"
+            ]
           },
           "additionalProperties": false
         },
