@@ -100,13 +100,13 @@ jobs:
             do
                 dir=${dir%*/}
                 7z a ${dir}.zip ${dir}
-                python .github/removedir.py $dir
+                python .github/JsonCreator/removedir.py $dir
             done
             for dir in Useful/*/
             do
                 dir=${dir%*/}
                 7z a ${dir}.zip ${dir}
-                python .github/removedir.py $dir
+                python .github/JsonCreator/removedir.py $dir
             done
         - name: Setup Pages
           uses: actions/configure-pages@v4
