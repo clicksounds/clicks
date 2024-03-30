@@ -1,0 +1,20 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "doggie.clicks",
+    "type": "Useful",
+    "name": "Doggie",
+    "authors": [
+        {
+            "name": "Doggie",
+            "gdAccountID": 175605
+        },
+        {
+            "name": "edgelordplayer",
+            "type": "Provider"
+        },
+        {
+            "name": "Morseful",
+            "type": "Requester"
+        }
+    ]
+}
