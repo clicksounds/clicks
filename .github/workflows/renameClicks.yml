@@ -108,6 +108,7 @@ jobs:
                 7z a ${dir}.zip ${dir}
                 python .github/JsonCreator/removedir.py $dir
             done
+            python .github/JsonCreator/removegithubfolder.py
         - name: Setup Pages
           uses: actions/configure-pages@v4
         - name: Upload artifact

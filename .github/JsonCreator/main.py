@@ -58,5 +58,4 @@ if __name__ == "__main__":
             file.write(f'{line}\n')
     
     shutil.rmtree("Output")
-    shutil.rmtree("../../.github")
     print("Files renamed, converted, and original files removed successfully!")
