@@ -43,7 +43,8 @@ def rename_files(folder_path2, prefix):
                     # Convert the renamed file to ogg
                     convert_to_ogg(os.path.join(root, new_filename))
             else:
-                print(f"Error: The path '{root}' does not contain enough elements to proceed with renaming.")
+                if file != "pack.json":
+                    print(f"Error: The path '{root}' does not contain enough elements to proceed with renaming.")
 
 def convert_to_ogg(input_file):
     try:

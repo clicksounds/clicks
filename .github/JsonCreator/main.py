@@ -7,10 +7,10 @@ import time
 jsonshit = {
     "everything": []
 }
-print("----- WITHOUT MODIFY -----")
-print(os.environ['ALL_FILES'])
-print("------ WITH MODIFY ------")
-print(os.environ['ALL_FILES'].replace("[, ", "[").replace("{, ", "{"))
+# print("----- WITHOUT MODIFY -----")
+# print(os.environ['ALL_FILES'])
+# print("------ WITH MODIFY ------")
+# print(os.environ['ALL_FILES'].replace("[, ", "[").replace("{, ", "{"))
 filecrap = json.loads(os.environ['ALL_FILES'].replace("[,", "[").replace("{,", "{"))
 
 
