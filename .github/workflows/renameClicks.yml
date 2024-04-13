@@ -100,14 +100,18 @@ jobs:
             do
                 dir=${dir%*/}
                 dir=${dir##*/}
-                7z a ${dir}.zip ${dir}
+                cd Meme/${dir}
+                7z a ${dir}.zip ./
+                cd ../../
                 python .github/JsonCreator/removedir.py $dir
             done
             for dir in Useful/*/
             do
                 dir=${dir%*/}
                 dir=${dir##*/}
-                7z a ${dir}.zip ${dir}
+                cd Useful/${dir}
+                7z a ${dir}.zip ./
+                cd ../../
                 python .github/JsonCreator/removedir.py $dir
             done
             python .github/JsonCreator/removegithubfolder.py
