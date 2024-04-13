@@ -31,16 +31,16 @@ def rename_files():
                 with open(os.path.join(root + "/pack.json"), "r") as file:
                     lines = file.readlines()
                     pack = json.loads('\n'.join(lines))
+                    file.close()
                 pack["click-files"] = filecrap["e"][name]["c"]
                 pack["release-files"] = filecrap["e"][name]["r"]
                 for thing in pack["authors"]:
                     if "type" not in thing:
                         thing["type"] = "Main"
                 with open(os.path.join(root + "/pack.json"), "w") as file:
-                    print(json.dumps(pack))
                     for line in [json.dumps(pack)]:
-                        print(line)
                         file.write(f'{line}\n')
+                    file.close()
                 jsonshit["everything"].append(pack)
 
 if __name__ == "__main__":
