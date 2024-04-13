@@ -103,7 +103,7 @@ jobs:
                 cd Meme/${dir}
                 7z a ${dir}.zip ./
                 cd ../../
-                python .github/JsonCreator/removedir.py $dir
+                python .github/JsonCreator/removedir.py Meme/${dir}
             done
             for dir in Useful/*/
             do
@@ -112,7 +112,7 @@ jobs:
                 cd Useful/${dir}
                 7z a ${dir}.zip ./
                 cd ../../
-                python .github/JsonCreator/removedir.py $dir
+                python .github/JsonCreator/removedir.py Useful/${dir}
             done
             python .github/JsonCreator/removegithubfolder.py
         - name: Setup Pages
