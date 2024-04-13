@@ -21,7 +21,6 @@ def rename_files():
 
         for i, file in enumerate(files, start=1):
             # do starting variables
-            print(root)
             name = root.split("/")[2]
             memeUseful = root.split("/")[1]
             # split whole file name to just the start and the extension
@@ -38,7 +37,9 @@ def rename_files():
                     if "type" not in thing:
                         thing["type"] = "Main"
                 with open(os.path.join(root + "/pack.json"), "w") as file:
+                    print(json.dumps(pack))
                     for line in [json.dumps(pack)]:
+                        print(line)
                         file.write(f'{line}\n')
                 jsonshit["everything"].append(pack)
 
