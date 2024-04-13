@@ -56,8 +56,8 @@ if __name__ == "__main__":
 
     shutil.rmtree("../../Meme")
     shutil.rmtree("../../Useful")
-    shutil.copytree("Update/Meme", "../../Meme")
-    shutil.copytree("Update/Useful", "../../Useful")
+    shutil.copytree("Output/Meme", "../../Meme")
+    shutil.copytree("Output/Useful", "../../Useful")
 
     with open("../../list.json", "w") as file:
         for line in [json.dumps(jsonshitall)]:
