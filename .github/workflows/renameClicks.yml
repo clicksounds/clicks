@@ -99,12 +99,14 @@ jobs:
             for dir in Meme/*/
             do
                 dir=${dir%*/}
+                dir=${dir##*/}
                 7z a ${dir}.zip ${dir}
                 python .github/JsonCreator/removedir.py $dir
             done
             for dir in Useful/*/
             do
                 dir=${dir%*/}
+                dir=${dir##*/}
                 7z a ${dir}.zip ${dir}
                 python .github/JsonCreator/removedir.py $dir
             done
