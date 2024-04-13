@@ -54,9 +54,15 @@ if __name__ == "__main__":
 
     jsonshitall = jsonshit["everything"]
 
+    shutil.rmtree("../../Meme")
+    shutil.rmtree("../../Useful")
+    shutil.copytree("Update/Meme", "../../Meme")
+    shutil.copytree("Update/Useful", "../../Useful")
+
     with open("../../list.json", "w") as file:
         for line in [json.dumps(jsonshitall)]:
             file.write(f'{line}\n')
+        file.close()
     
     shutil.rmtree("Output")
     print("Files renamed, converted, and original files removed successfully!")
