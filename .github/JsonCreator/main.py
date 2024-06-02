@@ -5,7 +5,9 @@ import json
 import time
 
 jsonshit = {
-    "everything": []
+    "everything": [],
+    "meme": [],
+    "useful": []
 }
 # print("----- WITHOUT MODIFY -----")
 # print(os.environ['ALL_FILES'])
@@ -41,7 +43,15 @@ def rename_files():
                     for line in [json.dumps(pack)]:
                         file.write(f'{line}\n')
                     file.close()
+                with open(os.path.join("../../info/" + pack["id"] + ".json"), "w") as file:
+                    for line in [json.dumps(pack)]:
+                        file.write(f'{line}\n')
+                    file.close()
                 jsonshit["everything"].append(pack)
+                if pack["type"] == "Meme":
+                    jsonshit["meme"].append(pack)
+                elif pack["type"] == "Useful":
+                    jsonshit["useful"].append(pack)
 
 if __name__ == "__main__":
     if os.path.exists("Output"):
@@ -53,6 +63,8 @@ if __name__ == "__main__":
     rename_files()
 
     jsonshitall = jsonshit["everything"]
+    jsonshitall2 = jsonshit["meme"]
+    jsonshitall3 = jsonshit["useful"]
 
     shutil.rmtree("../../Meme")
     shutil.rmtree("../../Useful")
@@ -61,6 +73,14 @@ if __name__ == "__main__":
 
     with open("../../list.json", "w") as file:
         for line in [json.dumps(jsonshitall)]:
+            file.write(f'{line}\n')
+        file.close()
+    with open("../../meme.json", "w") as file:
+        for line in [json.dumps(jsonshitall2)]:
+            file.write(f'{line}\n')
+        file.close()
+    with open("../../useful.json", "w") as file:
+        for line in [json.dumps(jsonshitall3)]:
             file.write(f'{line}\n')
         file.close()
     

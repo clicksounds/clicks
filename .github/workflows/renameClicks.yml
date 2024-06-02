@@ -90,18 +90,22 @@ jobs:
             done
             output="$output}}"
             echo "files=$output" >> "$GITHUB_OUTPUT"
+        - name: Make folder for packs and pack info
+          run: |
+            mkdir info
+            mkdir packs
         - name: Run json creator
           run: cd .github/JsonCreator/; python main.py
           env:
             ALL_FILES: ${{ steps.get-files.outputs.files }}
-        - name: Compress Into Zip for pages
+        - name: Compress into .zip for GitHub Pages
           run: |
             for dir in Meme/*/
             do
                 dir=${dir%*/}
                 dir=${dir##*/}
                 cd Meme/${dir}
-                7z a -r -ssw ../${dir}.zip pack.json Clicks/ Releases/
+                7z a -r -ssw ../packs${dir}.zip pack.json Clicks/ Releases/
                 cd ../../
                 python .github/JsonCreator/removedir.py Meme/${dir}
             done
