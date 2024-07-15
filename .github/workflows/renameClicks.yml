@@ -105,7 +105,7 @@ jobs:
                 dir=${dir%*/}
                 dir=${dir##*/}
                 cd Meme/${dir}
-                7z a -r -ssw ../packs${dir}.zip pack.json Clicks/ Releases/
+                7z a -r -ssw ../packs${dir}.zip pack.json pack.png Clicks/ Releases/
                 cd ../../
                 python .github/JsonCreator/removedir.py Meme/${dir}
             done
@@ -114,7 +114,7 @@ jobs:
                 dir=${dir%*/}
                 dir=${dir##*/}
                 cd Useful/${dir}
-                7z a -r -ssw ../${dir}.zip  pack.json Clicks/ Releases/
+                7z a -r -ssw ../${dir}.zip  pack.json pack.png Clicks/ Releases/
                 cd ../../
                 python .github/JsonCreator/removedir.py Useful/${dir}
             done
