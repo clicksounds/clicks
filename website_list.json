@@ -1,0 +1,222 @@
+{
+  "Meme": [
+    {"name": "alanwalker.spectre", "folders": [
+        "Clicks",
+    ]},
+    {"name": "ballball.bonk", "folders": [
+        "Clicks",
+    ]},
+    {"name": "coop.cardoorslam", "folders": [
+        "Clicks",
+    ]},
+    {"name": "coop.deskhit", "folders": [
+        "Clicks",
+    ]},
+    {"name": "discord.ping", "folders": [
+        "Clicks",
+    ]},
+    {"name": "george-thorogood.bad-to-the-bone", "folders": [
+        "Clicks",
+    ]},
+    {"name": "koraii.congregation", "folders": [
+        "Clicks",
+    ]},
+    {"name": "mdk.dash", "folders": [
+        "Clicks",
+    ]},
+    {"name": "microsoft.win-usb", "folders": [
+        "Clicks",
+    ]},
+    {"name": "npesta.ohmygod", "folders": [
+        "Clicks",
+    ]},
+    {"name": "riot.quack", "folders": [
+        "Clicks",
+    ]},
+    {"name": "roblox.gravitycoil", "folders": [
+        "Clicks",
+    ]},
+    {"name": "robtop.gd-death", "folders": [
+        "Clicks",
+    ]},
+    {"name": "stormwave.fireinthehole", "folders": [
+        "Clicks",
+    ]},
+    {"name": "tacobell.bell", "folders": [
+        "Clicks",
+    ]},
+    {"name": "tiktok.tiktok", "folders": [
+        "Clicks",
+        "Releases",
+    ]},
+    {"name": "unknown.aughhh", "folders": [
+        "Clicks",
+    ]},
+    {"name": "unknown.el-gato", "folders": [
+        "Clicks",
+    ]},
+    {"name": "unknown.hamburger", "folders": [
+        "Clicks",
+    ]},
+    {"name": "unknown.huh", "folders": [
+        "Clicks",
+    ]},
+    {"name": "unknown.metalpipe", "folders": [
+        "Clicks",
+    ]},
+    {"name": "unknown.plate", "folders": [
+        "Clicks",
+    ]},
+    {"name": "unknown.pluh", "folders": [
+        "Clicks",
+    ]},
+    {"name": "unknown.soda", "folders": [
+        "Clicks",
+    ]},
+    {"name": "unknown.wateronthehill", "folders": [
+        "Clicks",
+    ]},
+    {"name": "uproxide.awdangit", "folders": [
+        "Clicks",
+    ]},
+    {"name": "vine.boom", "folders": [
+        "Clicks",
+    ]},
+    {"name": "waterflame.bwomp", "folders": [
+        "Clicks",
+    ]},
+    {"name": "wulzy.gdcologne", "folders": [
+        "Clicks",
+    ]},
+  ],
+  "Useful": [
+    {"name": "aceofspades.bloody", "folders": [
+        "Clicks",
+        "Releases",
+    ]},
+    {"name": "aceofspades.logitech-g502", "folders": [
+        "Clicks",
+        "Releases",
+    ]},
+    {"name": "cursed.clicks", "folders": [
+        "Clicks",
+    ]},
+    {"name": "doggie.clicks", "folders": [
+        "Clicks",
+        "Releases",
+    ]},
+    {"name": "imsgdo.aa-mr1d9tb", "folders": [
+        "Clicks",
+    ]},
+    {"name": "lofracotestinogd.electro-mouse", "folders": [
+        "Clicks",
+        "Releases",
+    ]},
+    {"name": "main.logitech-mx-anywhere-2s", "folders": [
+        "Clicks",
+        "Releases",
+    ]},
+    {"name": "neiro.clicks", "folders": [
+        "Clicks",
+        "Releases",
+    ]},
+    {"name": "npesta.clicks", "folders": [
+        "Clicks",
+        "Releases",
+    ]},
+    {"name": "peppy.osuhit", "folders": [
+        "Clicks",
+    ]},
+    {"name": "spaceuk.clicks", "folders": [
+        "Clicks",
+    ]},
+    {"name": "swim1x.faze", "folders": [
+        "Clicks",
+        "Releases",
+    ]},
+    {"name": "trusta.clicks", "folders": [
+        "Clicks",
+    ]},
+    {"name": "unknown.click-1", "folders": [
+        "Clicks",
+    ]},
+    {"name": "unknown.click-2", "folders": [
+        "Clicks",
+    ]},
+    {"name": "unknown.click-release-1", "folders": [
+        "Clicks",
+        "Releases",
+    ]},
+    {"name": "unknown.click-release-2", "folders": [
+        "Clicks",
+        "Releases",
+    ]},
+    {"name": "unknown.click3", "folders": [
+        "Clicks",
+    ]},
+    {"name": "unknown.gazonk", "folders": [
+        "Clicks",
+    ]},
+    {"name": "unknown.metronome", "folders": [
+        "Clicks",
+    ]},
+    {"name": "unknown.mouse-click-6", "folders": [
+        "Clicks",
+        "Releases",
+    ]},
+    {"name": "unknown.mouse-click-7", "folders": [
+        "Clicks",
+        "Releases",
+    ]},
+    {"name": "unknown.pacitys", "folders": [
+        "Clicks",
+        "Releases",
+    ]},
+    {"name": "unknown.sayo-device", "folders": [
+        "Clicks",
+        "Releases",
+    ]},
+    {"name": "unknown.screen-tap-1", "folders": [
+        "Clicks",
+    ]},
+    {"name": "unknown.space-bar-1", "folders": [
+        "Clicks",
+    ]},
+    {"name": "unknown.space-bar-2", "folders": [
+        "Clicks",
+        "Releases",
+    ]},
+    {"name": "unknown.up-arrow-1", "folders": [
+        "Clicks",
+    ]},
+    {"name": "unknown.up-arrow-2", "folders": [
+        "Clicks",
+    ]},
+    {"name": "unknown.up-arrow-3", "folders": [
+        "Clicks",
+    ]},
+    {"name": "unknown.up-arrow-4", "folders": [
+        "Clicks",
+        "Releases",
+    ]},
+    {"name": "unknown.up-arrow-5", "folders": [
+        "Clicks",
+    ]},
+    {"name": "unknown.viper-mouse", "folders": [
+        "Clicks",
+        "Releases",
+    ]},
+    {"name": "viper.spacebar", "folders": [
+        "Clicks",
+        "Releases",
+    ]},
+    {"name": "zoink.clicks", "folders": [
+        "Clicks",
+        "Releases",
+    ]},
+    {"name": "zoink.clicks2", "folders": [
+        "Clicks",
+        "Releases",
+    ]},
+  ]
+}
