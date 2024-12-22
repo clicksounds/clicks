@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click Sounds Index</title>
+    <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body and background styles */
+        body {
+            font-family: Arial, sans-serif;
+            color: #fff;
+            background: url('./.images/nobglogo.png') no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Overlay to darken the image */
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: -1;
+        }
+
+        /* Navbar styles */
+        nav {
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 10px 20px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 10;
+        }
+
+        /* Navigation links */
+        nav a {
+            color: #00aaff;
+            text-decoration: none;
+            font-size: 1.2em;
+            margin-right: 20px;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover {
+            background: #00aaff;
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        /* Main content styles */
+        h1 {
+            font-size: 2.5em;
+            margin-top: 100px;
+        }
+
+        /* Filter form styles */
+        .filter-container {
+            margin: 20px 0;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+        }
+
+        .filter-container input,
+        .filter-container select {
+            padding: 10px;
+            font-size: 1em;
+            margin: 10px 5px;
+            border-radius: 5px;
+            border: 1px solid #00aaff;
+            background-color: rgba(255, 255, 255, 0.2);
+            color: #fff;
+        }
+
+        .filter-container button {
+            padding: 10px 20px;
+            font-size: 1.2em;
+            background-color: #00aaff;
+            border: none;
+            color: #fff;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .filter-container button:hover {
+            background-color: #0088cc;
+        }
+
+        /* Sound list container */
+        .sound-list {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 30px;
+        }
+
+        .sound-item {
+            margin: 10px;
+            padding: 15px;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            border-radius: 5px;
+            width: 80%;
+            text-align: center;
+            transition: background-color 0.3s;
+        }
+
+        .sound-item:hover {
+            background-color: #00aaff;
+            cursor: pointer;
+        }
+
+        /* No results message */
+        .no-results {
+            color: #ff6347;
+            font-size: 1.5em;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="./addsoundhelp.html">Add Sound</a>
+        <a href="./index.html">Home</a>
+        <a href="./download.html">Download</a>
+    </nav>
+
+    <h1>Click Sounds Index</h1>
+
+    <!-- Filter Options -->
+    <div class="filter-container">
+        <input type="text" id="searchBar" placeholder="Search for sounds..." onkeyup="filterSounds()">
+        <select id="categorySelect" onchange="filterSounds()">
+            <option value="">Select Category</option>
+            <option value="Meme">Meme</option>
+            <option value="Useful">Useful</option>
+        </select>
+        <select id="typeSelect" onchange="filterSounds()">
+            <option value="">Select Type</option>
+            <option value="Clicks">Clicks</option>
+            <option value="Releases">Releases</option>
+            <option value="Both">Both</option>
+        </select>
+        <button onclick="filterSounds()">Apply Filters</button>
+    </div>
+
+    <!-- Sounds List -->
+    <div class="sound-list" id="soundList">
+        <!-- Dynamic content will appear here -->
+    </div>
+
+    <div class="no-results" id="noResults" style="display: none;">No sounds found matching your criteria.</div>
+
+    <script>
+        // Path to the generated website_list.json file
+        const soundsDataPath = './website_list.json'; // Adjust path to where the JSON file is located
+
+        // Function to fetch sounds data (simulated for GitHub Pages)
+        async function loadSoundsData() {
+            const response = await fetch(soundsDataPath);
+            const data = await response.json();
+            return data;
+        }
+
+        // Function to display sounds based on filter
+        function displaySounds(filteredSounds) {
+            const soundList = document.getElementById('soundList');
+            soundList.innerHTML = ''; // Clear current list
+
+            if (filteredSounds.length === 0) {
+                document.getElementById('noResults').style.display = 'block';
+            } else {
+                document.getElementById('noResults').style.display = 'none';
+                filteredSounds.forEach(sound => {
+                    const soundItem = document.createElement('div');
+                    soundItem.classList.add('sound-item');
+                    soundItem.textContent = `${sound.name} (Folders: ${sound.folders.join(', ')})`;
+                    soundList.appendChild(soundItem);
+                });
+            }
+        }
+
+        // Function to filter sounds based on user input
+        async function filterSounds() {
+            const searchQuery = document.getElementById('searchBar').value.toLowerCase();
+            const categoryFilter = document.getElementById('categorySelect').value;
+            const typeFilter = document.getElementById('typeSelect').value;
+
+            const soundsData = await loadSoundsData(); // Load data
+
+            let filteredSounds = [];
+
+            // Iterate through the categories (Meme, Useful)
+            for (let category in soundsData.e) {
+                if (categoryFilter && category !== categoryFilter) continue;
+
+                soundsData.e[category].forEach(sound => {
+                    const matchesSearch = sound.name.toLowerCase().includes(searchQuery);
+                    const matchesType = (typeFilter === 'Both' || sound.folders.includes(typeFilter) || (typeFilter === '' && sound.folders.length > 0));
+                    
+                    if (matchesSearch && matchesType) {
+                        filteredSounds.push({ ...sound, category });
+                    }
+                });
+            }
+
+            displaySounds(filteredSounds);
+        }
+
+        // Initial display of all sounds
+        window.onload = filterSounds; // Call filterSounds() on page load
+    </script>
+
+</body>
+</html>
