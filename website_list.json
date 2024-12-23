@@ -1,285 +1,222 @@
 {
   "Meme": [
-    {"name": "alanwalker.spectre", "folders": [
+    {"name": "alanwalker.spectre", "type": "Meme", "folders": [
         "Clicks"
-    ]}
-,
-    {"name": "ballball.bonk", "folders": [
+    ]},
+    {"name": "ballball.bonk", "type": "Meme", "folders": [
         "Clicks"
-    ]}
-,
-    {"name": "coop.cardoorslam", "folders": [
+    ]},
+    {"name": "coop.cardoorslam", "type": "Meme", "folders": [
         "Clicks"
-    ]}
-,
-    {"name": "coop.deskhit", "folders": [
+    ]},
+    {"name": "coop.deskhit", "type": "Meme", "folders": [
         "Clicks"
-    ]}
-,
-    {"name": "discord.ping", "folders": [
+    ]},
+    {"name": "discord.ping", "type": "Meme", "folders": [
         "Clicks"
-    ]}
-,
-    {"name": "george-thorogood.bad-to-the-bone", "folders": [
+    ]},
+    {"name": "george-thorogood.bad-to-the-bone", "type": "Meme", "folders": [
         "Clicks"
-    ]}
-,
-    {"name": "koraii.congregation", "folders": [
+    ]},
+    {"name": "koraii.congregation", "type": "Meme", "folders": [
         "Clicks"
-    ]}
-,
-    {"name": "mdk.dash", "folders": [
+    ]},
+    {"name": "mdk.dash", "type": "Meme", "folders": [
         "Clicks"
-    ]}
-,
-    {"name": "microsoft.win-usb", "folders": [
+    ]},
+    {"name": "microsoft.win-usb", "type": "Meme", "folders": [
         "Clicks"
-    ]}
-,
-    {"name": "npesta.ohmygod", "folders": [
+    ]},
+    {"name": "npesta.ohmygod", "type": "Meme", "folders": [
         "Clicks"
-    ]}
-,
-    {"name": "riot.quack", "folders": [
+    ]},
+    {"name": "riot.quack", "type": "Meme", "folders": [
         "Clicks"
-    ]}
-,
-    {"name": "roblox.gravitycoil", "folders": [
+    ]},
+    {"name": "roblox.gravitycoil", "type": "Meme", "folders": [
         "Clicks"
-    ]}
-,
-    {"name": "robtop.gd-death", "folders": [
+    ]},
+    {"name": "robtop.gd-death", "type": "Meme", "folders": [
         "Clicks"
-    ]}
-,
-    {"name": "stormwave.fireinthehole", "folders": [
+    ]},
+    {"name": "stormwave.fireinthehole", "type": "Meme", "folders": [
         "Clicks"
-    ]}
-,
-    {"name": "tacobell.bell", "folders": [
+    ]},
+    {"name": "tacobell.bell", "type": "Meme", "folders": [
         "Clicks"
-    ]}
-,
-    {"name": "tiktok.tiktok", "folders": [
+    ]},
+    {"name": "tiktok.tiktok", "type": "Meme", "folders": [
         "Clicks"
-        "Releases"
-    ]}
-,
-    {"name": "unknown.aughhh", "folders": [
+        , "Releases"
+    ]},
+    {"name": "unknown.aughhh", "type": "Meme", "folders": [
         "Clicks"
-    ]}
-,
-    {"name": "unknown.el-gato", "folders": [
+    ]},
+    {"name": "unknown.el-gato", "type": "Meme", "folders": [
         "Clicks"
-    ]}
-,
-    {"name": "unknown.hamburger", "folders": [
+    ]},
+    {"name": "unknown.hamburger", "type": "Meme", "folders": [
         "Clicks"
-    ]}
-,
-    {"name": "unknown.huh", "folders": [
+    ]},
+    {"name": "unknown.huh", "type": "Meme", "folders": [
         "Clicks"
-    ]}
-,
-    {"name": "unknown.metalpipe", "folders": [
+    ]},
+    {"name": "unknown.metalpipe", "type": "Meme", "folders": [
         "Clicks"
-    ]}
-,
-    {"name": "unknown.plate", "folders": [
+    ]},
+    {"name": "unknown.plate", "type": "Meme", "folders": [
         "Clicks"
-    ]}
-,
-    {"name": "unknown.pluh", "folders": [
+    ]},
+    {"name": "unknown.pluh", "type": "Meme", "folders": [
         "Clicks"
-    ]}
-,
-    {"name": "unknown.soda", "folders": [
+    ]},
+    {"name": "unknown.soda", "type": "Meme", "folders": [
         "Clicks"
-    ]}
-,
-    {"name": "unknown.wateronthehill", "folders": [
+    ]},
+    {"name": "unknown.wateronthehill", "type": "Meme", "folders": [
         "Clicks"
-    ]}
-,
-    {"name": "uproxide.awdangit", "folders": [
+    ]},
+    {"name": "uproxide.awdangit", "type": "Meme", "folders": [
         "Clicks"
-    ]}
-,
-    {"name": "vine.boom", "folders": [
+    ]},
+    {"name": "vine.boom", "type": "Meme", "folders": [
         "Clicks"
-    ]}
-,
-    {"name": "waterflame.bwomp", "folders": [
+    ]},
+    {"name": "waterflame.bwomp", "type": "Meme", "folders": [
         "Clicks"
-    ]}
-,
-    {"name": "wulzy.gdcologne", "folders": [
+    ]},
+    {"name": "wulzy.gdcologne", "type": "Meme", "folders": [
         "Clicks"
     ]}
   ],
   "Useful": [
-    {"name": "aceofspades.bloody", "folders": [
+    {"name": "aceofspades.bloody", "type": "Useful", "folders": [
         "Clicks"
-        "Releases"
-    ]}
-,
-    {"name": "aceofspades.logitech-g502", "folders": [
+        , "Releases"
+    ]},
+    {"name": "aceofspades.logitech-g502", "type": "Useful", "folders": [
         "Clicks"
-        "Releases"
-    ]}
-,
-    {"name": "cursed.clicks", "folders": [
+        , "Releases"
+    ]},
+    {"name": "cursed.clicks", "type": "Useful", "folders": [
         "Clicks"
-    ]}
-,
-    {"name": "doggie.clicks", "folders": [
+    ]},
+    {"name": "doggie.clicks", "type": "Useful", "folders": [
         "Clicks"
-        "Releases"
-    ]}
-,
-    {"name": "imsgdo.aa-mr1d9tb", "folders": [
+        , "Releases"
+    ]},
+    {"name": "imsgdo.aa-mr1d9tb", "type": "Useful", "folders": [
         "Clicks"
-    ]}
-,
-    {"name": "lofracotestinogd.electro-mouse", "folders": [
+    ]},
+    {"name": "lofracotestinogd.electro-mouse", "type": "Useful", "folders": [
         "Clicks"
-        "Releases"
-    ]}
-,
-    {"name": "main.logitech-mx-anywhere-2s", "folders": [
+        , "Releases"
+    ]},
+    {"name": "main.logitech-mx-anywhere-2s", "type": "Useful", "folders": [
         "Clicks"
-        "Releases"
-    ]}
-,
-    {"name": "neiro.clicks", "folders": [
+        , "Releases"
+    ]},
+    {"name": "neiro.clicks", "type": "Useful", "folders": [
         "Clicks"
-        "Releases"
-    ]}
-,
-    {"name": "npesta.clicks", "folders": [
+        , "Releases"
+    ]},
+    {"name": "npesta.clicks", "type": "Useful", "folders": [
         "Clicks"
-        "Releases"
-    ]}
-,
-    {"name": "peppy.osuhit", "folders": [
+        , "Releases"
+    ]},
+    {"name": "peppy.osuhit", "type": "Useful", "folders": [
         "Clicks"
-    ]}
-,
-    {"name": "spaceuk.clicks", "folders": [
+    ]},
+    {"name": "spaceuk.clicks", "type": "Useful", "folders": [
         "Clicks"
-    ]}
-,
-    {"name": "swim1x.faze", "folders": [
+    ]},
+    {"name": "swim1x.faze", "type": "Useful", "folders": [
         "Clicks"
-        "Releases"
-    ]}
-,
-    {"name": "trusta.clicks", "folders": [
+        , "Releases"
+    ]},
+    {"name": "trusta.clicks", "type": "Useful", "folders": [
         "Clicks"
-    ]}
-,
-    {"name": "unknown.click-1", "folders": [
+    ]},
+    {"name": "unknown.click-1", "type": "Useful", "folders": [
         "Clicks"
-    ]}
-,
-    {"name": "unknown.click-2", "folders": [
+    ]},
+    {"name": "unknown.click-2", "type": "Useful", "folders": [
         "Clicks"
-    ]}
-,
-    {"name": "unknown.click-release-1", "folders": [
+    ]},
+    {"name": "unknown.click-release-1", "type": "Useful", "folders": [
         "Clicks"
-        "Releases"
-    ]}
-,
-    {"name": "unknown.click-release-2", "folders": [
+        , "Releases"
+    ]},
+    {"name": "unknown.click-release-2", "type": "Useful", "folders": [
         "Clicks"
-        "Releases"
-    ]}
-,
-    {"name": "unknown.click3", "folders": [
+        , "Releases"
+    ]},
+    {"name": "unknown.click3", "type": "Useful", "folders": [
         "Clicks"
-    ]}
-,
-    {"name": "unknown.gazonk", "folders": [
+    ]},
+    {"name": "unknown.gazonk", "type": "Useful", "folders": [
         "Clicks"
-    ]}
-,
-    {"name": "unknown.metronome", "folders": [
+    ]},
+    {"name": "unknown.metronome", "type": "Useful", "folders": [
         "Clicks"
-    ]}
-,
-    {"name": "unknown.mouse-click-6", "folders": [
+    ]},
+    {"name": "unknown.mouse-click-6", "type": "Useful", "folders": [
         "Clicks"
-        "Releases"
-    ]}
-,
-    {"name": "unknown.mouse-click-7", "folders": [
+        , "Releases"
+    ]},
+    {"name": "unknown.mouse-click-7", "type": "Useful", "folders": [
         "Clicks"
-        "Releases"
-    ]}
-,
-    {"name": "unknown.pacitys", "folders": [
+        , "Releases"
+    ]},
+    {"name": "unknown.pacitys", "type": "Useful", "folders": [
         "Clicks"
-        "Releases"
-    ]}
-,
-    {"name": "unknown.sayo-device", "folders": [
+        , "Releases"
+    ]},
+    {"name": "unknown.sayo-device", "type": "Useful", "folders": [
         "Clicks"
-        "Releases"
-    ]}
-,
-    {"name": "unknown.screen-tap-1", "folders": [
+        , "Releases"
+    ]},
+    {"name": "unknown.screen-tap-1", "type": "Useful", "folders": [
         "Clicks"
-    ]}
-,
-    {"name": "unknown.space-bar-1", "folders": [
+    ]},
+    {"name": "unknown.space-bar-1", "type": "Useful", "folders": [
         "Clicks"
-    ]}
-,
-    {"name": "unknown.space-bar-2", "folders": [
+    ]},
+    {"name": "unknown.space-bar-2", "type": "Useful", "folders": [
         "Clicks"
-        "Releases"
-    ]}
-,
-    {"name": "unknown.up-arrow-1", "folders": [
+        , "Releases"
+    ]},
+    {"name": "unknown.up-arrow-1", "type": "Useful", "folders": [
         "Clicks"
-    ]}
-,
-    {"name": "unknown.up-arrow-2", "folders": [
+    ]},
+    {"name": "unknown.up-arrow-2", "type": "Useful", "folders": [
         "Clicks"
-    ]}
-,
-    {"name": "unknown.up-arrow-3", "folders": [
+    ]},
+    {"name": "unknown.up-arrow-3", "type": "Useful", "folders": [
         "Clicks"
-    ]}
-,
-    {"name": "unknown.up-arrow-4", "folders": [
+    ]},
+    {"name": "unknown.up-arrow-4", "type": "Useful", "folders": [
         "Clicks"
-        "Releases"
-    ]}
-,
-    {"name": "unknown.up-arrow-5", "folders": [
+        , "Releases"
+    ]},
+    {"name": "unknown.up-arrow-5", "type": "Useful", "folders": [
         "Clicks"
-    ]}
-,
-    {"name": "unknown.viper-mouse", "folders": [
+    ]},
+    {"name": "unknown.viper-mouse", "type": "Useful", "folders": [
         "Clicks"
-        "Releases"
-    ]}
-,
-    {"name": "viper.spacebar", "folders": [
+        , "Releases"
+    ]},
+    {"name": "viper.spacebar", "type": "Useful", "folders": [
         "Clicks"
-        "Releases"
-    ]}
-,
-    {"name": "zoink.clicks", "folders": [
+        , "Releases"
+    ]},
+    {"name": "zoink.clicks", "type": "Useful", "folders": [
         "Clicks"
-        "Releases"
-    ]}
-,
-    {"name": "zoink.clicks2", "folders": [
+        , "Releases"
+    ]},
+    {"name": "zoink.clicks2", "type": "Useful", "folders": [
         "Clicks"
-        "Releases"
+        , "Releases"
     ]}
   ]
 }
