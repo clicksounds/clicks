@@ -113,6 +113,7 @@ jobs:
 
       - name: Generate website_list.json
         run: |
+          set -e  # Exit immediately if a command exits with a non-zero status
           echo "Generating website_list.json..."
           echo '{' > website_list.json
           echo '  "Meme": [' >> website_list.json
@@ -121,11 +122,15 @@ jobs:
           do
               dir=${dir%*/}
               dir=${dir##*/}
-              name=$(jq -r '.name' "Meme/$dir/pack.json")
-              echo "    {\"name\": \"$name\", \"type\": \"Meme\", \"folders\": [" >> website_list.json
-              [ -d "Meme/$dir/Clicks" ] && echo "        \"Clicks\"" >> website_list.json
-              [ -d "Meme/$dir/Releases" ] && echo "        , \"Releases\"" >> website_list.json
-              echo "    ]}," >> website_list.json
+              if [ -f "Meme/$dir/pack.json" ]; then
+                  name=$(jq -r '.name' "Meme/$dir/pack.json")
+                  echo "    {\"name\": \"$name\", \"type\": \"Meme\", \"folders\": [" >> website_list.json
+                  [ -d "Meme/$dir/Clicks" ] && echo "        \"Clicks\"" >> website_list.json
+                  [ -d "Meme/$dir/Releases" ] && echo "        , \"Releases\"" >> website_list.json
+                  echo "    ]}," >> website_list.json
+              else
+                  echo "pack.json not found in Meme/$dir"
+              fi
           done
 
           sed -i '$ s/,$//' website_list.json
@@ -136,24 +141,26 @@ jobs:
           do
               dir=${dir%*/}
               dir=${dir##*/}
-              name=$(jq -r '.name' "Useful/$dir/pack.json")
-              echo "    {\"name\": \"$name\", \"type\": \"Useful\", \"folders\": [" >> website_list.json
-              [ -d "Useful/$dir/Clicks" ] && echo "        \"Clicks\"" >> website_list.json
-              [ -d "Useful/$dir/Releases" ] && echo "        , \"Releases\"" >> website_list.json
-              echo "    ]}," >> website_list.json
+              if [ -f "Useful/$dir/pack.json" ]; then
+                  name=$(jq -r '.name' "Useful/$dir/pack.json")
+                  echo "    {\"name\": \"$name\", \"type\": \"Useful\", \"folders\": [" >> website_list.json
+                  [ -d "Useful/$dir/Clicks" ] && echo "        \"Clicks\"" >> website_list.json
+                  [ -d "Useful/$dir/Releases" ] && echo "        , \"Releases\"" >> website_list.json
+                  echo "    ]}," >> website_list.json
+              else
+                  echo "pack.json not found in Useful/$dir"
+              fi
           done
 
           sed -i '$ s/,$//' website_list.json
           echo '  ]' >> website_list.json
           echo '}' >> website_list.json
-
-
-          - name: Commit Generated website_list.json
-            run: |
-              git config user.name "GitHub Actions"
-              git config user.email "actions@github.com"
-              git add website_list.json
-              git commit -m "Update website_list.json" && git push || echo "Nothing to commit, no changes to JSON."
+        - name: Commit Generated website_list.json
+          run: |
+            git config user.name "GitHub Actions"
+            git config user.email "actions@github.com"
+            git add website_list.json
+            git commit -m "Update website_list.json" && git push || echo "Nothing to commit, no changes to JSON."
 
       - name: Compress into .zip for GitHub Pages
         run: |
