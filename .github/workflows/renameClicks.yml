@@ -14,6 +14,7 @@ concurrency:
   group: "pages"
   cancel-in-progress: false
 
+
 jobs:
   rename:
     name: Rename and Deploy Pages
@@ -197,3 +198,5 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+        environment:
+          name: github-pages
