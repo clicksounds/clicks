@@ -108,36 +108,48 @@ jobs:
           echo '  "Meme": [' >> website_list.json
 
           # Loop through Meme directory
+          first=true
           for dir in Meme/*/
           do
               dir=${dir%*/}  # Remove trailing slash
               dir=${dir##*/}  # Get the directory name
+              if [ "$first" = true ]; then
+                first=false
+              else
+                echo "," >> website_list.json
+              fi
               echo "    {\"name\": \"$dir\", \"folders\": [" >> website_list.json
               if [ -d "Meme/$dir/Clicks" ]; then
-                echo "        \"Clicks\"," >> website_list.json
+                echo "        \"Clicks\"" >> website_list.json
               fi
               if [ -d "Meme/$dir/Releases" ]; then
-                echo "        \"Releases\"," >> website_list.json
+                echo "        \"Releases\"" >> website_list.json
               fi
-              echo "    ]}," >> website_list.json
+              echo "    ]}" >> website_list.json
           done
 
           echo '  ],' >> website_list.json
           echo '  "Useful": [' >> website_list.json
 
           # Loop through Useful directory
+          first=true
           for dir in Useful/*/
           do
               dir=${dir%*/}  # Remove trailing slash
               dir=${dir##*/}  # Get the directory name
+              if [ "$first" = true ]; then
+                first=false
+              else
+                echo "," >> website_list.json
+              fi
               echo "    {\"name\": \"$dir\", \"folders\": [" >> website_list.json
               if [ -d "Useful/$dir/Clicks" ]; then
-                echo "        \"Clicks\"," >> website_list.json
+                echo "        \"Clicks\"" >> website_list.json
               fi
               if [ -d "Useful/$dir/Releases" ]; then
-                echo "        \"Releases\"," >> website_list.json
+                echo "        \"Releases\"" >> website_list.json
               fi
-              echo "    ]}," >> website_list.json
+              echo "    ]}" >> website_list.json
           done
 
           echo '  ]' >> website_list.json
@@ -145,7 +157,7 @@ jobs:
 
       - name: Commit Generated website_list.json
         run: |
-          git config user.name "GitHub Actions"
+          git config user.name "Clicksounds Wesbite"
           git config user.email "actions@github.com"
           git add website_list.json
           git commit -m "Update website_list.json" && git push || echo "Nothing to commit, no changes to JSON."

@@ -173,21 +173,21 @@
     <div class="no-results" id="noResults" style="display: none;">No sounds found matching your criteria.</div>
 
     <script>
-        // Path to the generated website_list.json file
-        const soundsDataPath = './website_list.json'; // Adjust path to where the JSON file is located
-
+        // Load the sounds data from the JSON file
+        const soundsDataPath = './sounds/pack.json'; // Path to your JSON file
+    
         // Function to fetch sounds data (simulated for GitHub Pages)
         async function loadSoundsData() {
             const response = await fetch(soundsDataPath);
             const data = await response.json();
             return data;
         }
-
+    
         // Function to display sounds based on filter
         function displaySounds(filteredSounds) {
             const soundList = document.getElementById('soundList');
             soundList.innerHTML = ''; // Clear current list
-
+    
             if (filteredSounds.length === 0) {
                 document.getElementById('noResults').style.display = 'block';
             } else {
@@ -200,22 +200,22 @@
                 });
             }
         }
-
+    
         // Function to filter sounds based on user input
         async function filterSounds() {
             const searchQuery = document.getElementById('searchBar').value.toLowerCase();
             const categoryFilter = document.getElementById('categorySelect').value;
             const typeFilter = document.getElementById('typeSelect').value;
-
+    
             const soundsData = await loadSoundsData(); // Load data
-
+    
             let filteredSounds = [];
-
+    
             // Iterate through the categories (Meme, Useful)
-            for (let category in soundsData.e) {
+            for (let category in soundsData) {
                 if (categoryFilter && category !== categoryFilter) continue;
-
-                soundsData.e[category].forEach(sound => {
+    
+                soundsData[category].forEach(sound => {
                     const matchesSearch = sound.name.toLowerCase().includes(searchQuery);
                     const matchesType = (typeFilter === 'Both' || sound.folders.includes(typeFilter) || (typeFilter === '' && sound.folders.length > 0));
                     
@@ -224,13 +224,13 @@
                     }
                 });
             }
-
+    
             displaySounds(filteredSounds);
         }
-
+    
         // Initial display of all sounds
         window.onload = filterSounds; // Call filterSounds() on page load
-    </script>
+    </script>    
 
 </body>
 </html>
