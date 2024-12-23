@@ -107,6 +107,9 @@ jobs:
         run: cd .github/JsonCreator/; python main.py
         env:
           ALL_FILES: ${{ steps.get-files.outputs.files }}
+        
+      - name: Install jq
+        run: sudo apt-get install -y jq
 
       - name: Generate website_list.json
         run: |
