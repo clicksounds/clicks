@@ -138,10 +138,8 @@
         }
 
         .sound-list {
-            max-height: 400px;
             overflow-y: auto; 
             padding: 10px; 
-            border: 1px solid #ccc; 
         }
 
     </style>
@@ -190,10 +188,9 @@
             return data;
         }
     
-        // Function to display sounds based on filter
         function displaySounds(filteredSounds) {
             const soundList = document.getElementById('soundList');
-            soundList.innerHTML = ''; // Clear current list
+            soundList.innerHTML = ''; 
     
             if (filteredSounds.length === 0) {
                 document.getElementById('noResults').style.display = 'block';
@@ -202,7 +199,7 @@
                 filteredSounds.forEach(sound => {
                     const soundItem = document.createElement('div');
                     soundItem.classList.add('sound-item');
-                    soundItem.textContent = `${sound.name} (Folders: ${sound.folders.join(', ')})`;
+                    soundItem.textContent = `${sound.name}`;
                     soundList.appendChild(soundItem);
                 });
             }
@@ -214,11 +211,10 @@
             const categoryFilter = document.getElementById('categorySelect').value;
             const typeFilter = document.getElementById('typeSelect').value;
     
-            const soundsData = await loadSoundsData(); // Load data
+            const soundsData = await loadSoundsData(); 
     
             let filteredSounds = [];
     
-            // Iterate through the categories (Meme, Useful)
             for (let category in soundsData) {
                 if (categoryFilter && category !== categoryFilter) continue;
     
@@ -235,8 +231,7 @@
             displaySounds(filteredSounds);
         }
     
-        // Initial display of all sounds
-        window.onload = filterSounds; // Call filterSounds() on page load
+        window.onload = filterSounds; 
     </script>    
 
 </body>
