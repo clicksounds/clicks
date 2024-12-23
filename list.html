@@ -173,12 +173,11 @@
     <div class="no-results" id="noResults" style="display: none;">No sounds found matching your criteria.</div>
 
     <script>
-        // Load the sounds data from the JSON file
-        const soundsDataPath = './website_list.json'; // Path to your JSON file
+        const soundsDataPath = './website_list.json'; 
     
-        // Function to fetch sounds data (simulated for GitHub Pages)
         async function loadSoundsData() {
             const response = await fetch(soundsDataPath);
+            console.log(response); 
             const data = await response.json();
             return data;
         }
