@@ -155,12 +155,12 @@ jobs:
           sed -i '$ s/,$//' website_list.json
           echo '  ]' >> website_list.json
           echo '}' >> website_list.json
-        - name: Commit Generated website_list.json
-          run: |
-            git config user.name "GitHub Actions"
-            git config user.email "actions@github.com"
-            git add website_list.json
-            git commit -m "Update website_list.json" && git push || echo "Nothing to commit, no changes to JSON."
+      - name: Commit Generated website_list.json
+        run: |
+          git config user.name "Clicksounds Site"
+          git config user.email "actions@github.com"
+          git add website_list.json
+          git commit -m "Update website_list.json" && git push || echo "Nothing to commit, no changes to JSON."
 
       - name: Compress into .zip for GitHub Pages
         run: |
