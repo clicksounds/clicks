@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click Sounds Index</title>
+    <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body and background styles */
+        body {
+            font-family: Arial, sans-serif;
+            color: #fff;
+            background: url('./.images/nobglogo.png') no-repeat center center/cover; /* Replace with your image URL */
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Overlay to darken the image */
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6); /* Dark overlay */
+            z-index: -1;
+        }
+
+        /* Navbar styles */
+        nav {
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.8); /* Dark background for the navbar */
+            padding: 10px 20px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 10;
+        }
+
+        /* Navigation links */
+        nav a {
+            color: #00aaff;
+            text-decoration: none;
+            font-size: 1.2em;
+            margin-right: 20px;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover {
+            background: #00aaff;
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        /* Main content styles */
+        h1 {
+            font-size: 2.5em;
+            margin-top: 100px; /* Adjust margin to allow space for the navbar */
+        }
+
+        /* Sidebars */
+        .sidebar {
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            width: 50px;
+            background: rgba(0, 0, 0, 0.5); /* Transparent dark background */
+            z-index: 5;
+            animation: slide 3s ease-in-out infinite;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .sidebar.left {
+            left: -50px; /* Initially off-screen */
+        }
+
+        .sidebar.right {
+            right: -50px; /* Initially off-screen */
+        }
+
+        /* Animation to slide in the sidebars */
+        @keyframes slide {
+            0% {
+                left: -50px;
+                right: -50px;
+            }
+            50% {
+                left: 0;
+                right: 0;
+            }
+            100% {
+                left: -50px;
+                right: -50px;
+            }
+        }
+
+        /* Link inside the sidebar */
+        .sidebar a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2em;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+            transform: translateX(-10px); /* Slightly left shift */
+        }
+
+        .sidebar a:hover {
+            color: #00aaff;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 10px 15px;
+            border-radius: 5px;
+        }
+
+    ul {
+      list-style-type: disc;
+      margin-left: 20px;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+
+    /* Style for the info icon and hover effect */
+    .info-icon {
+      font-size: 18px;
+      margin-left: 5px;
+      color: blue;
+      cursor: pointer;
+      display: inline-block;
+      position: relative;
+    }
+
+    /* Style for the tooltip */
+    .tooltip {
+      visibility: hidden;
+      width: 250px;
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      border-radius: 5px;
+      padding: 5px;
+      position: absolute;
+      z-index: 1;
+      bottom: 120%;
+      left: 50%;
+      margin-left: -125px;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    /* Show tooltip on hover */
+    .info-icon:hover .tooltip {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="./list.html">List</a>
+        <a href="./index.html">Home</a>
+        <a href="./download.html">Download</a>
+    </nav>
+    <h1>Welcome to the how to add your click sound!</h1>
+    <small>this will help you submit click sounds to the mod</small>
+    <a href="https://github.com/clicksounds/indexer/issues/new?assignees=coopeeo,muhxd&labels=&projects=&template=new.yml">Post your sounds here</a>
+    <br>
+    <h1>Upload Guidelines</h1>
+    <ul>
+        <li>
+        Must not be a sound that already exists
+        <span class="info-icon">❓
+            <span class="tooltip">Ensure your click sound is unique and not duplicated from the mod's existing library.</span>
+        </span>
+        </li>
+        <li>
+        Must have minimal background noise
+        <span class="info-icon">❓
+            <span class="tooltip">Click sounds should be clear without unwanted sounds in the background (e.g., wind, static, etc.).</span>
+        </span>
+        </li>
+        <li>
+        Must not be too long
+        <span class="info-icon">❓
+            <span class="tooltip">Clicks must not being longer then 1 second.</span>
+        </span>
+        </li>
+        <li>
+        Must not be discriminatory
+        <span class="info-icon">❓
+            <span class="tooltip">This is about keeping sounds to not be discriminatory in any way!<br>For example a sound that just screams the word like "Gay!" is fine.<br>However a sound that puts the word "gay" in a negative connotation like "You suck, Gays!" is not!</span>
+        </span>
+        </li>
+        <li>
+        Keep the sounds family friendly
+        <span class="info-icon">❓
+            <span class="tooltip">Kids use this mod so make sure sounds don't have words like "fuck"</span>
+        </span>
+        </li>
+    </ul>
+    <h1><a href="https://github.com/clicksounds/indexer/raw/refs/heads/main/Click_Sound_Template.zip">Download Template Zip</a></h1>
+</body>
+</html>

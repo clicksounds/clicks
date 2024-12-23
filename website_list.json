@@ -1,0 +1,222 @@
+{
+  "Meme": [
+    {"name": "Spectre", "type": "Meme", "folders": [
+        "Clicks"
+    ]},
+    {"name": "Bonk", "type": "Meme", "folders": [
+        "Clicks"
+    ]},
+    {"name": "Car Door Slam", "type": "Meme", "folders": [
+        "Clicks"
+    ]},
+    {"name": "Desk Hit", "type": "Meme", "folders": [
+        "Clicks"
+    ]},
+    {"name": "Discord Ping", "type": "Meme", "folders": [
+        "Clicks"
+    ]},
+    {"name": "Bad to the Bone", "type": "Meme", "folders": [
+        "Clicks"
+    ]},
+    {"name": "Congregation", "type": "Meme", "folders": [
+        "Clicks"
+    ]},
+    {"name": "Dash", "type": "Meme", "folders": [
+        "Clicks"
+    ]},
+    {"name": "Windows USB Sounds", "type": "Meme", "folders": [
+        "Clicks"
+    ]},
+    {"name": "oh my god", "type": "Meme", "folders": [
+        "Clicks"
+    ]},
+    {"name": "Riot Swag", "type": "Meme", "folders": [
+        "Clicks"
+    ]},
+    {"name": "Gravity Coil", "type": "Meme", "folders": [
+        "Clicks"
+    ]},
+    {"name": "GD Death", "type": "Meme", "folders": [
+        "Clicks"
+    ]},
+    {"name": "Fire in the Hole", "type": "Meme", "folders": [
+        "Clicks"
+    ]},
+    {"name": "Taco Bell", "type": "Meme", "folders": [
+        "Clicks"
+    ]},
+    {"name": "Tiktok", "type": "Meme", "folders": [
+        "Clicks"
+        , "Releases"
+    ]},
+    {"name": "aughhh", "type": "Meme", "folders": [
+        "Clicks"
+    ]},
+    {"name": "Meow", "type": "Meme", "folders": [
+        "Clicks"
+    ]},
+    {"name": "hambuger", "type": "Meme", "folders": [
+        "Clicks"
+    ]},
+    {"name": "huh", "type": "Meme", "folders": [
+        "Clicks"
+    ]},
+    {"name": "Metal Pipe", "type": "Meme", "folders": [
+        "Clicks"
+    ]},
+    {"name": "Plate Breaking", "type": "Meme", "folders": [
+        "Clicks"
+    ]},
+    {"name": "Pluh", "type": "Meme", "folders": [
+        "Clicks"
+    ]},
+    {"name": "Soda", "type": "Meme", "folders": [
+        "Clicks"
+    ]},
+    {"name": "Water on the Hill", "type": "Meme", "folders": [
+        "Clicks"
+    ]},
+    {"name": "Aw dang it", "type": "Meme", "folders": [
+        "Clicks"
+    ]},
+    {"name": "Vine Boom", "type": "Meme", "folders": [
+        "Clicks"
+    ]},
+    {"name": "Bwomp", "type": "Meme", "folders": [
+        "Clicks"
+    ]},
+    {"name": "i looove gd cologne", "type": "Meme", "folders": [
+        "Clicks"
+    ]}
+  ],
+  "Useful": [
+    {"name": "Bloody Mouse", "type": "Useful", "folders": [
+        "Clicks"
+        , "Releases"
+    ]},
+    {"name": "Logitech - G502", "type": "Useful", "folders": [
+        "Clicks"
+        , "Releases"
+    ]},
+    {"name": "Cursed (Player)", "type": "Useful", "folders": [
+        "Clicks"
+    ]},
+    {"name": "Doggie", "type": "Useful", "folders": [
+        "Clicks"
+        , "Releases"
+    ]},
+    {"name": "Samsung AA-MR1D9TB Mouse", "type": "Useful", "folders": [
+        "Clicks"
+    ]},
+    {"name": "Electro Mouse", "type": "Useful", "folders": [
+        "Clicks"
+        , "Releases"
+    ]},
+    {"name": "Logitech MX Anywhere 2S", "type": "Useful", "folders": [
+        "Clicks"
+        , "Releases"
+    ]},
+    {"name": "Neiro", "type": "Useful", "folders": [
+        "Clicks"
+        , "Releases"
+    ]},
+    {"name": "npesta", "type": "Useful", "folders": [
+        "Clicks"
+        , "Releases"
+    ]},
+    {"name": "osu! Hit Sound", "type": "Useful", "folders": [
+        "Clicks"
+    ]},
+    {"name": "SpaceUK", "type": "Useful", "folders": [
+        "Clicks"
+    ]},
+    {"name": "Faze Clicks", "type": "Useful", "folders": [
+        "Clicks"
+        , "Releases"
+    ]},
+    {"name": "TrusTa (Player)", "type": "Useful", "folders": [
+        "Clicks"
+    ]},
+    {"name": "Click 1", "type": "Useful", "folders": [
+        "Clicks"
+    ]},
+    {"name": "Click 2", "type": "Useful", "folders": [
+        "Clicks"
+    ]},
+    {"name": "Click Release 1", "type": "Useful", "folders": [
+        "Clicks"
+        , "Releases"
+    ]},
+    {"name": "Click Release 2", "type": "Useful", "folders": [
+        "Clicks"
+        , "Releases"
+    ]},
+    {"name": "Click 3", "type": "Useful", "folders": [
+        "Clicks"
+    ]},
+    {"name": "Gazonk", "type": "Useful", "folders": [
+        "Clicks"
+    ]},
+    {"name": "Metronome", "type": "Useful", "folders": [
+        "Clicks"
+    ]},
+    {"name": "Mouse Click 6", "type": "Useful", "folders": [
+        "Clicks"
+        , "Releases"
+    ]},
+    {"name": "Mouse Click 7", "type": "Useful", "folders": [
+        "Clicks"
+        , "Releases"
+    ]},
+    {"name": "Pacitys", "type": "Useful", "folders": [
+        "Clicks"
+        , "Releases"
+    ]},
+    {"name": "Sayo Device", "type": "Useful", "folders": [
+        "Clicks"
+        , "Releases"
+    ]},
+    {"name": "Screen Tap 1", "type": "Useful", "folders": [
+        "Clicks"
+    ]},
+    {"name": "Space Bar 1", "type": "Useful", "folders": [
+        "Clicks"
+    ]},
+    {"name": "Space Bar 2", "type": "Useful", "folders": [
+        "Clicks"
+        , "Releases"
+    ]},
+    {"name": "Up Arrow 1", "type": "Useful", "folders": [
+        "Clicks"
+    ]},
+    {"name": "Up Arrow 2", "type": "Useful", "folders": [
+        "Clicks"
+    ]},
+    {"name": "Up Arrow 3", "type": "Useful", "folders": [
+        "Clicks"
+    ]},
+    {"name": "Up Arrow 4", "type": "Useful", "folders": [
+        "Clicks"
+        , "Releases"
+    ]},
+    {"name": "Up Arrow 5", "type": "Useful", "folders": [
+        "Clicks"
+    ]},
+    {"name": "Viper Mouse", "type": "Useful", "folders": [
+        "Clicks"
+        , "Releases"
+    ]},
+    {"name": "Viper's Spacebar", "type": "Useful", "folders": [
+        "Clicks"
+        , "Releases"
+    ]},
+    {"name": "Zoink", "type": "Useful", "folders": [
+        "Clicks"
+        , "Releases"
+    ]},
+    {"name": "Zoink 2", "type": "Useful", "folders": [
+        "Clicks"
+        , "Releases"
+    ]}
+  ]
+}

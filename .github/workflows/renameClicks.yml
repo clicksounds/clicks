@@ -15,117 +15,183 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-    rename:
-      name: Rename and Deploy Pages
-      runs-on: ubuntu-latest
-      steps:
-        - name: Checkout Repository
-          uses: actions/checkout@v4
-        - name: Setup ffmpeg
-          uses: FedericoCarboni/setup-ffmpeg@v3
-          id: setup-ffmpeg
-        - name: Install Packages
-          run: |
-            python -m pip install ffmpeg
-            python -m pip install pydub
-        - name: Run Sounds Copier
-          run: python ./.github/CopySoundsForRename.py
-        - name: Run File Namer
-          run: cd .github/FileNamer; python main.py
-        - name: Copy Output to the Original Folder
-          run: python .github/CopySoundsForRenamePT2.py
-        - name: Update Repository
-          run: |
-            git config user.name "Sounds Updater"
-            git config user.email github-actions@github.com
-            git add .
-            git commit -m "Update Sounds (renames all multiple click files)" && git push || echo "Nothing to commit, there's no changes."
-        - name: Get Click and Release files
-          id: get-files
-          run: |
-            output="{\"e\": {"
-            for dir in Meme/*/
-            do
-                dir=${dir%*/}
-                dir=${dir##*/}
-                output="${output}, \"${dir}\": {\"c\": ["
-                for file in Meme/$dir/Clicks/*
-                do
-                    file=${file##*/}
-                    if [ "$file" != "*" ]; then
-                      output="${output}, \"${file}\""
-                    fi
-                done
-                output="${output}], \"r\": ["
-                for file in Meme/$dir/Releases/*
-                do
-                    file=${file##*/}
-                    if [ "$file" != "*" ]; then
-                      output="${output}, \"${file}\""
-                    fi
-                done
-                output="${output}]}"
-            done
-            for dir in Useful/*/
-            do
-                dir=${dir%*/}
-                dir=${dir##*/}
-                output="${output}, \"${dir}\": {\"c\": ["
-                for file in Useful/$dir/Clicks/*
-                do
-                    file=${file##*/}
-                    if [ "$file" != "*" ]; then
-                      output="${output}, \"${file}\""
-                    fi
-                done
-                output="${output}], \"r\": ["
-                for file in Useful/$dir/Releases/*
-                do
-                    file=${file##*/}
-                    if [ "$file" != "*" ]; then
-                      output="$output, \"${file}\""
-                    fi
-                done
-                output="$output]}"
-            done
-            output="$output}}"
-            echo "files=$output" >> "$GITHUB_OUTPUT"
-        - name: Make folder for packs and pack info
-          run: |
-            mkdir info
-            mkdir packs
-        - name: Run json creator
-          run: cd .github/JsonCreator/; python main.py
-          env:
-            ALL_FILES: ${{ steps.get-files.outputs.files }}
-        - name: Compress into .zip for GitHub Pages
-          run: |
-            for dir in Meme/*/
-            do
-                dir=${dir%*/}
-                dir=${dir##*/}
-                cd Meme/${dir}
-                7z a -r -ssw ../packs${dir}.zip pack.json pack.png Clicks/ Releases/
-                cd ../../
-                python .github/JsonCreator/removedir.py Meme/${dir}
-            done
-            for dir in Useful/*/
-            do
-                dir=${dir%*/}
-                dir=${dir##*/}
-                cd Useful/${dir}
-                7z a -r -ssw ../${dir}.zip  pack.json pack.png Clicks/ Releases/
-                cd ../../
-                python .github/JsonCreator/removedir.py Useful/${dir}
-            done
-            python .github/JsonCreator/removegithubfolder.py
-        - name: Setup Pages
-          uses: actions/configure-pages@v4
-        - name: Upload artifact
-          uses: actions/upload-pages-artifact@v3
-          with:
-            path: '.'
-        - name: Deploy to GitHub Pages
-          id: deployment
-          uses: actions/deploy-pages@v4
-    
+  rename:
+    name: Rename and Deploy Pages
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup ffmpeg
+        uses: FedericoCarboni/setup-ffmpeg@v3
+        id: setup-ffmpeg
+
+      - name: Install Packages
+        run: |
+          python -m pip install ffmpeg
+          python -m pip install pydub
+
+      - name: Run Sounds Copier
+        run: python ./.github/CopySoundsForRename.py
+
+      - name: Run File Namer
+        run: cd .github/FileNamer; python main.py
+
+      - name: Copy Output to the Original Folder
+        run: python .github/CopySoundsForRenamePT2.py
+
+      - name: Update Repository
+        run: |
+          git config user.name "Sounds Updater"
+          git config user.email github-actions@github.com
+          git add .
+          git commit -m "Update Sounds (renames all multiple click files)" && git push || echo "Nothing to commit, there's no changes."
+
+      - name: Get Click and Release files
+        id: get-files
+        run: |
+          output="{\"e\": {"
+          for dir in Meme/*/
+          do
+              dir=${dir%*/}
+              dir=${dir##*/}
+              output="${output}, \"${dir}\": {\"c\": ["
+              for file in Meme/$dir/Clicks/*
+              do
+                  file=${file##*/}
+                  if [ "$file" != "*" ]; then
+                    output="${output}, \"${file}\""
+                  fi
+              done
+              output="${output}], \"r\": ["
+              for file in Meme/$dir/Releases/*
+              do
+                  file=${file##*/}
+                  if [ "$file" != "*" ]; then
+                    output="${output}, \"${file}\""
+                  fi
+              done
+              output="${output}]}"
+          done
+          for dir in Useful/*/
+          do
+              dir=${dir%*/}
+              dir=${dir##*/}
+              output="${output}, \"${dir}\": {\"c\": ["
+              for file in Useful/$dir/Clicks/*
+              do
+                  file=${file##*/}
+                  if [ "$file" != "*" ]; then
+                    output="${output}, \"${file}\""
+                  fi
+              done
+              output="${output}], \"r\": ["
+              for file in Useful/$dir/Releases/*
+              do
+                  file=${file##*/}
+                  if [ "$file" != "*" ]; then
+                    output="${output}, \"${file}\""
+                  fi
+              done
+              output="${output}]}"
+          done
+          output="${output}}}"
+          echo "files=$output" >> "$GITHUB_OUTPUT"
+
+      - name: Make folder for packs and pack info
+        run: |
+          mkdir info
+          mkdir packs
+
+      - name: Run json creator
+        run: cd .github/JsonCreator/; python main.py
+        env:
+          ALL_FILES: ${{ steps.get-files.outputs.files }}
+        
+      - name: Install jq
+        run: sudo apt-get install -y jq
+
+      - name: Generate website_list.json
+        run: |
+          set -e  # Exit immediately if a command exits with a non-zero status
+          echo "Generating website_list.json..."
+          echo '{' > website_list.json
+          echo '  "Meme": [' >> website_list.json
+
+          for dir in Meme/*/
+          do
+              dir=${dir%*/}
+              dir=${dir##*/}
+              if [ -f "Meme/$dir/pack.json" ]; then
+                  name=$(jq -r '.name' "Meme/$dir/pack.json")
+                  echo "    {\"name\": \"$name\", \"type\": \"Meme\", \"folders\": [" >> website_list.json
+                  [ -d "Meme/$dir/Clicks" ] && echo "        \"Clicks\"" >> website_list.json
+                  [ -d "Meme/$dir/Releases" ] && echo "        , \"Releases\"" >> website_list.json
+                  echo "    ]}," >> website_list.json
+              else
+                  echo "pack.json not found in Meme/$dir"
+              fi
+          done
+
+          sed -i '$ s/,$//' website_list.json
+          echo '  ],' >> website_list.json
+          echo '  "Useful": [' >> website_list.json
+
+          for dir in Useful/*/
+          do
+              dir=${dir%*/}
+              dir=${dir##*/}
+              if [ -f "Useful/$dir/pack.json" ]; then
+                  name=$(jq -r '.name' "Useful/$dir/pack.json")
+                  echo "    {\"name\": \"$name\", \"type\": \"Useful\", \"folders\": [" >> website_list.json
+                  [ -d "Useful/$dir/Clicks" ] && echo "        \"Clicks\"" >> website_list.json
+                  [ -d "Useful/$dir/Releases" ] && echo "        , \"Releases\"" >> website_list.json
+                  echo "    ]}," >> website_list.json
+              else
+                  echo "pack.json not found in Useful/$dir"
+              fi
+          done
+
+          sed -i '$ s/,$//' website_list.json
+          echo '  ]' >> website_list.json
+          echo '}' >> website_list.json
+      - name: Commit Generated website_list.json
+        run: |
+          git config user.name "Clicksounds Site"
+          git config user.email "actions@github.com"
+          git add website_list.json
+          git commit -m "Update website_list.json" && git push || echo "Nothing to commit, no changes to JSON."
+
+      - name: Compress into .zip for GitHub Pages
+        run: |
+          for dir in Meme/*/
+          do
+              dir=${dir%*/}
+              dir=${dir##*/}
+              cd Meme/${dir}
+              7z a -r -ssw ../packs${dir}.zip pack.json pack.png Clicks/ Releases/
+              cd ../../
+              python .github/JsonCreator/removedir.py Meme/${dir}
+          done
+          for dir in Useful/*/
+          do
+              dir=${dir%*/}
+              dir=${dir##*/}
+              cd Useful/${dir}
+              7z a -r -ssw ../${dir}.zip pack.json pack.png Clicks/ Releases/
+              cd ../../
+              python .github/JsonCreator/removedir.py Useful/${dir}
+          done
+          python .github/JsonCreator/removegithubfolder.py
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
