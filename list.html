@@ -136,11 +136,21 @@
             font-size: 1.5em;
             margin-top: 20px;
         }
-
-        .sound-list {
-            overflow-y: auto; 
-            padding: 10px; 
+        body {
+            margin: 0;
+            overflow: hidden; 
+            height: 100%; 
         }
+
+        html {
+            height: 100%; 
+            overflow: auto; 
+        }
+
+        ::-webkit-scrollbar {
+            display: none; 
+        }
+
 
     </style>
 </head>
