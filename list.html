@@ -145,6 +145,48 @@
         ::-webkit-scrollbar {
             display: none; 
         }
+
+    #typeSelect {
+        border-radius: 5px;
+        border: 1px solid #00aaff;
+        background-color: rgba(255, 255, 255, 0.2);
+        color: rgb(255, 255, 255);  
+        -webkit-appearance: none;  
+        -moz-appearance: none;  
+        appearance: none;  
+    }
+
+    #typeSelect option {
+        border-radius: 5px;
+        border: 1px solid #00aaff;
+        background-color: rgba(0, 0, 0, 0.1);  
+        color: black;  
+    }
+
+    #typeSelect:focus option {
+        background-color: rgba(0, 0, 0, 0.2);  
+    }
+
+    #categorySelect {
+        border-radius: 5px;
+        border: 1px solid #00aaff;
+        background-color: rgba(255, 255, 255, 0.2);
+        color: rgb(255, 255, 255);  
+        -webkit-appearance: none;  
+        -moz-appearance: none;  
+        appearance: none;  
+    }
+
+    #categorySelect option {
+        border-radius: 5px;
+        border: 1px solid #00aaff;
+        background-color: rgba(0, 0, 0, 0.1);  
+        color: black;  
+    }
+
+    #categorySelect:focus option {
+        background-color: rgba(0, 0, 0, 0.2);  
+    }
     </style>
 </head>
 <body>
@@ -165,12 +207,14 @@
             <option value="Meme">Meme</option>
             <option value="Useful">Useful</option>
         </select>
+        <script> document.addEventListener('DOMContentLoaded', function() { const selectElement = document.getElementById('categorySelect'); const defaultOption = selectElement.querySelector('option[value=""]'); selectElement.addEventListener('change', function() { if (selectElement.value === "") { selectElement.selectedIndex = 1;  } }); defaultOption.style.display = 'none'; }); </script>
         <select id="typeSelect" onchange="filterSounds()">
             <option value="">Select Type</option>
             <option value="Clicks">Clicks</option>
             <option value="Releases">Releases</option>
             <option value="Both">Both</option>
         </select>
+        <script> document.addEventListener('DOMContentLoaded', function() { const selectElement = document.getElementById('typeSelect'); const defaultOption = selectElement.querySelector('option[value=""]'); selectElement.addEventListener('change', function() { if (selectElement.value === "") { selectElement.selectedIndex = 1;  } }); defaultOption.style.display = 'none'; }); </script>
         <button onclick="filterSounds()">Apply Filters</button>
     </div>
 
@@ -182,6 +226,7 @@
     <div class="no-results" id="noResults" style="display: none;">No sounds found matching your criteria.</div>
 
     <script>
+        
         const soundsDataPath = './website_list.json'; 
     
         async function loadSoundsData() {
