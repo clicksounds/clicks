@@ -99,7 +99,7 @@ jobs:
           run: cd .github/JsonCreator/; python main.py
           env:
             ALL_FILES: ${{ steps.get-files.outputs.files }}
-                - name: Generate website_list.json
+        - name: Generate website_list.json
         run: |
           echo "Generating website_list.json..."
           echo '{' > website_list.json
