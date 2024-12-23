@@ -157,7 +157,7 @@ jobs:
 
       - name: Commit Generated website_list.json
         run: |
-          git config user.name "Clicksounds Wesbite"
+          git config user.name "GitHub Actions"
           git config user.email "actions@github.com"
           git add website_list.json
           git commit -m "Update website_list.json" && git push || echo "Nothing to commit, no changes to JSON."
@@ -195,3 +195,5 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+        with:
+          environment: github-pages   # Specify the environment here
