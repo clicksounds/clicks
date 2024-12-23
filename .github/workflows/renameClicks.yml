@@ -1,4 +1,4 @@
-name: Rename All Clicks and Deploy Pages
+name: Rename All Clicks and Deploy Pages with json
 
 on:
   push:
@@ -72,7 +72,7 @@ jobs:
                     output="${output}, \"${file}\""
                   fi
               done
-              output="${output}]}"
+              output="${output}]}]"
           done
           # Loop through Useful directory
           for dir in Useful/*/
@@ -95,14 +95,12 @@ jobs:
                     output="${output}, \"${file}\""
                   fi
               done
-              output="${output}]}"
+              output="${output}]}]"
           done
           output="$output}}"
           echo "files=$output" >> "$GITHUB_OUTPUT"
 
-      
-
-        - name: Generate website_list.json
+      - name: Generate website_list.json
         run: |
           echo "Generating website_list.json..."
           echo '{' > website_list.json
