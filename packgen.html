@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click Pack Generator</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #1e1e2f;
+            color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        h1, h2 {
+            color: #85ccf5;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        section {
+            background-color: #2a2a3d;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 600px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+
+        label.required::after {
+            content: " *";
+            color: red;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        input[type="file"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 15px;
+            margin-right: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #3a3a50;
+            color: #fff;
+        }
+
+        input[type="radio"] {
+            margin-right: 5px;
+            display: inline-block;
+        }
+
+        label[for="typeUseful"],
+        label[for="typeMeme"] {
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        input[type="file"] {
+            border: 2px dashed #85ccf5;
+            text-align: center;
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            margin-top: 15px;
+            border: none;
+            border-radius: 10px;
+            background-color: #555;
+            color: #1e1e2f;
+            font-size: 1rem;
+            cursor: not-allowed;
+            transition: background-color 0.3s, transform 0.2s;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        button:hover {
+            background-color: #6ea7c7;
+        }
+
+        button:enabled {
+            background-color: #6ee873;
+            cursor: pointer;
+        }
+
+        button:enabled:hover {
+            background-color: #4abf5f;
+            transform: translateY(-2px);
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            background-color: #3a3a50;
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        p {
+            font-size: 0.9rem;
+        }
+
+        #generatePack:disabled {
+            background-color: #555;
+            cursor: not-allowed;
+        }
+
+        @media (max-width: 600px) {
+            section {
+                margin: 10px;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Click Pack Generator</h1>
+
+    <section>
+        <h2>Pack Details</h2>
+        <label for="packName" class="required">Pack Name:</label>
+        <input type="text" id="packName" placeholder="Enter pack name" required><br>
+
+        <label for="authorName" class="required">Author Name:</label>
+        <input type="text" id="authorName" placeholder="Enter author name" required><br>
+
+        <label for="gdAccountID">Geometry Dash Account ID (optional):</label>
+        <input type="text" id="gdAccountID" placeholder="Enter GD account ID"><br>
+
+        <label class="required">Type:</label>
+        <input type="radio" id="typeUseful" name="packType" value="Useful">
+        <label for="typeUseful" style="display: inline-block;">Useful</label>
+        <input type="radio" id="typeMeme" name="packType" value="Meme">
+        <label for="typeMeme" style="display: inline-block;">Meme</label>
+    </section>
+
+    <section>
+        <h2>Click Sounds (max 25)</h2>
+        <input type="file" id="clickFiles" multiple accept=".mp3,.ogg,.wav">
+        <p id="clickCount">Uploaded: 0/25</p>
+        <ul id="clickList"></ul>
+    </section>
+
+    <section>
+        <h2>Release Sounds (max 25)</h2>
+        <input type="file" id="releaseFiles" multiple accept=".mp3,.ogg,.wav">
+        <p id="releaseCount">Uploaded: 0/25</p>
+        <ul id="releaseList"></ul>
+    </section>
+
+    <section style="display: flex; justify-content: center; align-items: center; height: 100%;">
+        <button id="generatePack" disabled>Download Pack</button>
+    </section>
+
+    <script>
+        const clickFiles = [];
+        const releaseFiles = [];
+
+        document.getElementById('clickFiles').addEventListener('change', (e) => {
+            const files = Array.from(e.target.files);
+            if (clickFiles.length + files.length > 25) {
+                alert('You can only upload up to 25 click sounds.');
+                return;
+            }
+            clickFiles.push(...files);
+            updateList('click', clickFiles);
+        });
+
+        document.getElementById('releaseFiles').addEventListener('change', (e) => {
+            const files = Array.from(e.target.files);
+            if (releaseFiles.length + files.length > 25) {
+                alert('You can only upload up to 25 release sounds.');
+                return;
+            }
+            releaseFiles.push(...files);
+            updateList('release', releaseFiles);
+        });
+
+        document.getElementById('gdAccountID').addEventListener('input', (e) => {
+            const value = e.target.value;
+            if (!/^[0-9]*$/.test(value)) {
+                e.target.value = value.replace(/\D/g, '');
+            }
+        });
+
+        function updateList(type, files) {
+            const list = document.getElementById(`${type}List`);
+            const count = document.getElementById(`${type}Count`);
+            list.innerHTML = '';
+            files.forEach((file, index) => {
+                const li = document.createElement('li');
+                li.textContent = `${index + 1}. ${file.name}`;
+                list.appendChild(li);
+            });
+            count.textContent = `Uploaded: ${files.length}/25`;
+            checkGenerateButton();
+        }
+
+        function checkGenerateButton() {
+            const generateButton = document.getElementById('generatePack');
+            const packName = document.getElementById('packName').value.trim();
+            const authorName = document.getElementById('authorName').value.trim();
+            const typeSelected = document.querySelector('input[name="packType"]:checked');
+
+            generateButton.disabled = !(packName && authorName && typeSelected) || clickFiles.length === 0 && releaseFiles.length === 0;
+        }
+
+        window.addEventListener('load', () => {
+            checkGenerateButton();
+        });
+
+        document.getElementById('generatePack').addEventListener('click', async () => {
+            const packName = document.getElementById('packName').value.trim();
+            const authorName = document.getElementById('authorName').value.trim();
+            const gdAccountID = document.getElementById('gdAccountID').value.trim();
+            const packType = document.querySelector('input[name="packType"]:checked').value;
+
+            const zip = new JSZip();
+            const clicksFolder = zip.folder('Clicks');
+            const releasesFolder = zip.folder('Releases');
+
+            clickFiles.forEach((file, index) => {
+                clicksFolder.file(`${index + 1}.${file.name.split('.').pop()}`, file);
+            });
+
+            releaseFiles.forEach((file, index) => {
+                releasesFolder.file(`${index + 1}.${file.name.split('.').pop()}`, file);
+            });
+
+            const id = `${authorName.toLowerCase().replace(/\s+/g, '-')}.${packName.toLowerCase().replace(/\s+/g, '-')}`;
+            const packJson = {
+                "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+                "id": id,
+                "type": packType,
+                "name": packName,
+                "authors": [
+                    {
+                        "name": authorName,
+                        ...(gdAccountID && { "gdAccountID": parseInt(gdAccountID, 10) })
+                    }
+                ]
+            };
+
+            zip.file('pack.json', JSON.stringify(packJson, null, 4));
+
+            const content = await zip.generateAsync({ type: 'blob' });
+            const a = document.createElement('a');
+            a.href = URL.createObjectURL(content);
+            a.download = `${id}.zip`;
+            a.click();
+        });
+
+        document.getElementById('packName').addEventListener('input', checkGenerateButton);
+        document.getElementById('authorName').addEventListener('input', checkGenerateButton);
+        document.querySelectorAll('input[name="packType"]').forEach(input => {
+            input.addEventListener('change', checkGenerateButton);
+        });
+
+        window.addEventListener('beforeunload', () => {
+            document.getElementById('packName').value = '';
+            document.getElementById('authorName').value = '';
+            document.getElementById('gdAccountID').value = '';
+            document.getElementById('clickFiles').value = '';
+            document.getElementById('releaseFiles').value = '';
+            document.querySelector('input[name="packType"]:checked').checked = false;
+        });
+    </script>
+</body>
+</html>
