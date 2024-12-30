@@ -328,6 +328,16 @@
             document.getElementById('releaseFiles').value = '';
             document.querySelector('input[name="packType"]:checked').checked = false;
         });
+		
+		document.querySelectorAll('input[type="text"]').forEach(input => {
+			input.addEventListener('input', (e) => {
+				const value = e.target.value;
+				if (!/^[a-zA-Z0-9-_]*$/.test(value)) {
+					alert('Only alphanumeric characters, dashes (-), and underscores (_) are allowed.');
+					e.target.value = value.replace(/[^a-zA-Z0-9-_]/g, '');
+				}
+			});
+		});
     </script>
 </body>
 </html>
