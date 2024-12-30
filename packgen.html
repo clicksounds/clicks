@@ -131,9 +131,53 @@
                 font-size: 1.5rem;
             }
         }
+		
+		/* Navbar styles */
+		nav {
+			width: 100%;
+			background-color: rgba(0, 0, 0, 0.8); /* Dark background for the navbar */
+			padding: 10px 20px;
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 10;
+			display: flex;
+			justify-content: center; /* centers the navbar items */
+			align-items: center; /* vertically aligns the navbar items */
+		}
+
+		/* Navigation links */
+		nav a {
+			color: #00aaff;
+			text-decoration: none;
+			font-size: 1.2em;
+			margin-right: 20px;
+			display: inline-block;
+			transition: all 0.3s ease;
+		}
+
+		nav a:hover {
+			background: #00aaff;
+			color: #fff;
+			padding: 5px 10px;
+			border-radius: 5px;
+		}
+
+        /* Main content styles */
+        h1 {
+            font-size: 2.5em;
+            margin-top: 100px; /* Adjust margin to allow space for the navbar */
+        }
     </style>
 </head>
 <body>
+	<nav>
+        <a href="./list.html">List</a>
+		<a href="./index.html">Home</a>
+		<a href="./addsoundhelp.html">Add Sound</a>
+		<a href="./download.html">Download</a>
+    </nav>
+
     <h1>Click Pack Generator</h1>
 
     <section>
