@@ -16,7 +16,6 @@
         body {
             font-family: Arial, sans-serif;
             color: #fff;
-            /*background: url('./.images/nobglogo.png') no-repeat center center/cover; /* Replace with your image URL */
             background-color: #1e1e2f;
             height: 100vh;
             display: flex;
@@ -26,6 +25,11 @@
             text-align: center;
             position: relative;
             overflow: hidden;
+        }
+		
+		/* Links dont turn purple after being visited*/
+        a:visited {
+            color: #00aaff;
         }
 
         /* Overlay to darken the image
@@ -137,8 +141,10 @@
         <a href="./addsoundhelp.html">Add Sound</a>
         <a href="./packgen.html">Pack Generator</a>
     </nav>
-    <img src="./.images/geode-cs-install.gif" alt= "Installing CS using the Geode index." style="display: block; margin-left: auto; margin-right: auto; width: 50%; max-width: 300px; height: auto;">
+    <img src="./.images/geode-cs-install.gif" alt= "Installing CS using the Geode index." style="display: block; margin-left: auto; margin-right: auto; width: 50%; max-width: 700px; height: auto;">
     
-    <h4><br>To download click sounds open the geode index or go to the geode site and download the mod!</h4>
+    <h3><br>Click Sounds and Click Sounds Lite can be downloaded ingame from the Geode Index.</h3>
+	<h4><br>Click Sounds can also be downloaded from <a href="https://github.com/clicksounds/geode-clicksound/releases/latest">here.</a></h4>
+	<h4><br>Click Sounds Lite can also be downloaded from <a href="https://github.com/clicksounds/geode-clicksoundslite/releases/latest">here.</a></h4>
 </body>
 </html>
