@@ -1,0 +1,11 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "bitah.zonk-click-pack",
+    "type": "Useful",
+    "name": "Zonk Click Pack (Randomized)",
+    "authors": [
+        {
+            "name": "Bitah"
+        }
+    ]
+}
