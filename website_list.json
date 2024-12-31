@@ -109,6 +109,10 @@
         "Clicks"
         , "Releases"
     ]},
+    {"name": "NormiePack", "type": "Useful", "folders": [
+        "Clicks"
+        , "Releases"
+    ]},
     {"name": "Samsung AA-MR1D9TB Mouse", "type": "Useful", "folders": [
         "Clicks"
     ]},
