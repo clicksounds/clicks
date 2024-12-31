@@ -1,0 +1,11 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "exparaigon.normiepack",
+    "type": "Useful",
+    "name": "NormiePack",
+    "authors": [
+        {
+            "name": "Exparaigon"
+        }
+    ]
+}
