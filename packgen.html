@@ -310,7 +310,7 @@
             const content = await zip.generateAsync({ type: 'blob' });
             const a = document.createElement('a');
             a.href = URL.createObjectURL(content);
-            a.download = `${id}.zip`;
+            a.download = `${id}.packgen.zip`;
             a.click();
         });
 
@@ -329,18 +329,18 @@
             document.querySelector('input[name="packType"]:checked').checked = false;
         });
 		
-	document.querySelectorAll('input[type="text"]').forEach(input => {
-		input.addEventListener('input', (e) => {
-			const value = e.target.value;
-			if (!/^[a-zA-Z0-9-_ ]*$/.test(value)) {
-				alert('Only alphanumeric characters, spaces, dashes (-), and underscores (_) are allowed.');
-				e.target.value = value.replace(/[^a-zA-Z0-9-_ ]/g, '');
-			}
-		});
-	});
+	    document.querySelectorAll('input[type="text"]').forEach(input => {
+	    	input.addEventListener('input', (e) => {
+	    		const value = e.target.value;
+	    		if (!/^[a-zA-Z0-9-_ ]*$/.test(value)) {
+	        		alert('Only alphanumeric characters, spaces, dashes (-), and underscores (_) are allowed.');
+	    			e.target.value = value.replace(/[^a-zA-Z0-9-_ ]/g, '');
+	    		}
+		    });
+	    });
 
-	document.documentElement.style.overflowX = 'hidden';
-	document.body.style.overflowX = 'hidden';
+	    document.documentElement.style.overflowX = 'hidden';
+	    document.body.style.overflowX = 'hidden';
     </script>
 </body>
 </html>
