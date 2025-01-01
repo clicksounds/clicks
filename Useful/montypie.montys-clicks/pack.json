@@ -1,0 +1,11 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "montypie.montys-clicks",
+    "type": "Useful",
+    "name": "Montys-Clicks",
+    "authors": [
+        {
+            "name": "MontyPie"
+        }
+    ]
+}
