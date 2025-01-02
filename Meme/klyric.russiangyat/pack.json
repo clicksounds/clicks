@@ -1,0 +1,11 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "klyric.russiangyat",
+    "type": "Meme",
+    "name": "RussianGyat",
+    "authors": [
+        {
+            "name": "Klyric"
+        }
+    ]
+}
