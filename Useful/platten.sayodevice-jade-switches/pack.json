@@ -1,0 +1,12 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "platten.sayodevice-jade-switches",
+    "type": "Useful",
+    "name": "Sayodevice Jade Switches",
+    "authors": [
+        {
+            "name": "Platten",
+            "gdAccountID": 26668684
+        }
+    ]
+}
