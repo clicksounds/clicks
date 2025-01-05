@@ -1,0 +1,11 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "cuuh.laptop-spacebar",
+    "type": "Useful",
+    "name": "Laptop Spacebar",
+    "authors": [
+        {
+            "name": "cuuh"
+        }
+    ]
+}
