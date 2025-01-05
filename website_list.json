@@ -146,6 +146,10 @@
     {"name": "osu! Hit Sound", "type": "Useful", "folders": [
         "Clicks"
     ]},
+    {"name": "Glorious Model O", "type": "Useful", "folders": [
+        "Clicks"
+        , "Releases"
+    ]},
     {"name": "Sayodevice Jade Switches", "type": "Useful", "folders": [
         "Clicks"
         , "Releases"
