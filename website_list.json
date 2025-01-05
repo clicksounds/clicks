@@ -112,6 +112,10 @@
     {"name": "Cursed (Player)", "type": "Useful", "folders": [
         "Clicks"
     ]},
+    {"name": "Laptop Spacebar", "type": "Useful", "folders": [
+        "Clicks"
+        , "Releases"
+    ]},
     {"name": "Doggie", "type": "Useful", "folders": [
         "Clicks"
         , "Releases"
