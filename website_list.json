@@ -146,6 +146,10 @@
     {"name": "osu! Hit Sound", "type": "Useful", "folders": [
         "Clicks"
     ]},
+    {"name": "Sayodevice Jade Switches", "type": "Useful", "folders": [
+        "Clicks"
+        , "Releases"
+    ]},
     {"name": "Epomaker RT100 Spacebar", "type": "Useful", "folders": [
         "Clicks"
     ]},
@@ -153,6 +157,10 @@
         "Clicks"
     ]},
     {"name": "Faze Clicks", "type": "Useful", "folders": [
+        "Clicks"
+        , "Releases"
+    ]},
+    {"name": "Trikehards controller click pack V2", "type": "Useful", "folders": [
         "Clicks"
         , "Releases"
     ]},
