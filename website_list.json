@@ -112,6 +112,10 @@
     {"name": "Cursed (Player)", "type": "Useful", "folders": [
         "Clicks"
     ]},
+    {"name": "G502", "type": "Useful", "folders": [
+        "Clicks"
+        , "Releases"
+    ]},
     {"name": "Laptop Spacebar", "type": "Useful", "folders": [
         "Clicks"
         , "Releases"
