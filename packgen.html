@@ -22,7 +22,12 @@
 
         h1 {
             text-align: center;
-            margin-top: 20px;
+            margin-top: 100px;
+            font-size: 2.5em;
+        }
+
+        h2 {
+            margin-bottom: 0px;
         }
 
         section {
@@ -42,6 +47,12 @@
         label.required::after {
             content: " *";
             color: red;
+        }
+
+        .footnote {
+            color: #999999;
+            margin-top: 0px;
+            display: block;
         }
 
         input[type="text"],
@@ -71,6 +82,7 @@
         input[type="file"] {
             border: 2px dashed #85ccf5;
             text-align: center;
+            margin-top: 12px;
         }
 
         button {
@@ -163,12 +175,6 @@
 			padding: 5px 10px;
 			border-radius: 5px;
 		}
-
-        /* Main content styles */
-        h1 {
-            font-size: 2.5em;
-            margin-top: 100px; /* Adjust margin to allow space for the navbar */
-        }
     </style>
 </head>
 <body>
@@ -185,6 +191,8 @@
         <h2>Pack Details</h2>
         <label for="packName" class="required">Pack Name:</label>
         <input type="text" id="packName" placeholder="Enter pack name" required><br>
+        
+        <small class="footnote">The author's name and account ID is for the original creator of the sound(s).</small>
 
         <label for="authorName" class="required">Author Name:</label>
         <input type="text" id="authorName" placeholder="Enter author name" required><br>
@@ -201,6 +209,7 @@
 
     <section>
         <h2>Click Sounds (max 25)</h2>
+        <small class="footnote">The best audio format is .ogg.</small>
         <input type="file" id="clickFiles" multiple accept=".mp3,.ogg,.wav">
         <p id="clickCount">Uploaded: 0/25</p>
         <ul id="clickList"></ul>
@@ -208,6 +217,7 @@
 
     <section>
         <h2>Release Sounds (max 25)</h2>
+        <small class="footnote">The best audio format is .ogg.</small>
         <input type="file" id="releaseFiles" multiple accept=".mp3,.ogg,.wav">
         <p id="releaseCount">Uploaded: 0/25</p>
         <ul id="releaseList"></ul>
