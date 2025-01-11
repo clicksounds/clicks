@@ -163,6 +163,10 @@
         "Clicks"
         , "Releases"
     ]},
+    {"name": "Nice Clicks", "type": "Useful", "folders": [
+        "Clicks"
+        , "Releases"
+    ]},
     {"name": "osu! Hit Sound", "type": "Useful", "folders": [
         "Clicks"
     ]},
@@ -271,6 +275,10 @@
         "Clicks"
     ]},
     {"name": "Viper 8k", "type": "Useful", "folders": [
+        "Clicks"
+        , "Releases"
+    ]},
+    {"name": "Zeroniums Keyboard", "type": "Useful", "folders": [
         "Clicks"
         , "Releases"
     ]},
