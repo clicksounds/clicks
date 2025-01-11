@@ -1,0 +1,12 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "nywalll.nice-clicks",
+    "type": "Useful",
+    "name": "Nice Clicks",
+    "authors": [
+        {
+            "name": "Nywalll",
+            "gdAccountID": 90575325
+        }
+    ]
+}
