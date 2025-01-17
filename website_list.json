@@ -170,6 +170,10 @@
         "Clicks"
         , "Releases"
     ]},
+    {"name": "Microsoft Mouse", "type": "Useful", "folders": [
+        "Clicks"
+        , "Releases"
+    ]},
     {"name": "npesta", "type": "Useful", "folders": [
         "Clicks"
         , "Releases"
