@@ -105,6 +105,9 @@
         "Clicks"
         , "Releases"
     ]},
+    {"name": "Mobile Ground Tap", "type": "Useful", "folders": [
+        "Clicks"
+    ]},
     {"name": "Default", "type": "Useful", "folders": [
         "Clicks"
     ]},
@@ -127,6 +130,10 @@
         "Clicks"
         , "Releases"
     ]},
+    {"name": "Mobile Taps V2", "type": "Useful", "folders": [
+        "Clicks"
+        , "Releases"
+    ]},
     {"name": "random mouse i found in my drawer", "type": "Useful", "folders": [
         "Clicks"
         , "Releases"
@@ -139,6 +146,10 @@
         "Clicks"
         , "Releases"
     ]},
+    {"name": "Doggie G502 Hero", "type": "Useful", "folders": [
+        "Clicks"
+        , "Releases"
+    ]},
     {"name": "NormiePack", "type": "Useful", "folders": [
         "Clicks"
         , "Releases"
@@ -147,6 +158,10 @@
         "Clicks"
     ]},
     {"name": "Creamy Clicks", "type": "Useful", "folders": [
+        "Clicks"
+        , "Releases"
+    ]},
+    {"name": "Lawfuls Clicks", "type": "Useful", "folders": [
         "Clicks"
         , "Releases"
     ]},
@@ -163,6 +178,14 @@
         , "Releases"
     ]},
     {"name": "Neiro", "type": "Useful", "folders": [
+        "Clicks"
+        , "Releases"
+    ]},
+    {"name": "NexusGD", "type": "Useful", "folders": [
+        "Clicks"
+        , "Releases"
+    ]},
+    {"name": "Microsoft Mouse", "type": "Useful", "folders": [
         "Clicks"
         , "Releases"
     ]},

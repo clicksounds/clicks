@@ -1,0 +1,11 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "lawfuldmcboo.lawfuls-clicks",
+    "type": "Useful",
+    "name": "Lawfuls Clicks",
+    "authors": [
+        {
+            "name": "LawfulDmcBoo"
+        }
+    ]
+}

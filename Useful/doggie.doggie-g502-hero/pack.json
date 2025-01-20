@@ -1,0 +1,11 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "doggie.doggie-g502-hero",
+    "type": "Useful",
+    "name": "Doggie G502 Hero",
+    "authors": [
+        {
+            "name": "Doggie"
+        }
+    ]
+}

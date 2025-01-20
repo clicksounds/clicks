@@ -1,0 +1,11 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "nexusgd.nexusgd",
+    "type": "Useful",
+    "name": "NexusGD",
+    "authors": [
+        {
+            "name": "NexusGD"
+        }
+    ]
+}
