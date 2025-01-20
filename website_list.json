@@ -105,6 +105,9 @@
         "Clicks"
         , "Releases"
     ]},
+    {"name": "Mobile Ground Tap", "type": "Useful", "folders": [
+        "Clicks"
+    ]},
     {"name": "Default", "type": "Useful", "folders": [
         "Clicks"
     ]},
