@@ -1,0 +1,11 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "danix7.cream-blue-v3",
+    "type": "Useful",
+    "name": "Cream Blue v3",
+    "authors": [
+        {
+            "name": "Danix7"
+        }
+    ]
+}
