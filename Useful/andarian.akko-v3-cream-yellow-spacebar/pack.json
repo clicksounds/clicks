@@ -1,0 +1,11 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "andarian.akko-v3-cream-yellow-spacebar",
+    "type": "Useful",
+    "name": "Akko V3 Cream Yellow spacebar",
+    "authors": [
+        {
+            "name": "Andarian"
+        }
+    ]
+}
