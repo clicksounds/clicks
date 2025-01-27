@@ -205,6 +205,10 @@
         "Clicks"
         , "Releases"
     ]},
+    {"name": "Questionable Mouse", "type": "Useful", "folders": [
+        "Clicks"
+        , "Releases"
+    ]},
     {"name": "Microsoft Mouse", "type": "Useful", "folders": [
         "Clicks"
         , "Releases"
