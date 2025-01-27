@@ -1,0 +1,11 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "andarian.andarians-spacebar",
+    "type": "Useful",
+    "name": "Andarians Spacebar",
+    "authors": [
+        {
+            "name": "Andarian"
+        }
+    ]
+}
