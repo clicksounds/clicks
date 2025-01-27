@@ -339,6 +339,10 @@
     {"name": "Zoink 2", "type": "Useful", "folders": [
         "Clicks"
         , "Releases"
+    ]},
+    {"name": "Razer DeathAdder Elite", "type": "Useful", "folders": [
+        "Clicks"
+        , "Releases"
     ]}
   ]
 }
