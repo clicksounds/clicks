@@ -1,0 +1,11 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "cursed.cursed-clicks-2023",
+    "type": "Useful",
+    "name": "Cursed Clicks 2023",
+    "authors": [
+        {
+            "name": "Cursed"
+        }
+    ]
+}
