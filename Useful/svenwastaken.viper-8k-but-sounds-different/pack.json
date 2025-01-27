@@ -1,0 +1,11 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "svenwastaken.viper-8k-but-sounds-different",
+    "type": "Useful",
+    "name": "Viper 8K but Sounds different",
+    "authors": [
+        {
+            "name": "SvenWasTaken"
+        }
+    ]
+}
