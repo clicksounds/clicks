@@ -208,6 +208,10 @@
     {"name": "osu! Hit Sound", "type": "Useful", "folders": [
         "Clicks"
     ]},
+    {"name": "Wooting Two HE", "type": "Useful", "folders": [
+        "Clicks"
+        , "Releases"
+    ]},
     {"name": "Glorious Model O", "type": "Useful", "folders": [
         "Clicks"
         , "Releases"
