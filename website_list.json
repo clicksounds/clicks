@@ -130,6 +130,10 @@
     {"name": "Cursed (Player)", "type": "Useful", "folders": [
         "Clicks"
     ]},
+    {"name": "Cursed Clicks 2023", "type": "Useful", "folders": [
+        "Clicks"
+        , "Releases"
+    ]},
     {"name": "G502", "type": "Useful", "folders": [
         "Clicks"
         , "Releases"
