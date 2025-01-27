@@ -1,0 +1,11 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "zwild.razer-deathadder-elite",
+    "type": "Useful",
+    "name": "Razer DeathAdder Elite",
+    "authors": [
+        {
+            "name": "zWild"
+        }
+    ]
+}
