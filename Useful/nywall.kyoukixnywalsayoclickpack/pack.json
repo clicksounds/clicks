@@ -1,0 +1,11 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "nywall.kyoukixnywalsayoclickpack",
+    "type": "Useful",
+    "name": "kyoukiXnywalSayoClickpack",
+    "authors": [
+        {
+            "name": "nywall"
+        }
+    ]
+}
