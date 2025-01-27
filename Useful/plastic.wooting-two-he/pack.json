@@ -1,0 +1,11 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "plastic.wooting-two-he",
+    "type": "Useful",
+    "name": "Wooting Two HE",
+    "authors": [
+        {
+            "name": "Plastic"
+        }
+    ]
+}
