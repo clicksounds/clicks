@@ -1,0 +1,12 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "nobody.questionable-mouse",
+    "type": "Useful",
+    "name": "Questionable Mouse",
+    "authors": [
+        {
+            "name": "gigaboy99",
+            "gdAccountID": 29450530
+        }
+    ]
+}
