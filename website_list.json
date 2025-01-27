@@ -113,6 +113,10 @@
         "Clicks"
         , "Releases"
     ]},
+    {"name": "Andarians Spacebar", "type": "Useful", "folders": [
+        "Clicks"
+        , "Releases"
+    ]},
     {"name": "Gateron Yellow switch", "type": "Useful", "folders": [
         "Clicks"
         , "Releases"
