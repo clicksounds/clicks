@@ -18,6 +18,10 @@
       "type": "string",
       "pattern": "^([a-z0-9\\-]+\\.[a-z0-9\\-]+)$"
     },
+    "packgen" {
+		  "type": "boolean",
+		  "description": "Indicates if a pack was made using pack generator. This is important for debugging. It must be enabled only on click packs made using pack generator."
+	  },
     "type": {
       "description": "Is this click pack a Meme, or is it Useful. Only allows \"Useful\" or \"Meme\" to be typed. (CASE SENSITIVE)",
       "type": "string",
