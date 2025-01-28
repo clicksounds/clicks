@@ -1,0 +1,12 @@
+{
+    "$schema": "https://pastebin.com/raw/WdpRhAtd",
+    "id": "sony.gran-turismo-7",
+	"packgen": true,
+    "type": "Useful",
+    "name": "Gran Turismo 7",
+    "authors": [
+        {
+            "name": "Sony"
+        }
+    ]
+}
