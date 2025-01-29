@@ -1,0 +1,12 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "danix7.g412-se-up-arrow",
+	"packgen": true,
+    "type": "Useful",
+    "name": "G412 SE Up Arrow",
+    "authors": [
+        {
+            "name": "Danix7"
+        }
+    ]
+}
