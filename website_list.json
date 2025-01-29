@@ -170,6 +170,10 @@
         "Clicks"
         , "Releases"
     ]},
+    {"name": "G412 SE Up Arrow", "type": "Useful", "folders": [
+        "Clicks"
+        , "Releases"
+    ]},
     {"name": "whatclick", "type": "Useful", "folders": [
         "Clicks"
         , "Releases"
