@@ -1,0 +1,13 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "goodvirgame.g502-v2",
+    "packgen": true,
+    "type": "Useful",
+    "name": "G502 v2",
+    "authors": [
+        {
+            "name": "GoodVirGame",
+            "gdAccountID": 23452776
+        }
+    ]
+}
