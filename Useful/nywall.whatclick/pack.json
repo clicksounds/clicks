@@ -1,0 +1,12 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "nywall.whatclick",
+	"packgen": false,
+    "type": "Useful",
+    "name": "whatclick",
+    "authors": [
+        {
+            "name": "Nywall"
+        }
+    ]
+}
