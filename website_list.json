@@ -240,6 +240,10 @@
         "Clicks"
         , "Releases"
     ]},
+    {"name": "whatclick", "type": "Useful", "folders": [
+        "Clicks"
+        , "Releases"
+    ]},
     {"name": "Nice Clicks", "type": "Useful", "folders": [
         "Clicks"
         , "Releases"
