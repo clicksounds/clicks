@@ -1,0 +1,12 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "mark.marks-logitech-g502",
+    "packgen": true,
+    "type": "Useful",
+    "name": "Marks Logitech G502",
+    "authors": [
+        {
+            "name": "mark"
+        }
+    ]
+}
