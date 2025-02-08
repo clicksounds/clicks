@@ -216,6 +216,10 @@
         "Clicks"
         , "Releases"
     ]},
+    {"name": "Exens SayoDevice O3C", "type": "Useful", "folders": [
+        "Clicks"
+        , "Releases"
+    ]},
     {"name": "NexusGD", "type": "Useful", "folders": [
         "Clicks"
         , "Releases"
