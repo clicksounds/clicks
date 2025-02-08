@@ -1,0 +1,13 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "neiro.exens-sayodevice-o3c",
+    "packgen": true,
+    "type": "Useful",
+    "name": "Exens SayoDevice O3C",
+    "authors": [
+        {
+            "name": "Neiro",
+            "gdAccountID": 5316754
+        }
+    ]
+}
