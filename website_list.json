@@ -130,10 +130,6 @@
     {"name": "Default", "type": "Useful", "folders": [
         "Clicks"
     ]},
-    {"name": "Neiro Click Pack", "type": "Useful", "folders": [
-        "Clicks"
-        , "Releases"
-    ]},
     {"name": "SayoDevice O3C V2", "type": "Useful", "folders": [
         "Clicks"
         , "Releases"
@@ -221,6 +217,10 @@
         , "Releases"
     ]},
     {"name": "Exens SayoDevice O3C", "type": "Useful", "folders": [
+        "Clicks"
+        , "Releases"
+    ]},
+    {"name": "Neiro Click Pack", "type": "Useful", "folders": [
         "Clicks"
         , "Releases"
     ]},
