@@ -1,13 +1,13 @@
 {
     "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
-    "id": "beat.neiro-click-pack",
+    "id": "neiro.neiro-click-pack",
     "packgen": true,
     "type": "Useful",
     "name": "Neiro Click Pack",
     "authors": [
         {
-            "name": "Beat",
-            "gdAccountID": 26412428
+            "name": "Neiro",
+            "gdAccountID": 5316754
         }
     ]
 }
