@@ -1,0 +1,12 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "bitah.rk61-up-arrow",
+    "packgen": true,
+    "type": "Useful",
+    "name": "RK61 Up Arrow",
+    "authors": [
+        {
+            "name": "Bitah"
+        }
+    ]
+}
