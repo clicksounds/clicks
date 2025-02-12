@@ -134,6 +134,10 @@
     {"name": "Default", "type": "Useful", "folders": [
         "Clicks"
     ]},
+    {"name": "RK61 Up Arrow", "type": "Useful", "folders": [
+        "Clicks"
+        , "Releases"
+    ]},
     {"name": "SayoDevice O3C V2", "type": "Useful", "folders": [
         "Clicks"
         , "Releases"
