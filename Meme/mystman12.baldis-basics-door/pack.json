@@ -1,0 +1,12 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "mystman12.baldis-basics-door",
+    "packgen": true,
+    "type": "Meme",
+    "name": "Baldis Basics Door",
+    "authors": [
+        {
+            "name": "mystman12"
+        }
+    ]
+}
