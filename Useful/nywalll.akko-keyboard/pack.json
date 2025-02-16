@@ -1,0 +1,12 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "nywalll.akko-keyboard",
+    "packgen": true,
+    "type": "Useful",
+    "name": "Akko Keyboard",
+    "authors": [
+        {
+            "name": "nywalll"
+        }
+    ]
+}
