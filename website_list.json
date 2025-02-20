@@ -24,6 +24,9 @@
     {"name": "Bad to the Bone", "type": "Meme", "folders": [
         "Clicks"
     ]},
+    {"name": "KingSammelot Boing", "type": "Meme", "folders": [
+        "Clicks"
+    ]},
     {"name": "RussianGyat", "type": "Meme", "folders": [
         "Clicks"
         , "Releases"
@@ -36,6 +39,10 @@
     ]},
     {"name": "Windows USB Sounds", "type": "Meme", "folders": [
         "Clicks"
+    ]},
+    {"name": "Baldis Basics Door", "type": "Meme", "folders": [
+        "Clicks"
+        , "Releases"
     ]},
     {"name": "oh my god", "type": "Meme", "folders": [
         "Clicks"
@@ -120,6 +127,10 @@
         "Clicks"
         , "Releases"
     ]},
+    {"name": "Cheap logitech mouse", "type": "Useful", "folders": [
+        "Clicks"
+        , "Releases"
+    ]},
     {"name": "Gateron Yellow switch", "type": "Useful", "folders": [
         "Clicks"
         , "Releases"
@@ -130,7 +141,7 @@
     {"name": "Default", "type": "Useful", "folders": [
         "Clicks"
     ]},
-    {"name": "Neiro Click Pack", "type": "Useful", "folders": [
+    {"name": "RK61 Up Arrow", "type": "Useful", "folders": [
         "Clicks"
         , "Releases"
     ]},
@@ -224,6 +235,10 @@
         "Clicks"
         , "Releases"
     ]},
+    {"name": "Neiro Click Pack", "type": "Useful", "folders": [
+        "Clicks"
+        , "Releases"
+    ]},
     {"name": "NexusGD", "type": "Useful", "folders": [
         "Clicks"
         , "Releases"
@@ -249,6 +264,10 @@
         , "Releases"
     ]},
     {"name": "whatclick", "type": "Useful", "folders": [
+        "Clicks"
+        , "Releases"
+    ]},
+    {"name": "Akko Keyboard", "type": "Useful", "folders": [
         "Clicks"
         , "Releases"
     ]},
@@ -399,6 +418,10 @@
         , "Releases"
     ]},
     {"name": "Razer DeathAdder Elite", "type": "Useful", "folders": [
+        "Clicks"
+        , "Releases"
+    ]},
+    {"name": "zxsetj up arrow pack", "type": "Useful", "folders": [
         "Clicks"
         , "Releases"
     ]}
