@@ -302,6 +302,10 @@
     {"name": "SpaceUK", "type": "Useful", "folders": [
         "Clicks"
     ]},
+    {"name": "Razer Blackwidow Keyboard", "type": "Useful", "folders": [
+        "Clicks"
+        , "Releases"
+    ]},
     {"name": "Viper 8K but Sounds different", "type": "Useful", "folders": [
         "Clicks"
         , "Releases"
