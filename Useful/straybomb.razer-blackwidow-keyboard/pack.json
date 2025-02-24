@@ -1,0 +1,12 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "straybomb.razer-blackwidow-keyboard",
+    "packgen": true,
+    "type": "Useful",
+    "name": "Razer Blackwidow Keyboard",
+    "authors": [
+        {
+            "name": "straybomb"
+        }
+    ]
+}
