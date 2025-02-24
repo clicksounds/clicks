@@ -1,0 +1,12 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "straybomb.g203",
+    "packgen": true,
+    "type": "Useful",
+    "name": "G203",
+    "authors": [
+        {
+            "name": "straybomb"
+        }
+    ]
+}
