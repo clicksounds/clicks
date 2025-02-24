@@ -302,6 +302,10 @@
     {"name": "SpaceUK", "type": "Useful", "folders": [
         "Clicks"
     ]},
+    {"name": "G203", "type": "Useful", "folders": [
+        "Clicks"
+        , "Releases"
+    ]},
     {"name": "g402", "type": "Useful", "folders": [
         "Clicks"
         , "Releases"
