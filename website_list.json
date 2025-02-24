@@ -302,6 +302,10 @@
     {"name": "SpaceUK", "type": "Useful", "folders": [
         "Clicks"
     ]},
+    {"name": "g402", "type": "Useful", "folders": [
+        "Clicks"
+        , "Releases"
+    ]},
     {"name": "Razer Blackwidow Keyboard", "type": "Useful", "folders": [
         "Clicks"
         , "Releases"
