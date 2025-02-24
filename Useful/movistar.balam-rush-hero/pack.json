@@ -1,0 +1,13 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "movistar.balam-rush-hero",
+    "packgen": true,
+    "type": "Useful",
+    "name": "Balam Rush Hero",
+    "authors": [
+        {
+            "name": "Movistar",
+            "gdAccountID": 30159959
+        }
+    ]
+}
