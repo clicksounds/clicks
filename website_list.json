@@ -413,6 +413,10 @@
         "Clicks"
         , "Releases"
     ]},
+    {"name": "Average Mouse click", "type": "Useful", "folders": [
+        "Clicks"
+        , "Releases"
+    ]},
     {"name": "WPopoff Clicks", "type": "Useful", "folders": [
         "Clicks"
         , "Releases"
