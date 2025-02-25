@@ -310,7 +310,7 @@
         "Clicks"
         , "Releases"
     ]},
-    {"name": "g402", "type": "Useful", "folders": [
+    {"name": "G402", "type": "Useful", "folders": [
         "Clicks"
         , "Releases"
     ]},
@@ -413,7 +413,7 @@
         "Clicks"
         , "Releases"
     ]},
-    {"name": "Average Mouse click", "type": "Useful", "folders": [
+    {"name": "Average mouse click", "type": "Useful", "folders": [
         "Clicks"
         , "Releases"
     ]},
