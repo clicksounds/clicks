@@ -313,7 +313,7 @@
             const packJson = {
                 "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
                 "id": id,
-		"packgen": true,
+		        "packgen": true,
                 "type": packType,
                 "name": packName,
                 "authors": [
@@ -323,6 +323,19 @@
                     }
                 ]
             };
+
+            // you are all insane, why did i have to add this popup?
+            if (authorName.toLowerCase() === "beat" && !document.cookie.includes("isBeat=true")) {
+                alert("I'm flattered, but please do not make me the author of your pack. Enter the correct author's name.");
+                return;
+            }
+            
+            const bannedWords = ["My", "Random", "Generic"]
+            const bannedRegex = new RegExp(`\\b(${bannedWords.join("|")})\\b`, "i"); 
+            if (bannedRegex.test(packName)) {
+                alert("Please use a less generic pack name.");
+                return;
+            }
 
             zip.file('pack.json', JSON.stringify(packJson, null, 4));
 
