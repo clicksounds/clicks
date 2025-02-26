@@ -1,0 +1,13 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "andarian.andarians-sayodevice-o3c",
+    "packgen": true,
+    "type": "Useful",
+    "name": "Andarians SayoDevice O3C",
+    "authors": [
+        {
+            "name": "Andarian",
+            "gdAccountID": 27823067
+        }
+    ]
+}
