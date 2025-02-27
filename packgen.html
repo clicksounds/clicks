@@ -196,6 +196,9 @@
         <h2>Pack Details</h2>
         <label for="packName" class="required">Pack Name:</label>
         <input type="text" id="packName" placeholder="Enter pack name" required><br>
+
+        <label for="packDescription">Pack Description:</label>
+        <input type="text" id="packDescription" placeholder="DO NOT USE, UNDER CONSTRUCTION"><br>
         
         <small class="footnote" style="color: red;">The author's name and account ID is for the original creator of the sound(s).</small>
 
@@ -316,6 +319,7 @@
 		        "packgen": true,
                 "type": packType,
                 "name": packName,
+                ...(packDescription && { "description": packDescription }),
                 "authors": [
                     {
                         "name": authorName,
@@ -323,6 +327,7 @@
                     }
                 ]
             };
+
 
             // you are all insane, why did i have to add this popup?
             if (authorName.toLowerCase() === "beat" && !document.cookie.includes("isBeat=true")) {
@@ -354,6 +359,7 @@
 
         window.addEventListener('beforeunload', () => {
             document.getElementById('packName').value = '';
+            document.getElementById('packDescription').value = '';
             document.getElementById('authorName').value = '';
             document.getElementById('gdAccountID').value = '';
             document.getElementById('clickFiles').value = '';
