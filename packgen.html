@@ -198,7 +198,7 @@
         <input type="text" id="packName" placeholder="Enter pack name" required><br>
 
         <label for="packDescription">Pack Description:</label>
-        <input type="text" id="packDescription" placeholder="Enter pack description (optional, max 100 characters)" disabled><br>
+        <input type="text" id="packDescription" placeholder="Enter pack description (optional, max 150 characters)"><br>
         
         <small class="footnote" style="color: red;">The author's name and account ID is for the original creator of the sound(s).</small>
 
@@ -296,6 +296,7 @@
 
         document.getElementById('generatePack').addEventListener('click', async () => {
             const packName = document.getElementById('packName').value.trim();
+            const packDescription = document.getElementById('packDescription').value.trim();
             const authorName = document.getElementById('authorName').value.trim();
             const gdAccountID = document.getElementById('gdAccountID').value.trim();
             const packType = document.querySelector('input[name="packType"]:checked').value;
@@ -334,11 +335,21 @@
                 alert("I'm flattered, but please do not make me the author of your pack. Enter the correct author's name.");
                 return;
             }
+
+            if (packDescription.length > 150) alert("Warning: The pack description is beyond the 100 character limit. It may not be accepted if you submit it to the Click Sounds Index.")
             
-            const bannedWords = ["My", "Random", "Generic"]
-            const bannedRegex = new RegExp(`\\b(${bannedWords.join("|")})\\b`, "i"); 
-            if (bannedRegex.test(packName)) {
+            const genericWords = ["My", "Random", "Generic"]
+            const genericRegex = new RegExp(`\\b(${genericWords.join("|")})\\b`, "i"); 
+            if (genericRegex.test(packName)) {
                 alert("Please use a less generic pack name.");
+                return;
+            }
+
+            // to be worked on
+            const knownAuthors = ["Doggie", "Zoink", "Riot"];
+            const foundKnownAuthor = knownAuthors.find(author => packName.toLowerCase().includes(author.toLowerCase()));
+            if (foundKnownAuthor && packName.toLowerCase().includes(authorName.toLowerCase()) === false) {
+                window.open('https://youtu.be/noJXsLZRWsE', '_blank');
                 return;
             }
 
