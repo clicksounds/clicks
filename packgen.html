@@ -368,7 +368,8 @@
         });
 		
 	    document.querySelectorAll('input[type="text"]').forEach(input => {
-	    	input.addEventListener('input', (e) => {
+            if (input.id === 'packDescription') return;
+            input.addEventListener('input', (e) => {
 	    		const value = e.target.value;
 	    		if (!/^[a-zA-Z0-9-_ ]*$/.test(value)) {
 	        		alert('Only alphanumeric characters, spaces, dashes (-), and underscores (_) are allowed.');
