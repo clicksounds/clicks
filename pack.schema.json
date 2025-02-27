@@ -34,7 +34,7 @@
       "pattern": "^(?![a-zA-Z0-9 '-\\?\\!]*?click|[a-zA-Z0-9 '-\\?\\!]*?pack|[a-zA-Z0-9 '-\\?\\!]*?release)[a-zA-Z0-9 '-\\?\\!]*?$"
     },
     "description": {
-      "description": "Up to 100 character description of the click pack, optional.",
+      "description": "Up to 150 character description of the click pack, optional.",
       "type": "string"
     },
     "authors": {
