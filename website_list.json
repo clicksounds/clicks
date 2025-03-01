@@ -123,6 +123,10 @@
         "Clicks"
         , "Releases"
     ]},
+    {"name": "Andarians SayoDevice no deskmat", "type": "Useful", "folders": [
+        "Clicks"
+        , "Releases"
+    ]},
     {"name": "Andarians SayoDevice O3C", "type": "Useful", "folders": [
         "Clicks"
         , "Releases"
@@ -219,11 +223,23 @@
         "Clicks"
         , "Releases"
     ]},
+    {"name": "Redragon Kumara K552-2", "type": "Useful", "folders": [
+        "Clicks"
+        , "Releases"
+    ]},
+    {"name": "m4rks Viper 8k", "type": "Useful", "folders": [
+        "Clicks"
+        , "Releases"
+    ]},
     {"name": "Logitech MX Anywhere 2S", "type": "Useful", "folders": [
         "Clicks"
         , "Releases"
     ]},
-    {"name": "Marks Logitech G502", "type": "Useful", "folders": [
+    {"name": "m4rks Logitech G502", "type": "Useful", "folders": [
+        "Clicks"
+        , "Releases"
+    ]},
+    {"name": "Wooting UwU", "type": "Useful", "folders": [
         "Clicks"
         , "Releases"
     ]},
@@ -232,10 +248,6 @@
         , "Releases"
     ]},
     {"name": "Balam Rush Hero", "type": "Useful", "folders": [
-        "Clicks"
-        , "Releases"
-    ]},
-    {"name": "Wooting UwU", "type": "Useful", "folders": [
         "Clicks"
         , "Releases"
     ]},

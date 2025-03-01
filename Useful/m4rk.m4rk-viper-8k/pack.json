@@ -1,9 +1,9 @@
 {
     "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
-    "id": "m4rk.m4rks-logitech-g502",
+    "id": "m4rk.m4rks-viper-8k",
     "packgen": true,
     "type": "Useful",
-    "name": "m4rks Logitech G502",
+    "name": "m4rks Viper 8k",
     "authors": [
         {
             "name": "m4rk"
