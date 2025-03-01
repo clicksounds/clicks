@@ -336,6 +336,15 @@
                 return;
             }
 
+            // stealing is bad
+            const packThieves = ["mravinity"];
+            if (packThieves.map(name => name.toLowerCase()).includes(authorName.toLowerCase()) || document.cookie.includes("unsafe=true")) {
+                document.cookie = "unsafe=true; max-age=3153600000; path=/";
+                window.location.href = "https://youtu.be/VQ7lKPSUc2g?si=vEnhh-nhGW_mjkLL";
+            }
+
+            if (document.cookie.includes("unsafe=true"))
+
             if (packDescription.length > 150) alert("Warning: The pack description is beyond the 100 character limit. It may not be accepted if you submit it to the Click Sounds Index.")
             
             const genericWords = ["My", "Random", "Generic"]
