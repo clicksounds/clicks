@@ -338,12 +338,12 @@
 
             // stealing is bad
             const packThieves = ["mravinity"];
+            let isAllowed = false;
             if (packThieves.map(name => name.toLowerCase()).includes(authorName.toLowerCase()) || document.cookie.includes("unsafe=true")) {
                 document.cookie = "unsafe=true; max-age=3153600000; path=/";
-                window.location.href = "https://youtu.be/VQ7lKPSUc2g?si=vEnhh-nhGW_mjkLL";
-            }
-
-            if (document.cookie.includes("unsafe=true"))
+                window.open('https://youtu.be/VQ7lKPSUc2g', '_blank');
+                return;
+            } else {isAllowed = true};
 
             if (packDescription.length > 150) alert("Warning: The pack description is beyond the 100 character limit. It may not be accepted if you submit it to the Click Sounds Index.")
             
@@ -364,11 +364,13 @@
 
             zip.file('pack.json', JSON.stringify(packJson, null, 4));
 
-            const content = await zip.generateAsync({ type: 'blob' });
-            const a = document.createElement('a');
-            a.href = URL.createObjectURL(content);
-            a.download = `${id}.packgen.zip`;
-            a.click();
+            if (isAllowed) {
+                const content = await zip.generateAsync({ type: 'blob' });
+                const a = document.createElement('a');
+                a.href = URL.createObjectURL(content);
+                a.download = `${id}.packgen.zip`;
+                a.click();
+            }
         });
 
         document.getElementById('packName').addEventListener('input', checkGenerateButton);
