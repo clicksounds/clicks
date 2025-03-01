@@ -1,13 +1,12 @@
 {
     "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
-    "id": "mravinity.wooting-uwu",
-    "packgen": true,
+    "id": "markiethecatlover.wooting-uwu",
+    "packgen": false,
     "type": "Useful",
     "name": "Wooting UwU",
     "authors": [
         {
-            "name": "MrAvinity",
-            "gdAccountID": 30218222
+            "name": "MarkieTheCatLover"
         }
     ]
-}
+} 
