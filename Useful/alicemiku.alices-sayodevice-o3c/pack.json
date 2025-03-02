@@ -1,0 +1,14 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "alicemiku.alices-sayodevice-o3c",
+    "packgen": true,
+    "type": "Useful",
+    "name": "alices SayoDevice O3C",
+    "description": "my sayo device sounds :3c",
+    "authors": [
+        {
+            "name": "alicemiku",
+            "gdAccountID": 14455791
+        }
+    ]
+}
