@@ -246,6 +246,9 @@
         if basedAuthors.map(name => name.toLowerCase()).includes(authorName.toLowerCase()) {
             maxSounds = 50;
         }
+        
+        document.getElementById('clickCount').textContent = `Uploaded: 0/${maxSounds}`;
+        document.getElementById('releaseCount').textContent = `Uploaded: 0/${maxSounds}`;
 
         document.getElementById('clickFiles').addEventListener('change', (e) => {
             const files = Array.from(e.target.files);
@@ -283,7 +286,7 @@
                 li.textContent = `${index + 1}. ${file.name}`;
                 list.appendChild(li);
             });
-            count.textContent = `Uploaded: ${files.length}/25`;
+            count.textContent = `Uploaded: ${files.length}/${maxSounds}`;
             checkGenerateButton();
         }
 
@@ -306,7 +309,6 @@
             const authorName = document.getElementById('authorName').value.trim();
             const gdAccountID = document.getElementById('gdAccountID').value.trim();
             const packType = document.querySelector('input[name="packType"]:checked').value;
-            let maxSounds = 25;
 
             const zip = new JSZip();
             const clicksFolder = zip.folder('Clicks');
