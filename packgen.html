@@ -240,11 +240,17 @@
     <script>
         const clickFiles = [];
         const releaseFiles = [];
+        let maxSounds = 25;
+        
+        const basedAuthors = ["andarian"]:
+        if basedAuthors.map(name => name.toLowerCase()).includes(authorName.toLowerCase()) {
+            maxSounds = 50;
+        }
 
         document.getElementById('clickFiles').addEventListener('change', (e) => {
             const files = Array.from(e.target.files);
-            if (clickFiles.length + files.length > 25) {
-                alert('You can only upload up to 25 click sounds.');
+            if (clickFiles.length + files.length > maxSounds) {
+                alert(`You can only upload up to ${maxSounds} click sounds.`);
                 return;
             }
             clickFiles.push(...files);
@@ -253,8 +259,8 @@
 
         document.getElementById('releaseFiles').addEventListener('change', (e) => {
             const files = Array.from(e.target.files);
-            if (releaseFiles.length + files.length > 25) {
-                alert('You can only upload up to 25 release sounds.');
+            if (releaseFiles.length + files.length > maxSounds) {
+                alert(`You can only upload up to ${maxSounds} click sounds.`);
                 return;
             }
             releaseFiles.push(...files);
@@ -300,6 +306,7 @@
             const authorName = document.getElementById('authorName').value.trim();
             const gdAccountID = document.getElementById('gdAccountID').value.trim();
             const packType = document.querySelector('input[name="packType"]:checked').value;
+            let maxSounds = 25;
 
             const zip = new JSZip();
             const clicksFolder = zip.folder('Clicks');
@@ -328,7 +335,6 @@
                     }
                 ]
             };
-
 
             // you are all insane, why did i have to add this popup?
             if (authorName.toLowerCase() === "beat" && !document.cookie.includes("isBeat=true")) {
