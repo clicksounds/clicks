@@ -168,10 +168,6 @@
         "Clicks"
         , "Releases"
     ]},
-    {"name": "G502", "type": "Useful", "folders": [
-        "Clicks"
-        , "Releases"
-    ]},
     {"name": "Laptop Spacebar", "type": "Useful", "folders": [
         "Clicks"
         , "Releases"
@@ -276,6 +272,10 @@
         , "Releases"
     ]},
     {"name": "npesta", "type": "Useful", "folders": [
+        "Clicks"
+        , "Releases"
+    ]},
+    {"name": "G502", "type": "Useful", "folders": [
         "Clicks"
         , "Releases"
     ]},
