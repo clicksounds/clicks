@@ -1,11 +1,11 @@
 {
     "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
-    "id": "cuuh.g502",
+    "id": "nywall.g502",
     "type": "Useful",
     "name": "G502",
     "authors": [
         {
-            "name": "Cuuh"
+            "name": "Nywall"
         }
     ]
 }
