@@ -3,9 +3,14 @@
     "id": "andarian.andarians-mobile-taps",
     "type": "Useful",
     "name": "Andarians mobile taps",
+    "description": "Clicks recorded by me and cut by nywall. Probably one of my best packs yet.",
     "authors": [
         {
-            "name": "Andarian"
+            "name": "Andarian",
+            "gdAccountID": 27823067
+        },
+        {
+            "name": "nywall"
         }
     ]
 }
