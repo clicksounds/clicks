@@ -275,6 +275,10 @@
         "Clicks"
         , "Releases"
     ]},
+    {"name": "Blueswitch", "type": "Useful", "folders": [
+        "Clicks"
+        , "Releases"
+    ]},
     {"name": "G502", "type": "Useful", "folders": [
         "Clicks"
         , "Releases"
