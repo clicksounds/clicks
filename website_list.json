@@ -324,6 +324,10 @@
     {"name": "Epomaker RT100 Spacebar", "type": "Useful", "folders": [
         "Clicks"
     ]},
+    {"name": "Secants Mouse Click", "type": "Useful", "folders": [
+        "Clicks"
+        , "Releases"
+    ]},
     {"name": "Gran Turismo 7", "type": "Useful", "folders": [
         "Clicks"
     ]},
