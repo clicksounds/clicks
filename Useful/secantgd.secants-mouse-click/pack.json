@@ -1,0 +1,13 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "secantgd.secants-mouse-click",
+    "packgen": true,
+    "type": "Useful",
+    "name": "Secants Mouse Click",
+    "description": "I used a mouse I had lying around at our home to make this clickpack",
+    "authors": [
+        {
+            "name": "SecantGD"
+        }
+    ]
+}
