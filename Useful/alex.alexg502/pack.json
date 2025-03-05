@@ -1,11 +1,11 @@
 {
     "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
-    "id": "aceofspades.logitech-g502",
+    "id": "alex.alexg502",
     "type": "Useful",
-    "name": "Logitech - G502",
+    "name": "alexg502",
     "authors": [
         {
-            "name": "aceofspades"
+            "name": "alex"
         }
     ]
 }
