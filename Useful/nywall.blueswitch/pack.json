@@ -1,0 +1,13 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "nywall.blueswitch",
+    "packgen": true,
+    "type": "Useful",
+    "name": "Blueswitch",
+    "description": "very cheap dexp mechanical keyboard that has very loud blue switches",
+    "authors": [
+        {
+            "name": "nywall"
+        }
+    ]
+}
