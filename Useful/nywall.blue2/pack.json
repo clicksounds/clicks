@@ -1,12 +1,11 @@
 {
     "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
-    "id": "prolion.blue2",
+    "id": "nywall.blue2",
     "type": "Useful",
     "name": "Blue2",
     "authors": [
         {
-            "name": "prolion",
-            "gdAccountID": 26441199
+            "name": "Nywall"
         }
     ]
 }
