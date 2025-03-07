@@ -271,6 +271,9 @@
         "Clicks"
         , "Releases"
     ]},
+    {"name": "Blue2", "type": "Useful", "folders": [
+        "Clicks"
+    ]},
     {"name": "Blueswitch", "type": "Useful", "folders": [
         "Clicks"
         , "Releases"
@@ -313,9 +316,6 @@
     {"name": "Sayodevice Jade Switches", "type": "Useful", "folders": [
         "Clicks"
         , "Releases"
-    ]},
-    {"name": "Blue2", "type": "Useful", "folders": [
-        "Clicks"
     ]},
     {"name": "Epomaker RT100 Spacebar", "type": "Useful", "folders": [
         "Clicks"
