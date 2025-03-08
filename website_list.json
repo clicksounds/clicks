@@ -278,6 +278,10 @@
     {"name": "Blue2", "type": "Useful", "folders": [
         "Clicks"
     ]},
+    {"name": "Blueswitch V2", "type": "Useful", "folders": [
+        "Clicks"
+        , "Releases"
+    ]},
     {"name": "Blueswitch", "type": "Useful", "folders": [
         "Clicks"
         , "Releases"
