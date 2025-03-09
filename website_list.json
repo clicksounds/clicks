@@ -386,6 +386,10 @@
     {"name": "Gazonk", "type": "Useful", "folders": [
         "Clicks"
     ]},
+    {"name": "Logitech G502 Hero", "type": "Useful", "folders": [
+        "Clicks"
+        , "Releases"
+    ]},
     {"name": "Metronome", "type": "Useful", "folders": [
         "Clicks"
     ]},
