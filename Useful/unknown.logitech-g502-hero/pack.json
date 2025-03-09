@@ -1,0 +1,12 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "unknown.logitech-g502-hero",
+    "packgen": true,
+    "type": "Useful",
+    "name": "Logitech G502 Hero",
+    "authors": [
+        {
+            "name": "Unknown"
+        }
+    ]
+}
