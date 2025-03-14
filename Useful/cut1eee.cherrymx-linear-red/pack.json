@@ -1,0 +1,14 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "cut1eee.cherrymx-linear-red",
+    "packgen": true,
+    "type": "Useful",
+    "name": "CherryMX Linear Red",
+    "description": "CherryMX's Red key.",
+    "authors": [
+        {
+            "name": "Cut1eee",
+            "gdAccountID": 29696759
+        }
+    ]
+}
