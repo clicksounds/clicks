@@ -334,6 +334,10 @@
         "Clicks"
         , "Releases"
     ]},
+    {"name": "RazerMini", "type": "Useful", "folders": [
+        "Clicks"
+        , "Releases"
+    ]},
     {"name": "Epomaker RT100 Spacebar", "type": "Useful", "folders": [
         "Clicks"
     ]},
