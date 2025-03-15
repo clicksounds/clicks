@@ -1,0 +1,14 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "andarian.gateron-yellow-switches",
+    "packgen": true,
+    "type": "Useful",
+    "name": "Gateron Yellow switches",
+    "description": "Alpha version of Gateron Yellow switches, before i remake it again. Clicks made by Andarian",
+    "authors": [
+        {
+            "name": "Andarian",
+            "gdAccountID": 27823067
+        }
+    ]
+}
