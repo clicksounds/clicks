@@ -1,0 +1,12 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "markiethecatlover.wooting-60he",
+    "packgen": true,
+    "type": "Useful",
+    "name": "Wooting 60HE",
+    "authors": [
+        {
+            "name": "markiethecatlover"
+        }
+    ]
+}
