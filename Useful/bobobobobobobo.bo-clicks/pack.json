@@ -1,0 +1,14 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "bobobobobobobo.bo-clicks",
+    "packgen": true,
+    "type": "Useful",
+    "name": "Bo Clicks",
+    "description": "BoBoBoBoBoBoBo's mouse, used in his GD videos in the past.",
+    "authors": [
+        {
+            "name": "BoBoBoBoBoBoBo",
+            "gdAccountID": 9467426
+        }
+    ]
+}
