@@ -482,6 +482,10 @@
         "Clicks"
         , "Releases"
     ]},
+    {"name": "Zikos UpArrow", "type": "Useful", "folders": [
+        "Clicks"
+        , "Releases"
+    ]},
     {"name": "Zoink", "type": "Useful", "folders": [
         "Clicks"
         , "Releases"
