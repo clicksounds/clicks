@@ -166,17 +166,34 @@
     <h2><a target="_blank" rel="noopener noreferrer" href="https://github.com/clicksounds/clicks/">GitHub</a></h2>
 
     <script>
-        // FREEMODE HERE <--------------------------------------------------------------------------------------------------------
-        var freemodeActive = false;
-
-        var freemodeBar = document.getElementById('freemodeBar');
-        if (freemodeActive) {
-            freemodeBar.textContent = "CSPI Freemode is active!";
-            freemodeBar.style.backgroundColor = "#2CE272";
-        } else {
-            freemodeBar.textContent = "CSPI Freemode is inactive.";
-            freemodeBar.style.backgroundColor = "#F75959";
+        async function fetchFreemode() {
+            try {
+                let response = await fetch('https://pastebin.com/raw/CjABWr6F');
+                let text = await response.text();
+                let lines = text.split('\n');
+                let freemodeBar = document.getElementById('freemodeBar');
+            
+                if (lines.length > 1) {
+                    let freemodeActive = lines[1].trim().toLowerCase() === 'true';
+                    if (freemodeActive) {
+                        freemodeBar.textContent = "CSPI Freemode is active!";
+                        freemodeBar.style.backgroundColor = "#2CE272";
+                    } else {
+                        freemodeBar.textContent = "CSPI Freemode is inactive.";
+                        freemodeBar.style.backgroundColor = "#F75959";
+                    }
+                } else {
+                    freemodeBar.textContent = "CSPI Freemode status is unknown.";
+                    freemodeBar.style.backgroundColor = "#FFD700";
+                }
+            } catch (error) {
+                console.error("Error fetching freemode status:", error);
+                let freemodeBar = document.getElementById('freemodeBar');
+                freemodeBar.textContent = "CSPI Freemode status unknown.";
+                freemodeBar.style.backgroundColor = "#FFD700";
+            }
         }
+        fetchFreemode();
     </script>
 </body>
 </html>
