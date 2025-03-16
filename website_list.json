@@ -165,10 +165,6 @@
         "Clicks"
         , "Releases"
     ]},
-    {"name": "Zoink Click Pack", "type": "Useful", "folders": [
-        "Clicks"
-        , "Releases"
-    ]},
     {"name": "Bo Clicks", "type": "Useful", "folders": [
         "Clicks"
         , "Releases"
@@ -499,6 +495,10 @@
         , "Releases"
     ]},
     {"name": "Zoink 2", "type": "Useful", "folders": [
+        "Clicks"
+        , "Releases"
+    ]},
+    {"name": "Zoink Click Pack", "type": "Useful", "folders": [
         "Clicks"
         , "Releases"
     ]},
