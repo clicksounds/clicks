@@ -147,6 +147,10 @@
         "Clicks"
         , "Releases"
     ]},
+    {"name": "Gateron Yellow switches", "type": "Useful", "folders": [
+        "Clicks"
+        , "Releases"
+    ]},
     {"name": "Mobile Ground Tap", "type": "Useful", "folders": [
         "Clicks"
     ]},
