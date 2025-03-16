@@ -1,0 +1,12 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "tobyn.tobyn-rog-mouse",
+    "packgen": true,
+    "type": "Useful",
+    "name": "tobyn rog mouse",
+    "authors": [
+        {
+            "name": "tobyn"
+        }
+    ]
+}
