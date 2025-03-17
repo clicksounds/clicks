@@ -1,0 +1,12 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "wardh.reddragon-visnu",
+    "packgen": true,
+    "type": "Useful",
+    "name": "Reddragon Visnu",
+    "authors": [
+        {
+            "name": "Wardh"
+        }
+    ]
+}
