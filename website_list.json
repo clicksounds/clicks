@@ -165,10 +165,6 @@
         "Clicks"
         , "Releases"
     ]},
-    {"name": "Zonk Click Pack (Randomized)", "type": "Useful", "folders": [
-        "Clicks"
-        , "Releases"
-    ]},
     {"name": "Bo Clicks", "type": "Useful", "folders": [
         "Clicks"
         , "Releases"
@@ -291,6 +287,10 @@
         "Clicks"
         , "Releases"
     ]},
+    {"name": "Akko Ocean Blue switches", "type": "Useful", "folders": [
+        "Clicks"
+        , "Releases"
+    ]},
     {"name": "Blueswitch V2", "type": "Useful", "folders": [
         "Clicks"
         , "Releases"
@@ -324,6 +324,14 @@
         , "Releases"
     ]},
     {"name": "Nice Clicks", "type": "Useful", "folders": [
+        "Clicks"
+        , "Releases"
+    ]},
+    {"name": "Paqoe Keyboard", "type": "Useful", "folders": [
+        "Clicks"
+        , "Releases"
+    ]},
+    {"name": "Paqoe New mouse", "type": "Useful", "folders": [
         "Clicks"
         , "Releases"
     ]},
@@ -376,6 +384,10 @@
         , "Releases"
     ]},
     {"name": "Faze Clicks", "type": "Useful", "folders": [
+        "Clicks"
+        , "Releases"
+    ]},
+    {"name": "tobyn rog mouse", "type": "Useful", "folders": [
         "Clicks"
         , "Releases"
     ]},
@@ -470,7 +482,15 @@
     {"name": "Vladuwka12 Spacebar", "type": "Useful", "folders": [
         "Clicks"
     ]},
+    {"name": "Reddragon Visnu", "type": "Useful", "folders": [
+        "Clicks"
+        , "Releases"
+    ]},
     {"name": "Wardhs Akko Cream Blue spacebar", "type": "Useful", "folders": [
+        "Clicks"
+        , "Releases"
+    ]},
+    {"name": "Wardhs Reddragon Keyboard Blueswitch", "type": "Useful", "folders": [
         "Clicks"
         , "Releases"
     ]},
@@ -499,6 +519,10 @@
         , "Releases"
     ]},
     {"name": "Zoink 2", "type": "Useful", "folders": [
+        "Clicks"
+        , "Releases"
+    ]},
+    {"name": "Zoink Click Pack", "type": "Useful", "folders": [
         "Clicks"
         , "Releases"
     ]},

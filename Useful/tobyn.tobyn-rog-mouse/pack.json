@@ -1,11 +1,12 @@
 {
     "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
-    "id": "nywall.fwg502",
+    "id": "tobyn.tobyn-rog-mouse",
+    "packgen": true,
     "type": "Useful",
-    "name": "G502",
+    "name": "tobyn rog mouse",
     "authors": [
         {
-            "name": "nywall"
+            "name": "tobyn"
         }
     ]
 }

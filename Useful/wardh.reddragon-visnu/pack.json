@@ -1,11 +1,12 @@
 {
     "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
-    "id": "nywall.fwg502",
+    "id": "wardh.reddragon-visnu",
+    "packgen": true,
     "type": "Useful",
-    "name": "G502",
+    "name": "Reddragon Visnu",
     "authors": [
         {
-            "name": "nywall"
+            "name": "Wardh"
         }
     ]
 }
