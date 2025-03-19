@@ -36,6 +36,7 @@
             text-align: center;
             position: relative;
             padding-top: 50px; /* added padding to give space for the navbar */
+            overflow-x: hidden;
         }
 
         /* Navbar styles */
@@ -57,6 +58,7 @@
             margin-right: 20px;
             display: inline-block;
             transition: all 0.3s ease;
+            box-sizing: border-box;
         }
 
         nav a:hover {
@@ -179,11 +181,14 @@
 </head>
 <body>
     <nav>
-        <a href="./list.html">List</a>
         <a href="./">Home</a>
+        <a href="./list.html">List</a>
         <a href="./download.html">Download</a>
-        <a href="./packgen.html">Pack Generator</a>
+		<a href="./addsoundhelp.html">Add Sound</a>
+        <a href="./packgen.html">Packgen</a>
+        <a href="./packcon.html">Packcon</a>
     </nav>
+    
     <h1>Sound pack submission</h1>
     <h2>Submit packs to the indexer <a target="_blank" rel="noopener noreferrer" href="https://github.com/clicksounds/indexer/issues/new?assignees=coopeeo,muhxd&labels=&projects=&template=new.yml">here</a>.</h2>
     <div style="margin-top: 20px; text-align: center;">

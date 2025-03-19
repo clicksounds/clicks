@@ -19,10 +19,11 @@
             margin: 0;
             padding: 0;
             line-height: 1.6;
+            overflow-x: hidden;
         }
 
         h1, h2 {
-            color: #85ccf5;
+            color: #faa352;
         }
 
         h1 {
@@ -37,9 +38,15 @@
             margin-top: 0px;
         }
 
+        h3 {
+            text-align: center; 
+            color: #df9a59;
+            margin-bottom: 2%;
+        }
+
         section {
             background-color: #2a2a3d;
-            border-radius: 10px;
+            border-radius: 15px;
             padding: 20px;
             margin: 20px auto;
             max-width: 600px;
@@ -53,7 +60,7 @@
 
         label.required::after {
             content: " *";
-            color: red;
+            color: rgb(255, 136, 0);
         }
 
         .footnote {
@@ -87,7 +94,7 @@
         }
 
         input[type="file"] {
-            border: 2px dashed #85ccf5;
+            border: 2px dashed #df9a59;
             text-align: center;
             margin-top: 12px;
         }
@@ -96,7 +103,6 @@
             display: block;
             width: 100%;
             padding: 15px;
-            margin-top: 15px;
             border: none;
             border-radius: 10px;
             background-color: #555;
@@ -108,7 +114,7 @@
         }
 
         button:hover {
-            background-color: #6ea7c7;
+            background-color: #df9a59;
         }
 
         button:enabled {
@@ -164,6 +170,7 @@
 			display: flex;
 			justify-content: center; /* centers the navbar items */
 			align-items: center; /* vertically aligns the navbar items */
+            box-sizing: border-box;
 		}
 
 		/* Navigation links */
@@ -186,15 +193,16 @@
 </head>
 <body>
 	<nav>
+        <a href="./">Home</a>
         <a href="./list.html">List</a>
-		<a href="./">Home</a>
+        <a href="./download.html">Download</a>
 		<a href="./addsoundhelp.html">Add Sound</a>
-		<a href="./download.html">Download</a>
         <a href="./packgen.html">Packgen</a>
+        <a href="./packcon.html">Packcon</a>
     </nav>
 
     <h1>Click Pack Converter</h1>
-    <h3 style="text-align: center; color: #85ccf5;">Converts ZCB Live click packs to .packgen.zip packs.</h3>
+    <h3>Converts ZCB Live click packs to .packgen.zip packs.</h3>
 
     <section>
         <h2>Pack Details</h2>
@@ -204,7 +212,7 @@
         <label for="packDescription">Pack Description:</label>
         <input type="text" id="packDescription" placeholder="Enter pack description (optional, max 150 characters)"><br>
         
-        <small class="footnote" style="color: red;">The author's name and account ID is for the original creator of the sound(s). If you do not know it, please type "Unknown"</small>
+        <small class="footnote" style="color: #df9a59;">The author's name and account ID is for the original creator of the sound(s). If you do not know it, please type "Unknown"</small>
 
         <label for="authorName" class="required">Author Name:</label>
         <input type="text" id="authorName" placeholder="Enter author name" required><br>
@@ -221,61 +229,107 @@
 
     <section>
         <h2>ZCB Click Pack</h2>
-        <small class="footnote">Select a ZCB Live click pack file. It can be .zip or .rar format.</small>
-        <input type="file" id="zcbFile" multiple accept=".zip,.rar">
+        <small class="footnote">Select a ZCB Live click pack file. It must be .zip format. The .rar format is planned to be supported in the future.</small>
+        <input type="file" id="zcbFile" accept=".zip,.rar">
     </section>
     
-    <h2 style="color:red; text-align:center;">🚨 DO NOT RENAME THE .PACKGEN.ZIP FILE 🚨</h2>
+    <h2 style="color:#df9a59; text-align:center;">🚨 DO NOT RENAME THE .PACKGEN.ZIP FILE 🚨</h2>
     
     <section style="display: flex; justify-content: center; align-items: center; height: 100%;">
         <button id="generatePack" disabled>Download Pack</button>
     </section>
 
     <script>
-        document.getElementById('gdAccountID').addEventListener('input', (e) => {
-            const value = e.target.value;
-            if (!/^[0-9]*$/.test(value)) {
-                e.target.value = value.replace(/\D/g, '');
-            }
+        let clickFiles = [];
+        let releaseFiles = [];
+
+        // reset everything after refreshing the page
+        window.addEventListener('load', () => {
+            document.getElementById('packName').value = '';
+            document.getElementById('packDescription').value = '';
+            document.getElementById('authorName').value = '';
+            document.getElementById('gdAccountID').value = '';
+            document.querySelectorAll('input[name="packType"]').forEach(input => input.checked = false);
+            document.getElementById('zcbFile').value = '';
+            const generateButton = document.getElementById('generatePack');
+            generateButton.disabled = true;
+            clickFiles = [];
+            releaseFiles = [];
         });
 
-        function checkGenerateButton() {
-            const generateButton = document.getElementById('generatePack');
-            const packName = document.getElementById('packName').value.trim();
-            const authorName = document.getElementById('authorName').value.trim();
-            const typeSelected = document.querySelector('input[name="packType"]:checked');
-
-            generateButton.disabled = !(packName && authorName && typeSelected) || clickFiles.length === 0 && releaseFiles.length === 0;
-        }
-
-        window.addEventListener('load', () => {
+        // actually convert the pack
+        document.getElementById('zcbFile').addEventListener('change', async (event) => {
+            const files = event.target.files;
+            clickFiles = [];
+            releaseFiles = [];
+    
+            for (const file of files) {
+                if (file.name.endsWith('.zip')) {
+                    const JSZip = window.JSZip;
+                    const zip = new JSZip();
+    
+                    try {
+                        const content = await file.arrayBuffer();
+                        const loadedZip = await zip.loadAsync(content);
+    
+                        async function processFolder(folder) {
+                            for (const relativePath in folder.files) {
+                                const fileName = relativePath.split('/').pop();
+                                const folderPath = relativePath.split('/').slice(0, -1).join('/').toLowerCase();
+    
+                                if (folder.files[relativePath].dir) {
+                                    await processFolder(folder.files[relativePath]);
+                                } else if (
+                                    folderPath.includes('clicks') &&
+                                    /\.(mp3|wav|ogg)$/i.test(fileName)
+                                ) {
+                                    const fileData = await folder.files[relativePath].async('blob');
+                                    clickFiles.push(new File([fileData], fileName));
+                                } else if (
+                                    folderPath.includes('releases') &&
+                                    /\.(mp3|wav|ogg)$/i.test(fileName)
+                                ) {
+                                    const fileData = await folder.files[relativePath].async('blob');
+                                    releaseFiles.push(new File([fileData], fileName));
+                                }
+                            }
+                        }
+                        await processFolder(loadedZip);
+                    } catch (error) {
+                        alert(`Error processing file ${file.name}: ${error.message}`);
+                    }
+                } else {
+                    alert('Only .zip files are supported.');
+                }
+            }
+    
             checkGenerateButton();
         });
-
+    
         document.getElementById('generatePack').addEventListener('click', async () => {
             const packName = document.getElementById('packName').value.trim();
             const packDescription = document.getElementById('packDescription').value.trim();
             const authorName = document.getElementById('authorName').value.trim();
             const gdAccountID = document.getElementById('gdAccountID').value.trim();
             const packType = document.querySelector('input[name="packType"]:checked').value;
-
+    
             const zip = new JSZip();
             const clicksFolder = zip.folder('Clicks');
             const releasesFolder = zip.folder('Releases');
-
+    
             clickFiles.forEach((file, index) => {
                 clicksFolder.file(`${index + 1}.${file.name.split('.').pop()}`, file);
             });
-
+    
             releaseFiles.forEach((file, index) => {
                 releasesFolder.file(`${index + 1}.${file.name.split('.').pop()}`, file);
             });
-
+    
             const id = `${authorName.toLowerCase().replace(/\s+/g, '-')}.${packName.toLowerCase().replace(/\s+/g, '-')}`;
             const packJson = {
                 "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
                 "id": id,
-		        "packgen": true,
+                "packcon": true,
                 "type": packType,
                 "name": packName,
                 ...(packDescription && { "description": packDescription }),
@@ -286,72 +340,39 @@
                     }
                 ]
             };
-
-            // you are all insane, why did i have to add this popup?
-            if (authorName.toLowerCase() === "beat" && !document.cookie.includes("isBeat=true")) {
-                alert("I'm flattered, but please do not make me the author of your pack. Enter the correct author's name.");
-                return;
-            }
-
-            // stealing is bad
-            const packThieves = ["mravinity", "dxnix7"];
-            let isAllowed = false;
-            if (packThieves.map(name => name.toLowerCase()).includes(authorName.toLowerCase()) || document.cookie.includes("unsafe=true")) {
-                document.cookie = "unsafe=true; max-age=3153600000; path=/";
-                window.open('https://youtu.be/cBE6hG_j7EA', '_blank');
-                return;
-            } else {isAllowed = true};
-
-            if (packDescription.length > 150) alert("Warning: The pack description is beyond the 150 character limit. It may not be accepted if you submit it to the Click Sounds Index.")
-
-            // to be worked on
-            const knownAuthors = ["Doggie", "Zoink", "Riot", "Trick", "M4rk", "Technical", "Tride", "Npesta", "Aeonair", "Juniper", "Vladuwka12", "Vladuwka", "Andarian"];
-            const foundKnownAuthor = knownAuthors.find(author => packName.toLowerCase().includes(author.toLowerCase()));
-            if (foundKnownAuthor && packName.toLowerCase().includes(authorName.toLowerCase()) === false) {
-                window.open('https://youtu.be/noJXsLZRWsE', '_blank');
-                return;
-            }
-
+    
             zip.file('pack.json', JSON.stringify(packJson, null, 4));
-
-            if (isAllowed) {
-                const content = await zip.generateAsync({ type: 'blob' });
-                const a = document.createElement('a');
-                a.href = URL.createObjectURL(content);
-                a.download = `${id}.packgen.zip`;
-                a.click();
-            }
+    
+            const content = await zip.generateAsync({ type: 'blob' });
+            const a = document.createElement('a');
+            a.href = URL.createObjectURL(content);
+            a.download = `${id}.packgen.zip`;
+            a.click();
         });
-
+    
+        function checkGenerateButton() {
+            const generateButton = document.getElementById('generatePack');
+            const packName = document.getElementById('packName').value.trim();
+            const authorName = document.getElementById('authorName').value.trim();
+            const typeSelected = document.querySelector('input[name="packType"]:checked');
+    
+            generateButton.disabled = !(packName && authorName && typeSelected) || clickFiles.length === 0 && releaseFiles.length === 0;
+        }
+    
         document.getElementById('packName').addEventListener('input', checkGenerateButton);
         document.getElementById('authorName').addEventListener('input', checkGenerateButton);
         document.querySelectorAll('input[name="packType"]').forEach(input => {
             input.addEventListener('change', checkGenerateButton);
         });
 
-        window.addEventListener('beforeunload', () => {
-            document.getElementById('packName').value = '';
-            document.getElementById('packDescription').value = '';
-            document.getElementById('authorName').value = '';
-            document.getElementById('gdAccountID').value = '';
-            document.getElementById('clickFiles').value = '';
-            document.getElementById('releaseFiles').value = '';
-            document.querySelector('input[name="packType"]:checked').checked = false;
+        // no .packgen.zip file allowed
+        document.getElementById('zcbFile').addEventListener('change', function() {
+            if (this.files[0] && this.files[0].name.endsWith('.packgen.zip')) {
+                alert('This is a one-way converter and does not support converting .packgen.zip files. Please select a ZCB Live click pack file with the .zip file extension.');
+                this.value = '';
+            }
         });
-		
-	    document.querySelectorAll('input[type="text"]').forEach(input => {
-            if (input.id === 'packDescription') return;
-            input.addEventListener('input', (e) => {
-	    		const value = e.target.value;
-	    		if (!/^[a-zA-Z0-9-_ ]*$/.test(value)) {
-	        		alert('Only alphanumeric characters, spaces, dashes (-), and underscores (_) are allowed.');
-	    			e.target.value = value.replace(/[^a-zA-Z0-9-_ ]/g, '');
-	    		}
-		    });
-	    });
 
-	    document.documentElement.style.overflowX = 'hidden';
-	    document.body.style.overflowX = 'hidden';
     </script>
 </body>
 </html>

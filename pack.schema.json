@@ -22,6 +22,10 @@
 		  "type": "boolean",
 		  "description": "Indicates if a pack was made using pack generator. This is important for debugging. It must be enabled only on click packs made using pack generator."
 	  },
+    "packcon": {
+      "type": "boolean",
+      "description": "Indicates if a pack was made using pack converter. This is important for debugging. It must be enabled only on click packs made using pack converter."
+    },
     "type": {
       "description": "Is this click pack a Meme, or is it Useful. Only allows \"Useful\" or \"Meme\" to be typed. (CASE SENSITIVE)",
       "type": "string",
