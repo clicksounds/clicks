@@ -1,0 +1,14 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "vortrox.vortrox-click-pack",
+    "packgen": true,
+    "type": "Useful",
+    "name": "Vortrox Click Pack",
+    "description": "Vortrox Clicks",
+    "authors": [
+        {
+            "name": "Vortrox",
+            "gdAccountID": 3541866
+        }
+    ]
+}
