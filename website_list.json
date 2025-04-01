@@ -8,6 +8,11 @@
     {"name": "Vortrox Click Pack", "type": "Useful", "folders": [
         "Clicks"
         , "Releases"
+    ]},
+    {"name": "That's all of the packs.", "type": "Useful", "folders": [
+    ]},
+    {"name": "Swag", "type": "Useful", "folders": [
+        "Clicks"
     ]}
   ]
 }
