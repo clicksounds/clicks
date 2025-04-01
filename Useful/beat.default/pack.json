@@ -1,13 +1,12 @@
 {
     "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
     "id": "beat.default",
+    "packgen": true,
     "type": "Useful",
-    "name": "Vortrox Click Pack",
-    "description": "april fools",
+    "name": "Soggy",
     "authors": [
         {
-            "name": "Vortrox",
-            "gdAccountID": 3541866
+            "name": "Soggy"
         }
     ]
 }

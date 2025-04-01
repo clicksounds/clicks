@@ -1,0 +1,12 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "kingsammelot.kingsammelot-boing",
+    "packgen": true,
+    "type": "Meme",
+    "name": "Soggy",
+    "authors": [
+        {
+            "name": "Soggy"
+        }
+    ]
+}

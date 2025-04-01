@@ -1,0 +1,11 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "tacobell.bell",
+    "type": "Meme",
+    "name": "Soggy",
+    "authors": [
+        {
+            "name": "Soggy"
+        }
+    ]
+}

@@ -1,0 +1,12 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "m4rk.m4rks-logitech-g502",
+    "packgen": true,
+    "type": "Useful",
+    "name": "Soggy",
+    "authors": [
+        {
+            "name": "Soggy"
+        }
+    ]
+}

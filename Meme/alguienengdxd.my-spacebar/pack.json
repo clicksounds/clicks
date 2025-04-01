@@ -1,0 +1,12 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "alguienengdxd.my-spacebar",
+    "packgen": true,
+    "type": "Meme",
+    "name": "Soggy",
+    "authors": [
+        {
+            "name": "Soggy"
+        }
+    ]
+}

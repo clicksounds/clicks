@@ -1,0 +1,11 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "vladuwka12.spacebar",
+    "type": "Useful",
+    "name": "Soggy",
+    "authors": [
+        {
+            "name": "Soggy"
+        }
+    ]
+}
