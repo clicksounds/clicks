@@ -3,12 +3,10 @@
     "id": "beat.default",
     "packgen": true,
     "type": "Useful",
-    "name": "Default",
-    "description": "Default sound of the Click Sounds mod. Made with help from zxset.",
+    "name": "Soggy",
     "authors": [
         {
-            "name": "Beat",
-            "gdAccountID": 13873867
+            "name": "Soggy"
         }
     ]
 }
