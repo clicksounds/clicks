@@ -2,10 +2,15 @@
     "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
     "id": "wulzy.gdcologne",
     "type": "Meme",
-    "name": "Soggy",
+    "name": "i looove gd cologne",
     "authors": [
         {
-            "name": "Soggy"
+            "name": "Wulzy",
+            "gdAccountID": 1373926
+        },
+        {
+            "name": "Colon",
+            "gdAccountID": 106255
         }
     ]
 }

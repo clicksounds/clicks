@@ -2,10 +2,15 @@
     "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
     "id": "vine.boom",
     "type": "Meme",
-    "name": "Soggy",
+    "name": "Vine Boom",
     "authors": [
         {
-            "name": "Soggy"
+            "name": "Vine (RIP)"
+        },
+        {
+            "name": "Beat",
+            "gdAccountID": 13873867,
+            "type": "Provider"
         }
     ]
 }

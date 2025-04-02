@@ -2,10 +2,10 @@
     "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
     "id": "bitah.sayodevice-o3c-v2",
     "type": "Useful",
-    "name": "Soggy",
+    "name": "SayoDevice O3C V2",
     "authors": [
         {
-            "name": "Soggy"
+            "name": "bitah"
         }
     ]
 }

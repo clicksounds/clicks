@@ -3,10 +3,11 @@
     "id": "nywall.blueswitch",
     "packgen": true,
     "type": "Useful",
-    "name": "Soggy",
+    "name": "Blueswitch",
+    "description": "very cheap dexp mechanical keyboard that has very loud blue switches",
     "authors": [
         {
-            "name": "Soggy"
+            "name": "nywall"
         }
     ]
 }

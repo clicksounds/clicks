@@ -2,10 +2,10 @@
     "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
     "id": "nexusgd.nexusgd",
     "type": "Useful",
-    "name": "Soggy",
+    "name": "NexusGD",
     "authors": [
         {
-            "name": "Soggy"
+            "name": "NexusGD"
         }
     ]
 }

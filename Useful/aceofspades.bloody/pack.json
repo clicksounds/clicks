@@ -2,10 +2,10 @@
     "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
     "id": "aceofspades.bloody",
     "type": "Useful",
-    "name": "Soggy",
+    "name": "Bloody Mouse",
     "authors": [
         {
-            "name": "Soggy"
+            "name": "aceofspades"
         }
     ]
 }

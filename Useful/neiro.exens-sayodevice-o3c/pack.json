@@ -3,10 +3,11 @@
     "id": "neiro.exens-sayodevice-o3c",
     "packgen": true,
     "type": "Useful",
-    "name": "Soggy",
+    "name": "Exens SayoDevice O3C",
     "authors": [
         {
-            "name": "Soggy"
+            "name": "Neiro",
+            "gdAccountID": 5316754
         }
     ]
 }

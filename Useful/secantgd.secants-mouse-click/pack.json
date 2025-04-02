@@ -3,10 +3,11 @@
     "id": "secantgd.secants-mouse-click",
     "packgen": true,
     "type": "Useful",
-    "name": "Soggy",
+    "name": "Secants Mouse Click",
+    "description": "I used a mouse I had lying around at our home to make this clickpack",
     "authors": [
         {
-            "name": "Soggy"
+            "name": "SecantGD"
         }
     ]
 }

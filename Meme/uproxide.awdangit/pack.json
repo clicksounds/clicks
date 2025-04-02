@@ -2,10 +2,11 @@
     "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
     "id": "uproxide.awdangit",
     "type": "Meme",
-    "name": "Soggy",
+    "name": "Aw dang it",
     "authors": [
         {
-            "name": "Soggy"
+            "name": "Uproxide",
+            "gdAccountID": 25397826
         }
     ]
 }

@@ -2,10 +2,10 @@
     "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
     "id": "trusta.clicks",
     "type": "Useful",
-    "name": "Soggy",
+    "name": "TrusTa (Player)",
     "authors": [
         {
-            "name": "Soggy"
+            "name": "TrusTa"
         }
     ]
 }

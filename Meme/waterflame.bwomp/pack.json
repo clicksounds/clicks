@@ -2,10 +2,15 @@
     "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
     "id": "waterflame.bwomp",
     "type": "Meme",
-    "name": "Soggy",
+    "name": "Bwomp",
     "authors": [
         {
-            "name": "Soggy"
+            "name": "Waterflame"
+        },
+        {
+            "name": "Beat",
+            "gdAccountID": 13873867,
+            "type": "Provider"
         }
     ]
 }

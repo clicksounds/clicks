@@ -2,10 +2,10 @@
     "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
     "id": "cuuh.laptop-spacebar",
     "type": "Useful",
-    "name": "Soggy",
+    "name": "Laptop Spacebar",
     "authors": [
         {
-            "name": "Soggy"
+            "name": "cuuh"
         }
     ]
 }

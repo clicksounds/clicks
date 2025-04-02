@@ -3,10 +3,10 @@
     "id": "straybomb.razer-blackwidow-keyboard",
     "packgen": true,
     "type": "Useful",
-    "name": "Soggy",
+    "name": "Razer Blackwidow Keyboard",
     "authors": [
         {
-            "name": "Soggy"
+            "name": "straybomb"
         }
     ]
 }

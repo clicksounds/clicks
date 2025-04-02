@@ -2,10 +2,10 @@
     "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
     "id": "unknown.space-bar-2",
     "type": "Useful",
-    "name": "Soggy",
+    "name": "Space Bar 2",
     "authors": [
         {
-            "name": "Soggy"
+            "name": "Unknown"
         }
     ]
 }

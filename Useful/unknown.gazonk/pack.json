@@ -2,10 +2,10 @@
     "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
     "id": "unknown.gazonk",
     "type": "Useful",
-    "name": "Soggy",
+    "name": "Gazonk",
     "authors": [
         {
-            "name": "Soggy"
+            "name": "Unknown"
         }
     ]
 }

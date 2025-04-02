@@ -2,10 +2,10 @@
     "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
     "id": "lawfuldmcboo.creamy-clicks",
     "type": "Useful",
-    "name": "Soggy",
+    "name": "Creamy Clicks",
     "authors": [
         {
-            "name": "Soggy"
+            "name": "LawfulDmcBoo"
         }
     ]
 }

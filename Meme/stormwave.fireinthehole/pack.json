@@ -2,10 +2,21 @@
     "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
     "id": "stormwave.fireinthehole",
     "type": "Meme",
-    "name": "Soggy",
+    "name": "Fire in the Hole",
     "authors": [
         {
-            "name": "Soggy"
+            "name": "Joe"
+        },
+        {
+            "name": "Art (Founder of Stormwave Audio)"
+        },
+        {
+            "name": "Stormwave Audio"
+        },
+        {
+            "name": "Beat",
+            "gdAccountID": 13873867,
+            "type": "Provider"
         }
     ]
 }

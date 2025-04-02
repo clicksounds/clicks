@@ -3,10 +3,11 @@
     "id": "neiro.neiro-click-pack",
     "packgen": true,
     "type": "Useful",
-    "name": "Soggy",
+    "name": "Neiro Click Pack",
     "authors": [
         {
-            "name": "Soggy"
+            "name": "Neiro",
+            "gdAccountID": 5316754
         }
     ]
 }

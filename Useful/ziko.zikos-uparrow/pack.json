@@ -3,10 +3,11 @@
     "id": "ziko.zikos-uparrow",
     "packgen": true,
     "type": "Useful",
-    "name": "Soggy",
+    "name": "Zikos UpArrow",
+    "description": "Zikos Up Arrow clicks",
     "authors": [
         {
-            "name": "Soggy"
+            "name": "Ziko"
         }
     ]
 }

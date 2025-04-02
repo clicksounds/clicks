@@ -2,10 +2,10 @@
     "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
     "id": "tacobell.bell",
     "type": "Meme",
-    "name": "Soggy",
+    "name": "Taco Bell",
     "authors": [
         {
-            "name": "Soggy"
+            "name": "Taco Bell"
         }
     ]
 }

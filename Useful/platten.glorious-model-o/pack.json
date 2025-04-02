@@ -2,10 +2,11 @@
     "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
     "id": "platten.glorious-model-o",
     "type": "Useful",
-    "name": "Soggy",
+    "name": "Glorious Model O",
     "authors": [
         {
-            "name": "Soggy"
+            "name": "Platten",
+            "gdAccountID": 26668684
         }
     ]
 }

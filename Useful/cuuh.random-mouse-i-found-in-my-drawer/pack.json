@@ -2,10 +2,10 @@
     "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
     "id": "cuuh.random-mouse-i-found-in-my-drawer",
     "type": "Useful",
-    "name": "Soggy",
+    "name": "random mouse i found in my drawer",
     "authors": [
         {
-            "name": "Soggy"
+            "name": "Cuuh"
         }
     ]
 }

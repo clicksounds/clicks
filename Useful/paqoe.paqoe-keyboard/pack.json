@@ -3,10 +3,11 @@
     "id": "paqoe.paqoe-keyboard",
     "packgen": true,
     "type": "Useful",
-    "name": "Soggy",
+    "name": "Paqoe Keyboard",
     "authors": [
         {
-            "name": "Soggy"
+            "name": "Paqoe",
+            "gdAccountID": 5870542
         }
     ]
 }

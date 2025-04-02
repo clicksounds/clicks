@@ -3,10 +3,11 @@
     "id": "nywall.whatclick",
     "packgen": true,
     "type": "Useful",
-    "name": "Soggy",
+    "name": "Zoe Keyboard (whatclick)",
+    "description": "whatclick (aka Zoe's or Simon's keyboard). Hosted and cut by nywall, updated by Andarian.",
     "authors": [
         {
-            "name": "Soggy"
+            "name": "nywall"
         }
     ]
 }

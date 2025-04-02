@@ -3,10 +3,11 @@
     "id": "nywall.blueswitch-v2",
     "packgen": true,
     "type": "Useful",
-    "name": "Soggy",
+    "name": "Blueswitch V2",
+    "description": "Clicks recorded and cut by nywall. V2/Remake version of the blueswitch (dexp blazing pro keyboard).",
     "authors": [
         {
-            "name": "Soggy"
+            "name": "nywall"
         }
     ]
 }

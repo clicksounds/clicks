@@ -2,10 +2,10 @@
     "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
     "id": "cuuh.satisfying-keyboard",
     "type": "Useful",
-    "name": "Soggy",
+    "name": "Satisfying Keyboard",
     "authors": [
         {
-            "name": "Soggy"
+            "name": "Cuuh"
         }
     ]
 }

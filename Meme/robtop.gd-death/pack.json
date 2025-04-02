@@ -2,10 +2,11 @@
     "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
     "id": "robtop.gd-death",
     "type": "Meme",
-    "name": "Soggy",
+    "name": "GD Death",
     "authors": [
         {
-            "name": "Soggy"
+            "name": "RobTop",
+            "gdAccountID": 71
         }
     ]
 }

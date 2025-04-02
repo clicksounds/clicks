@@ -2,10 +2,10 @@
     "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
     "id": "andarian.andarians-spacebar",
     "type": "Useful",
-    "name": "Soggy",
+    "name": "Andarians Spacebar",
     "authors": [
         {
-            "name": "Soggy"
+            "name": "Andarian"
         }
     ]
 }

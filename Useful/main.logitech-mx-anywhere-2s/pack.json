@@ -2,10 +2,10 @@
     "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
     "id": "main.logitech-mx-anywhere-2s",
     "type": "Useful",
-    "name": "Soggy",
+    "name": "Logitech MX Anywhere 2S",
     "authors": [
         {
-            "name": "Soggy"
+            "name": "Main"
         }
     ]
 }

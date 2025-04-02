@@ -3,10 +3,12 @@
     "id": "cut1eee.cherrymx-linear-red",
     "packgen": true,
     "type": "Useful",
-    "name": "Soggy",
+    "name": "CherryMX Linear Red",
+    "description": "CherryMX's Red key.",
     "authors": [
         {
-            "name": "Soggy"
+            "name": "Cut1eee",
+            "gdAccountID": 29696759
         }
     ]
 }

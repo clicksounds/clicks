@@ -3,10 +3,11 @@
     "id": "kingsammelot.kingsammelot-boing",
     "packgen": true,
     "type": "Meme",
-    "name": "Soggy",
+    "name": "KingSammelot Boing",
     "authors": [
         {
-            "name": "Soggy"
+            "name": "KingSammelot",
+            "gdAccountID": 7684191
         }
     ]
 }

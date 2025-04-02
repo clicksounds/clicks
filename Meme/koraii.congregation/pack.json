@@ -2,10 +2,10 @@
     "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
     "id": "koraii.congregation",
     "type": "Meme",
-    "name": "Soggy",
+    "name": "Congregation",
     "authors": [
         {
-            "name": "Soggy"
+            "name": "Koraii"
         }
     ]
 }

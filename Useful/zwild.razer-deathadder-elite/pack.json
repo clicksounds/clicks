@@ -2,10 +2,10 @@
     "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
     "id": "zwild.razer-deathadder-elite",
     "type": "Useful",
-    "name": "Soggy",
+    "name": "Razer DeathAdder Elite",
     "authors": [
         {
-            "name": "Soggy"
+            "name": "zWild"
         }
     ]
 }

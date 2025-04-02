@@ -2,10 +2,11 @@
     "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
     "id": "trikehard.trikehards-controller-click-pack-v2",
     "type": "Useful",
-    "name": "Soggy",
+    "name": "Trikehards controller click pack V2",
     "authors": [
         {
-            "name": "Soggy"
+            "name": "trikehard",
+            "gdAccountID": 13926343
         }
     ]
 }

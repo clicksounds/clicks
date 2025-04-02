@@ -2,10 +2,11 @@
     "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
     "id": "brawl-stars.starr-drop",
     "type": "Meme",
-    "name": "Soggy",
+    "name": "Starr Drop",
     "authors": [
         {
-            "name": "Soggy"
+            "name": "Brawl Stars",
+            "gdAccountID": 14527112
         }
     ]
 }

@@ -3,10 +3,11 @@
     "id": "alguienengdxd.my-spacebar",
     "packgen": true,
     "type": "Meme",
-    "name": "Soggy",
+    "name": "My Spacebar",
     "authors": [
         {
-            "name": "Soggy"
+            "name": "alguienEnGDxd",
+            "gdAccountID": 27152006
         }
     ]
 }

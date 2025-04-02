@@ -2,10 +2,10 @@
     "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
     "id": "zoink.zoink-click-pack",
     "type": "Useful",
-    "name": "Soggy",
+    "name": "Zoink Click Pack",
     "authors": [
         {
-            "name": "Soggy"
+            "name": "Zoink"
         }
     ]
 }

@@ -2,10 +2,10 @@
     "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
     "id": "notusefulgd.microsoft-mouse",
     "type": "Useful",
-    "name": "Soggy",
+    "name": "Microsoft Mouse",
     "authors": [
         {
-            "name": "Soggy"
+            "name": "NotUsefulGD"
         }
     ]
 }

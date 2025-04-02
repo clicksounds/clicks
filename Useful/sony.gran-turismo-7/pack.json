@@ -1,12 +1,12 @@
 {
     "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
     "id": "sony.gran-turismo-7",
-    "packgen": true,
+	"packgen": true,
     "type": "Useful",
-    "name": "Soggy",
+    "name": "Gran Turismo 7",
     "authors": [
         {
-            "name": "Soggy"
+            "name": "Sony"
         }
     ]
 }

@@ -2,10 +2,11 @@
     "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
     "id": "yen.viper-8k",
     "type": "Useful",
-    "name": "Soggy",
+    "name": "Viper 8k",
     "authors": [
         {
-            "name": "Soggy"
+            "name": "yen",
+            "gdAccountID": 27575236
         }
     ]
 }

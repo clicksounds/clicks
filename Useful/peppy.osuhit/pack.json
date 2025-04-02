@@ -2,10 +2,10 @@
     "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
     "id": "peppy.osuhit",
     "type": "Useful",
-    "name": "Soggy",
+    "name": "osu! Hit Sound",
     "authors": [
         {
-            "name": "Soggy"
+            "name": "peppy (Dean Herbert)"
         }
     ]
 }

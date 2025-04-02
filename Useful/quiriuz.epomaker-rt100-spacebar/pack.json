@@ -2,10 +2,11 @@
     "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
     "id": "quiriuz.epomaker-rt100-spacebar",
     "type": "Useful",
-    "name": "Soggy",
+    "name": "Epomaker RT100 Spacebar",
     "authors": [
         {
-            "name": "Soggy"
+            "name": "Quiriuz",
+            "gdAccountID": 24158035
         }
     ]
 }

@@ -2,10 +2,11 @@
     "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
     "id": "npesta.ohmygod",
     "type": "Meme",
-    "name": "Soggy",
+    "name": "oh my god",
     "authors": [
         {
-            "name": "Soggy"
+            "name": "npesta",
+            "gdAccountID": 1507703
         }
     ]
 }

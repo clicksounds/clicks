@@ -2,10 +2,10 @@
     "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
     "id": "zeronium.zeroniums-keyboard",
     "type": "Useful",
-    "name": "Soggy",
+    "name": "Zeroniums Keyboard",
     "authors": [
         {
-            "name": "Soggy"
+            "name": "Zeronium"
         }
     ]
 }

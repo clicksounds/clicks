@@ -3,10 +3,11 @@
     "id": "movistar.balam-rush-hero",
     "packgen": true,
     "type": "Useful",
-    "name": "Soggy",
+    "name": "Balam Rush Hero",
     "authors": [
         {
-            "name": "Soggy"
+            "name": "Movistar",
+            "gdAccountID": 30159959
         }
     ]
 }

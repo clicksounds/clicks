@@ -2,10 +2,10 @@
     "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
     "id": "plastic.wooting-two-he",
     "type": "Useful",
-    "name": "Soggy",
+    "name": "Wooting Two HE",
     "authors": [
         {
-            "name": "Soggy"
+            "name": "Plastic"
         }
     ]
 }

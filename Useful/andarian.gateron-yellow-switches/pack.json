@@ -3,10 +3,12 @@
     "id": "andarian.gateron-yellow-switches",
     "packgen": true,
     "type": "Useful",
-    "name": "Soggy",
+    "name": "Gateron Yellow switches",
+    "description": "Alpha version of Gateron Yellow switches, before i remake it again. Clicks made by Andarian",
     "authors": [
         {
-            "name": "Soggy"
+            "name": "Andarian",
+            "gdAccountID": 27823067
         }
     ]
 }

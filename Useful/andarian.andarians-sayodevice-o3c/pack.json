@@ -3,10 +3,11 @@
     "id": "andarian.andarians-sayodevice-o3c",
     "packgen": true,
     "type": "Useful",
-    "name": "Soggy",
+    "name": "Andarians SayoDevice O3C",
     "authors": [
         {
-            "name": "Soggy"
+            "name": "Andarian",
+            "gdAccountID": 27823067
         }
     ]
 }

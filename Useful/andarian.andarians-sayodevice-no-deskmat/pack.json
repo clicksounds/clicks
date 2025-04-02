@@ -3,10 +3,11 @@
     "id": "andarian.andarians-sayodevice-no-deskmat",
     "packgen": true,
     "type": "Useful",
-    "name": "Soggy",
+    "name": "Andarians SayoDevice no deskmat",
     "authors": [
         {
-            "name": "Soggy"
+            "name": "Andarian",
+            "gdAccountID": 27823067
         }
     ]
 }

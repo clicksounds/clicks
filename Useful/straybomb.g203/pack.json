@@ -3,10 +3,10 @@
     "id": "straybomb.g203",
     "packgen": true,
     "type": "Useful",
-    "name": "Soggy",
+    "name": "G203",
     "authors": [
         {
-            "name": "Soggy"
+            "name": "straybomb"
         }
     ]
 }

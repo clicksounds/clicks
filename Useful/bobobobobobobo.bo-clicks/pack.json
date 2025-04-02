@@ -3,10 +3,12 @@
     "id": "bobobobobobobo.bo-clicks",
     "packgen": true,
     "type": "Useful",
-    "name": "Soggy",
+    "name": "Bo Clicks",
+    "description": "BoBoBoBoBoBoBo's mouse, used in his GD videos in the past.",
     "authors": [
         {
-            "name": "Soggy"
+            "name": "BoBoBoBoBoBoBo",
+            "gdAccountID": 9467426
         }
     ]
 }

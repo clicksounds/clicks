@@ -2,10 +2,15 @@
     "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
     "id": "andarian.andarians-mobile-taps",
     "type": "Useful",
-    "name": "Soggy",
+    "name": "Andarians mobile taps",
+    "description": "Clicks recorded by me and cut by nywall. Probably one of my best packs yet.",
     "authors": [
         {
-            "name": "Soggy"
+            "name": "Andarian",
+            "gdAccountID": 27823067
+        },
+        {
+            "name": "nywall"
         }
     ]
 }

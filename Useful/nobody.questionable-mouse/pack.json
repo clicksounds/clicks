@@ -2,10 +2,11 @@
     "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
     "id": "nobody.questionable-mouse",
     "type": "Useful",
-    "name": "Soggy",
+    "name": "Questionable Mouse",
     "authors": [
         {
-            "name": "Soggy"
+            "name": "gigaboy99",
+            "gdAccountID": 29450530
         }
     ]
 }

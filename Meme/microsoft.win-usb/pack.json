@@ -2,10 +2,15 @@
     "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
     "id": "microsoft.win-usb",
     "type": "Meme",
-    "name": "Soggy",
+    "name": "Windows USB Sounds",
     "authors": [
         {
-            "name": "Soggy"
+            "name": "Microsoft"
+        },
+        {
+            "name": "Cooper",
+            "gdAccountID": 21207551,
+            "type": "Provider"
         }
     ]
 }

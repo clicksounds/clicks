@@ -2,10 +2,10 @@
     "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
     "id": "unknown.wateronthehill",
     "type": "Meme",
-    "name": "Soggy",
+    "name": "Water on the Hill",
     "authors": [
         {
-            "name": "Soggy"
+            "name": "Unknown"
         }
     ]
 }

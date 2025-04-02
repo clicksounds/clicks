@@ -3,10 +3,11 @@
     "id": "nywall.kyoukixnywalsayoclickpack",
     "packgen": true,
     "type": "Useful",
-    "name": "Soggy",
+    "name": "kyoukiXnywalSayoClickpack",
+    "description": "Clickpack recorded by Kyouki, cut and hosted by nywall. Updated by Andarian.",
     "authors": [
         {
-            "name": "Soggy"
+            "name": "nywall"
         }
     ]
 }

@@ -2,10 +2,11 @@
     "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
     "id": "riot.swag",
     "type": "Meme",
-    "name": "Soggy",
+    "name": "Riot Swag",
     "authors": [
         {
-            "name": "Soggy"
+            "name": "Riot",
+            "gdAccountID": 37415
         }
     ]
 }

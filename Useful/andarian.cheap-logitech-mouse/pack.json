@@ -3,10 +3,11 @@
     "id": "andarian.cheap-logitech-mouse",
     "packgen": true,
     "type": "Useful",
-    "name": "Soggy",
+    "name": "Cheap logitech mouse",
     "authors": [
         {
-            "name": "Soggy"
+            "name": "Andarian",
+            "gdAccountID": 27823067
         }
     ]
 }

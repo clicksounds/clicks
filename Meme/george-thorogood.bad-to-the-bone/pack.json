@@ -2,10 +2,10 @@
     "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
     "id": "george-thorogood.bad-to-the-bone",
     "type": "Meme",
-    "name": "Soggy",
+    "name": "Bad to the Bone",
     "authors": [
         {
-            "name": "Soggy"
+            "name": "George Thorogood"
         }
     ]
 }

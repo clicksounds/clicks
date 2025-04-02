@@ -2,10 +2,14 @@
     "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
     "id": "discord.ping",
     "type": "Meme",
-    "name": "Soggy",
+    "name": "Discord Ping",
     "authors": [
         {
-            "name": "Soggy"
+            "name": "Discord"
+        },
+        {
+            "name": "laxiscul",
+            "type": "Provider"
         }
     ]
 }

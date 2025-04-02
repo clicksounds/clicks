@@ -3,10 +3,11 @@
     "id": "nywall.royal-kludge-r75-up-arrow",
     "packgen": true,
     "type": "Useful",
-    "name": "Soggy",
+    "name": "Royal Kludge R75 Up Arrow",
+    "description": "a very nice sound of a royal kludge.",
     "authors": [
         {
-            "name": "Soggy"
+            "name": "nywall"
         }
     ]
 }
