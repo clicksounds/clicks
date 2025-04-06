@@ -456,6 +456,10 @@
     {"name": "Screen Tap 1", "type": "Useful", "folders": [
         "Clicks"
     ]},
+    {"name": "Soft Keyboard", "type": "Useful", "folders": [
+        "Clicks"
+        , "Releases"
+    ]},
     {"name": "Space Bar 1", "type": "Useful", "folders": [
         "Clicks"
     ]},
