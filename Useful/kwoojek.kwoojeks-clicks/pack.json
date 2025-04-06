@@ -1,0 +1,14 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "kwoojek.kwoojeks-clicks",
+    "packgen": true,
+    "type": "Useful",
+    "name": "kwoojeks clicks",
+    "description": "MY SUPER COOL CLICKS",
+    "authors": [
+        {
+            "name": "kwoojek",
+            "gdAccountID": 30472069
+        }
+    ]
+}
