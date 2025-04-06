@@ -1,0 +1,14 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "unknown.soft-keyboard",
+    "packgen": true,
+    "type": "Useful",
+    "name": "Soft Keyboard",
+    "description": "very softttt",
+    "authors": [
+        {
+            "name": "Unknown",
+            "gdAccountID": 30519670
+        }
+    ]
+}
