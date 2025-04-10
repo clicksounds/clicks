@@ -1,0 +1,13 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "isaac.logitech-g413-tkl",
+    "packgen": true,
+    "type": "Useful",
+    "name": "Logitech G413 TKL",
+    "authors": [
+        {
+            "name": "isaac",
+            "gdAccountID": 14716714
+        }
+    ]
+}
