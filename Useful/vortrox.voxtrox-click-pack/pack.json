@@ -1,0 +1,14 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "vortrox.voxtrox-click-pack",
+    "packgen": true,
+    "type": "Useful",
+    "name": "Voxtrox Click Pack",
+    "description": "Vortrox Click Pack, aka Vortrox's SayoDevice O3C. Latest clicks by Vortrox, and idk who cut this",
+    "authors": [
+        {
+            "name": "Vortrox",
+            "gdAccountID": 3541866
+        }
+    ]
+}
