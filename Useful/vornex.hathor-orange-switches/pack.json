@@ -1,0 +1,14 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "vornex.hathor-orange-switches",
+    "packgen": true,
+    "type": "Useful",
+    "name": "Hathor Orange Switches",
+    "description": "moderator note: this pack is amazing",
+    "authors": [
+        {
+            "name": "Vornex",
+            "gdAccountID": 32054372
+        }
+    ]
+}
