@@ -496,7 +496,11 @@
     {"name": "Hathor Orange Switches", "type": "Useful", "folders": [
         "Clicks"
     ]},
-    {"name": "Voxtrox Click Pack", "type": "Useful", "folders": [
+    {"name": "Vortrox Click Pack", "type": "Useful", "folders": [
+        "Clicks"
+        , "Releases"
+    ]},
+    {"name": "Voxtrox Click Pack Lite", "type": "Useful", "folders": [
         "Clicks"
         , "Releases"
     ]},
