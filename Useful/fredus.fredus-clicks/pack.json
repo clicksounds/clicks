@@ -1,0 +1,13 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "fredus.fredus-clicks",
+    "packgen": true,
+    "type": "Useful",
+    "name": "fredus clicks",
+    "authors": [
+        {
+            "name": "Fredus",
+            "gdAccountID": 31214088
+        }
+    ]
+}
