@@ -1,0 +1,13 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "oli.razer-huntsman-mini",
+    "packgen": true,
+    "type": "Useful",
+    "name": "Razer Huntsman Mini",
+    "description": "Razer Huntsman Mini keyboard with the Black MX switches. Pack made by oli, cut by oli.",
+    "authors": [
+        {
+            "name": "oli"
+        }
+    ]
+}
