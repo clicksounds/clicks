@@ -376,6 +376,10 @@
     {"name": "Epomaker RT100 Spacebar", "type": "Useful", "folders": [
         "Clicks"
     ]},
+    {"name": "RaspSayoV2 Enhanced", "type": "Useful", "folders": [
+        "Clicks"
+        , "Releases"
+    ]},
     {"name": "Secants Mouse Click", "type": "Useful", "folders": [
         "Clicks"
         , "Releases"
