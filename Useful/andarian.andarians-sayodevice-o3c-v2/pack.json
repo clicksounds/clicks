@@ -1,0 +1,14 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "andarian.andarians-sayodevice-o3c-v2",
+    "packgen": true,
+    "type": "Useful",
+    "name": "Andarians SayoDevice O3C V2",
+    "description": "The extension/remake/replacement of the \"Andarian's SayoDevice no deskmat\" pack with 100 sounds and 3 hours worth of cutting to make my best click pack ever yet. Clicks recorded and cut by Andarian (me) on mobile.",
+    "authors": [
+        {
+            "name": "Andarian",
+            "gdAccountID": 27823067
+        }
+    ]
+}
