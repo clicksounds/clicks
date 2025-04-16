@@ -1,0 +1,13 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "rasp.raspsayov2-enhanced",
+    "packgen": true,
+    "type": "Useful",
+    "name": "RaspSayoV2 Enhanced",
+    "description": "The Rasp's SayoDevice enhanced click pack with the Gateron Jade magnetic switches. It's one of the best clickpacks in ZCB in the past.",
+    "authors": [
+        {
+            "name": "Rasp"
+        }
+    ]
+}
