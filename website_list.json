@@ -449,6 +449,10 @@
     {"name": "Gazonk", "type": "Useful", "folders": [
         "Clicks"
     ]},
+    {"name": "Logitech - G102", "type": "Useful", "folders": [
+        "Clicks"
+        , "Releases"
+    ]},
     {"name": "Logitech G502 Hero", "type": "Useful", "folders": [
         "Clicks"
         , "Releases"
