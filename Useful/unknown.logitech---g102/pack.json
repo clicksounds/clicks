@@ -1,0 +1,12 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "unknown.logitech---g102",
+    "packgen": true,
+    "type": "Useful",
+    "name": "Logitech - G102",
+    "authors": [
+        {
+            "name": "Unknown"
+        }
+    ]
+}
