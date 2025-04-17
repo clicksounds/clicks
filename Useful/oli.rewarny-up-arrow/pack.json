@@ -1,0 +1,12 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "oli.rewarny-up-arrow",
+    "packgen": true,
+    "type": "Useful",
+    "name": "Rewarny Up Arrow",
+    "authors": [
+        {
+            "name": "oli (Rewarny)"
+        }
+    ]
+}
