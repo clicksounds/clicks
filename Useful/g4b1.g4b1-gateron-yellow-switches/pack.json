@@ -1,0 +1,12 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "g4b1.g4b1-gateron-yellow-switches",
+    "packgen": true,
+    "type": "Useful",
+    "name": "G4b1 Gateron Yellow Switches",
+    "authors": [
+        {
+            "name": "G4b1"
+        }
+    ]
+}
