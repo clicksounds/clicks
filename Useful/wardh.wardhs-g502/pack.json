@@ -1,0 +1,12 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "wardh.wardhs-g502",
+    "packcon": true,
+    "type": "Useful",
+    "name": "Wardhs G502",
+    "authors": [
+        {
+            "name": "Wardh"
+        }
+    ]
+}
