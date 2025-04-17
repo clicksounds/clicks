@@ -1,0 +1,13 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "nywall.microsoft-wired-keyboard",
+    "packgen": true,
+    "type": "Useful",
+    "name": "Microsoft Wired Keyboard",
+    "description": "microsoft wired keyboard from nywall, the clickpack god himself.",
+    "authors": [
+        {
+            "name": "nywall"
+        }
+    ]
+}
