@@ -1,0 +1,12 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "unknown.razer-basilisk-v3",
+    "packgen": true,
+    "type": "Useful",
+    "name": "Razer Basilisk V3",
+    "authors": [
+        {
+            "name": "Unknown"
+        }
+    ]
+}
