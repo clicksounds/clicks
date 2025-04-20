@@ -1,0 +1,12 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "ne-znay.klick-mishi",
+    "packgen": true,
+    "type": "Useful",
+    "name": "Klick mishi",
+    "authors": [
+        {
+            "name": "Ne znay"
+        }
+    ]
+}
