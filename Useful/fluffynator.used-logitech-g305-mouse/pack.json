@@ -1,0 +1,13 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "fluffynator.used-logitech-g305-mouse",
+    "packgen": true,
+    "type": "Useful",
+    "name": "Used logitech g305 mouse",
+    "authors": [
+        {
+            "name": "fluffynator",
+            "gdAccountID": 15186557
+        }
+    ]
+}
