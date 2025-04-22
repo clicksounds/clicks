@@ -1,0 +1,12 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "oli.asayo",
+    "packgen": true,
+    "type": "Useful",
+    "name": "asayo",
+    "authors": [
+        {
+            "name": "oli"
+        }
+    ]
+}
