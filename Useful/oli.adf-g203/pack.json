@@ -1,0 +1,12 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "oli.adf-g203",
+    "packgen": true,
+    "type": "Useful",
+    "name": "adf-g203",
+    "authors": [
+        {
+            "name": "oli"
+        }
+    ]
+}
