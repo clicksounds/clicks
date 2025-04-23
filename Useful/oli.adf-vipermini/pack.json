@@ -1,0 +1,12 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "oli.adf-vipermini",
+    "packgen": true,
+    "type": "Useful",
+    "name": "adf-ViperMini",
+    "authors": [
+        {
+            "name": "oli"
+        }
+    ]
+}
