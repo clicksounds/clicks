@@ -1,0 +1,13 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "oli.adf-sayo-no-deskmat",
+    "packgen": true,
+    "type": "Useful",
+    "name": "adf-sayo no deskmat",
+    "description": "The SayoDevice that oli (adf) is using but he forgot to put on the deskmat while he was recording the clicks. Clickpack inspired by Andarian (me) especially!",
+    "authors": [
+        {
+            "name": "oli"
+        }
+    ]
+}
