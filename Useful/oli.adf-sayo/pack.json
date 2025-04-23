@@ -1,0 +1,13 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "oli.adf-sayo",
+    "packgen": true,
+    "type": "Useful",
+    "name": "adf-sayo",
+    "description": "The SayoDevice that oli (adf) is using with the Outemu Pink Magnetic Switches.",
+    "authors": [
+        {
+            "name": "oli"
+        }
+    ]
+}
