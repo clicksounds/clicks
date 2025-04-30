@@ -1,0 +1,14 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "doggie.doggie-click-pack",
+    "packgen": true,
+    "type": "Useful",
+    "name": "Doggie Click Pack",
+    "description": "The new sounds of Doggie's Wooting 80HE keyboard. Clicks recorded by Doggie (himself), hosted by Beat, cut by Andarian (me) <3",
+    "authors": [
+        {
+            "name": "Doggie",
+            "gdAccountID": 175605
+        }
+    ]
+}
