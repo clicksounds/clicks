@@ -351,6 +351,7 @@
             } else {isAllowed = true};
 
             if (packDescription.length > 150) alert("Warning: The pack description is beyond the 150 character limit. It may not be accepted if you submit it to the Click Sounds Index.")
+            if (packDescription.length < 15) alert("Warning: The pack description is very short. Please write a more detailed pack description or remove the pack description. The pack may not be accepted if you submit it to the Click Sounds Index.")
             
             const genericWords = ["My", "Random", "Generic"]
             const genericRegex = new RegExp(`\\b(${genericWords.join("|")})\\b`, "i"); 
