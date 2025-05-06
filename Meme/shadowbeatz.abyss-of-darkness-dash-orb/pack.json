@@ -1,0 +1,13 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "shadowbeatz.abyss-of-darkness-dash-orb",
+    "packgen": true,
+    "type": "Meme",
+    "name": "Abyss of Darkness dash orb",
+    "description": "The dash orb jumpscare in Abyss of Darkness by Exen. This would be a new jumpscare lmao. Inspired by OneAlphaHelix's Limbo Completion.",
+    "authors": [
+        {
+            "name": "ShadowBeatz"
+        }
+    ]
+}
