@@ -103,6 +103,9 @@ jobs:
           mkdir info
           mkdir packs
 
+      - name: Debug ALL_FILES Variable
+        run: echo "${{ steps.get-files.outputs.files }}" | wc -c
+      
       - name: Run json creator
         run: cd .github/JsonCreator/; python main.py
         env:
