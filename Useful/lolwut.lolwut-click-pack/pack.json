@@ -1,0 +1,12 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "lolwut.lolwut-click-pack",
+    "packgen": true,
+    "type": "Useful",
+    "name": "Lolwut Click Pack",
+    "authors": [
+        {
+            "name": "lolwut"
+        }
+    ]
+}
