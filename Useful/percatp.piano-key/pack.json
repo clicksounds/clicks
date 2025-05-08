@@ -1,0 +1,13 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "percatp.piano-key",
+    "type": "Useful",
+    "name": "Piano key",
+    "description": "Make music. Made this just for fun",
+    "authors": [
+        {
+            "name": "Percatp",
+            "gdAccountID": 28267065
+        }
+    ]
+}
