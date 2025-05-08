@@ -1,0 +1,13 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "verdantis.tv-controller-click",
+    "type": "Useful",
+    "name": "TV Controller Click",
+    "description": "A good click made entirely from the back of a TV remote! No release sound because it sounds too quiet.",
+    "authors": [
+        {
+            "name": "Verdantis",
+            "gdAccountID": 23742621
+        }
+    ]
+}
