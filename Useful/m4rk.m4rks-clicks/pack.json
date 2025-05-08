@@ -1,0 +1,13 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "m4rk.m4rks-clicks",
+    "packgen": true,
+    "type": "Useful",
+    "name": "M4rks Clicks",
+    "description": "another popular used a lot for showcasing :3. made by m4rkgd",
+    "authors": [
+        {
+            "name": "M4rk"
+        }
+    ]
+}
