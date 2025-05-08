@@ -1,0 +1,12 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "sushilaps.laps-up-arrow",
+    "packgen": true,
+    "type": "Useful",
+    "name": "Laps Up Arrow",
+    "authors": [
+        {
+            "name": "sushilaps"
+        }
+    ]
+}
