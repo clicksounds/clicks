@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - 'index.html'
+  workflow_dispatch:
 
 jobs:
   deploy:
