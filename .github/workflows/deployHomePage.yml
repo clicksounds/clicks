@@ -1,20 +1,35 @@
-name: Deploy Home Page
+name: Deploy on Home Page Changed
 
 on:
   push:
     paths:
       - 'index.html'
+    branches:
+      - main
   workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: 'pages'
+  cancel-in-progress: false
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: checkout
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
-      - name: deploy to github pages
-        uses: JamesIves/github-pages-deploy-action@v4.7.3
+      - uses: actions/configure-pages@v4
+
+      - uses: actions/upload-pages-artifact@v3
         with:
-          branch: gh-pages
-          folder: .
+          path: '.'
+
+      - uses: actions/deploy-pages@v4
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
