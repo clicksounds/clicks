@@ -246,30 +246,33 @@
         const clickFiles = [];
         const releaseFiles = [];
 
+        let overlimitConfirmed = false;
+
         document.getElementById('clickFiles').addEventListener('change', (e) => {
             const files = Array.from(e.target.files);
-            if (clickFiles.length + files.length > 25) {
-                alert('You can only upload up to 25 click sounds.');
-                return;
+            if (clickFiles.length + files.length > 25 && !overlimitConfirmed) {
+                if (confirm("Are you sure you want to go over the limit? The pack will not be accepted on the click sounds index.")) {
+                    clickFiles.push(...files);
+                    overlimitConfirmed = true;
+                    updateList('click', clickFiles);
+                }
+            } else {
+                clickFiles.push(...files);
+                updateList('click', clickFiles);
             }
-            clickFiles.push(...files);
-            updateList('click', clickFiles);
         });
 
         document.getElementById('releaseFiles').addEventListener('change', (e) => {
             const files = Array.from(e.target.files);
-            if (releaseFiles.length + files.length > 25) {
-                alert('You can only upload up to 25 release sounds.');
-                return;
-            }
-            releaseFiles.push(...files);
-            updateList('release', releaseFiles);
-        });
-
-        document.getElementById('gdAccountID').addEventListener('input', (e) => {
-            const value = e.target.value;
-            if (!/^[0-9]*$/.test(value)) {
-                e.target.value = value.replace(/\D/g, '');
+            if (releaseFiles.length + files.length > 25 && !overlimitConfirmed) {
+                if (confirm("Are you sure you want to go over the limit? The pack will not be accepted on the click sounds index.")) {
+                    releaseFiles.push(...files);
+                    overlimitConfirmed = true;
+                    updateList('release', releaseFiles);
+                }
+            } else {
+                releaseFiles.push(...files);
+                updateList('release', releaseFiles);
             }
         });
 
@@ -282,7 +285,16 @@
                 li.textContent = `${index + 1}. ${file.name}`;
                 list.appendChild(li);
             });
-            count.textContent = `Uploaded: ${files.length}/25`;
+
+            const fileCount = files.length;
+            count.textContent = `Uploaded: ${fileCount}/25`;
+
+            if (fileCount > 25) {
+                count.style.color = 'orange'; 
+            } else {
+                count.style.color = '';
+            }
+
             checkGenerateButton();
         }
 
@@ -322,7 +334,7 @@
             const packJson = {
                 "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
                 "id": id,
-		        "packgen": true,
+                "packgen": true,
                 "type": packType,
                 "name": packName,
                 ...(packDescription && { "description": packDescription }),
@@ -334,33 +346,29 @@
                 ]
             };
 
-
-            // you are all insane, why did i have to add this popup?
             if (authorName.toLowerCase() === "beat" && !document.cookie.includes("isBeat=true")) {
                 alert("I'm flattered, but please do not make me the author of your pack. Enter the correct author's name.");
                 return;
             }
 
-            // stealing is bad
             const packThieves = ["mravinity", "dxnix7"];
             let isAllowed = false;
             if (packThieves.map(name => name.toLowerCase()).includes(authorName.toLowerCase()) || document.cookie.includes("unsafe=true")) {
                 document.cookie = "unsafe=true; max-age=3153600000; path=/";
                 window.open('https://youtu.be/cBE6hG_j7EA', '_blank');
                 return;
-            } else {isAllowed = true};
+            } else { isAllowed = true; }
 
             if (packDescription.length > 150) alert("Warning: The pack description is beyond the 150 character limit. It may not be accepted if you submit it to the Click Sounds Index.")
             if (packDescription.length < 15 && packDescription.length > 0) alert("Warning: The pack description is very short. Please write a more detailed pack description or remove the pack description. The pack may not be accepted if you submit it to the Click Sounds Index.")
-            
+
             const genericWords = ["My", "Random", "Generic"]
-            const genericRegex = new RegExp(`\\b(${genericWords.join("|")})\\b`, "i"); 
+            const genericRegex = new RegExp(`\\b(${genericWords.join("|")})\\b`, "i");
             if (genericRegex.test(packName)) {
                 alert("Please use a less generic pack name.");
                 return;
             }
 
-            // to be worked on
             const knownAuthors = ["Doggie", "Zoink", "Riot", "Trick", "M4rk", "Technical", "Tride", "Npesta", "Aeonair", "Juniper", "Vladuwka12", "Vladuwka", "Andarian"];
             const foundKnownAuthor = knownAuthors.find(author => packName.toLowerCase().includes(author.toLowerCase()));
             if (foundKnownAuthor && packName.toLowerCase().includes(authorName.toLowerCase()) === false) {
@@ -394,20 +402,20 @@
             document.getElementById('releaseFiles').value = '';
             document.querySelector('input[name="packType"]:checked').checked = false;
         });
-		
-	    document.querySelectorAll('input[type="text"]').forEach(input => {
+
+        document.querySelectorAll('input[type="text"]').forEach(input => {
             if (input.id === 'packDescription') return;
             input.addEventListener('input', (e) => {
-	    		const value = e.target.value;
-	    		if (!/^[a-zA-Z0-9-_ ]*$/.test(value)) {
-	        		alert('Only alphanumeric characters, spaces, dashes (-), and underscores (_) are allowed.');
-	    			e.target.value = value.replace(/[^a-zA-Z0-9-_ ]/g, '');
-	    		}
-		    });
-	    });
+                const value = e.target.value;
+                if (!/^[a-zA-Z0-9-_ ]*$/.test(value)) {
+                    alert('Only alphanumeric characters, spaces, dashes (-), and underscores (_) are allowed.');
+                    e.target.value = value.replace(/[^a-zA-Z0-9-_ ]/g, '');
+                }
+            });
+        });
 
-	    document.documentElement.style.overflowX = 'hidden';
-	    document.body.style.overflowX = 'hidden';
+        document.documentElement.style.overflowX = 'hidden';
+        document.body.style.overflowX = 'hidden';
     </script>
 </body>
 </html>
