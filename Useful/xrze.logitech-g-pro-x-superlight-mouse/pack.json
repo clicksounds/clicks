@@ -1,0 +1,13 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "xrze.logitech-g-pro-x-superlight-mouse",
+    "packgen": true,
+    "type": "Useful",
+    "name": "Logitech G Pro x Superlight Mouse",
+    "description": "this was cut by nywall and recorded by xrze. the pack was also mistakenly called \"andarianlogitech\" by nywall for some reasons.",
+    "authors": [
+        {
+            "name": "xrze"
+        }
+    ]
+}
