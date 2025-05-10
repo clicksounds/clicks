@@ -1,0 +1,12 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "sushilaps.laps-bloody-a60",
+    "packgen": true,
+    "type": "Useful",
+    "name": "Laps Bloody A60",
+    "authors": [
+        {
+            "name": "sushilaps"
+        }
+    ]
+}
