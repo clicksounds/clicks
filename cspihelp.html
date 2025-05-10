@@ -1,1 +1,238 @@
-<h1>Under construction</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click Pack Generator</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <link rel="icon" href="./.images/favicon.png" type="image/png">
+    <meta property="og:title" content="Click Sounds: Pack Generator">
+    <meta property="og:description" content="A tool to make packs for the Click Sounds Index">
+    <meta property="og:image" content="https://raw.githubusercontent.com/clicksounds/clicks/refs/heads/main/.images/fullres-logo.png">
+    <meta property="og:url" content="https://clicksounds.xyz/packgen.html">
+    <meta property="og:type" content="website">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #1e1e2f;
+            color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2 {
+            color: #85ccf5;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 100px;
+            font-size: 2.5em;
+        }
+
+        h2 {
+            margin-bottom: 0px;
+            margin-top: 0px;
+        }
+
+        .code-inline {
+            background: #1f1f30;
+            color: #f5f5f5;
+            font-family: monospace;
+            padding: 0.2em 0.4em;
+            border-radius: 4px;
+        }
+
+        img {
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.58);
+        }
+
+        section {
+            background-color: #2a2a3d;
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 600px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+
+        a:visited {
+            color: #00aaff;
+        }
+
+        .footnote {
+            color: #999999;
+            margin-top: 0px;
+            display: block;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        input[type="file"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 15px;
+            margin-right: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #3a3a50;
+            color: #fff;
+        }
+
+        input[type="radio"] {
+            margin-right: 5px;
+            display: inline-block;
+        }
+
+        label[for="typeUseful"],
+        label[for="typeMeme"] {
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        input[type="file"] {
+            border: 2px dashed #85ccf5;
+            text-align: center;
+            margin-top: 12px;
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            margin-top: 15px;
+            border: none;
+            border-radius: 10px;
+            background-color: #555;
+            color: #1e1e2f;
+            font-size: 1rem;
+            cursor: not-allowed;
+            transition: background-color 0.3s, transform 0.2s;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        button:hover {
+            background-color: #6ea7c7;
+        }
+
+        button:enabled {
+            background-color: #6ee873;
+            cursor: pointer;
+        }
+
+        button:enabled:hover {
+            background-color: #4abf5f;
+            transform: translateY(-2px);
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            background-color: #3a3a50;
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        p {
+            font-size: 0.9rem;
+        }
+
+        br {
+            display: block;
+            line-height: 1;
+        }
+
+        @media (max-width: 600px) {
+            section {
+                margin: 10px;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+        }
+		
+		/* Navbar styles */
+		nav {
+			width: 100%;
+			background-color: rgba(0, 0, 0, 0.8); /* Dark background for the navbar */
+			padding: 10px 20px;
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 10;
+			display: flex;
+			justify-content: center; /* centers the navbar items */
+			align-items: center; /* vertically aligns the navbar items */
+            box-sizing: border-box;
+		}
+
+		/* Navigation links */
+		nav a {
+			color: #00aaff;
+			text-decoration: none;
+			font-size: 1.2em;
+			margin-right: 20px;
+			display: inline-block;
+			transition: all 0.3s ease;
+		}
+
+		nav a:hover {
+			background: #00aaff;
+			color: #fff;
+			padding: 5px 10px;
+			border-radius: 5px;
+		}
+    </style>
+</head>
+<body>
+	<nav>
+        <a href="./">Home</a>
+        <a href="./list.html">List</a>
+        <a href="./download.html">Download</a>
+		<a href="./addsoundhelp.html">Add Sound</a>
+        <a href="./packgen.html">Packgen</a>
+        <a href="./packcon.html">Packcon</a>
+        <a href="./cspihelp.html">CSPI</a>
+    </nav>
+
+    <h1>Click Sounds Pack Installer</h1>
+
+    <section>
+        <h2>What is Click Sounds Pack Installer?</h2>
+        <label>Click Sounds Pack Installer (CSPI) is an extension mod for Click Sounds that can add custom click packs to the Click Sounds Index (the library of click packs available in the Click Sounds menu).</label>
+
+        <h2>How do I use it?</h2>
+        <label>First, you will need a click pack. It must be in <span class="code-inline">.packgen.zip</span> format. If the pack is in ZCB Live format, you will need to use <span class="code-inline"><a href="./packcon.html" style="color: #faa352;">Packcon</a></span> to convert it to a <span class="code-inline">.packgen.zip</span> click pack. If you need to make a new <span class="code-inline">.packgen.zip</span> pack, use <span class="code-inline"><a href="./packgen.html" style="color: #00aaff;">Packgen</a></span>. Click packs with over 25 clicks or 25 releases will not be allowed on the Click Sounds Index if you intend to publish your click pack.</label>   
+        <br><label>Once you have your pack ready, <span style="color: #85ccf5;">simply open the CSPI menu using the PI button in the icon kit, press ‘Add Pack’, choose the type, and select the .packgen.zip click pack.</span></label>
+        <img src="./.images/cspackinstaller-mainmenu.png" alt="CSPI Main Menu" width="100%" height="auto">
+
+        <h2>How do I make sounds for my packs?</h2>
+        <label>This is a broader topic that has many already existing tutorials online. Generally, the best click packs have sounds that:<br></label>
+        <label class="code-inline">- Have no delay in the beginning</label>
+        <label class="code-inline">- Have minimal background noise</label>
+        <label class="code-inline">- Are not too loud or too quiet</label>
+        <label class="code-inline">- Are not too long</label>
+
+        <h2>How do I download CSPI?</h2>
+        <label>Click Sounds Pack Installer can be downloaded from the Geode Index.</label>
+        <img src="./.images/cspackinstaller-download.png" alt="CSPI Main Menu" width="100%" height="auto">
+
+        <h2>Notes</h2>
+        <label class="code-inline">The Click Sounds Index will not automatically download by default when CSPI is enabled. Disabling CSPI Invalidation in Click Sounds' settings will change this, although it will remove your custom packs on startup.</label>
+        <label class="code-inline">Click Sounds will not play audio files that contain video data.</label>
+    </section>
+</body>
+</html>

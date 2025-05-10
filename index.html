@@ -66,18 +66,6 @@
             border-radius: 5px;
         }
 
-        /* Freemode bar styles */
-        .freemode-bar {
-            width: 100%;
-            padding: 10px 20px;
-            text-align: center;
-            font-size: 1.2em;
-            position: absolute;
-            top: 40px; /* Adjust to appear just below the navbar */
-            left: 0;
-            z-index: 9;
-        }
-
         /* Main content styles */
         h1 {
             font-size: 2.5em;
@@ -153,9 +141,8 @@
 		<a href="./addsoundhelp.html">Add Sound</a>
         <a href="./packgen.html">Packgen</a>
         <a href="./packcon.html">Packcon</a>
+        <a href="./cspihelp.html">CSPI</a>
     </nav>
-
-    <div id="freemodeBar" class="freemode-bar"></div>
 
     <img src="./.images/fullres-nobglogo.png" alt="Logo" style="width: 20%;">
 
@@ -166,18 +153,5 @@
     <h3>Having an issue? Join the <a href="https://discord.gg/tu98bsGA32">Discord Server</a> for help.</h3>
     <br>
     <h2><a target="_blank" rel="noopener noreferrer" href="https://github.com/clicksounds/clicks/">GitHub</a></h2>
-
-    <script>
-        let freemodeActive = false; // <--------------------------------------- freemode
-        let freemodeBar = document.getElementById('freemodeBar');
-    
-        if (freemodeActive) {
-            freemodeBar.textContent = "CSPI Freemode is active!";
-            freemodeBar.style.backgroundColor = "#2CE272";
-        } else {
-            freemodeBar.textContent = "CSPI Freemode is inactive.";
-            freemodeBar.style.backgroundColor = "#F75959";
-        }
-    </script>    
 </body>
 </html>
