@@ -1,0 +1,13 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "sushilaps.laps-bloody-mouse-v7",
+    "packgen": true,
+    "type": "Useful",
+    "name": "Laps Bloody Mouse V7",
+    "description": "First Laps clickpack after two years! Biggest comeback ever in ZCB.",
+    "authors": [
+        {
+            "name": "sushilaps"
+        }
+    ]
+}
