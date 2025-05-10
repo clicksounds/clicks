@@ -3,7 +3,7 @@ name: Deploy on Home Page Changed
 on:
   push:
     paths:
-      - 'index.html'
+      - '*.html'
     branches:
       - main
   workflow_dispatch:
