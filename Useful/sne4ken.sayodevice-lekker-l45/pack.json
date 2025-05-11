@@ -1,0 +1,13 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "sne4ken.sayodevice-lekker-l45",
+    "packgen": true,
+    "type": "Useful",
+    "name": "SayoDevice Lekker L45",
+    "description": "SayoDevice 03C v2 with Lekker L45 switches.",
+    "authors": [
+        {
+            "name": "sne4ken"
+        }
+    ]
+}
