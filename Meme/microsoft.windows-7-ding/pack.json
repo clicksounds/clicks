@@ -1,0 +1,13 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "microsoft.windows-7-ding",
+    "packgen": true,
+    "type": "Meme",
+    "name": "Windows 7 Ding",
+    "description": "Ding!",
+    "authors": [
+        {
+            "name": "Microsoft"
+        }
+    ]
+}
