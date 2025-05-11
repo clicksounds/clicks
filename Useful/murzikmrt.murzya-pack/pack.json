@@ -1,0 +1,14 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "murzikmrt.murzya-pack",
+    "packgen": true,
+    "type": "Useful",
+    "name": "Murzya pack",
+    "description": "Made, I think, pleasantly for the ears",
+    "authors": [
+        {
+            "name": "MurzikMRT",
+            "gdAccountID": 16151003
+        }
+    ]
+}
