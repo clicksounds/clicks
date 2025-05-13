@@ -1,0 +1,14 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "flushymelon.flushymelons-yunzii-x71",
+    "packgen": true,
+    "type": "Useful",
+    "name": "Flushymelons Yunzii x71",
+    "description": "the click sounds of my keyboard",
+    "authors": [
+        {
+            "name": "Flushymelon",
+            "gdAccountID": 24845607
+        }
+    ]
+}
