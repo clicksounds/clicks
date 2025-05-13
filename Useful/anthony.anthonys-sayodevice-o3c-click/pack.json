@@ -1,0 +1,12 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "anthony.anthonys-sayodevice-o3c-click",
+    "packgen": true,
+    "type": "Useful",
+    "name": "Anthonys SayoDevice O3C Click",
+    "authors": [
+        {
+            "name": "Anthony"
+        }
+    ]
+}
