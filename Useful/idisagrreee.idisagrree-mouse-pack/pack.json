@@ -1,0 +1,14 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "idisagrreee.idisagrree-mouse-pack",
+    "packgen": true,
+    "type": "Useful",
+    "name": "iDisagrRee Mouse Pack",
+    "description": "10 Different mouse clicks and releases",
+    "authors": [
+        {
+            "name": "iDisagrReee",
+            "gdAccountID": 31921978
+        }
+    ]
+}
