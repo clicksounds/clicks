@@ -1,0 +1,13 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "microsoft.user-account-control",
+    "packgen": true,
+    "type": "Meme",
+    "name": "User Account Control",
+    "description": "Windows 7",
+    "authors": [
+        {
+            "name": "Microsoft"
+        }
+    ]
+}
