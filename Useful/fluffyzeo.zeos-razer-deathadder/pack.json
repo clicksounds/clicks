@@ -1,0 +1,13 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "fluffyzeo.zeos-razer-deathadder",
+    "packgen": true,
+    "type": "Useful",
+    "name": "Zeos Razer Deathadder",
+    "description": "Credit: zeo (fluffyzeo on discord); full clickpack available in zcb",
+    "authors": [
+        {
+            "name": "fluffyzeo"
+        }
+    ]
+}
