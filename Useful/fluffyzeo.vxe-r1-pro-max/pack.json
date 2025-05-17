@@ -1,0 +1,13 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "fluffyzeo.vxe-r1-pro-max",
+    "packgen": true,
+    "type": "Useful",
+    "name": "VXE R1 Pro Max",
+    "description": "Mouse: VXE (aka VGN) R1 Pro Max (Kailh White Sword switches); use ZCB to get the full pack with 97 sounds; Credit: zeo (fluffyzeo on discord)",
+    "authors": [
+        {
+            "name": "fluffyzeo"
+        }
+    ]
+}
