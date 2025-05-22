@@ -1,0 +1,13 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "unknown.wooting-80he-up-arrow",
+    "packgen": true,
+    "type": "Useful",
+    "name": "Wooting 80HE Up Arrow",
+    "description": "The up arrow of Wooting 80HE keyboard. Clicks made by a random person on ZCB server then he deleted his account and messages, cut by Andarian (me)",
+    "authors": [
+        {
+            "name": "Unknown"
+        }
+    ]
+}
