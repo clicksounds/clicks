@@ -1,0 +1,14 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "zoink.zoinks-wooting-80he",
+    "packcon": true,
+    "type": "Useful",
+    "name": "Zoink Wooting 80HE",
+    "description": "The new May 2025 clickpack of Zoink's new keyboard by the legend himself. Pack made by Zoink, cut by Andarian (me) and uploaded by Zicedcube (GitHub). I fixed the packgen file too.",
+    "authors": [
+        {
+            "name": "Zoink",
+            "gdAccountID": 14273934
+        }
+    ]
+}
