@@ -1,0 +1,13 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "unknown.wooting-80he-spacebar",
+    "packgen": true,
+    "type": "Useful",
+    "name": "Wooting 80HE Spacebar",
+    "description": "Bricky spacebar of the Wooting 80HE.",
+    "authors": [
+        {
+            "name": "Unknown"
+        }
+    ]
+}
