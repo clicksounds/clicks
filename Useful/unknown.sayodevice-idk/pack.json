@@ -1,0 +1,13 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "unknown.sayodevice-idk",
+    "packgen": true,
+    "type": "Useful",
+    "name": "sayodevice idk",
+    "description": "a very cool sayodevice click sound",
+    "authors": [
+        {
+            "name": "Unknown"
+        }
+    ]
+}
