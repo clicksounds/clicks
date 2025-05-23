@@ -1,0 +1,13 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "nicnicboss.nicnicboss-sayo",
+    "packgen": true,
+    "type": "Useful",
+    "name": "nicnicboss sayo",
+    "description": "nicnicboss sayo (from zcb server).",
+    "authors": [
+        {
+            "name": "NicNicBoss"
+        }
+    ]
+}
