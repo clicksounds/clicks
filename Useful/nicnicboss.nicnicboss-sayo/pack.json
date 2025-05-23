@@ -3,8 +3,8 @@
     "id": "nicnicboss.nicnicboss-sayo",
     "packgen": true,
     "type": "Useful",
-    "name": "nicnicboss sayo",
-    "description": "nicnicboss sayo (from zcb server).",
+    "name": "NicNicBoss SayoDevice",
+    "description": "An unexpectedly large SayoDevice clickpack by NicNicBoss (on ZCB server). 70 sounds in total cut by Andarian (me) on mobile.",
     "authors": [
         {
             "name": "NicNicBoss"
