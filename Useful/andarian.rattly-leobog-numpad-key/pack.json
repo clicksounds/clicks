@@ -1,0 +1,14 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "andarian.rattly-leobog-numpad-key",
+    "packgen": true,
+    "type": "Useful",
+    "name": "rattly leobog numpad key",
+    "description": "Rattly numpad key with the Leobog Graywood V3 shaft switch. Clicks made all by Andarian (me).",
+    "authors": [
+        {
+            "name": "Andarian",
+            "gdAccountID": 27823067
+        }
+    ]
+}
