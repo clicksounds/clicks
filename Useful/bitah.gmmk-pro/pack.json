@@ -1,0 +1,13 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "bitah.gmmk-pro",
+    "packgen": true,
+    "type": "Useful",
+    "name": "GMMK Pro",
+    "description": "gmmk pro keyboard with hmx latte switches",
+    "authors": [
+        {
+            "name": "Bitah"
+        }
+    ]
+}
