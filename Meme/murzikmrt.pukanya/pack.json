@@ -1,0 +1,13 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "murzikmrt.pukanya",
+    "packgen": true,
+    "type": "Meme",
+    "name": "Pukanya",
+    "authors": [
+        {
+            "name": "MurZikMRT",
+            "gdAccountID": 16151003
+        }
+    ]
+}
