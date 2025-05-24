@@ -1,0 +1,14 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "ciganxxx.logitech-g-pro",
+    "packgen": true,
+    "type": "Useful",
+    "name": "Logitech G PRO Keyboard",
+    "description": "Unknown",
+    "authors": [
+        {
+            "name": "CiganXXX",
+            "gdAccountID": 32285568
+        }
+    ]
+}
