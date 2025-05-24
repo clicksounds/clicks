@@ -1,0 +1,14 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "murzik.dexp-rapier-up",
+    "packgen": true,
+    "type": "Useful",
+    "name": "DEXP Rapier UP",
+    "authors": [
+        {
+            "name": "MurZik",
+            "gdAccountID": 16151003
+        }
+    ]
+}
+    
