@@ -1,0 +1,14 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "murzikmrt.dexp-rapier-w",
+    "packgen": true,
+    "type": "Useful",
+    "name": "DEXP Rapier W",
+    "description": "the sound of the \"W\" key, is someone playing it besides me?",
+    "authors": [
+        {
+            "name": "MurZikMRT",
+            "gdAccountID": 16151003
+        }
+    ]
+}
