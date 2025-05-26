@@ -1,0 +1,13 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "nicnicboss.nicnicboss-up-arrow-pack",
+    "packgen": true,
+    "type": "Useful",
+    "name": "NicNicBoss Up Arrow Pack",
+    "description": "requested and made by NicNicBoss, cut by Andarian (on ZCB server)",
+    "authors": [
+        {
+            "name": "NicNicBoss"
+        }
+    ]
+}
