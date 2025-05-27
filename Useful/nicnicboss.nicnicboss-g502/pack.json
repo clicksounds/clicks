@@ -1,0 +1,12 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "nicnicboss.nicnicboss-g502",
+    "packgen": true,
+    "type": "Useful",
+    "name": "NicNicBoss G502",
+    "authors": [
+        {
+            "name": "NicNicBoss"
+        }
+    ]
+}
