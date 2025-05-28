@@ -1,0 +1,12 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "nhay.msterbran",
+    "packgen": true,
+    "type": "Useful",
+    "name": "Msterbran",
+    "authors": [
+        {
+            "name": "Nhay"
+        }
+    ]
+}
