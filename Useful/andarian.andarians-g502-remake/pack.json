@@ -1,0 +1,14 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "andarian.andarians-g502-remake",
+    "packgen": true,
+    "type": "Useful",
+    "name": "Andarians G502 Remake",
+    "description": "remake and (hopefully) better optimized version of my G502 Hero clickpack! clicks all made by @andarianwx on mobile.",
+    "authors": [
+        {
+            "name": "Andarian",
+            "gdAccountID": 27823067
+        }
+    ]
+}
