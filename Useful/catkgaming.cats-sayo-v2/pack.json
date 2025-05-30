@@ -1,0 +1,14 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "catkgaming.cats-sayo-v2",
+    "packgen": true,
+    "type": "Useful",
+    "name": "Cats Sayo V2",
+    "description": "A better version of another pack I made, with more sounds and (hopefully) better audio quality!!!",
+    "authors": [
+        {
+            "name": "CatKGaming",
+            "gdAccountID": 26670396
+        }
+    ]
+}
