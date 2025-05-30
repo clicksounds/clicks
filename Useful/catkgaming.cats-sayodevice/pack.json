@@ -1,0 +1,13 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "catkgaming.cats-sayodevice",
+    "packgen": true,
+    "type": "Useful",
+    "name": "Cats Sayodevice",
+    "description": "Sounds I recorded myself using my sayodevice!",
+    "authors": [
+        {
+            "name": "CatKGaming"
+        }
+    ]
+}
