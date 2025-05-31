@@ -1,0 +1,14 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "lazai.old-office-mouse",
+    "packgen": true,
+    "type": "Useful",
+    "name": "Old Office Mouse",
+    "description": "Old Office's Mouse click sounds.",
+    "authors": [
+        {
+            "name": "Lazai",
+            "gdAccountID": 25147015
+        }
+    ]
+}
