@@ -1,0 +1,13 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "nicnicboss.nicnicboss-sayodevice-no-deskmat-remake",
+    "packgen": true,
+    "type": "Useful",
+    "name": "NicNicBoss SayoDevice no deskmat Remake",
+    "description": "remake of the \"NicNicBoss SayoDevice\". ZCB Full Clickpack is coming soon!",
+    "authors": [
+        {
+            "name": "NicNicBoss"
+        }
+    ]
+}
