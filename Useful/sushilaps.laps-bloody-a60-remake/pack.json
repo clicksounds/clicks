@@ -1,0 +1,13 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "sushilaps.laps-bloody-a60-remake",
+    "packgen": true,
+    "type": "Useful",
+    "name": "Laps Bloody A60 Remake",
+    "description": "the remake of the legendary Laps A60 clickpack (on ZCB). clicks made and cut by @sushilaps, fixed (increased volume and fixed volume of the sounds being too low). by @andarianwx.",
+    "authors": [
+        {
+            "name": "sushilaps"
+        }
+    ]
+}
