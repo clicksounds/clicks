@@ -1,0 +1,13 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "fluffyzeo.goofypack",
+    "packgen": true,
+    "type": "Meme",
+    "name": "goofypack",
+    "description": "From ZCB's april fools",
+    "authors": [
+        {
+            "name": "fluffyzeo"
+        }
+    ]
+}
