@@ -1,0 +1,14 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "andarian.andarians-laptop-spacebar-v2",
+    "packgen": true,
+    "type": "Useful",
+    "name": "Andarians Laptop Spacebar V2",
+    "description": "another laptop spacebar clickpack!!! Idk which one was that but i recorded it on a kind of uh... hp laptop like 100 miles away from home. clickpack cut by me, enjoy!",
+    "authors": [
+        {
+            "name": "Andarian",
+            "gdAccountID": 27823067
+        }
+    ]
+}
