@@ -53,50 +53,33 @@ jobs:
           output="{\"e\": {"
           for dir in Meme/*/
           do
-              dir=${dir%*/}
-              dir=${dir##*/}
+              dir=${dir%*/}; dir=${dir##*/}
               output="${output}, \"${dir}\": {\"c\": ["
-              for file in Meme/$dir/Clicks/*
-              do
-                  file=${file##*/}
-                  if [ "$file" != "*" ]; then
-                    output="${output}, \"${file}\""
-                  fi
+              for file in Meme/$dir/Clicks/*; do
+                  file=${file##*/}; [ "$file" != "*" ] && output="${output}, \"${file}\""
               done
               output="${output}], \"r\": ["
-              for file in Meme/$dir/Releases/*
-              do
-                  file=${file##*/}
-                  if [ "$file" != "*" ]; then
-                    output="${output}, \"${file}\""
-                  fi
+              for file in Meme/$dir/Releases/*; do
+                  file=${file##*/}; [ "$file" != "*" ] && output="${output}, \"${file}\""
               done
               output="${output}]}"
           done
           for dir in Useful/*/
           do
-              dir=${dir%*/}
-              dir=${dir##*/}
+              dir=${dir%*/}; dir=${dir##*/}
               output="${output}, \"${dir}\": {\"c\": ["
-              for file in Useful/$dir/Clicks/*
-              do
-                  file=${file##*/}
-                  if [ "$file" != "*" ]; then
-                    output="${output}, \"${file}\""
-                  fi
+              for file in Useful/$dir/Clicks/*; do
+                  file=${file##*/}; [ "$file" != "*" ] && output="${output}, \"${file}\""
               done
               output="${output}], \"r\": ["
-              for file in Useful/$dir/Releases/*
-              do
-                  file=${file##*/}
-                  if [ "$file" != "*" ]; then
-                    output="${output}, \"${file}\""
-                  fi
+              for file in Useful/$dir/Releases/*; do
+                  file=${file##*/}; [ "$file" != "*" ] && output="${output}, \"${file}\""
               done
               output="${output}]}"
           done
           output="${output}}}"
-          echo "files=$output" >> "$GITHUB_OUTPUT"
+          # Write to file instead of env var
+          echo "$output" > .github/JsonCreator/all_files.json
 
       - name: Make folder for packs and pack info
         run: |
@@ -108,8 +91,6 @@ jobs:
       
       - name: Run json creator
         run: cd .github/JsonCreator/; python main.py
-        env:
-          ALL_FILES: ${{ steps.get-files.outputs.files }}
         
       - name: Install jq
         run: sudo apt-get install -y jq
