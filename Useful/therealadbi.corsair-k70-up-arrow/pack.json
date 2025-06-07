@@ -1,0 +1,11 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "therealadbi.corsair-k70-up-arrow",
+    "type": "Useful",
+    "name": "Corsair K70 Up Arrow",
+    "authors": [
+        {
+            "name": "adbi"
+        }
+    ]
+}
