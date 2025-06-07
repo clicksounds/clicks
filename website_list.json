@@ -21,6 +21,10 @@
     {"name": "Discord Ping", "type": "Meme", "folders": [
         "Clicks"
     ]},
+    {"name": "goofypack", "type": "Meme", "folders": [
+        "Clicks"
+        , "Releases"
+    ]},
     {"name": "Bad to the Bone", "type": "Meme", "folders": [
         "Clicks"
     ]},
@@ -37,7 +41,18 @@
     {"name": "Dash", "type": "Meme", "folders": [
         "Clicks"
     ]},
+    {"name": "User Account Control", "type": "Meme", "folders": [
+        "Clicks"
+        , "Releases"
+    ]},
     {"name": "Windows USB Sounds", "type": "Meme", "folders": [
+        "Clicks"
+    ]},
+    {"name": "Windows 7 Ding", "type": "Meme", "folders": [
+        "Clicks"
+        , "Releases"
+    ]},
+    {"name": "Pukanya", "type": "Meme", "folders": [
         "Clicks"
     ]},
     {"name": "Baldis Basics Door", "type": "Meme", "folders": [
@@ -56,11 +71,18 @@
     {"name": "GD Death", "type": "Meme", "folders": [
         "Clicks"
     ]},
+    {"name": "Abyss of Darkness dash orb", "type": "Meme", "folders": [
+        "Clicks"
+    ]},
     {"name": "Fire in the Hole", "type": "Meme", "folders": [
         "Clicks"
     ]},
     {"name": "Taco Bell", "type": "Meme", "folders": [
         "Clicks"
+    ]},
+    {"name": "tada", "type": "Meme", "folders": [
+        "Clicks"
+        , "Releases"
     ]},
     {"name": "Tiktok", "type": "Meme", "folders": [
         "Clicks"
@@ -127,6 +149,10 @@
         "Clicks"
         , "Releases"
     ]},
+    {"name": "Andarians Laptop Spacebar V2", "type": "Useful", "folders": [
+        "Clicks"
+        , "Releases"
+    ]},
     {"name": "Andarians Mobile Taps V2", "type": "Useful", "folders": [
         "Clicks"
         , "Releases"
@@ -159,11 +185,27 @@
         "Clicks"
         , "Releases"
     ]},
+    {"name": "HP EliteBook Laptop Spacebar", "type": "Useful", "folders": [
+        "Clicks"
+        , "Releases"
+    ]},
+    {"name": "rattly leobog numpad key", "type": "Useful", "folders": [
+        "Clicks"
+        , "Releases"
+    ]},
+    {"name": "Anthonys SayoDevice O3C Click", "type": "Useful", "folders": [
+        "Clicks"
+        , "Releases"
+    ]},
     {"name": "Mobile Ground Tap", "type": "Useful", "folders": [
         "Clicks"
     ]},
     {"name": "Default", "type": "Useful", "folders": [
         "Clicks"
+    ]},
+    {"name": "GMMK Pro", "type": "Useful", "folders": [
+        "Clicks"
+        , "Releases"
     ]},
     {"name": "RK61 Up Arrow", "type": "Useful", "folders": [
         "Clicks"
@@ -174,6 +216,18 @@
         , "Releases"
     ]},
     {"name": "Bo Clicks", "type": "Useful", "folders": [
+        "Clicks"
+        , "Releases"
+    ]},
+    {"name": "Cats Sayo V2", "type": "Useful", "folders": [
+        "Clicks"
+        , "Releases"
+    ]},
+    {"name": "Cats Sayodevice", "type": "Useful", "folders": [
+        "Clicks"
+        , "Releases"
+    ]},
+    {"name": "Logitech G PRO Keyboard", "type": "Useful", "folders": [
         "Clicks"
         , "Releases"
     ]},
@@ -192,19 +246,11 @@
         "Clicks"
         , "Releases"
     ]},
-    {"name": "Mobile Taps V2", "type": "Useful", "folders": [
-        "Clicks"
-        , "Releases"
-    ]},
-    {"name": "random mouse i found in my drawer", "type": "Useful", "folders": [
-        "Clicks"
-        , "Releases"
-    ]},
-    {"name": "Satisfying Keyboard", "type": "Useful", "folders": [
-        "Clicks"
-        , "Releases"
-    ]},
     {"name": "Doggie", "type": "Useful", "folders": [
+        "Clicks"
+        , "Releases"
+    ]},
+    {"name": "Doggie Click Pack", "type": "Useful", "folders": [
         "Clicks"
         , "Releases"
     ]},
@@ -220,6 +266,18 @@
         "Clicks"
         , "Releases"
     ]},
+    {"name": "VXE R1 Pro Max", "type": "Useful", "folders": [
+        "Clicks"
+        , "Releases"
+    ]},
+    {"name": "Zeos Razer Deathadder", "type": "Useful", "folders": [
+        "Clicks"
+        , "Releases"
+    ]},
+    {"name": "Flushymelons Yunzii x71", "type": "Useful", "folders": [
+        "Clicks"
+        , "Releases"
+    ]},
     {"name": "fredus clicks", "type": "Useful", "folders": [
         "Clicks"
         , "Releases"
@@ -229,6 +287,10 @@
         , "Releases"
     ]},
     {"name": "Ians Mobile Taps", "type": "Useful", "folders": [
+        "Clicks"
+        , "Releases"
+    ]},
+    {"name": "iDisagrRee Mouse Pack", "type": "Useful", "folders": [
         "Clicks"
         , "Releases"
     ]},
@@ -254,7 +316,15 @@
         "Clicks"
         , "Releases"
     ]},
+    {"name": "Old Office Mouse", "type": "Useful", "folders": [
+        "Clicks"
+        , "Releases"
+    ]},
     {"name": "Electro Mouse", "type": "Useful", "folders": [
+        "Clicks"
+        , "Releases"
+    ]},
+    {"name": "Lolwut Click Pack", "type": "Useful", "folders": [
         "Clicks"
         , "Releases"
     ]},
@@ -263,6 +333,14 @@
         , "Releases"
     ]},
     {"name": "m4rks Viper 8k", "type": "Useful", "folders": [
+        "Clicks"
+        , "Releases"
+    ]},
+    {"name": "M4rks Clicks", "type": "Useful", "folders": [
+        "Clicks"
+        , "Releases"
+    ]},
+    {"name": "Royal Kludge R75", "type": "Useful", "folders": [
         "Clicks"
         , "Releases"
     ]},
@@ -290,6 +368,18 @@
         "Clicks"
         , "Releases"
     ]},
+    {"name": "DEXP Rapier UP", "type": "Useful", "folders": [
+        "Clicks"
+        , "Releases"
+    ]},
+    {"name": "DEXP Rapier W", "type": "Useful", "folders": [
+        "Clicks"
+        , "Releases"
+    ]},
+    {"name": "Murzya pack", "type": "Useful", "folders": [
+        "Clicks"
+        , "Releases"
+    ]},
     {"name": "Klick mishi", "type": "Useful", "folders": [
         "Clicks"
         , "Releases"
@@ -307,6 +397,26 @@
         , "Releases"
     ]},
     {"name": "NexusGD", "type": "Useful", "folders": [
+        "Clicks"
+        , "Releases"
+    ]},
+    {"name": "Msterbran", "type": "Useful", "folders": [
+        "Clicks"
+        , "Releases"
+    ]},
+    {"name": "NicNicBoss G502", "type": "Useful", "folders": [
+        "Clicks"
+        , "Releases"
+    ]},
+    {"name": "NicNicBoss SayoDevice", "type": "Useful", "folders": [
+        "Clicks"
+        , "Releases"
+    ]},
+    {"name": "NicNicBoss SayoDevice no deskmat Remake", "type": "Useful", "folders": [
+        "Clicks"
+        , "Releases"
+    ]},
+    {"name": "NicNicBoss Up Arrow Pack", "type": "Useful", "folders": [
         "Clicks"
         , "Releases"
     ]},
@@ -366,7 +476,23 @@
         "Clicks"
         , "Releases"
     ]},
+    {"name": "adf-g203", "type": "Useful", "folders": [
+        "Clicks"
+        , "Releases"
+    ]},
+    {"name": "adf-sayo no deskmat", "type": "Useful", "folders": [
+        "Clicks"
+        , "Releases"
+    ]},
+    {"name": "adf-sayo V2", "type": "Useful", "folders": [
+        "Clicks"
+        , "Releases"
+    ]},
     {"name": "adf-sayo", "type": "Useful", "folders": [
+        "Clicks"
+        , "Releases"
+    ]},
+    {"name": "adf-ViperMini", "type": "Useful", "folders": [
         "Clicks"
         , "Releases"
     ]},
@@ -391,6 +517,9 @@
         , "Releases"
     ]},
     {"name": "osu! Hit Sound", "type": "Useful", "folders": [
+        "Clicks"
+    ]},
+    {"name": "Piano key", "type": "Useful", "folders": [
         "Clicks"
     ]},
     {"name": "Wooting Two HE", "type": "Useful", "folders": [
@@ -420,6 +549,14 @@
         "Clicks"
         , "Releases"
     ]},
+    {"name": "SayoDevice Lekker L45", "type": "Useful", "folders": [
+        "Clicks"
+        , "Releases"
+    ]},
+    {"name": "sayolol", "type": "Useful", "folders": [
+        "Clicks"
+        , "Releases"
+    ]},
     {"name": "Gran Turismo 7", "type": "Useful", "folders": [
         "Clicks"
     ]},
@@ -438,11 +575,31 @@
         "Clicks"
         , "Releases"
     ]},
+    {"name": "Laps Bloody A60 Remake", "type": "Useful", "folders": [
+        "Clicks"
+        , "Releases"
+    ]},
+    {"name": "Laps Bloody A60", "type": "Useful", "folders": [
+        "Clicks"
+        , "Releases"
+    ]},
+    {"name": "Laps Bloody Mouse V7", "type": "Useful", "folders": [
+        "Clicks"
+        , "Releases"
+    ]},
+    {"name": "Laps Up Arrow", "type": "Useful", "folders": [
+        "Clicks"
+        , "Releases"
+    ]},
     {"name": "Viper 8K but Sounds different", "type": "Useful", "folders": [
         "Clicks"
         , "Releases"
     ]},
     {"name": "Faze Clicks", "type": "Useful", "folders": [
+        "Clicks"
+        , "Releases"
+    ]},
+    {"name": "Corsair K70 Up Arrow", "type": "Useful", "folders": [
         "Clicks"
         , "Releases"
     ]},
@@ -512,6 +669,10 @@
         "Clicks"
         , "Releases"
     ]},
+    {"name": "sayodevice idk", "type": "Useful", "folders": [
+        "Clicks"
+        , "Releases"
+    ]},
     {"name": "Screen Tap 1", "type": "Useful", "folders": [
         "Clicks"
     ]},
@@ -546,6 +707,17 @@
         "Clicks"
         , "Releases"
     ]},
+    {"name": "Wooting 80HE Spacebar", "type": "Useful", "folders": [
+        "Clicks"
+        , "Releases"
+    ]},
+    {"name": "Wooting 80HE Up Arrow", "type": "Useful", "folders": [
+        "Clicks"
+        , "Releases"
+    ]},
+    {"name": "TV Controller Click", "type": "Useful", "folders": [
+        "Clicks"
+    ]},
     {"name": "Viper's Spacebar", "type": "Useful", "folders": [
         "Clicks"
         , "Releases"
@@ -560,7 +732,7 @@
         "Clicks"
         , "Releases"
     ]},
-    {"name": "Voxtrox Click Pack Lite", "type": "Useful", "folders": [
+    {"name": "Vortrox Click Pack Lite", "type": "Useful", "folders": [
         "Clicks"
         , "Releases"
     ]},
@@ -585,6 +757,14 @@
         , "Releases"
     ]},
     {"name": "WPopoff Clicks", "type": "Useful", "folders": [
+        "Clicks"
+        , "Releases"
+    ]},
+    {"name": "Xer0s Blackwidow V3 up arrow", "type": "Useful", "folders": [
+        "Clicks"
+        , "Releases"
+    ]},
+    {"name": "Logitech G Pro x Superlight Mouse", "type": "Useful", "folders": [
         "Clicks"
         , "Releases"
     ]},
@@ -613,6 +793,10 @@
         , "Releases"
     ]},
     {"name": "Zoink Clicks 2023", "type": "Useful", "folders": [
+        "Clicks"
+        , "Releases"
+    ]},
+    {"name": "Zoink's Wooting 80HE", "type": "Useful", "folders": [
         "Clicks"
         , "Releases"
     ]},
