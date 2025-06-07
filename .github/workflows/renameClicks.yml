@@ -78,7 +78,6 @@ jobs:
               output="${output}]}"
           done
           output="${output}}}"
-          # Write to file instead of env var
           echo "$output" > .github/JsonCreator/all_files.json
 
       - name: Make folder for packs and pack info
@@ -88,6 +87,9 @@ jobs:
 
       - name: Debug ALL_FILES Variable
         run: echo "${{ steps.get-files.outputs.files }}" | wc -c
+
+      - name: Generate all_files.json
+        run: python .github/JsonCreator/makeallfiles.py
       
       - name: Run json creator
         run: cd .github/JsonCreator/; python main.py
