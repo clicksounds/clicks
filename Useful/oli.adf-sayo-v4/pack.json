@@ -1,0 +1,12 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "oli.adf-sayo-v4",
+    "packgen": true,
+    "type": "Useful",
+    "name": "adf-sayo V4",
+    "authors": [
+        {
+            "name": "oli"
+        }
+    ]
+}
