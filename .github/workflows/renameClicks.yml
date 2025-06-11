@@ -103,44 +103,65 @@ jobs:
           echo "Generating website_list.json..."
           echo '{' > website_list.json
           echo '  "Meme": [' >> website_list.json
-
+      
           for dir in Meme/*/
           do
               dir=${dir%*/}
               dir=${dir##*/}
               if [ -f "Meme/$dir/pack.json" ]; then
                   name=$(jq -r '.name' "Meme/$dir/pack.json")
-                  echo "    {\"name\": \"$name\", \"type\": \"Meme\", \"folders\": [" >> website_list.json
-                  [ -d "Meme/$dir/Clicks" ] && echo "        \"Clicks\"" >> website_list.json
-                  [ -d "Meme/$dir/Releases" ] && echo "        , \"Releases\"" >> website_list.json
-                  echo "    ]}," >> website_list.json
+                  id=$(jq -r '.id' "Meme/$dir/pack.json")
+                  echo "    {\"name\": \"$name\", \"id\": \"$id\", \"type\": \"Meme\", \"folders\": [" >> website_list.json
+                  first=true
+                  if [ -d "Meme/$dir/Clicks" ]; then
+                      echo -n "        \"Clicks\"" >> website_list.json
+                      first=false
+                  fi
+                  if [ -d "Meme/$dir/Releases" ]; then
+                      if [ "$first" = false ]; then
+                          echo -n ", " >> website_list.json
+                      fi
+                      echo -n "\"Releases\"" >> website_list.json
+                  fi
+                  echo "]}, " >> website_list.json
               else
                   echo "pack.json not found in Meme/$dir"
               fi
           done
-
-          sed -i '$ s/,$//' website_list.json
+      
+          sed -i '$ s/, $//' website_list.json
           echo '  ],' >> website_list.json
           echo '  "Useful": [' >> website_list.json
-
+      
           for dir in Useful/*/
           do
               dir=${dir%*/}
               dir=${dir##*/}
               if [ -f "Useful/$dir/pack.json" ]; then
                   name=$(jq -r '.name' "Useful/$dir/pack.json")
-                  echo "    {\"name\": \"$name\", \"type\": \"Useful\", \"folders\": [" >> website_list.json
-                  [ -d "Useful/$dir/Clicks" ] && echo "        \"Clicks\"" >> website_list.json
-                  [ -d "Useful/$dir/Releases" ] && echo "        , \"Releases\"" >> website_list.json
-                  echo "    ]}," >> website_list.json
+                  id=$(jq -r '.id' "Useful/$dir/pack.json")
+                  echo "    {\"name\": \"$name\", \"id\": \"$id\", \"type\": \"Useful\", \"folders\": [" >> website_list.json
+                  first=true
+                  if [ -d "Useful/$dir/Clicks" ]; then
+                      echo -n "        \"Clicks\"" >> website_list.json
+                      first=false
+                  fi
+                  if [ -d "Useful/$dir/Releases" ]; then
+                      if [ "$first" = false ]; then
+                          echo -n ", " >> website_list.json
+                      fi
+                      echo -n "\"Releases\"" >> website_list.json
+                  fi
+                  echo "]}, " >> website_list.json
               else
                   echo "pack.json not found in Useful/$dir"
               fi
           done
-
-          sed -i '$ s/,$//' website_list.json
+      
+          sed -i '$ s/, $//' website_list.json
           echo '  ]' >> website_list.json
           echo '}' >> website_list.json
+
       - name: Commit Generated website_list.json
         run: |
           git config user.name "Clicksounds Site"
