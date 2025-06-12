@@ -1,0 +1,14 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "therealkeanan00.uwu",
+    "packgen": true,
+    "type": "Meme",
+    "name": "UwU",
+    "description": "Says uwuwuwuwuwuwuwuwuwuwuwuwu",
+    "authors": [
+        {
+            "name": "therealKeanan00",
+            "gdAccountID": 30576486
+        }
+    ]
+}
