@@ -299,7 +299,7 @@
                 const content = await zip.generateAsync({ type: "blob" });
                 const a = document.createElement("a");
                 a.href = URL.createObjectURL(content);
-                a.download = `${id}.zip`;
+                a.download = `${id}.packgen.zip`;
                 a.click();
             } catch (err) {
                 console.error(err);
