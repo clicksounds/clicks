@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Click Sounds Index</title>
-    <link rel="icon" href="./.images/favicon.png" type="image/png">
-    <meta property="og:title" content="Click Sounds: List">
-    <meta property="og:description" content="A list of sounds from the Click Sounds Index">
-    <meta property="og:image" content="https://raw.githubusercontent.com/clicksounds/clicks/refs/heads/main/.images/fullres-logo.png">
-    <meta property="og:url" content="https://clicksounds.xyz/list.html">
-    <meta property="og:type" content="website">
+    <link rel="icon" href="./.images/favicon.png" type="image/png" />
+    <meta property="og:title" content="Click Sounds: List" />
+    <meta property="og:description" content="A list of sounds from the Click Sounds Index" />
+    <meta property="og:image" content="https://raw.githubusercontent.com/clicksounds/clicks/refs/heads/main/.images/fullres-logo.png" />
+    <meta property="og:url" content="https://clicksounds.xyz/list.html" />
+    <meta property="og:type" content="website" />
     <style>
         /* Reset and base styles */
         * {
@@ -32,18 +32,6 @@
             position: relative;
             overflow: hidden;
         }
-
-        /* Overlay to darken the image
-        body::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.6);
-            z-index: -1;
-        }*/
 
         /* Navbar styles */
         nav {
@@ -119,8 +107,16 @@
             flex-direction: column;
             align-items: center;
             margin-top: 30px;
+            max-height: 400px;
+            overflow-y: auto;
+            padding: 10px;
         }
 
+        ::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* changed sound-item from div to button */
         .sound-item {
             margin: 10px;
             padding: 15px;
@@ -130,11 +126,25 @@
             width: 80%;
             text-align: center;
             transition: background-color 0.3s;
+            border: none;
+            cursor: pointer;
+            font-size: 1.1em;
+        }
+
+        .sound-item:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            background-color: rgba(0, 0, 0, 0.4);
+            color: #888;
         }
 
         .sound-item:hover {
             background-color: #00aaff;
-            cursor: pointer;
+        }
+
+        .sound-item:disabled:hover {
+            background-color: rgba(0, 0, 0, 0.4);
+            color: #888;
         }
 
         /* No results message */
@@ -144,56 +154,47 @@
             margin-top: 20px;
         }
 
-        .sound-list {
-            max-height: 400px;
-            overflow-y: auto; 
-            padding: 10px; 
+        #typeSelect {
+            border-radius: 5px;
+            border: 1px solid #00aaff;
+            background-color: rgba(255, 255, 255, 0.2);
+            color: rgb(255, 255, 255);
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
         }
-        ::-webkit-scrollbar {
-            display: none; 
+
+        #typeSelect option {
+            border-radius: 5px;
+            border: 1px solid #00aaff;
+            background-color: rgba(0, 0, 0, 0.1);
+            color: black;
         }
 
-    #typeSelect {
-        border-radius: 5px;
-        border: 1px solid #00aaff;
-        background-color: rgba(255, 255, 255, 0.2);
-        color: rgb(255, 255, 255);  
-        -webkit-appearance: none;  
-        -moz-appearance: none;  
-        appearance: none;  
-    }
+        #typeSelect:focus option {
+            background-color: rgba(0, 0, 0, 0.2);
+        }
 
-    #typeSelect option {
-        border-radius: 5px;
-        border: 1px solid #00aaff;
-        background-color: rgba(0, 0, 0, 0.1);  
-        color: black;  
-    }
+        #categorySelect {
+            border-radius: 5px;
+            border: 1px solid #00aaff;
+            background-color: rgba(255, 255, 255, 0.2);
+            color: rgb(255, 255, 255);
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+        }
 
-    #typeSelect:focus option {
-        background-color: rgba(0, 0, 0, 0.2);  
-    }
+        #categorySelect option {
+            border-radius: 5px;
+            border: 1px solid #00aaff;
+            background-color: rgba(0, 0, 0, 0.1);
+            color: black;
+        }
 
-    #categorySelect {
-        border-radius: 5px;
-        border: 1px solid #00aaff;
-        background-color: rgba(255, 255, 255, 0.2);
-        color: rgb(255, 255, 255);  
-        -webkit-appearance: none;  
-        -moz-appearance: none;  
-        appearance: none;  
-    }
-
-    #categorySelect option {
-        border-radius: 5px;
-        border: 1px solid #00aaff;
-        background-color: rgba(0, 0, 0, 0.1);  
-        color: black;  
-    }
-
-    #categorySelect:focus option {
-        background-color: rgba(0, 0, 0, 0.2);  
-    }
+        #categorySelect:focus option {
+            background-color: rgba(0, 0, 0, 0.2);
+        }
     </style>
 </head>
 <body>
@@ -201,7 +202,7 @@
         <a href="./">Home</a>
         <a href="./list.html">List</a>
         <a href="./download.html">Download</a>
-		<a href="./addsoundhelp.html">Add Sound</a>
+        <a href="./addsoundhelp.html">Add Sound</a>
         <a href="./packgen.html">Packgen</a>
         <a href="./packcon.html">Packcon</a>
         <a href="./cspihelp.html">CSPI</a>
@@ -211,86 +212,164 @@
 
     <!-- Filter Options -->
     <div class="filter-container">
-        <input type="text" id="searchBar" placeholder="Search for sounds..." onkeyup="filterSounds()">
+        <input
+            type="text"
+            id="searchBar"
+            placeholder="Search for sounds..."
+            onkeyup="filterSounds()"
+        />
         <select id="categorySelect" onchange="filterSounds()">
             <option value="">Select Category</option>
             <option value="Meme">Meme</option>
             <option value="Useful">Useful</option>
         </select>
-        <script> document.addEventListener('DOMContentLoaded', function() { const selectElement = document.getElementById('categorySelect'); const defaultOption = selectElement.querySelector('option[value=""]'); selectElement.addEventListener('change', function() { if (selectElement.value === "") { selectElement.selectedIndex = 1;  } }); defaultOption.style.display = 'none'; }); </script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const selectElement = document.getElementById("categorySelect");
+                const defaultOption = selectElement.querySelector('option[value=""]');
+                selectElement.addEventListener("change", function () {
+                    if (selectElement.value === "") {
+                        selectElement.selectedIndex = 1;
+                    }
+                });
+                defaultOption.style.display = "none";
+            });
+        </script>
         <select id="typeSelect" onchange="filterSounds()">
             <option value="">Select Type</option>
             <option value="Clicks">Clicks</option>
             <option value="Releases">Releases</option>
             <option value="Both">Both</option>
         </select>
-        <script> document.addEventListener('DOMContentLoaded', function() { const selectElement = document.getElementById('typeSelect'); const defaultOption = selectElement.querySelector('option[value=""]'); selectElement.addEventListener('change', function() { if (selectElement.value === "") { selectElement.selectedIndex = 1;  } }); defaultOption.style.display = 'none'; }); </script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const selectElement = document.getElementById("typeSelect");
+                const defaultOption = selectElement.querySelector('option[value=""]');
+                selectElement.addEventListener("change", function () {
+                    if (selectElement.value === "") {
+                        selectElement.selectedIndex = 1;
+                    }
+                });
+                defaultOption.style.display = "none";
+            });
+        </script>
         <button onclick="filterSounds()">Apply Filters</button>
     </div>
 
     <!-- Sounds List -->
-    <div class="sound-list" id="soundList">
-        <!-- Dynamic content will appear here -->
+    <div class="sound-list" id="soundList"></div>
+
+    <div class="no-results" id="noResults" style="display: none;">
+        No sounds found matching your criteria.
     </div>
 
-    <div class="no-results" id="noResults" style="display: none;">No sounds found matching your criteria.</div>
+    <script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
 
     <script>
-        
-        const soundsDataPath = './website_list.json'; 
-    
+        const soundsDataPath = "./website_list.json";
+
         async function loadSoundsData() {
             const response = await fetch(soundsDataPath);
-            console.log(response); 
-            const data = await response.json();
-            return data;
+            return await response.json();
         }
-    
+
+        async function downloadPack(category, id) {
+            const zip = new JSZip();
+
+            async function addFilesToZip(path) {
+                const apiUrl = `https://api.github.com/repos/clicksounds/clicks/contents/${category}/${id}/${path}?ref=main`;
+                const res = await fetch(apiUrl);
+                if (!res.ok) throw new Error(`Failed to fetch ${apiUrl}`);
+                const entries = await res.json();
+
+                for (const entry of entries) {
+                    if (entry.type === "file") {
+                        const fileRes = await fetch(entry.download_url);
+                        const blob = await fileRes.blob();
+                        const relPath = entry.path.replace(`${category}/${id}/`, "");
+                        zip.file(relPath, blob);
+                    } else if (entry.type === "dir") {
+                        await addFilesToZip(entry.path.replace(`${category}/${id}/`, ""));
+                    }
+                }
+            }
+
+            try {
+                await addFilesToZip("");
+                const content = await zip.generateAsync({ type: "blob" });
+                const a = document.createElement("a");
+                a.href = URL.createObjectURL(content);
+                a.download = `${id}.zip`;
+                a.click();
+            } catch (err) {
+                console.error(err);
+                alert("Failed to download pack: " + err.message);
+            }
+        }
+
         function displaySounds(filteredSounds) {
-            const soundList = document.getElementById('soundList');
-            soundList.innerHTML = ''; 
-    
+            const soundList = document.getElementById("soundList");
+            soundList.innerHTML = "";
+
             if (filteredSounds.length === 0) {
-                document.getElementById('noResults').style.display = 'block';
+                document.getElementById("noResults").style.display = "block";
             } else {
-                document.getElementById('noResults').style.display = 'none';
-                filteredSounds.forEach(sound => {
-                    const soundItem = document.createElement('div');
-                    soundItem.classList.add('sound-item');
-                    soundItem.textContent = `${sound.name}`;
-                    soundList.appendChild(soundItem);
+                document.getElementById("noResults").style.display = "none";
+
+                filteredSounds.forEach((sound) => {
+                    const btn = document.createElement("button");
+                    btn.classList.add("sound-item");
+                    btn.textContent = sound.name;
+                    btn.onclick = async () => {
+                        btn.disabled = true;
+                        const originalText = btn.textContent;
+                        btn.textContent = "Downloading...";
+                        try {
+                            await downloadPack(sound.type, sound.id);
+                        } finally {
+                            setTimeout(() => {
+                                btn.disabled = false;
+                                btn.textContent = originalText;
+                            }, 5000);
+                        }
+                    };
+                    soundList.appendChild(btn);
                 });
             }
         }
-    
+
         // Function to filter sounds based on user input
         async function filterSounds() {
-            const searchQuery = document.getElementById('searchBar').value.toLowerCase();
-            const categoryFilter = document.getElementById('categorySelect').value;
-            const typeFilter = document.getElementById('typeSelect').value;
-    
-            const soundsData = await loadSoundsData(); 
-    
+            const searchQuery = document
+                .getElementById("searchBar")
+                .value.toLowerCase();
+            const categoryFilter = document.getElementById("categorySelect").value;
+            const typeFilter = document.getElementById("typeSelect").value;
+
+            const soundsData = await loadSoundsData();
+
             let filteredSounds = [];
-    
+
             for (let category in soundsData) {
                 if (categoryFilter && category !== categoryFilter) continue;
-    
-                soundsData[category].forEach(sound => {
+
+                soundsData[category].forEach((sound) => {
                     const matchesSearch = sound.name.toLowerCase().includes(searchQuery);
-                    const matchesType = (typeFilter === 'Both' || sound.folders.includes(typeFilter) || (typeFilter === '' && sound.folders.length > 0));
-                    
+                    const matchesType =
+                        typeFilter === "Both" ||
+                        sound.folders.includes(typeFilter) ||
+                        (typeFilter === "" && sound.folders.length > 0);
+
                     if (matchesSearch && matchesType) {
                         filteredSounds.push({ ...sound, category });
                     }
                 });
             }
-    
+
             displaySounds(filteredSounds);
         }
-    
-        window.onload = filterSounds; 
-    </script>    
 
+        window.onload = filterSounds;
+    </script>
 </body>
 </html>
