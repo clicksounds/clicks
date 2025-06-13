@@ -279,7 +279,7 @@
             async function addFilesToZip(path) {
                 const apiUrl = `https://api.github.com/repos/clicksounds/clicks/contents/${category}/${id}/${path}?ref=main`;
                 const res = await fetch(apiUrl);
-                if (!res.ok) throw new Error(`Failed to fetch ${apiUrl}`);
+                if (!res.ok) throw new Error(`Failed to fetch ${apiUrl}.`);
                 const entries = await res.json();
 
                 for (const entry of entries) {
@@ -303,7 +303,7 @@
                 a.click();
             } catch (err) {
                 console.error(err);
-                alert("Failed to download pack: " + err.message);
+                alert("Failed to download pack: " + err.message + "\n\nThis is not your fault. Please report this issue in the Click Sounds Discord server so it can be fixed.");
             }
         }
 
