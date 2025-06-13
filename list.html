@@ -339,6 +339,16 @@
         }
 
         // Function to filter sounds based on user input
+        let cachedSoundsData = null;
+
+        async function getCachedSoundsData() {
+            if (!cachedSoundsData) {
+                const response = await fetch(soundsDataPath);
+                cachedSoundsData = await response.json();
+            }
+            return cachedSoundsData;
+        }
+
         async function filterSounds() {
             const searchQuery = document
                 .getElementById("searchBar")
@@ -346,7 +356,7 @@
             const categoryFilter = document.getElementById("categorySelect").value;
             const typeFilter = document.getElementById("typeSelect").value;
 
-            const soundsData = await loadSoundsData();
+            const soundsData = await getCachedSoundsData();
 
             let filteredSounds = [];
 
@@ -365,7 +375,6 @@
                     }
                 });
             }
-
             displaySounds(filteredSounds);
         }
 
