@@ -97,12 +97,12 @@ jobs:
       - name: Install jq
         run: sudo apt-get install -y jq
 
-      - name: Generate website_list.json
+      - name: Generate index_list.json
         run: |
           set -e  # Exit immediately if a command exits with a non-zero status
-          echo "Generating website_list.json..."
-          echo '{' > website_list.json
-          echo '  "Meme": [' >> website_list.json
+          echo "Generating index_list.json..."
+          echo '{' > index_list.json
+          echo '  "Meme": [' >> index_list.json
       
           for dir in Meme/*/
           do
@@ -111,27 +111,27 @@ jobs:
               if [ -f "Meme/$dir/pack.json" ]; then
                   name=$(jq -r '.name' "Meme/$dir/pack.json")
                   id=$(jq -r '.id' "Meme/$dir/pack.json")
-                  echo "    {\"name\": \"$name\", \"id\": \"$id\", \"type\": \"Meme\", \"folders\": [" >> website_list.json
+                  echo "    {\"name\": \"$name\", \"id\": \"$id\", \"type\": \"Meme\", \"folders\": [" >> index_list.json
                   first=true
                   if [ -d "Meme/$dir/Clicks" ]; then
-                      echo -n "        \"Clicks\"" >> website_list.json
+                      echo -n "        \"Clicks\"" >> index_list.json
                       first=false
                   fi
                   if [ -d "Meme/$dir/Releases" ]; then
                       if [ "$first" = false ]; then
-                          echo -n ", " >> website_list.json
+                          echo -n ", " >> index_list.json
                       fi
-                      echo -n "\"Releases\"" >> website_list.json
+                      echo -n "\"Releases\"" >> index_list.json
                   fi
-                  echo "]}, " >> website_list.json
+                  echo "]}, " >> index_list.json
               else
                   echo "pack.json not found in Meme/$dir"
               fi
           done
       
-          sed -i '$ s/, $//' website_list.json
-          echo '  ],' >> website_list.json
-          echo '  "Useful": [' >> website_list.json
+          sed -i '$ s/, $//' index_list.json
+          echo '  ],' >> index_list.json
+          echo '  "Useful": [' >> index_list.json
       
           for dir in Useful/*/
           do
@@ -140,34 +140,34 @@ jobs:
               if [ -f "Useful/$dir/pack.json" ]; then
                   name=$(jq -r '.name' "Useful/$dir/pack.json")
                   id=$(jq -r '.id' "Useful/$dir/pack.json")
-                  echo "    {\"name\": \"$name\", \"id\": \"$id\", \"type\": \"Useful\", \"folders\": [" >> website_list.json
+                  echo "    {\"name\": \"$name\", \"id\": \"$id\", \"type\": \"Useful\", \"folders\": [" >> index_list.json
                   first=true
                   if [ -d "Useful/$dir/Clicks" ]; then
-                      echo -n "        \"Clicks\"" >> website_list.json
+                      echo -n "        \"Clicks\"" >> index_list.json
                       first=false
                   fi
                   if [ -d "Useful/$dir/Releases" ]; then
                       if [ "$first" = false ]; then
-                          echo -n ", " >> website_list.json
+                          echo -n ", " >> index_list.json
                       fi
-                      echo -n "\"Releases\"" >> website_list.json
+                      echo -n "\"Releases\"" >> index_list.json
                   fi
-                  echo "]}, " >> website_list.json
+                  echo "]}, " >> index_list.json
               else
                   echo "pack.json not found in Useful/$dir"
               fi
           done
       
-          sed -i '$ s/, $//' website_list.json
-          echo '  ]' >> website_list.json
-          echo '}' >> website_list.json
+          sed -i '$ s/, $//' index_list.json
+          echo '  ]' >> index_list.json
+          echo '}' >> index_list.json
 
-      - name: Commit Generated website_list.json
+      - name: Commit Generated index_list.json
         run: |
           git config user.name "Clicksounds Site"
           git config user.email "actions@github.com"
-          git add website_list.json
-          git commit -m "Update website_list.json" && git push || echo "Nothing to commit, no changes to JSON."
+          git add index_list.json
+          git commit -m "Update index_list.json" && git push || echo "Nothing to commit, no changes to JSON."
 
       - name: Compress into .zip for GitHub Pages
         run: |

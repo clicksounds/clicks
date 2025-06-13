@@ -266,10 +266,10 @@
     <script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
 
     <script>
-        const soundsDataPath = "./website_list.json";
+        const indexListDataPath = "./website_list.json";
 
         async function loadSoundsData() {
-            const response = await fetch(soundsDataPath);
+            const response = await fetch(indexListDataPath);
             return await response.json();
         }
 
@@ -343,7 +343,7 @@
 
         async function getCachedSoundsData() {
             if (!cachedSoundsData) {
-                const response = await fetch(soundsDataPath);
+                const response = await fetch(indexListDataPath);
                 cachedSoundsData = await response.json();
             }
             return cachedSoundsData;
