@@ -1,0 +1,442 @@
+{
+  "Meme": [
+    {"name": "Spectre", "id": "alanwalker.spectre", "type": "Meme", "folders": [
+        "Clicks"]}, 
+    {"name": "My Spacebar", "id": "alguienengdxd.my-spacebar", "type": "Meme", "folders": [
+        "Clicks"]}, 
+    {"name": "Bonk", "id": "ballball.bonk", "type": "Meme", "folders": [
+        "Clicks"]}, 
+    {"name": "Starr Drop", "id": "brawl-stars.starr-drop", "type": "Meme", "folders": [
+        "Clicks"]}, 
+    {"name": "Car Door Slam", "id": "coop.cardoorslam", "type": "Meme", "folders": [
+        "Clicks"]}, 
+    {"name": "Desk Hit", "id": "coop.deskhit", "type": "Meme", "folders": [
+        "Clicks"]}, 
+    {"name": "Discord Ping", "id": "discord.ping", "type": "Meme", "folders": [
+        "Clicks"]}, 
+    {"name": "goofypack", "id": "fluffyzeo.goofypack", "type": "Meme", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "Bad to the Bone", "id": "george-thorogood.bad-to-the-bone", "type": "Meme", "folders": [
+        "Clicks"]}, 
+    {"name": "KingSammelot Boing", "id": "kingsammelot.kingsammelot-boing", "type": "Meme", "folders": [
+        "Clicks"]}, 
+    {"name": "RussianGyat", "id": "klyric.russiangyat", "type": "Meme", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "Congregation", "id": "koraii.congregation", "type": "Meme", "folders": [
+        "Clicks"]}, 
+    {"name": "Dash", "id": "mdk.dash", "type": "Meme", "folders": [
+        "Clicks"]}, 
+    {"name": "User Account Control", "id": "microsoft.user-account-control", "type": "Meme", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "Windows USB Sounds", "id": "microsoft.win-usb", "type": "Meme", "folders": [
+        "Clicks"]}, 
+    {"name": "Windows 7 Ding", "id": "microsoft.windows-7-ding", "type": "Meme", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "Pukanya", "id": "murzikmrt.pukanya", "type": "Meme", "folders": [
+        "Clicks"]}, 
+    {"name": "Baldis Basics Door", "id": "mystman12.baldis-basics-door", "type": "Meme", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "oh my god", "id": "npesta.ohmygod", "type": "Meme", "folders": [
+        "Clicks"]}, 
+    {"name": "Riot Swag", "id": "riot.swag", "type": "Meme", "folders": [
+        "Clicks"]}, 
+    {"name": "Gravity Coil", "id": "roblox.gravitycoil", "type": "Meme", "folders": [
+        "Clicks"]}, 
+    {"name": "GD Death", "id": "robtop.gd-death", "type": "Meme", "folders": [
+        "Clicks"]}, 
+    {"name": "Abyss of Darkness dash orb", "id": "shadowbeatz.abyss-of-darkness-dash-orb", "type": "Meme", "folders": [
+        "Clicks"]}, 
+    {"name": "Fire in the Hole", "id": "stormwave.fireinthehole", "type": "Meme", "folders": [
+        "Clicks"]}, 
+    {"name": "Taco Bell", "id": "tacobell.bell", "type": "Meme", "folders": [
+        "Clicks"]}, 
+    {"name": "tada", "id": "tada.tada", "type": "Meme", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "UwU", "id": "therealkeanan00.uwu", "type": "Meme", "folders": [
+        "Clicks"]}, 
+    {"name": "Tiktok", "id": "tiktok.tiktok", "type": "Meme", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "aughhh", "id": "unknown.aughhh", "type": "Meme", "folders": [
+        "Clicks"]}, 
+    {"name": "Meow", "id": "unknown.el-gato", "type": "Meme", "folders": [
+        "Clicks"]}, 
+    {"name": "hambuger", "id": "unknown.hamburger", "type": "Meme", "folders": [
+        "Clicks"]}, 
+    {"name": "huh", "id": "unknown.huh", "type": "Meme", "folders": [
+        "Clicks"]}, 
+    {"name": "Metal Pipe", "id": "unknown.metalpipe", "type": "Meme", "folders": [
+        "Clicks"]}, 
+    {"name": "Plate Breaking", "id": "unknown.plate", "type": "Meme", "folders": [
+        "Clicks"]}, 
+    {"name": "Pluh", "id": "unknown.pluh", "type": "Meme", "folders": [
+        "Clicks"]}, 
+    {"name": "Soda", "id": "unknown.soda", "type": "Meme", "folders": [
+        "Clicks"]}, 
+    {"name": "Water on the Hill", "id": "unknown.wateronthehill", "type": "Meme", "folders": [
+        "Clicks"]}, 
+    {"name": "Aw dang it", "id": "uproxide.awdangit", "type": "Meme", "folders": [
+        "Clicks"]}, 
+    {"name": "Vine Boom", "id": "vine.boom", "type": "Meme", "folders": [
+        "Clicks"]}, 
+    {"name": "Bwomp", "id": "waterflame.bwomp", "type": "Meme", "folders": [
+        "Clicks"]}, 
+    {"name": "i looove gd cologne", "id": "wulzy.gdcologne", "type": "Meme", "folders": [
+        "Clicks"]}
+  ],
+  "Useful": [
+    {"name": "Bloody Mouse", "id": "aceofspades.bloody", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "alexg502", "id": "alex.alexg502", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "alices SayoDevice O3C", "id": "alicemiku.alices-sayodevice-o3c", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "Andarians G502 Hero", "id": "andarian.andarians-g502-hero", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "Andarians Keyboard Enter Key", "id": "andarian.andarians-keyboard-enter-key", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "Andarians Laptop Spacebar V2", "id": "andarian.andarians-laptop-spacebar-v2", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "Andarians Mobile Taps V2", "id": "andarian.andarians-mobile-taps-v2", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "Andarians mobile taps", "id": "andarian.andarians-mobile-taps", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "Andarians SayoDevice no deskmat", "id": "andarian.andarians-sayodevice-no-deskmat", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "Andarians SayoDevice O3C V2", "id": "andarian.andarians-sayodevice-o3c-v2", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "Andarians SayoDevice O3C", "id": "andarian.andarians-sayodevice-o3c", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "Andarians Spacebar", "id": "andarian.andarians-spacebar", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "Cheap logitech mouse", "id": "andarian.cheap-logitech-mouse", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "Gateron Yellow switches", "id": "andarian.gateron-yellow-switches", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "HP EliteBook Laptop Spacebar", "id": "andarian.hp-elitebook-laptop-spacebar", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "rattly leobog numpad key", "id": "andarian.rattly-leobog-numpad-key", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "Anthonys SayoDevice O3C Click", "id": "anthony.anthonys-sayodevice-o3c-click", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "Mobile Ground Tap", "id": "bbobxd.mobile-ground-tap", "type": "Useful", "folders": [
+        "Clicks"]}, 
+    {"name": "Default", "id": "beat.default", "type": "Useful", "folders": [
+        "Clicks"]}, 
+    {"name": "GMMK Pro", "id": "bitah.gmmk-pro", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "RK61 Up Arrow", "id": "bitah.rk61-up-arrow", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "SayoDevice O3C V2", "id": "bitah.sayodevice-o3c-v2", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "Bo Clicks", "id": "bobobobobobobo.bo-clicks", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "Cats Sayo V2", "id": "catkgaming.cats-sayo-v2", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "Cats Sayodevice", "id": "catkgaming.cats-sayodevice", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "Logitech G PRO Keyboard", "id": "ciganxxx.logitech-g-pro", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "Cursed (Player)", "id": "cursed.clicks", "type": "Useful", "folders": [
+        "Clicks"]}, 
+    {"name": "Cursed Clicks 2023", "id": "cursed.cursed-clicks-2023", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "CherryMX Linear Red", "id": "cut1eee.cherrymx-linear-red", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "Laptop Spacebar", "id": "cuuh.laptop-spacebar", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "Doggie", "id": "doggie.clicks", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "Doggie Click Pack", "id": "doggie.doggie-click-pack", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "Doggie G502 Hero", "id": "doggie.doggie-g502-hero", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "NormiePack", "id": "exparaigon.normiepack", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "Used logitech g305 mouse", "id": "fluffynator.used-logitech-g305-mouse", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "VXE R1 Pro Max", "id": "fluffyzeo.vxe-r1-pro-max", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "Zeos Razer Deathadder", "id": "fluffyzeo.zeos-razer-deathadder", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "Flushymelons Yunzii x71", "id": "flushymelon.flushymelons-yunzii-x71", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "fredus clicks", "id": "fredus.fredus-clicks", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "G4b1 Gateron Yellow Switches", "id": "g4b1.g4b1-gateron-yellow-switches", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "Ians Mobile Taps", "id": "ian.ians-mobile-taps", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "iDisagrRee Mouse Pack", "id": "idisagrreee.idisagrree-mouse-pack", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "Samsung AA-MR1D9TB Mouse", "id": "imsgdo.aa-mr1d9tb", "type": "Useful", "folders": [
+        "Clicks"]}, 
+    {"name": "Logitech G413 TKL", "id": "isaac.logitech-g413-tkl", "type": "Useful", "folders": [
+        "Clicks"]}, 
+    {"name": "Lenovo Wired Mouse - SM50F76959", "id": "justadude64.lenovo-wired-mouse---sm50f76959", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "kwoojeks clicks", "id": "kwoojek.kwoojeks-clicks", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "Creamy Clicks", "id": "lawfuldmcboo.creamy-clicks", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "Lawfuls Clicks", "id": "lawfuldmcboo.lawfuls-clicks", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "Old Office Mouse", "id": "lazai.old-office-mouse", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "Electro Mouse", "id": "lofracotestinogd.electro-mouse", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "Lolwut Click Pack", "id": "lolwut.lolwut-click-pack", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "Redragon Kumara K552-2", "id": "lulildo.redragon-kumara-k552-2", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "m4rks Viper 8k", "id": "m4rk.m4rks-viper-8k", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "M4rks Clicks", "id": "m4rk.m4rks-clicks", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "Royal Kludge R75", "id": "m5pon4ik.royal-kludge-r75", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "Logitech MX Anywhere 2S", "id": "main.logitech-mx-anywhere-2s", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "m4rks Logitech G502", "id": "m4rk.m4rks-logitech-g502", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "Wooting 60HE", "id": "markiethecatlover.wooting-60he", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "Wooting UwU", "id": "markiethecatlover.wooting-uwu", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "Montys-Clicks", "id": "montypie.montys-clicks", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "Balam Rush Hero", "id": "movistar.balam-rush-hero", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "DEXP Rapier UP", "id": "murzik.dexp-rapier-up", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "DEXP Rapier W", "id": "murzikmrt.dexp-rapier-w", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "Murzya pack", "id": "murzikmrt.murzya-pack", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "Klick mishi", "id": "ne-znay.klick-mishi", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "Neiro", "id": "neiro.clicks", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "Exens SayoDevice O3C", "id": "neiro.exens-sayodevice-o3c", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "Neiro Click Pack", "id": "neiro.neiro-click-pack", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "NexusGD", "id": "nexusgd.nexusgd", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "Msterbran", "id": "nhay.msterbran", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "NicNicBoss G502", "id": "nicnicboss.nicnicboss-g502", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "NicNicBoss SayoDevice", "id": "nicnicboss.nicnicboss-sayo", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "NicNicBoss SayoDevice no deskmat Remake", "id": "nicnicboss.nicnicboss-sayodevice-no-deskmat-remake", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "NicNicBoss Up Arrow Pack", "id": "nicnicboss.nicnicboss-up-arrow-pack", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "Questionable Mouse", "id": "nobody.questionable-mouse", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "Microsoft Mouse", "id": "notusefulgd.microsoft-mouse", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "npesta", "id": "npesta.clicks", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "Akko Ocean Blue switches", "id": "nywall.akko-ocean-blue-switches", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "Blueswitch V2", "id": "nywall.blueswitch-v2", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "Blueswitch", "id": "nywall.blueswitch", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "G502", "id": "nywall.fwg502", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "kyoukiXnywalSayoClickpack", "id": "nywall.kyoukixnywalsayoclickpack", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "Microsoft Wired Keyboard", "id": "nywall.microsoft-wired-keyboard", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "nywalls Bloody AL90 Mouse", "id": "nywall.nywalls-bloody-al90-mouse", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "Royal Kludge R75 Up Arrow", "id": "nywall.royal-kludge-r75-up-arrow", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "Zoe Keyboard (whatclick)", "id": "nywall.whatclick", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "Akko Keyboard", "id": "nywalll.akko-keyboard", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "Nice Clicks", "id": "nywalll.nice-clicks", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "adf-g203", "id": "oli.adf-g203", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "adf-sayo no deskmat", "id": "oli.adf-sayo-no-deskmat", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "adf-sayo V2", "id": "oli.adf-sayo-v2", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "adf-sayo V4", "id": "oli.adf-sayo-v4", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "adf-sayo", "id": "oli.adf-sayo", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "adf-ViperMini", "id": "oli.adf-vipermini", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "asayo", "id": "oli.asayo", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "Razer Huntsman Mini", "id": "oli.razer-huntsman-mini", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "Rewarny Up Arrow", "id": "oli.rewarny-up-arrow", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "Paqoe Keyboard", "id": "paqoe.paqoe-keyboard", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "Paqoe New mouse", "id": "paqoe.paqoe-new-mouse", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "osu! Hit Sound", "id": "peppy.osuhit", "type": "Useful", "folders": [
+        "Clicks"]}, 
+    {"name": "Piano key", "id": "percatp.piano-key", "type": "Useful", "folders": [
+        "Clicks"]}, 
+    {"name": "Wooting Two HE", "id": "plastic.wooting-two-he", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "Glorious Model O", "id": "platten.glorious-model-o", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "Sayodevice Jade Switches", "id": "platten.sayodevice-jade-switches", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "RazerMini", "id": "proojw123.razermini", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "Epomaker RT100 Spacebar", "id": "quiriuz.epomaker-rt100-spacebar", "type": "Useful", "folders": [
+        "Clicks"]}, 
+    {"name": "RaspSayoV2 Enhanced", "id": "rasp.raspsayov2-enhanced", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "Secants Mouse Click", "id": "secantgd.secants-mouse-click", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "SayoDevice Lekker L45", "id": "sne4ken.sayodevice-lekker-l45", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "sayolol", "id": "somerandomperson.sayolol", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "Gran Turismo 7", "id": "sony.gran-turismo-7", "type": "Useful", "folders": [
+        "Clicks"]}, 
+    {"name": "SpaceUK", "id": "spaceuk.clicks", "type": "Useful", "folders": [
+        "Clicks"]}, 
+    {"name": "G203", "id": "straybomb.g203", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "G402", "id": "straybomb.g402", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "Razer Blackwidow Keyboard", "id": "straybomb.razer-blackwidow-keyboard", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "Laps Bloody A60 Remake", "id": "sushilaps.laps-bloody-a60-remake", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "Laps Bloody A60", "id": "sushilaps.laps-bloody-a60", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "Laps Bloody Mouse V7", "id": "sushilaps.laps-bloody-mouse-v7", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "Laps Up Arrow", "id": "sushilaps.laps-up-arrow", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "Viper 8K but Sounds different", "id": "svenwastaken.viper-8k-but-sounds-different", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "Faze Clicks", "id": "swim1x.faze", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "Corsair K70 Up Arrow", "id": "therealadbi.corsair-k70-up-arrow", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "tobyn rog mouse", "id": "tobyn.tobyn-rog-mouse", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "Trikehards controller click pack V2", "id": "trikehard.trikehards-controller-click-pack-v2", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "TrusTa (Player)", "id": "trusta.clicks", "type": "Useful", "folders": [
+        "Clicks"]}, 
+    {"name": "Alloy Fps Pro UpArrow", "id": "unknown.alloy-fps-pro-uparrow", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "Click 1", "id": "unknown.click-1", "type": "Useful", "folders": [
+        "Clicks"]}, 
+    {"name": "Click 2", "id": "unknown.click-2", "type": "Useful", "folders": [
+        "Clicks"]}, 
+    {"name": "Click Release 1", "id": "unknown.click-release-1", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "Click Release 2", "id": "unknown.click-release-2", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "Click 3", "id": "unknown.click3", "type": "Useful", "folders": [
+        "Clicks"]}, 
+    {"name": "Gazonk", "id": "unknown.gazonk", "type": "Useful", "folders": [
+        "Clicks"]}, 
+    {"name": "Logitech - G102", "id": "unknown.logitech---g102", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "Logitech G502 Hero", "id": "unknown.logitech-g502-hero", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "Metronome", "id": "unknown.metronome", "type": "Useful", "folders": [
+        "Clicks"]}, 
+    {"name": "Mouse Click 6", "id": "unknown.mouse-click-6", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "Mouse Click 7", "id": "unknown.mouse-click-7", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "Pacitys", "id": "unknown.pacitys", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "Razer Basilisk V3", "id": "unknown.razer-basilisk-v3", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "Sayo Device", "id": "unknown.sayo-device", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "sayodevice idk", "id": "unknown.sayodevice-idk", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "Screen Tap 1", "id": "unknown.screen-tap-1", "type": "Useful", "folders": [
+        "Clicks"]}, 
+    {"name": "Soft Keyboard", "id": "unknown.soft-keyboard", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "Space Bar 1", "id": "unknown.space-bar-1", "type": "Useful", "folders": [
+        "Clicks"]}, 
+    {"name": "Space Bar 2", "id": "unknown.space-bar-2", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "Up Arrow 1", "id": "unknown.up-arrow-1", "type": "Useful", "folders": [
+        "Clicks"]}, 
+    {"name": "Up Arrow 2", "id": "unknown.up-arrow-2", "type": "Useful", "folders": [
+        "Clicks"]}, 
+    {"name": "Up Arrow 3", "id": "unknown.up-arrow-3", "type": "Useful", "folders": [
+        "Clicks"]}, 
+    {"name": "Up Arrow 4", "id": "unknown.up-arrow-4", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "Up Arrow 5", "id": "unknown.up-arrow-5", "type": "Useful", "folders": [
+        "Clicks"]}, 
+    {"name": "Viper Mouse", "id": "unknown.viper-mouse", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "Wooting 80HE Spacebar", "id": "unknown.wooting-80he-spacebar", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "Wooting 80HE Up Arrow", "id": "unknown.wooting-80he-up-arrow", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "TV Controller Click", "id": "verdantis.tv-controller-click", "type": "Useful", "folders": [
+        "Clicks"]}, 
+    {"name": "Viper's Spacebar", "id": "viper.spacebar", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "Vladuwka12 Spacebar", "id": "vladuwka12.spacebar", "type": "Useful", "folders": [
+        "Clicks"]}, 
+    {"name": "Hathor Orange Switches", "id": "vornex.hathor-orange-switches", "type": "Useful", "folders": [
+        "Clicks"]}, 
+    {"name": "Vortrox Click Pack", "id": "vortrox.vortrox-click-pack", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "Vortrox Click Pack Lite", "id": "vortrox.voxtrox-click-pack-lite", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "Reddragon Visnu", "id": "wardh.reddragon-visnu", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "Wardhs Akko Cream Blue spacebar", "id": "wardh.wardhs-akko-cream-blue-spacebar", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "Wardhs G502", "id": "wardh.wardhs-g502", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "Wardhs Reddragon Keyboard Blueswitch", "id": "wardh.wardhs-reddragon-keyboard-blueswitch", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "Average Mouse Click", "id": "whimsyy.average-mouse-click", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "WPopoff Clicks", "id": "wpopoff.wpopoff-clicks", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "Xer0s Blackwidow V3 up arrow", "id": "xer0.xer0s-blackwidow-v3-up-arrow", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "Logitech G Pro x Superlight Mouse", "id": "xrze.logitech-g-pro-x-superlight-mouse", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "Viper 8k", "id": "yen.viper-8k", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "Zeroniums Keyboard", "id": "zeronium.zeroniums-keyboard", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "Zikos UpArrow", "id": "ziko.zikos-uparrow", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "Zoink", "id": "zoink.clicks", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "Zoink 2", "id": "zoink.clicks2", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "Zoink Click Pack", "id": "zoink.zoink-click-pack", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "Zoink Clicks 2023", "id": "zoink.zoink-clicks-1e", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "Zoink's Wooting 80HE", "id": "zoink.zoinks-wooting-80he", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "Razer DeathAdder Elite", "id": "zwild.razer-deathadder-elite", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "zxsetj up arrow pack", "id": "zxsetj.zxsetj-up-arrow-pack", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}
+  ]
+}
