@@ -347,7 +347,12 @@
             const authorName = document.getElementById('authorName').value.trim();
             const typeSelected = document.querySelector('input[name="packType"]:checked');
 
-            generateButton.disabled = !(packName && authorName && typeSelected) || clickFiles.length === 0 && releaseFiles.length === 0;
+            if (document.cookie.includes("dont-require-sounds=true")) {
+                generateButton.disabled = !(packName && authorName && typeSelected)
+            } else {
+                generateButton.disabled = !(packName && authorName && typeSelected) || clickFiles.length === 0 && releaseFiles.length === 0;
+            }
+
         }
 
         function checkVersioning() {
@@ -371,6 +376,10 @@
                 versioningContainer.appendChild(versioningInputContainer);
                 versioningInputContainer.appendChild(versionInput);
                 versioningInputContainer.classList.add('debug-rainbow');
+                // prevent non-numeric input
+                versionInput.addEventListener('input', () => {
+                    versionInput.value = versionInput.value.replace(/\D/g, '');
+                });
             }
         }
 
@@ -429,10 +438,29 @@
                 return;
             } else { isAllowed = true; }
 
-            if (authorName == "debug") {
-                if (packName == "allow versioning" && packType == "Meme") {
+            // debug commands
+            if (authorName == "debug" && packType == "Meme") {
+                if (packName == "allow versioning") {
                     document.cookie = "allow-versioning=true; max-age=3153600000; path=/";
                     alert("Debug: Versioning has been enabled. Press OK to reload the page.");
+                    window.location.reload();
+                    return;
+                }
+                if (packName == "i am beat") {
+                    document.cookie = "isBeat=true; max-age=3153600000; path=/";
+                    alert("Debug: You are now recognized as Beat. Press OK to reload the page.");
+                    window.location.reload();
+                    return;
+                }
+                if (packName == "require sounds") {
+                    document.cookie = "dont-require-sounds=false; max-age=3153600000; path=/";
+                    alert("Debug: Sounds are now required. Press OK to reload the page.");
+                    window.location.reload();
+                    return;
+                }
+                if (packName == "dont require sounds") {
+                    document.cookie = "dont-require-sounds=true; max-age=3153600000; path=/";
+                    alert("Debug: Sounds are no longer required. Press OK to reload the page.");
                     window.location.reload();
                     return;
                 }
