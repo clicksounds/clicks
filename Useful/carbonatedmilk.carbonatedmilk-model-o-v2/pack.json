@@ -1,0 +1,13 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "carbonatedmilk.carbonatedmilk-model-o-v2",
+    "packgen": true,
+    "type": "Useful",
+    "name": "carbonatedmilk model o v2",
+    "description": "clickpack by @carbonatedmilk__ on zcb server.",
+    "authors": [
+        {
+            "name": "carbonatedmilk"
+        }
+    ]
+}
