@@ -1,0 +1,14 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "andarian.aula-f75-up-arrow",
+    "packgen": true,
+    "type": "Useful",
+    "name": "Aula F75 Up Arrow",
+    "description": "up arrow of my new best keyboard (aula f75)!!! it comes with stock reaper switches and they do sounds very gud (thocky lol).",
+    "authors": [
+        {
+            "name": "Andarian",
+            "gdAccountID": 27823067
+        }
+    ]
+}
