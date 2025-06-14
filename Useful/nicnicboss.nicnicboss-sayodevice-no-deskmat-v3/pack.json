@@ -1,0 +1,13 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "nicnicboss.nicnicboss-sayodevice-no-deskmat-v3",
+    "packgen": true,
+    "type": "Useful",
+    "name": "NicNicBoss SayoDevice no deskmat V3",
+    "description": "v3 version (with zero noise but less sounds) by @nicnicboss on ZCB server.",
+    "authors": [
+        {
+            "name": "NicNicBoss"
+        }
+    ]
+}
