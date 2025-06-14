@@ -1,0 +1,12 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "norfolk.norfolks-bloody-a70x-clickpack",
+    "packgen": true,
+    "type": "Useful",
+    "name": "Norfolk's Bloody A70 Click Pack",
+    "authors": [
+        {
+            "name": "Norfolk"
+        }
+    ]
+}

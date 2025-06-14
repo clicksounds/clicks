@@ -108,6 +108,8 @@
         "Clicks", "Releases"]}, 
     {"name": "Andarians Spacebar", "id": "andarian.andarians-spacebar", "type": "Useful", "folders": [
         "Clicks", "Releases"]}, 
+    {"name": "Aula F75 Up Arrow", "id": "andarian.aula-f75-up-arrow", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
     {"name": "Cheap logitech mouse", "id": "andarian.cheap-logitech-mouse", "type": "Useful", "folders": [
         "Clicks", "Releases"]}, 
     {"name": "Gateron Yellow switches", "id": "andarian.gateron-yellow-switches", "type": "Useful", "folders": [
@@ -129,6 +131,8 @@
     {"name": "SayoDevice O3C V2", "id": "bitah.sayodevice-o3c-v2", "type": "Useful", "folders": [
         "Clicks", "Releases"]}, 
     {"name": "Bo Clicks", "id": "bobobobobobobo.bo-clicks", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "carbonatedmilk model o v2", "id": "carbonatedmilk.carbonatedmilk-model-o-v2", "type": "Useful", "folders": [
         "Clicks", "Releases"]}, 
     {"name": "Cats Sayo V2", "id": "catkgaming.cats-sayo-v2", "type": "Useful", "folders": [
         "Clicks", "Releases"]}, 
@@ -236,6 +240,8 @@
         "Clicks", "Releases"]}, 
     {"name": "Questionable Mouse", "id": "nobody.questionable-mouse", "type": "Useful", "folders": [
         "Clicks", "Releases"]}, 
+    {"name": "Norfolk's Bloody A70 Click Pack", "id": "norfolk.norfolks-bloody-a70x-clickpack", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
     {"name": "Microsoft Mouse", "id": "notusefulgd.microsoft-mouse", "type": "Useful", "folders": [
         "Clicks", "Releases"]}, 
     {"name": "npesta", "id": "npesta.clicks", "type": "Useful", "folders": [
@@ -302,6 +308,8 @@
         "Clicks", "Releases"]}, 
     {"name": "Secants Mouse Click", "id": "secantgd.secants-mouse-click", "type": "Useful", "folders": [
         "Clicks", "Releases"]}, 
+    {"name": "Sjunlee Clicks V5", "id": "sjunlee.sjunlee-clicks-v5", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
     {"name": "SayoDevice Lekker L45", "id": "sne4ken.sayodevice-lekker-l45", "type": "Useful", "folders": [
         "Clicks", "Releases"]}, 
     {"name": "sayolol", "id": "somerandomperson.sayolol", "type": "Useful", "folders": [
@@ -336,6 +344,8 @@
         "Clicks", "Releases"]}, 
     {"name": "TrusTa (Player)", "id": "trusta.clicks", "type": "Useful", "folders": [
         "Clicks"]}, 
+    {"name": "Unami sayo V2", "id": "unami.unami-sayo-v2", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
     {"name": "Alloy Fps Pro UpArrow", "id": "unknown.alloy-fps-pro-uparrow", "type": "Useful", "folders": [
         "Clicks", "Releases"]}, 
     {"name": "Click 1", "id": "unknown.click-1", "type": "Useful", "folders": [
@@ -413,6 +423,8 @@
     {"name": "Wardhs Reddragon Keyboard Blueswitch", "id": "wardh.wardhs-reddragon-keyboard-blueswitch", "type": "Useful", "folders": [
         "Clicks", "Releases"]}, 
     {"name": "Average Mouse Click", "id": "whimsyy.average-mouse-click", "type": "Useful", "folders": [
+        "Clicks", "Releases"]}, 
+    {"name": "Whizkid05 Click Pack", "id": "whizkid05.whizkid05-click-pack", "type": "Useful", "folders": [
         "Clicks", "Releases"]}, 
     {"name": "WPopoff Clicks", "id": "wpopoff.wpopoff-clicks", "type": "Useful", "folders": [
         "Clicks", "Releases"]}, 

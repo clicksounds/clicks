@@ -1,0 +1,13 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "whizkid05.whizkid05-click-pack",
+    "packgen": true,
+    "type": "Useful",
+    "name": "Whizkid05 Click Pack",
+    "authors": [
+        {
+            "name": "Whizkid05",
+            "gdAccountID": 3822295
+        }
+    ]
+}
