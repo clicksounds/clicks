@@ -183,6 +183,46 @@
 			padding: 5px 10px;
 			border-radius: 5px;
 		}
+
+        /* DEBUG RAINBOW */
+
+        @property --angle {
+            syntax: '<angle>';
+            initial-value: 0deg;
+            inherits: false;
+        }
+
+        @keyframes debug-rotate {
+            to {
+                --angle: 360deg;
+            }
+        }
+
+        .debug-rainbow {
+            position: relative;
+            display: block;
+            width: 100%;
+            padding: 4px;
+            border-radius: 15px;
+            background: conic-gradient(from var(--angle), red, orange, yellow, lime, aqua, blue, magenta, red);
+            animation: debug-rotate 4s linear infinite;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+
+        .debug-rainbow input {
+            position: relative;
+            display: block;
+            width: 100%;
+            border-radius: 11px;
+            background-color: #3a3a50;
+            padding: 10px;
+            border: none;
+            color: #fff;
+            font-family: inherit;
+            box-sizing: border-box;
+            margin: 0;
+        }
     </style>
 </head>
 <body>
@@ -326,8 +366,11 @@
                 versionInput.min = '1';
                 // add to versioning container
                 const versioningContainer = document.getElementById('versioningContainer');
+                const versioningInputContainer = document.createElement('div');
                 versioningContainer.appendChild(versionLabel);
-                versioningContainer.appendChild(versionInput);
+                versioningContainer.appendChild(versioningInputContainer);
+                versioningInputContainer.appendChild(versionInput);
+                versioningInputContainer.classList.add('debug-rainbow');
             }
         }
 
@@ -429,14 +472,15 @@
             input.addEventListener('change', checkGenerateButton);
         });
 
-        window.addEventListener('beforeunload', () => {
+        window.addEventListener('DOMContentLoaded', () => {
+            const packType = document.querySelector('input[name="packType"]:checked');
             document.getElementById('packName').value = '';
             document.getElementById('packDescription').value = '';
             document.getElementById('authorName').value = '';
             document.getElementById('gdAccountID').value = '';
             document.getElementById('clickFiles').value = '';
             document.getElementById('releaseFiles').value = '';
-            document.querySelector('input[name="packType"]:checked').checked = false;
+            if (packType) packType.checked = false;
         });
 
         document.querySelectorAll('input[type="text"]').forEach(input => {
