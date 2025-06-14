@@ -1,0 +1,12 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "unami.unami-sayo-v2",
+    "packgen": true,
+    "type": "Useful",
+    "name": "Unami sayo V2",
+    "authors": [
+        {
+            "name": "Unami"
+        }
+    ]
+}
