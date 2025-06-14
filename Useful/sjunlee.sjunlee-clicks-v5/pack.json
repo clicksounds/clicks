@@ -1,0 +1,13 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "sjunlee.sjunlee-clicks-v5",
+    "packgen": true,
+    "type": "Useful",
+    "name": "Sjunlee Clicks V5",
+    "description": "sjunleev5 clicks!! from his popular pplllife w/clicks showcase but better btw!",
+    "authors": [
+        {
+            "name": "sjunlee"
+        }
+    ]
+}
