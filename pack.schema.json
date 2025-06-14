@@ -18,6 +18,11 @@
       "type": "string",
       "pattern": "^([a-z0-9\\-]+\\.[a-z0-9\\-]+)$"
     },
+    "version": {
+      "description": "The version of the click pack. This is used to determine if the pack has been updated, and should be incremented by 1 when the pack is updated.",
+      "type": "integer",
+      "minimum": 1
+    },
     "packgen": {
 		  "type": "boolean",
 		  "description": "Indicates if a pack was made using pack generator. This is important for debugging. It must be enabled only on click packs made using pack generator."

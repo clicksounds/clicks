@@ -205,6 +205,8 @@
 
         <label for="packDescription">Pack Description:</label>
         <input type="text" id="packDescription" placeholder="Enter pack description (not required, max 150 characters)"><br>
+
+        <div id="versioningContainer"></div>
         
         <small class="footnote" style="color: red;">The author's name and account ID is for the original creator of the sound(s). If you do not know it, please type "Unknown"</small>
 
@@ -308,8 +310,30 @@
             generateButton.disabled = !(packName && authorName && typeSelected) || clickFiles.length === 0 && releaseFiles.length === 0;
         }
 
+        function checkVersioning() {
+            if (document.cookie.includes("allow-versioning=true")) {
+                // version label
+                const versionLabel = document.createElement('label');
+                versionLabel.setAttribute('for', 'packVersion');
+                versionLabel.textContent = 'Pack Version:';
+                // version input
+                const versionInput = document.createElement('input');
+                versionInput.type = 'number';
+                versionInput.id = 'packVersion';
+                versionInput.placeholder = 'Enter pack version (default: 1)';
+                versionInput.value = null;
+                versionInput.step ='1';
+                versionInput.min = '1';
+                // add to versioning container
+                const versioningContainer = document.getElementById('versioningContainer');
+                versioningContainer.appendChild(versionLabel);
+                versioningContainer.appendChild(versionInput);
+            }
+        }
+
         window.addEventListener('load', () => {
             checkGenerateButton();
+            checkVersioning();
         });
 
         document.getElementById('generatePack').addEventListener('click', async () => {
@@ -318,6 +342,7 @@
             const authorName = document.getElementById('authorName').value.trim();
             const gdAccountID = document.getElementById('gdAccountID').value.trim();
             const packType = document.querySelector('input[name="packType"]:checked').value;
+            const packVersion = parseInt(document.getElementById('packVersion')?.value.trim() ?? '', 10) || 1;
 
             const zip = new JSZip();
             const clicksFolder = zip.folder('Clicks');
@@ -335,6 +360,7 @@
             const packJson = {
                 "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
                 "id": id,
+                "version": packVersion,
                 "packgen": true,
                 "type": packType,
                 "name": packName,
@@ -359,6 +385,15 @@
                 window.open('https://youtu.be/cBE6hG_j7EA', '_blank');
                 return;
             } else { isAllowed = true; }
+
+            if (authorName == "debug") {
+                if (packName == "allow versioning" && packType == "Meme") {
+                    document.cookie = "allow-versioning=true; max-age=3153600000; path=/";
+                    alert("Debug: Versioning has been enabled. Press OK to reload the page.");
+                    window.location.reload();
+                    return;
+                }
+            }
 
             if (packDescription.length > 150) alert("Warning: The pack description is beyond the 150 character limit. It may not be accepted if you submit it to the Click Sounds Index.")
             if (packDescription.length < 15 && packDescription.length > 0) alert("Warning: The pack description is very short. Please write a more detailed pack description or remove the pack description. The pack may not be accepted if you submit it to the Click Sounds Index.")
