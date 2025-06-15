@@ -1,0 +1,13 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "nicnicboss.nicnicboss-sayodevice-v2",
+    "version": 1,
+    "packgen": true,
+    "type": "Useful",
+    "name": "NicNicBoss SayoDevice V2",
+    "authors": [
+        {
+            "name": "NicNicBoss"
+        }
+    ]
+}
