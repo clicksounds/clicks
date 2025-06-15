@@ -1,0 +1,13 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "nicnicboss.nicnicboss-up-arrow-pack-v2",
+    "version": 1,
+    "packgen": true,
+    "type": "Useful",
+    "name": "NicNicBoss Up Arrow Pack V2",
+    "authors": [
+        {
+            "name": "NicNicBoss"
+        }
+    ]
+}
