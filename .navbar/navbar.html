@@ -41,6 +41,13 @@
             border-radius: 5px;
         }
 
+        .icon {
+            width: 1.2em;
+            height: 1.2em;
+            vertical-align: middle;
+            margin-right: 6px;
+        }
+
         .dropdown {
             position: relative;
             margin: 0 10px;
@@ -52,7 +59,7 @@
         }
 
         .dropdown-toggle .arrow {
-            margin-left: 5px;
+            margin-left: 8px;
             transition: transform 0.3s ease;
             display: inline-block;
         }
@@ -92,15 +99,29 @@
             transform: rotate(90deg);
         }
 
+        svg.icon {
+            fill: currentColor;
+            stroke: currentColor;
+        }
+
         @media (max-width: 768px) {
             .navbar {
-                flex-direction: column;
-                align-items: flex-start;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                overflow-x: auto;
+                align-items: center;
             }
 
             .dropdown-content {
-                position: static;
-                padding-left: 20px;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                padding-left: 0;
+                display: none;
+                background-color: rgba(0, 0, 0, 0.95);
+                flex-direction: column;
+                min-width: 160px;
+                z-index: 1;
             }
 
             .dropdown.open .dropdown-content {
@@ -112,17 +133,33 @@
             }
 
             .dropdown:hover .dropdown-content {
-                display: none;
+                display: none !important;
+            }
+
+            .dropdown:hover .arrow {
+                transform: none !important;
             }
         }
     </style>
 </head>
 <body>
     <nav class="navbar">
-        <a href="/">🏠︎ Home</a>
+        <a href="/">
+            <svg class="icon" viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg">
+                <path d="M .6249 27.8242 C .6249 28.9492 1.5155 29.6289 2.6171 29.6289 C 3.2968 29.6289 3.8358 29.3008 4.3046 28.8320 L 27.1796 7.9961 C 27.4374 7.7383 27.7187 7.6445 28.0233 7.6445 C 28.3046 7.6445 28.5624 7.7383 28.8436 7.9961 L 51.6954 28.8320 C 52.1874 29.3008 52.7264 29.6289 53.3826 29.6289 C 54.4842 29.6289 55.3751 28.9492 55.3751 27.8242 C 55.3751 27.1211 55.1173 26.6758 54.6719 26.2774 L 46.5623 18.8945 L 46.5623 5.0430 C 46.5623 4.0117 45.9061 3.3555 44.8751 3.3555 L 41.8046 3.3555 C 40.7968 3.3555 40.0936 4.0117 40.0936 5.0430 L 40.0936 13.0117 L 30.8124 4.5274 C 29.9921 3.7539 28.9843 3.3789 27.9999 3.3789 C 27.0155 3.3789 26.0312 3.7539 25.1874 4.5274 L 1.3280 26.2774 C .9062 26.6758 .6249 27.1211 .6249 27.8242 Z M 7.3280 47.4883 C 7.3280 50.7461 9.2968 52.6445 12.6015 52.6445 L 22.0936 52.6445 L 22.0936 35.9805 C 22.0936 34.9023 22.8202 34.1992 23.8984 34.1992 L 32.1718 34.1992 C 33.2499 34.1992 33.9531 34.9023 33.9531 35.9805 L 33.9531 52.6445 L 43.4216 52.6445 C 46.7264 52.6445 48.6719 50.7461 48.6719 47.4883 L 48.6719 30.3320 L 28.7734 12.4023 C 28.5155 12.1679 28.2343 12.0508 27.9531 12.0508 C 27.6952 12.0508 27.4374 12.1679 27.1562 12.4258 L 7.3280 30.4492 Z"/>
+            </svg>
+            Home
+        </a>
 
         <div class="dropdown">
-            <div class="dropdown-toggle">⧉ Guides <span class="arrow">▷</span></div>
+            <div class="dropdown-toggle">
+                <svg class="icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none">
+                    <path d="M8 5.00005C7.01165 5.00082 6.49359 5.01338 6.09202 5.21799C5.71569 5.40973 5.40973 5.71569 5.21799 6.09202C5 6.51984 5 7.07989 5 8.2V17.8C5 18.9201 5 19.4802 5.21799 19.908C5.40973 20.2843 5.71569 20.5903 6.09202 20.782C6.51984 21 7.07989 21 8.2 21H15.8C16.9201 21 17.4802 21 17.908 20.782C18.2843 20.5903 18.5903 20.2843 18.782 19.908C19 19.4802 19 18.9201 19 17.8V8.2C19 7.07989 19 6.51984 18.782 6.09202C18.5903 5.71569 18.2843 5.40973 17.908 5.21799C17.5064 5.01338 16.9884 5.00082 16 5.00005M8 5.00005V7H16V5.00005M8 5.00005V4.70711C8 4.25435 8.17986 3.82014 8.5 3.5C8.82014 3.17986 9.25435 3 9.70711 3H14.2929C14.7456 3 15.1799 3.17986 15.5 3.5C15.8201 3.82014 16 4.25435 16 4.70711V5.00005M12 15H9M15 11H9"
+                          fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Guides
+                <span class="arrow">▷</span>
+            </div>
             <div class="dropdown-content">
                 <a href="/download.html">Download</a>
                 <a href="/addsoundhelp.html">Add Sounds</a>
@@ -131,7 +168,15 @@
         </div>
 
         <div class="dropdown">
-            <div class="dropdown-toggle">⚒ Tools <span class="arrow">▷</span></div>
+            <div class="dropdown-toggle">
+                <svg class="icon" viewBox="0 -8 72 72" xmlns="http://www.w3.org/2000/svg">
+                    <path fill="currentColor" d="M13.32,44.31a4.5,4.5,0,0,0,6.36,6.36L34.44,35.91l-6.36-6.36Z"/>
+                    <polygon fill="currentColor" points="50.2 16.96 56.63 13.63 60 7.13 56.86 3.99 50.36 7.36 47.03 13.78 39.21 21.61 42.38 24.79 50.2 16.96"/>
+                    <path fill="currentColor" d="M51.61,34,51,34a8.9,8.9,0,0,0-3.11.58L29.45,16.09A8.9,8.9,0,0,0,30,13l-.06-.6A8.9,8.9,0,0,0,17.19,4.89l6,6a3,3,0,0,1,.68,1.08A3,3,0,0,1,21,16a2.92,2.92,0,0,1-1-.21,3.15,3.15,0,0,1-1.08-.67l-6-6a8.9,8.9,0,0,0,7.49,12.78L21,22a8.9,8.9,0,0,0,3.11-.58L42.6,39.84A8.9,8.9,0,0,0,42,43l.06.6A9,9,0,0,0,51,51.94a8.72,8.72,0,0,0,3.85-.9l-6-6A3.08,3.08,0,0,1,48.21,44,3,3,0,0,1,51,40a2.92,2.92,0,0,1,1,.21,2.72,2.72,0,0,1,1.08.67l6,6A8.9,8.9,0,0,0,51.61,34Z"/>
+                </svg>
+                Tools
+                <span class="arrow">▷</span>
+            </div>
             <div class="dropdown-content">
                 <a href="/list.html">List</a>
                 <a href="/packgen.html">Packgen</a>
@@ -144,6 +189,7 @@
         document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
             toggle.addEventListener('click', function (e) {
                 if (window.innerWidth <= 768) {
+                    e.preventDefault();
                     const parent = this.parentElement;
                     parent.classList.toggle('open');
                 }
