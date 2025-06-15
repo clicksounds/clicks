@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <style>
+        .navbar {
+            font-family: Arial, sans-serif;
+            color: #fff;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 10px 20px;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 10;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            flex-wrap: wrap;
+        }
+
+        .navbar a,
+        .dropdown-toggle {
+            color: #00aaff;
+            text-decoration: none;
+            font-size: 1.2em;
+            margin: 0 20px;
+            display: inline-block;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .navbar a:hover,
+        .dropdown-toggle:hover {
+            background: #00aaff;
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        .dropdown {
+            position: relative;
+            margin: 0 10px;
+        }
+
+        .dropdown-toggle {
+            display: flex;
+            align-items: center;
+        }
+
+        .dropdown-toggle .arrow {
+            margin-left: 5px;
+            transition: transform 0.3s ease;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.95);
+            min-width: 160px;
+            z-index: 1;
+            flex-direction: column;
+            text-align: left;
+            padding: 10px 0;
+        }
+
+        .dropdown-content a {
+            display: block;
+            padding: 5px 20px;
+            margin: 0;
+            font-size: 1.1em;
+            color: #00aaff;
+            text-decoration: none;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #00aaff;
+            color: #fff;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: flex;
+        }
+
+        .dropdown:hover .arrow {
+            transform: rotate(90deg);
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .dropdown-content {
+                position: static;
+                padding-left: 20px;
+            }
+
+            .dropdown.open .dropdown-content {
+                display: flex;
+            }
+
+            .dropdown.open .arrow {
+                transform: rotate(90deg);
+            }
+
+            .dropdown:hover .dropdown-content {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="/">🏠︎ Home</a>
+
+        <div class="dropdown">
+            <div class="dropdown-toggle">⧉ Guides <span class="arrow">▷</span></div>
+            <div class="dropdown-content">
+                <a href="/download.html">Download</a>
+                <a href="/addsoundhelp.html">Add Sounds</a>
+                <a href="/cspihelp.html">CSPI</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <div class="dropdown-toggle">⚒ Tools <span class="arrow">▷</span></div>
+            <div class="dropdown-content">
+                <a href="/list.html">List</a>
+                <a href="/packgen.html">Packgen</a>
+                <a href="/packcon.html">Packcon</a>
+            </div>
+        </div>
+    </nav>
+
+    <script>
+        document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
+            toggle.addEventListener('click', function (e) {
+                if (window.innerWidth <= 768) {
+                    const parent = this.parentElement;
+                    parent.classList.toggle('open');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

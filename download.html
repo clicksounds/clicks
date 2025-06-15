@@ -10,6 +10,7 @@
     <meta property="og:image" content="https://raw.githubusercontent.com/clicksounds/clicks/refs/heads/main/.images/fullres-logo.png">
     <meta property="og:url" content="https://clicksounds.xyz/download.html">
     <meta property="og:type" content="website"/>
+    <script src="/.navbar/navbarFetch.js"></script>
     <style>
         /* Reset and base styles */
         * {
@@ -38,120 +39,16 @@
             color: #00aaff;
         }
 
-        /* Overlay to darken the image
-        body::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.6);
-            z-index: -1;
-        }*/
-
-        /* Navbar styles */
-        nav {
-            width: 100%;
-            background-color: rgba(0, 0, 0, 0.8); /* Dark background for the navbar */
-            padding: 10px 20px;
-            position: absolute;
-            top: 0;
-            left: 0;
-            z-index: 10;
-            box-sizing: border-box;
-        }
-
-        /* Navigation links */
-        nav a {
-            color: #00aaff;
-            text-decoration: none;
-            font-size: 1.2em;
-            margin-right: 20px;
-            display: inline-block;
-            transition: all 0.3s ease;
-        }
-
-        nav a:hover {
-            background: #00aaff;
-            color: #fff;
-            padding: 5px 10px;
-            border-radius: 5px;
-        }
-
         /* Main content styles */
         h1 {
             font-size: 2.5em;
-            margin-top: 100px; /* Adjust margin to allow space for the navbar */
-        }
-
-        /* Sidebars */
-        .sidebar {
-            position: fixed;
-            top: 0;
-            bottom: 0;
-            width: 50px;
-            background: rgba(0, 0, 0, 0.5); /* Transparent dark background */
-            z-index: 5;
-            animation: slide 3s ease-in-out infinite;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .sidebar.left {
-            left: -50px; /* Initially off-screen */
-        }
-
-        .sidebar.right {
-            right: -50px; /* Initially off-screen */
-        }
-
-        /* Animation to slide in the sidebars */
-        @keyframes slide {
-            0% {
-                left: -50px;
-                right: -50px;
-            }
-            50% {
-                left: 0;
-                right: 0;
-            }
-            100% {
-                left: -50px;
-                right: -50px;
-            }
-        }
-
-        /* Link inside the sidebar */
-        .sidebar a {
-            color: #fff;
-            text-decoration: none;
-            font-size: 1.2em;
-            transition: all 0.3s ease;
-            white-space: nowrap;
-            transform: translateX(-10px); /* Slightly left shift */
-        }
-
-        .sidebar a:hover {
-            color: #00aaff;
-            background: rgba(0, 0, 0, 0.7);
-            padding: 10px 15px;
-            border-radius: 5px;
+            margin-top: 100px;
         }
     </style>
 </head>
 <body>
-    <nav>
-        <a href="./">Home</a>
-        <a href="./list.html">List</a>
-        <a href="./download.html">Download</a>
-		<a href="./addsoundhelp.html">Add Sound</a>
-        <a href="./packgen.html">Packgen</a>
-        <a href="./packcon.html">Packcon</a>
-        <a href="./cspihelp.html">CSPI</a>
-    </nav>
-
+    <div id="navbar"></div>
+    
     <video src="./.images/geode-cs-install.mp4" alt= "Installing CS using the Geode index." style="display: block; margin-left: auto; margin-right: auto; width: 50%; max-width: 700px; height: auto;" loop autoplay muted></video>
     
     <h3><br>Click Sounds and Click Sounds Lite can be downloaded ingame from the Geode Index.</h3>
