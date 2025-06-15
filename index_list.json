@@ -5,7 +5,6 @@
       "id": "nywalll.akko-keyboard",
       "version": 1,
       "type": "Useful",
-      "description": " ",
       "authors": [{"name":"nywalll","type":"Main"}],
       "folders": ["Clicks","Releases"]
     },
@@ -23,7 +22,6 @@
       "id": "unknown.alloy-fps-pro-uparrow",
       "version": 1,
       "type": "Useful",
-      "description": " ",
       "authors": [{"name":"Unknown","type":"Main"}],
       "folders": ["Clicks","Releases"]
     },
@@ -68,7 +66,6 @@
       "id": "andarian.andarians-sayodevice-o3c",
       "version": 1,
       "type": "Useful",
-      "description": " ",
       "authors": [{"name":"Andarian","gdAccountID":27823067,"type":"Main"}],
       "folders": ["Clicks","Releases"]
     },
@@ -86,7 +83,6 @@
       "id": "andarian.andarians-sayodevice-no-deskmat",
       "version": 1,
       "type": "Useful",
-      "description": " ",
       "authors": [{"name":"Andarian","gdAccountID":27823067,"type":"Main"}],
       "folders": ["Clicks","Releases"]
     },
@@ -95,7 +91,6 @@
       "id": "andarian.andarians-spacebar",
       "version": 1,
       "type": "Useful",
-      "description": " ",
       "authors": [{"name":"Andarian","type":"Main"}],
       "folders": ["Clicks","Releases"]
     },
@@ -113,7 +108,6 @@
       "id": "anthony.anthonys-sayodevice-o3c-click",
       "version": 1,
       "type": "Useful",
-      "description": " ",
       "authors": [{"name":"Anthony","type":"Main"}],
       "folders": ["Clicks","Releases"]
     },
@@ -131,7 +125,6 @@
       "id": "whimsyy.average-mouse-click",
       "version": 1,
       "type": "Useful",
-      "description": " ",
       "authors": [{"name":"Whimsyy","type":"Main"}],
       "folders": ["Clicks","Releases"]
     },
@@ -140,7 +133,6 @@
       "id": "movistar.balam-rush-hero",
       "version": 1,
       "type": "Useful",
-      "description": " ",
       "authors": [{"name":"Movistar","gdAccountID":30159959,"type":"Main"}],
       "folders": ["Clicks","Releases"]
     },
@@ -149,7 +141,6 @@
       "id": "aceofspades.bloody",
       "version": 1,
       "type": "Useful",
-      "description": " ",
       "authors": [{"name":"aceofspades","type":"Main"}],
       "folders": ["Clicks","Releases"]
     },
@@ -203,7 +194,6 @@
       "id": "andarian.cheap-logitech-mouse",
       "version": 1,
       "type": "Useful",
-      "description": " ",
       "authors": [{"name":"Andarian","gdAccountID":27823067,"type":"Main"}],
       "folders": ["Clicks","Releases"]
     },
@@ -221,7 +211,6 @@
       "id": "unknown.click-1",
       "version": 1,
       "type": "Useful",
-      "description": " ",
       "authors": [{"name":"Unknown","type":"Main"}],
       "folders": ["Clicks"]
     },
@@ -230,7 +219,6 @@
       "id": "unknown.click-2",
       "version": 1,
       "type": "Useful",
-      "description": " ",
       "authors": [{"name":"Unknown","type":"Main"}],
       "folders": ["Clicks"]
     },
@@ -239,7 +227,6 @@
       "id": "unknown.click3",
       "version": 1,
       "type": "Useful",
-      "description": " ",
       "authors": [{"name":"Unknown","type":"Main"}],
       "folders": ["Clicks"]
     },
@@ -248,7 +235,6 @@
       "id": "unknown.click-release-1",
       "version": 1,
       "type": "Useful",
-      "description": " ",
       "authors": [{"name":"Unknown","type":"Main"}],
       "folders": ["Clicks","Releases"]
     },
@@ -257,7 +243,6 @@
       "id": "unknown.click-release-2",
       "version": 1,
       "type": "Useful",
-      "description": " ",
       "authors": [{"name":"Unknown","type":"Main"}],
       "folders": ["Clicks","Releases"]
     },
@@ -266,7 +251,6 @@
       "id": "therealadbi.corsair-k70-up-arrow",
       "version": 1,
       "type": "Useful",
-      "description": " ",
       "authors": [{"name":"adbi","type":"Main"}],
       "folders": ["Clicks","Releases"]
     },
@@ -275,7 +259,6 @@
       "id": "lawfuldmcboo.creamy-clicks",
       "version": 1,
       "type": "Useful",
-      "description": " ",
       "authors": [{"name":"LawfulDmcBoo","type":"Main"}],
       "folders": ["Clicks","Releases"]
     },
@@ -284,7 +267,6 @@
       "id": "cursed.cursed-clicks-2023",
       "version": 1,
       "type": "Useful",
-      "description": " ",
       "authors": [{"name":"Cursed","type":"Main"}],
       "folders": ["Clicks","Releases"]
     },
@@ -293,7 +275,6 @@
       "id": "cursed.clicks",
       "version": 1,
       "type": "Useful",
-      "description": " ",
       "authors": [{"name":"Cursed","gdAccountID":5603286,"type":"Main"},{"name":"Beat","gdAccountID":13873867,"type":"Provider"},{"name":"sakariya","type":"Requester"}],
       "folders": ["Clicks"]
     },
@@ -302,7 +283,6 @@
       "id": "murzik.dexp-rapier-up",
       "version": 1,
       "type": "Useful",
-      "description": " ",
       "authors": [{"name":"MurZik","gdAccountID":16151003,"type":"Main"}],
       "folders": ["Clicks","Releases"]
     },
@@ -329,7 +309,6 @@
       "id": "doggie.clicks",
       "version": 1,
       "type": "Useful",
-      "description": " ",
       "authors": [{"name":"Doggie","gdAccountID":175605,"type":"Main"},{"name":"edgelordplayer","type":"Provider"},{"name":"Morseful","type":"Requester"}],
       "folders": ["Clicks","Releases"]
     },
@@ -347,7 +326,6 @@
       "id": "doggie.doggie-g502-hero",
       "version": 1,
       "type": "Useful",
-      "description": " ",
       "authors": [{"name":"Doggie","type":"Main"}],
       "folders": ["Clicks","Releases"]
     },
@@ -356,7 +334,6 @@
       "id": "lofracotestinogd.electro-mouse",
       "version": 1,
       "type": "Useful",
-      "description": " ",
       "authors": [{"name":"LofracotestinoGD","type":"Main"}],
       "folders": ["Clicks","Releases"]
     },
@@ -365,7 +342,6 @@
       "id": "quiriuz.epomaker-rt100-spacebar",
       "version": 1,
       "type": "Useful",
-      "description": " ",
       "authors": [{"name":"Quiriuz","gdAccountID":24158035,"type":"Main"}],
       "folders": ["Clicks"]
     },
@@ -374,7 +350,6 @@
       "id": "neiro.exens-sayodevice-o3c",
       "version": 1,
       "type": "Useful",
-      "description": " ",
       "authors": [{"name":"Neiro","gdAccountID":5316754,"type":"Main"}],
       "folders": ["Clicks","Releases"]
     },
@@ -383,7 +358,6 @@
       "id": "swim1x.faze",
       "version": 1,
       "type": "Useful",
-      "description": " ",
       "authors": [{"name":"swim1x","type":"Main"}],
       "folders": ["Clicks","Releases"]
     },
@@ -401,7 +375,6 @@
       "id": "g4b1.g4b1-gateron-yellow-switches",
       "version": 1,
       "type": "Useful",
-      "description": " ",
       "authors": [{"name":"G4b1","type":"Main"}],
       "folders": ["Clicks","Releases"]
     },
@@ -410,7 +383,6 @@
       "id": "straybomb.g203",
       "version": 1,
       "type": "Useful",
-      "description": " ",
       "authors": [{"name":"straybomb","type":"Main"}],
       "folders": ["Clicks","Releases"]
     },
@@ -419,7 +391,6 @@
       "id": "straybomb.g402",
       "version": 1,
       "type": "Useful",
-      "description": " ",
       "authors": [{"name":"straybomb","type":"Main"}],
       "folders": ["Clicks","Releases"]
     },
@@ -428,7 +399,6 @@
       "id": "nywall.fwg502",
       "version": 1,
       "type": "Useful",
-      "description": " ",
       "authors": [{"name":"nywall","type":"Main"}],
       "folders": ["Clicks","Releases"]
     },
@@ -455,7 +425,6 @@
       "id": "unknown.gazonk",
       "version": 1,
       "type": "Useful",
-      "description": " ",
       "authors": [{"name":"Unknown","type":"Main"}],
       "folders": ["Clicks"]
     },
@@ -464,7 +433,6 @@
       "id": "platten.glorious-model-o",
       "version": 1,
       "type": "Useful",
-      "description": " ",
       "authors": [{"name":"Platten","gdAccountID":26668684,"type":"Main"}],
       "folders": ["Clicks","Releases"]
     },
@@ -473,7 +441,6 @@
       "id": "sony.gran-turismo-7",
       "version": 1,
       "type": "Useful",
-      "description": " ",
       "authors": [{"name":"Sony","type":"Main"}],
       "folders": ["Clicks"]
     },
@@ -500,7 +467,6 @@
       "id": "ian.ians-mobile-taps",
       "version": 1,
       "type": "Useful",
-      "description": " ",
       "authors": [{"name":"ian","type":"Main"}],
       "folders": ["Clicks","Releases"]
     },
@@ -509,7 +475,6 @@
       "id": "ne-znay.klick-mishi",
       "version": 1,
       "type": "Useful",
-      "description": " ",
       "authors": [{"name":"Ne znay","type":"Main"}],
       "folders": ["Clicks","Releases"]
     },
@@ -518,7 +483,6 @@
       "id": "sushilaps.laps-bloody-a60",
       "version": 1,
       "type": "Useful",
-      "description": " ",
       "authors": [{"name":"sushilaps","type":"Main"}],
       "folders": ["Clicks","Releases"]
     },
@@ -545,7 +509,6 @@
       "id": "sushilaps.laps-up-arrow",
       "version": 1,
       "type": "Useful",
-      "description": " ",
       "authors": [{"name":"sushilaps","type":"Main"}],
       "folders": ["Clicks","Releases"]
     },
@@ -554,7 +517,6 @@
       "id": "cuuh.laptop-spacebar",
       "version": 1,
       "type": "Useful",
-      "description": " ",
       "authors": [{"name":"cuuh","type":"Main"}],
       "folders": ["Clicks","Releases"]
     },
@@ -563,7 +525,6 @@
       "id": "lawfuldmcboo.lawfuls-clicks",
       "version": 1,
       "type": "Useful",
-      "description": " ",
       "authors": [{"name":"LawfulDmcBoo","type":"Main"}],
       "folders": ["Clicks","Releases"]
     },
@@ -572,7 +533,6 @@
       "id": "justadude64.lenovo-wired-mouse---sm50f76959",
       "version": 1,
       "type": "Useful",
-      "description": " ",
       "authors": [{"name":"JustADude64","type":"Main"}],
       "folders": ["Clicks","Releases"]
     },
@@ -581,7 +541,6 @@
       "id": "isaac.logitech-g413-tkl",
       "version": 1,
       "type": "Useful",
-      "description": " ",
       "authors": [{"name":"isaac","gdAccountID":14716714,"type":"Main"}],
       "folders": ["Clicks"]
     },
@@ -590,7 +549,6 @@
       "id": "unknown.logitech-g502-hero",
       "version": 1,
       "type": "Useful",
-      "description": " ",
       "authors": [{"name":"Unknown","type":"Main"}],
       "folders": ["Clicks","Releases"]
     },
@@ -617,7 +575,6 @@
       "id": "main.logitech-mx-anywhere-2s",
       "version": 1,
       "type": "Useful",
-      "description": " ",
       "authors": [{"name":"Main","type":"Main"}],
       "folders": ["Clicks","Releases"]
     },
@@ -626,7 +583,6 @@
       "id": "unknown.logitech---g102",
       "version": 1,
       "type": "Useful",
-      "description": " ",
       "authors": [{"name":"Unknown","type":"Main"}],
       "folders": ["Clicks","Releases"]
     },
@@ -635,7 +591,6 @@
       "id": "lolwut.lolwut-click-pack",
       "version": 1,
       "type": "Useful",
-      "description": " ",
       "authors": [{"name":"lolwut","type":"Main"}],
       "folders": ["Clicks","Releases"]
     },
@@ -653,7 +608,6 @@
       "id": "unknown.metronome",
       "version": 1,
       "type": "Useful",
-      "description": " ",
       "authors": [{"name":"Unknown","type":"Main"}],
       "folders": ["Clicks"]
     },
@@ -662,7 +616,6 @@
       "id": "notusefulgd.microsoft-mouse",
       "version": 1,
       "type": "Useful",
-      "description": " ",
       "authors": [{"name":"NotUsefulGD","type":"Main"}],
       "folders": ["Clicks","Releases"]
     },
@@ -680,7 +633,6 @@
       "id": "bbobxd.mobile-ground-tap",
       "version": 1,
       "type": "Useful",
-      "description": " ",
       "authors": [{"name":"bbobxD","gdAccountID":31204671,"type":"Main"}],
       "folders": ["Clicks"]
     },
@@ -689,7 +641,6 @@
       "id": "montypie.montys-clicks",
       "version": 1,
       "type": "Useful",
-      "description": " ",
       "authors": [{"name":"MontyPie","type":"Main"}],
       "folders": ["Clicks","Releases"]
     },
@@ -698,7 +649,6 @@
       "id": "unknown.mouse-click-6",
       "version": 1,
       "type": "Useful",
-      "description": " ",
       "authors": [{"name":"Unknown","type":"Main"}],
       "folders": ["Clicks","Releases"]
     },
@@ -707,7 +657,6 @@
       "id": "unknown.mouse-click-7",
       "version": 1,
       "type": "Useful",
-      "description": " ",
       "authors": [{"name":"Unknown","type":"Main"}],
       "folders": ["Clicks","Releases"]
     },
@@ -716,7 +665,6 @@
       "id": "nhay.msterbran",
       "version": 1,
       "type": "Useful",
-      "description": " ",
       "authors": [{"name":"Nhay","type":"Main"}],
       "folders": ["Clicks","Releases"]
     },
@@ -734,7 +682,6 @@
       "id": "neiro.clicks",
       "version": 1,
       "type": "Useful",
-      "description": " ",
       "authors": [{"name":"Neiro","type":"Main"}],
       "folders": ["Clicks","Releases"]
     },
@@ -743,7 +690,6 @@
       "id": "neiro.neiro-click-pack",
       "version": 1,
       "type": "Useful",
-      "description": " ",
       "authors": [{"name":"Neiro","gdAccountID":5316754,"type":"Main"}],
       "folders": ["Clicks","Releases"]
     },
@@ -752,7 +698,6 @@
       "id": "nexusgd.nexusgd",
       "version": 1,
       "type": "Useful",
-      "description": " ",
       "authors": [{"name":"NexusGD","type":"Main"}],
       "folders": ["Clicks","Releases"]
     },
@@ -761,7 +706,6 @@
       "id": "nicnicboss.nicnicboss-g502",
       "version": 1,
       "type": "Useful",
-      "description": " ",
       "authors": [{"name":"NicNicBoss","type":"Main"}],
       "folders": ["Clicks","Releases"]
     },
@@ -779,7 +723,6 @@
       "id": "nicnicboss.nicnicboss-sayodevice-v2",
       "version": 1,
       "type": "Useful",
-      "description": " ",
       "authors": [{"name":"NicNicBoss","type":"Main"}],
       "folders": ["Clicks","Releases"]
     },
@@ -815,7 +758,6 @@
       "id": "nicnicboss.nicnicboss-up-arrow-pack-v2",
       "version": 1,
       "type": "Useful",
-      "description": " ",
       "authors": [{"name":"NicNicBoss","type":"Main"}],
       "folders": ["Clicks","Releases"]
     },
@@ -824,7 +766,6 @@
       "id": "nywalll.nice-clicks",
       "version": 1,
       "type": "Useful",
-      "description": " ",
       "authors": [{"name":"Nywalll","gdAccountID":90575325,"type":"Main"}],
       "folders": ["Clicks","Releases"]
     },
@@ -833,7 +774,6 @@
       "id": "norfolk.norfolks-bloody-a70x-clickpack",
       "version": 1,
       "type": "Useful",
-      "description": " ",
       "authors": [{"name":"Norfolk","type":"Main"}],
       "folders": ["Clicks","Releases"]
     },
@@ -842,7 +782,6 @@
       "id": "exparaigon.normiepack",
       "version": 1,
       "type": "Useful",
-      "description": " ",
       "authors": [{"name":"Exparaigon","type":"Main"}],
       "folders": ["Clicks","Releases"]
     },
@@ -860,7 +799,6 @@
       "id": "unknown.pacitys",
       "version": 1,
       "type": "Useful",
-      "description": " ",
       "authors": [{"name":"Unknown","type":"Main"}],
       "folders": ["Clicks","Releases"]
     },
@@ -869,7 +807,6 @@
       "id": "paqoe.paqoe-keyboard",
       "version": 1,
       "type": "Useful",
-      "description": " ",
       "authors": [{"name":"Paqoe","gdAccountID":5870542,"type":"Main"}],
       "folders": ["Clicks","Releases"]
     },
@@ -878,7 +815,6 @@
       "id": "paqoe.paqoe-new-mouse",
       "version": 1,
       "type": "Useful",
-      "description": " ",
       "authors": [{"name":"Paqoe","gdAccountID":5870542,"type":"Main"}],
       "folders": ["Clicks","Releases"]
     },
@@ -896,7 +832,6 @@
       "id": "nobody.questionable-mouse",
       "version": 1,
       "type": "Useful",
-      "description": " ",
       "authors": [{"name":"gigaboy99","gdAccountID":29450530,"type":"Main"}],
       "folders": ["Clicks","Releases"]
     },
@@ -905,7 +840,6 @@
       "id": "bitah.rk61-up-arrow",
       "version": 1,
       "type": "Useful",
-      "description": " ",
       "authors": [{"name":"Bitah","type":"Main"}],
       "folders": ["Clicks","Releases"]
     },
@@ -932,7 +866,6 @@
       "id": "unknown.razer-basilisk-v3",
       "version": 1,
       "type": "Useful",
-      "description": " ",
       "authors": [{"name":"Unknown","type":"Main"}],
       "folders": ["Clicks","Releases"]
     },
@@ -941,7 +874,6 @@
       "id": "straybomb.razer-blackwidow-keyboard",
       "version": 1,
       "type": "Useful",
-      "description": " ",
       "authors": [{"name":"straybomb","type":"Main"}],
       "folders": ["Clicks","Releases"]
     },
@@ -950,7 +882,6 @@
       "id": "zwild.razer-deathadder-elite",
       "version": 1,
       "type": "Useful",
-      "description": " ",
       "authors": [{"name":"zWild","type":"Main"}],
       "folders": ["Clicks","Releases"]
     },
@@ -968,7 +899,6 @@
       "id": "wardh.reddragon-visnu",
       "version": 1,
       "type": "Useful",
-      "description": " ",
       "authors": [{"name":"Wardh","type":"Main"}],
       "folders": ["Clicks","Releases"]
     },
@@ -986,7 +916,6 @@
       "id": "oli.rewarny-up-arrow",
       "version": 1,
       "type": "Useful",
-      "description": " ",
       "authors": [{"name":"oli (Rewarny)","type":"Main"}],
       "folders": ["Clicks","Releases"]
     },
@@ -995,7 +924,6 @@
       "id": "m5pon4ik.royal-kludge-r75",
       "version": 1,
       "type": "Useful",
-      "description": " ",
       "authors": [{"name":"M5Pon4ik","gdAccountID":32428893,"type":"Main"}],
       "folders": ["Clicks","Releases"]
     },
@@ -1013,7 +941,6 @@
       "id": "imsgdo.aa-mr1d9tb",
       "version": 1,
       "type": "Useful",
-      "description": " ",
       "authors": [{"name":"Imsgdo","type":"Main"}],
       "folders": ["Clicks"]
     },
@@ -1031,7 +958,6 @@
       "id": "bitah.sayodevice-o3c-v2",
       "version": 1,
       "type": "Useful",
-      "description": " ",
       "authors": [{"name":"bitah","type":"Main"}],
       "folders": ["Clicks","Releases"]
     },
@@ -1040,7 +966,6 @@
       "id": "platten.sayodevice-jade-switches",
       "version": 1,
       "type": "Useful",
-      "description": " ",
       "authors": [{"name":"Platten","gdAccountID":26668684,"type":"Main"}],
       "folders": ["Clicks","Releases"]
     },
@@ -1049,7 +974,6 @@
       "id": "unknown.sayo-device",
       "version": 1,
       "type": "Useful",
-      "description": " ",
       "authors": [{"name":"Unknown","type":"Main"}],
       "folders": ["Clicks","Releases"]
     },
@@ -1058,7 +982,6 @@
       "id": "unknown.screen-tap-1",
       "version": 1,
       "type": "Useful",
-      "description": " ",
       "authors": [{"name":"Unknown","type":"Main"}],
       "folders": ["Clicks"]
     },
@@ -1094,7 +1017,6 @@
       "id": "spaceuk.clicks",
       "version": 1,
       "type": "Useful",
-      "description": " ",
       "authors": [{"name":"SpaceUK","type":"Main"}],
       "folders": ["Clicks"]
     },
@@ -1103,7 +1025,6 @@
       "id": "unknown.space-bar-1",
       "version": 1,
       "type": "Useful",
-      "description": " ",
       "authors": [{"name":"Unknown","type":"Main"}],
       "folders": ["Clicks"]
     },
@@ -1112,7 +1033,6 @@
       "id": "unknown.space-bar-2",
       "version": 1,
       "type": "Useful",
-      "description": " ",
       "authors": [{"name":"Unknown","type":"Main"}],
       "folders": ["Clicks","Releases"]
     },
@@ -1130,7 +1050,6 @@
       "id": "trikehard.trikehards-controller-click-pack-v2",
       "version": 1,
       "type": "Useful",
-      "description": " ",
       "authors": [{"name":"trikehard","gdAccountID":13926343,"type":"Main"}],
       "folders": ["Clicks","Releases"]
     },
@@ -1139,7 +1058,6 @@
       "id": "trusta.clicks",
       "version": 1,
       "type": "Useful",
-      "description": " ",
       "authors": [{"name":"TrusTa","type":"Main"}],
       "folders": ["Clicks"]
     },
@@ -1148,7 +1066,6 @@
       "id": "unami.unami-sayo-v2",
       "version": 1,
       "type": "Useful",
-      "description": " ",
       "authors": [{"name":"Unami","type":"Main"}],
       "folders": ["Clicks","Releases"]
     },
@@ -1157,7 +1074,6 @@
       "id": "unknown.up-arrow-1",
       "version": 1,
       "type": "Useful",
-      "description": " ",
       "authors": [{"name":"Unknown","type":"Main"}],
       "folders": ["Clicks"]
     },
@@ -1166,7 +1082,6 @@
       "id": "unknown.up-arrow-2",
       "version": 1,
       "type": "Useful",
-      "description": " ",
       "authors": [{"name":"Unknown","type":"Main"}],
       "folders": ["Clicks"]
     },
@@ -1175,7 +1090,6 @@
       "id": "unknown.up-arrow-3",
       "version": 1,
       "type": "Useful",
-      "description": " ",
       "authors": [{"name":"Unknown","type":"Main"}],
       "folders": ["Clicks"]
     },
@@ -1184,7 +1098,6 @@
       "id": "unknown.up-arrow-4",
       "version": 1,
       "type": "Useful",
-      "description": " ",
       "authors": [{"name":"Unknown","type":"Main"}],
       "folders": ["Clicks","Releases"]
     },
@@ -1193,7 +1106,6 @@
       "id": "unknown.up-arrow-5",
       "version": 1,
       "type": "Useful",
-      "description": " ",
       "authors": [{"name":"Unknown","type":"Main"}],
       "folders": ["Clicks"]
     },
@@ -1202,7 +1114,6 @@
       "id": "fluffynator.used-logitech-g305-mouse",
       "version": 1,
       "type": "Useful",
-      "description": " ",
       "authors": [{"name":"fluffynator","gdAccountID":15186557,"type":"Main"}],
       "folders": ["Clicks","Releases"]
     },
@@ -1220,7 +1131,6 @@
       "id": "svenwastaken.viper-8k-but-sounds-different",
       "version": 1,
       "type": "Useful",
-      "description": " ",
       "authors": [{"name":"SvenWasTaken","type":"Main"}],
       "folders": ["Clicks","Releases"]
     },
@@ -1229,7 +1139,6 @@
       "id": "yen.viper-8k",
       "version": 1,
       "type": "Useful",
-      "description": " ",
       "authors": [{"name":"yen","gdAccountID":27575236,"type":"Main"}],
       "folders": ["Clicks","Releases"]
     },
@@ -1238,7 +1147,6 @@
       "id": "unknown.viper-mouse",
       "version": 1,
       "type": "Useful",
-      "description": " ",
       "authors": [{"name":"Unknown","type":"Main"}],
       "folders": ["Clicks","Releases"]
     },
@@ -1247,7 +1155,6 @@
       "id": "viper.spacebar",
       "version": 1,
       "type": "Useful",
-      "description": " ",
       "authors": [{"name":"Viper","gdAccountID":14284530,"type":"Main"}],
       "folders": ["Clicks","Releases"]
     },
@@ -1256,7 +1163,6 @@
       "id": "vladuwka12.spacebar",
       "version": 1,
       "type": "Useful",
-      "description": " ",
       "authors": [{"name":"Vladuwka","type":"Main"}],
       "folders": ["Clicks"]
     },
@@ -1283,7 +1189,6 @@
       "id": "wpopoff.wpopoff-clicks",
       "version": 1,
       "type": "Useful",
-      "description": " ",
       "authors": [{"name":"WPopoff","type":"Main"}],
       "folders": ["Clicks","Releases"]
     },
@@ -1292,7 +1197,6 @@
       "id": "wardh.wardhs-akko-cream-blue-spacebar",
       "version": 1,
       "type": "Useful",
-      "description": " ",
       "authors": [{"name":"Wardh","type":"Main"}],
       "folders": ["Clicks","Releases"]
     },
@@ -1301,7 +1205,6 @@
       "id": "wardh.wardhs-g502",
       "version": 1,
       "type": "Useful",
-      "description": " ",
       "authors": [{"name":"Wardh","type":"Main"}],
       "folders": ["Clicks","Releases"]
     },
@@ -1310,7 +1213,6 @@
       "id": "wardh.wardhs-reddragon-keyboard-blueswitch",
       "version": 1,
       "type": "Useful",
-      "description": " ",
       "authors": [{"name":"Wardh","type":"Main"}],
       "folders": ["Clicks","Releases"]
     },
@@ -1319,7 +1221,6 @@
       "id": "whizkid05.whizkid05-click-pack",
       "version": 1,
       "type": "Useful",
-      "description": " ",
       "authors": [{"name":"Whizkid05","gdAccountID":3822295,"type":"Main"}],
       "folders": ["Clicks","Releases"]
     },
@@ -1328,7 +1229,6 @@
       "id": "markiethecatlover.wooting-60he",
       "version": 1,
       "type": "Useful",
-      "description": " ",
       "authors": [{"name":"markiethecatlover","type":"Main"}],
       "folders": ["Clicks","Releases"]
     },
@@ -1355,7 +1255,6 @@
       "id": "plastic.wooting-two-he",
       "version": 1,
       "type": "Useful",
-      "description": " ",
       "authors": [{"name":"Plastic","type":"Main"}],
       "folders": ["Clicks","Releases"]
     },
@@ -1364,7 +1263,6 @@
       "id": "markiethecatlover.wooting-uwu",
       "version": 1,
       "type": "Useful",
-      "description": " ",
       "authors": [{"name":"MarkieTheCatLover","type":"Main"}],
       "folders": ["Clicks","Releases"]
     },
@@ -1373,7 +1271,6 @@
       "id": "xer0.xer0s-blackwidow-v3-up-arrow",
       "version": 1,
       "type": "Useful",
-      "description": " ",
       "authors": [{"name":"Xer0","type":"Main"}],
       "folders": ["Clicks","Releases"]
     },
@@ -1391,7 +1288,6 @@
       "id": "zeronium.zeroniums-keyboard",
       "version": 1,
       "type": "Useful",
-      "description": " ",
       "authors": [{"name":"Zeronium","type":"Main"}],
       "folders": ["Clicks","Releases"]
     },
@@ -1418,7 +1314,6 @@
       "id": "zoink.clicks",
       "version": 1,
       "type": "Useful",
-      "description": " ",
       "authors": [{"name":"Zoink","gdAccountID":14273934,"type":"Main"}],
       "folders": ["Clicks","Releases"]
     },
@@ -1427,7 +1322,6 @@
       "id": "zoink.clicks2",
       "version": 1,
       "type": "Useful",
-      "description": " ",
       "authors": [{"name":"Zoink","gdAccountID":14273934,"type":"Main"},{"name":"zikuugmd","type":"Provider"}],
       "folders": ["Clicks","Releases"]
     },
@@ -1436,7 +1330,6 @@
       "id": "zoink.zoink-clicks-1e",
       "version": 1,
       "type": "Useful",
-      "description": " ",
       "authors": [{"name":"Zoink","type":"Main"}],
       "folders": ["Clicks","Releases"]
     },
@@ -1445,7 +1338,6 @@
       "id": "zoink.zoink-click-pack",
       "version": 1,
       "type": "Useful",
-      "description": " ",
       "authors": [{"name":"Zoink","type":"Main"}],
       "folders": ["Clicks","Releases"]
     },
@@ -1463,7 +1355,6 @@
       "id": "oli.adf-vipermini",
       "version": 1,
       "type": "Useful",
-      "description": " ",
       "authors": [{"name":"oli","type":"Main"}],
       "folders": ["Clicks","Releases"]
     },
@@ -1472,7 +1363,6 @@
       "id": "oli.adf-g203",
       "version": 1,
       "type": "Useful",
-      "description": " ",
       "authors": [{"name":"oli","type":"Main"}],
       "folders": ["Clicks","Releases"]
     },
@@ -1499,7 +1389,6 @@
       "id": "oli.adf-sayo-v4",
       "version": 1,
       "type": "Useful",
-      "description": " ",
       "authors": [{"name":"oli","type":"Main"}],
       "folders": ["Clicks","Releases"]
     },
@@ -1517,7 +1406,6 @@
       "id": "alex.alexg502",
       "version": 1,
       "type": "Useful",
-      "description": " ",
       "authors": [{"name":"alex","type":"Main"}],
       "folders": ["Clicks","Releases"]
     },
@@ -1535,7 +1423,6 @@
       "id": "oli.asayo",
       "version": 1,
       "type": "Useful",
-      "description": " ",
       "authors": [{"name":"oli","type":"Main"}],
       "folders": ["Clicks","Releases"]
     },
@@ -1553,7 +1440,6 @@
       "id": "fredus.fredus-clicks",
       "version": 1,
       "type": "Useful",
-      "description": " ",
       "authors": [{"name":"Fredus","gdAccountID":31214088,"type":"Main"}],
       "folders": ["Clicks","Releases"]
     },
@@ -1589,7 +1475,6 @@
       "id": "m4rk.m4rks-logitech-g502",
       "version": 1,
       "type": "Useful",
-      "description": " ",
       "authors": [{"name":"m4rk","type":"Main"}],
       "folders": ["Clicks","Releases"]
     },
@@ -1598,7 +1483,6 @@
       "id": "m4rk.m4rks-viper-8k",
       "version": 1,
       "type": "Useful",
-      "description": " ",
       "authors": [{"name":"m4rk","type":"Main"}],
       "folders": ["Clicks","Releases"]
     },
@@ -1607,7 +1491,6 @@
       "id": "npesta.clicks",
       "version": 1,
       "type": "Useful",
-      "description": " ",
       "authors": [{"name":"npesta","type":"Main"}],
       "folders": ["Clicks","Releases"]
     },
@@ -1616,7 +1499,6 @@
       "id": "nywall.nywalls-bloody-al90-mouse",
       "version": 1,
       "type": "Useful",
-      "description": " ",
       "authors": [{"name":"nywall","type":"Main"}],
       "folders": ["Clicks","Releases"]
     },
@@ -1625,7 +1507,6 @@
       "id": "peppy.osuhit",
       "version": 1,
       "type": "Useful",
-      "description": " ",
       "authors": [{"name":"peppy (Dean Herbert)","type":"Main"}],
       "folders": ["Clicks"]
     },
@@ -1652,7 +1533,6 @@
       "id": "somerandomperson.sayolol",
       "version": 1,
       "type": "Useful",
-      "description": " ",
       "authors": [{"name":"somerandomperson","type":"Main"}],
       "folders": ["Clicks","Releases"]
     },
@@ -1661,7 +1541,6 @@
       "id": "tobyn.tobyn-rog-mouse",
       "version": 1,
       "type": "Useful",
-      "description": " ",
       "authors": [{"name":"tobyn","type":"Main"}],
       "folders": ["Clicks","Releases"]
     },
@@ -1670,7 +1549,6 @@
       "id": "zxsetj.zxsetj-up-arrow-pack",
       "version": 1,
       "type": "Useful",
-      "description": " ",
       "authors": [{"name":"zxsetj","gdAccountID":31335670,"type":"Main"}],
       "folders": ["Clicks","Releases"]
     }
@@ -1690,7 +1568,6 @@
       "id": "uproxide.awdangit",
       "version": 1,
       "type": "Meme",
-      "description": " ",
       "authors": [{"name":"Uproxide","gdAccountID":25397826,"type":"Main"}],
       "folders": ["Clicks"]
     },
@@ -1699,7 +1576,6 @@
       "id": "george-thorogood.bad-to-the-bone",
       "version": 1,
       "type": "Meme",
-      "description": " ",
       "authors": [{"name":"George Thorogood","type":"Main"}],
       "folders": ["Clicks"]
     },
@@ -1708,7 +1584,6 @@
       "id": "mystman12.baldis-basics-door",
       "version": 1,
       "type": "Meme",
-      "description": " ",
       "authors": [{"name":"mystman12","type":"Main"}],
       "folders": ["Clicks","Releases"]
     },
@@ -1717,7 +1592,6 @@
       "id": "ballball.bonk",
       "version": 1,
       "type": "Meme",
-      "description": " ",
       "authors": [{"name":"Cheems (Balltze/Ball Ball)","type":"Main"},{"name":"snootboopes","type":"Main"}],
       "folders": ["Clicks"]
     },
@@ -1726,7 +1600,6 @@
       "id": "waterflame.bwomp",
       "version": 1,
       "type": "Meme",
-      "description": " ",
       "authors": [{"name":"Waterflame","type":"Main"},{"name":"Beat","gdAccountID":13873867,"type":"Provider"}],
       "folders": ["Clicks"]
     },
@@ -1735,7 +1608,6 @@
       "id": "coop.cardoorslam",
       "version": 1,
       "type": "Meme",
-      "description": " ",
       "authors": [{"name":"Cooper","type":"Main"}],
       "folders": ["Clicks"]
     },
@@ -1744,7 +1616,6 @@
       "id": "koraii.congregation",
       "version": 1,
       "type": "Meme",
-      "description": " ",
       "authors": [{"name":"Koraii","type":"Main"}],
       "folders": ["Clicks"]
     },
@@ -1753,7 +1624,6 @@
       "id": "mdk.dash",
       "version": 1,
       "type": "Meme",
-      "description": " ",
       "authors": [{"name":"Morgan David King (MDK)","type":"Main"},{"name":"RobTop","gdAccountID":71,"type":"Main"}],
       "folders": ["Clicks"]
     },
@@ -1762,7 +1632,6 @@
       "id": "coop.deskhit",
       "version": 1,
       "type": "Meme",
-      "description": " ",
       "authors": [{"name":"Cooper","gdAccountID":21207551,"type":"Main"}],
       "folders": ["Clicks"]
     },
@@ -1771,7 +1640,6 @@
       "id": "discord.ping",
       "version": 1,
       "type": "Meme",
-      "description": " ",
       "authors": [{"name":"Discord","type":"Main"},{"name":"laxiscul","type":"Provider"}],
       "folders": ["Clicks"]
     },
@@ -1780,7 +1648,6 @@
       "id": "stormwave.fireinthehole",
       "version": 1,
       "type": "Meme",
-      "description": " ",
       "authors": [{"name":"Joe","type":"Main"},{"name":"Art (Founder of Stormwave Audio)","type":"Main"},{"name":"Stormwave Audio","type":"Main"},{"name":"Beat","gdAccountID":13873867,"type":"Provider"}],
       "folders": ["Clicks"]
     },
@@ -1789,7 +1656,6 @@
       "id": "robtop.gd-death",
       "version": 1,
       "type": "Meme",
-      "description": " ",
       "authors": [{"name":"RobTop","gdAccountID":71,"type":"Main"}],
       "folders": ["Clicks"]
     },
@@ -1798,7 +1664,6 @@
       "id": "roblox.gravitycoil",
       "version": 1,
       "type": "Meme",
-      "description": " ",
       "authors": [{"name":"Roblox","type":"Main"}],
       "folders": ["Clicks"]
     },
@@ -1807,7 +1672,6 @@
       "id": "kingsammelot.kingsammelot-boing",
       "version": 1,
       "type": "Meme",
-      "description": " ",
       "authors": [{"name":"KingSammelot","gdAccountID":7684191,"type":"Main"}],
       "folders": ["Clicks"]
     },
@@ -1816,7 +1680,6 @@
       "id": "unknown.el-gato",
       "version": 1,
       "type": "Meme",
-      "description": " ",
       "authors": [{"name":"Unknown","type":"Main"}],
       "folders": ["Clicks"]
     },
@@ -1825,7 +1688,6 @@
       "id": "unknown.metalpipe",
       "version": 1,
       "type": "Meme",
-      "description": " ",
       "authors": [{"name":"Unknown","type":"Main"}],
       "folders": ["Clicks"]
     },
@@ -1834,7 +1696,6 @@
       "id": "alguienengdxd.my-spacebar",
       "version": 1,
       "type": "Meme",
-      "description": " ",
       "authors": [{"name":"alguienEnGDxd","gdAccountID":27152006,"type":"Main"}],
       "folders": ["Clicks"]
     },
@@ -1843,7 +1704,6 @@
       "id": "unknown.plate",
       "version": 1,
       "type": "Meme",
-      "description": " ",
       "authors": [{"name":"Unknown","type":"Main"}],
       "folders": ["Clicks"]
     },
@@ -1852,7 +1712,6 @@
       "id": "unknown.pluh",
       "version": 1,
       "type": "Meme",
-      "description": " ",
       "authors": [{"name":"Unknown","type":"Main"}],
       "folders": ["Clicks"]
     },
@@ -1861,7 +1720,6 @@
       "id": "murzikmrt.pukanya",
       "version": 1,
       "type": "Meme",
-      "description": " ",
       "authors": [{"name":"MurZikMRT","gdAccountID":16151003,"type":"Main"}],
       "folders": ["Clicks"]
     },
@@ -1870,7 +1728,6 @@
       "id": "riot.swag",
       "version": 1,
       "type": "Meme",
-      "description": " ",
       "authors": [{"name":"Riot","gdAccountID":37415,"type":"Main"}],
       "folders": ["Clicks"]
     },
@@ -1879,7 +1736,6 @@
       "id": "klyric.russiangyat",
       "version": 1,
       "type": "Meme",
-      "description": " ",
       "authors": [{"name":"Klyric","type":"Main"}],
       "folders": ["Clicks","Releases"]
     },
@@ -1888,7 +1744,6 @@
       "id": "unknown.soda",
       "version": 1,
       "type": "Meme",
-      "description": " ",
       "authors": [{"name":"Unknown","type":"Main"}],
       "folders": ["Clicks"]
     },
@@ -1897,7 +1752,6 @@
       "id": "alanwalker.spectre",
       "version": 1,
       "type": "Meme",
-      "description": " ",
       "authors": [{"name":"Alan Walker","type":"Main"}],
       "folders": ["Clicks"]
     },
@@ -1906,7 +1760,6 @@
       "id": "brawl-stars.starr-drop",
       "version": 1,
       "type": "Meme",
-      "description": " ",
       "authors": [{"name":"Brawl Stars","gdAccountID":14527112,"type":"Main"}],
       "folders": ["Clicks"]
     },
@@ -1915,7 +1768,6 @@
       "id": "tacobell.bell",
       "version": 1,
       "type": "Meme",
-      "description": " ",
       "authors": [{"name":"Taco Bell","type":"Main"}],
       "folders": ["Clicks"]
     },
@@ -1924,7 +1776,6 @@
       "id": "tiktok.tiktok",
       "version": 1,
       "type": "Meme",
-      "description": " ",
       "authors": [{"name":"TikTok","type":"Main"},{"name":"TikTok TTS","type":"Main"}],
       "folders": ["Clicks","Releases"]
     },
@@ -1951,7 +1802,6 @@
       "id": "vine.boom",
       "version": 1,
       "type": "Meme",
-      "description": " ",
       "authors": [{"name":"Vine (RIP)","type":"Main"},{"name":"Beat","gdAccountID":13873867,"type":"Provider"}],
       "folders": ["Clicks"]
     },
@@ -1960,7 +1810,6 @@
       "id": "unknown.wateronthehill",
       "version": 1,
       "type": "Meme",
-      "description": " ",
       "authors": [{"name":"Unknown","type":"Main"}],
       "folders": ["Clicks"]
     },
@@ -1978,7 +1827,6 @@
       "id": "microsoft.win-usb",
       "version": 1,
       "type": "Meme",
-      "description": " ",
       "authors": [{"name":"Microsoft","type":"Main"},{"name":"Cooper","gdAccountID":21207551,"type":"Provider"}],
       "folders": ["Clicks"]
     },
@@ -1987,7 +1835,6 @@
       "id": "unknown.aughhh",
       "version": 1,
       "type": "Meme",
-      "description": " ",
       "authors": [{"name":"Unknown","type":"Main"}],
       "folders": ["Clicks"]
     },
@@ -2005,7 +1852,6 @@
       "id": "unknown.hamburger",
       "version": 1,
       "type": "Meme",
-      "description": " ",
       "authors": [{"name":"Unknown","type":"Main"}],
       "folders": ["Clicks"]
     },
@@ -2014,7 +1860,6 @@
       "id": "unknown.huh",
       "version": 1,
       "type": "Meme",
-      "description": " ",
       "authors": [{"name":"Unknown","type":"Main"}],
       "folders": ["Clicks"]
     },
@@ -2023,7 +1868,6 @@
       "id": "wulzy.gdcologne",
       "version": 1,
       "type": "Meme",
-      "description": " ",
       "authors": [{"name":"Wulzy","gdAccountID":1373926,"type":"Main"},{"name":"Colon","gdAccountID":106255,"type":"Main"}],
       "folders": ["Clicks"]
     },
@@ -2032,7 +1876,6 @@
       "id": "npesta.ohmygod",
       "version": 1,
       "type": "Meme",
-      "description": " ",
       "authors": [{"name":"npesta","gdAccountID":1507703,"type":"Main"}],
       "folders": ["Clicks"]
     },
