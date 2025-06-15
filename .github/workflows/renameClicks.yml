@@ -144,12 +144,13 @@ jobs:
           for category in Useful Meme; do
             echo "  \"$category\": [" >> index_list.json
             grep -P "\t$category\t" "$tmp_file" | sort -V | while IFS=$'\t' read -r name id version type folders description authors; do
+              trimmed_desc=$(echo "$description" | sed 's/^[[:space:]]*//;s/[[:space:]]*$//')
               echo "    {" >> index_list.json
               echo "      \"name\": \"$name\"," >> index_list.json
               echo "      \"id\": \"$id\"," >> index_list.json
               echo "      \"version\": $version," >> index_list.json
               echo "      \"type\": \"$type\"," >> index_list.json
-              if [ -n "$description" ]; then
+              if [ -n "$trimmed_desc" ]; then
                 echo "      \"description\": \"$description\"," >> index_list.json
               fi
               echo "      \"authors\": $authors," >> index_list.json
