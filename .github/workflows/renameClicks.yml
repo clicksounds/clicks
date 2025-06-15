@@ -105,6 +105,11 @@ jobs:
           tmp_file="all_packs.tmp"
           > "$tmp_file"
 
+          has_audio_files() {
+            local folder=$1
+            find "$folder" -maxdepth 1 -iregex '.*\.\(mp3\|wav\|ogg\)' -type f | grep -q .
+          }
+
           collect_packs() {
             local type=$1
             for dir in $type/*/
@@ -116,11 +121,24 @@ jobs:
                 name=$(jq -r '.name' "$pack_path")
                 id=$(jq -r '.id' "$pack_path")
                 version=$(jq -r 'if has("version") then .version else 1 end' "$pack_path")
+                description=$(jq -c '.description // ""' "$pack_path")
+                authors=$(jq -c '.authors // []' "$pack_path")
+
+                has_clicks=false
+                has_releases=false
+                if [ -d "$type/$dir/Clicks" ] && has_audio_files "$type/$dir/Clicks"; then
+                  has_clicks=true
+                fi
+                if [ -d "$type/$dir/Releases" ] && has_audio_files "$type/$dir/Releases"; then
+                  has_releases=true
+                fi
+
                 folders=()
-                [ -d "$type/$dir/Clicks" ] && folders+=("\"Clicks\"")
-                [ -d "$type/$dir/Releases" ] && folders+=("\"Releases\"")
+                [ "$has_clicks" = true ] && folders+=("\"Clicks\"")
+                [ "$has_releases" = true ] && folders+=("\"Releases\"")
                 folders_joined=$(IFS=, ; echo "${folders[*]}")
-                echo -e "$name\t$id\t$version\t$type\t[$folders_joined]" >> "$tmp_file"
+
+                echo -e "$name\t$id\t$version\t$type\t[$folders_joined]\t$description\t$authors\t$has_clicks\t$has_releases" >> "$tmp_file"
               fi
             done
           }
@@ -132,8 +150,18 @@ jobs:
 
           for category in Useful Meme; do
             echo "  \"$category\": [" >> index_list.json
-            grep -P "\t$category\t" "$tmp_file" | sort -V | while IFS=$'\t' read -r name id version type folders; do
-              echo "    {\"name\": \"$name\", \"id\": \"$id\", \"version\": $version, \"type\": \"$type\", \"folders\": $folders}," >> index_list.json
+            grep -P "\t$category\t" "$tmp_file" | sort -V | while IFS=$'\t' read -r name id version type folders description authors has_clicks has_releases; do
+              echo "    {" >> index_list.json
+              echo "      \"name\": \"$name\"," >> index_list.json
+              echo "      \"id\": \"$id\"," >> index_list.json
+              echo "      \"version\": $version," >> index_list.json
+              echo "      \"type\": \"$type\"," >> index_list.json
+              echo "      \"description\": $description," >> index_list.json
+              echo "      \"authors\": $authors," >> index_list.json
+              echo "      \"has-clicks\": $has_clicks," >> index_list.json
+              echo "      \"has-releases\": $has_releases," >> index_list.json
+              echo "      \"folders\": $folders" >> index_list.json
+              echo "    }," >> index_list.json
             done
             sed -i '$ s/},$/}/' index_list.json
             echo "  ]," >> index_list.json
@@ -143,6 +171,7 @@ jobs:
           echo '}' >> index_list.json
 
           rm "$tmp_file"
+
 
 
 
