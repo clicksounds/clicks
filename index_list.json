@@ -138,6 +138,8 @@
         "Clicks", "Releases"]}, 
     {"name": "Cats Sayodevice", "id": "catkgaming.cats-sayodevice", "version": 1, "type": "Useful", "folders": [
         "Clicks", "Releases"]}, 
+    {"name": "test failed", "id": "changeme.test-failed", "version": 1, "type": "Useful", "folders": [
+        "Clicks"]}, 
     {"name": "Logitech G PRO Keyboard", "id": "ciganxxx.logitech-g-pro", "version": 1, "type": "Useful", "folders": [
         "Clicks", "Releases"]}, 
     {"name": "Cursed (Player)", "id": "cursed.clicks", "version": 1, "type": "Useful", "folders": [
