@@ -20,6 +20,7 @@
             align-items: center;
             text-align: center;
             flex-wrap: wrap;
+            overflow: visible !important;
         }
 
         .navbar a,
@@ -62,6 +63,44 @@
             margin-left: 8px;
             transition: transform 0.3s ease;
             display: inline-block;
+        }
+        
+        .navbar .dropdown-toggle {
+            all: unset;
+            color: #00aaff !important;
+            font-size: 1.2em;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            margin: 0 8px;
+            padding: 0;
+            transition: all 0.3s ease !important;
+        }
+
+        .navbar .dropdown-toggle:hover {
+            background: #00aaff !important;
+            color: #fff !important;
+            padding: 5px 10px !important;
+            border-radius: 5px !important;
+        }
+
+        .dropdown-toggle {
+            background: none;
+            border: none;
+            padding: 0;
+            margin: 0 8px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            color: #00aaff;
+            font-size: 1.2em;
+            transition: all 0.3s ease;
+        }
+        .dropdown-toggle:hover {
+            background: #00aaff;
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 5px;
         }
 
         .dropdown-content {
@@ -112,11 +151,16 @@
                 align-items: center;
             }
 
+            .navbar a,
+            .dropdown-toggle {
+                margin: 0 8px; /* tighter spacing */
+                font-size: 1em;
+            }
+
             .dropdown-content {
                 position: absolute;
                 top: 100%;
                 left: 0;
-                padding-left: 0;
                 display: none;
                 background-color: rgba(0, 0, 0, 0.95);
                 flex-direction: column;
@@ -132,14 +176,13 @@
                 transform: rotate(90deg);
             }
 
-            .dropdown:hover .dropdown-content {
-                display: none !important;
+            .dropdown {
+                position: relative;
             }
 
-            .dropdown:hover .arrow {
-                transform: none !important;
-            }
+            
         }
+
     </style>
 </head>
 <body>
@@ -152,14 +195,14 @@
         </a>
 
         <div class="dropdown">
-            <div class="dropdown-toggle">
+            <button type="button" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">
                 <svg class="icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none">
                     <path d="M8 5.00005C7.01165 5.00082 6.49359 5.01338 6.09202 5.21799C5.71569 5.40973 5.40973 5.71569 5.21799 6.09202C5 6.51984 5 7.07989 5 8.2V17.8C5 18.9201 5 19.4802 5.21799 19.908C5.40973 20.2843 5.71569 20.5903 6.09202 20.782C6.51984 21 7.07989 21 8.2 21H15.8C16.9201 21 17.4802 21 17.908 20.782C18.2843 20.5903 18.5903 20.2843 18.782 19.908C19 19.4802 19 18.9201 19 17.8V8.2C19 7.07989 19 6.51984 18.782 6.09202C18.5903 5.71569 18.2843 5.40973 17.908 5.21799C17.5064 5.01338 16.9884 5.00082 16 5.00005M8 5.00005V7H16V5.00005M8 5.00005V4.70711C8 4.25435 8.17986 3.82014 8.5 3.5C8.82014 3.17986 9.25435 3 9.70711 3H14.2929C14.7456 3 15.1799 3.17986 15.5 3.5C15.8201 3.82014 16 4.25435 16 4.70711V5.00005M12 15H9M15 11H9"
                           fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
                 Guides
                 <span class="arrow">▷</span>
-            </div>
+            </button>
             <div class="dropdown-content">
                 <a href="/download.html">Download</a>
                 <a href="/addsoundhelp.html">Add Sounds</a>
@@ -168,7 +211,7 @@
         </div>
 
         <div class="dropdown">
-            <div class="dropdown-toggle">
+            <button type="button" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">
                 <svg class="icon" viewBox="0 -8 72 72" xmlns="http://www.w3.org/2000/svg">
                     <path fill="currentColor" d="M13.32,44.31a4.5,4.5,0,0,0,6.36,6.36L34.44,35.91l-6.36-6.36Z"/>
                     <polygon fill="currentColor" points="50.2 16.96 56.63 13.63 60 7.13 56.86 3.99 50.36 7.36 47.03 13.78 39.21 21.61 42.38 24.79 50.2 16.96"/>
@@ -176,7 +219,7 @@
                 </svg>
                 Tools
                 <span class="arrow">▷</span>
-            </div>
+            </button>
             <div class="dropdown-content">
                 <a href="/list.html">List</a>
                 <a href="/packgen.html">Packgen</a>
@@ -186,13 +229,26 @@
     </nav>
 
     <script>
-        document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
-            toggle.addEventListener('click', function (e) {
-                if (window.innerWidth <= 768) {
-                    e.preventDefault();
-                    const parent = this.parentElement;
-                    parent.classList.toggle('open');
-                }
+        document.addEventListener('DOMContentLoaded', () => {
+            const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+            dropdownToggles.forEach(toggle => {
+                toggle.addEventListener('click', e => {
+                    if (window.innerWidth <= 768) {
+                        e.preventDefault();
+                        e.stopPropagation();
+
+                        const parent = toggle.closest('.dropdown');
+
+                        document.querySelectorAll('.dropdown.open').forEach(d => {
+                            if (d !== parent) d.classList.remove('open');
+                        });
+
+                        parent.classList.toggle('open');
+
+                        const expanded = parent.classList.contains('open');
+                        toggle.setAttribute('aria-expanded', expanded);
+                    }
+                });
             });
         });
     </script>
