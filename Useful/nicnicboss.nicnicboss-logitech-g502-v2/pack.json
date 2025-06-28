@@ -1,0 +1,14 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "nicnicboss.nicnicboss-logitech-g502-v2",
+    "version": 2,
+    "packgen": true,
+    "type": "Useful",
+    "name": "NicNicBoss Logitech G502 V2",
+    "description": "remake of nicnicboss g502!",
+    "authors": [
+        {
+            "name": "NicNicBoss"
+        }
+    ]
+}
