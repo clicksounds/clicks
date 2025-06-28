@@ -1,0 +1,13 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "nicnicboss.nicnicboss-logitech-g-pro-x-superlight",
+    "version": 1,
+    "packgen": true,
+    "type": "Useful",
+    "name": "NicNicBoss Logitech G-Pro x Superlight",
+    "authors": [
+        {
+            "name": "NicNicBoss"
+        }
+    ]
+}
