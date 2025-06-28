@@ -1,0 +1,13 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "0pacity.0pacitys-clicks-v2",
+    "version": 1,
+    "packgen": true,
+    "type": "Useful",
+    "name": "0pacitys Clicks V2",
+    "authors": [
+        {
+            "name": "0pacity"
+        }
+    ]
+}
