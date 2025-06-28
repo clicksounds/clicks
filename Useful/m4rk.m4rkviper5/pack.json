@@ -1,0 +1,13 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "m4rk.m4rkviper5",
+    "version": 1,
+    "packgen": true,
+    "type": "Useful",
+    "name": "M4rkViper5",
+    "authors": [
+        {
+            "name": "M4rk"
+        }
+    ]
+}
