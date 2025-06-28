@@ -1,0 +1,13 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "nicnicboss.nicnicboss-razer-basilisk-v3",
+    "version": 1,
+    "packgen": true,
+    "type": "Useful",
+    "name": "NicNicBoss Razer Basilisk V3",
+    "authors": [
+        {
+            "name": "NicNicBoss"
+        }
+    ]
+}
