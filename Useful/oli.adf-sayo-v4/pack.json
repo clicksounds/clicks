@@ -1,12 +1,12 @@
 {
     "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
-    "id": "oli.adf-sayo-v4",
+    "id": "axi.axi-sayo-v4",
     "packgen": true,
     "type": "Useful",
-    "name": "adf-sayo V4",
+    "name": "Axi-Sayo V4",
     "authors": [
         {
-            "name": "oli"
+            "name": "axi"
         }
     ]
 }
