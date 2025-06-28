@@ -1,0 +1,15 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "andarian.keychron-k4-up-arrow",
+    "version": 1,
+    "packgen": true,
+    "type": "Useful",
+    "name": "Keychron K4 Up Arrow",
+    "description": "another keyboard clickpack by me. i don't know what was im doing, but im bored.",
+    "authors": [
+        {
+            "name": "Andarian",
+            "gdAccountID": 27823067
+        }
+    ]
+}
