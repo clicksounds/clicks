@@ -137,6 +137,14 @@
       "folders": ["Clicks","Releases"]
     },
     {
+      "name": "Axi-Sayo V4",
+      "id": "axi.axi-sayo-v4",
+      "version": 1,
+      "type": "Useful",
+      "authors": [{"name":"axi","type":"Main"}],
+      "folders": ["Clicks","Releases"]
+    },
+    {
       "name": "Balam Rush Hero",
       "id": "movistar.balam-rush-hero",
       "version": 1,
@@ -1447,14 +1455,6 @@
       "version": 1,
       "type": "Useful",
       "description": "new best clickpack in zcb. pack made by adf (oli) ",
-      "authors": [{"name":"oli","type":"Main"}],
-      "folders": ["Clicks","Releases"]
-    },
-    {
-      "name": "adf-sayo V4",
-      "id": "oli.adf-sayo-v4",
-      "version": 1,
-      "type": "Useful",
       "authors": [{"name":"oli","type":"Main"}],
       "folders": ["Clicks","Releases"]
     },
