@@ -1,0 +1,13 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "unknown.viperpack_v2_5",
+    "version": 1,
+    "packgen": true,
+    "type": "Useful",
+    "name": "viperpack_v2_5",
+    "authors": [
+        {
+            "name": "Unknown"
+        }
+    ]
+}
