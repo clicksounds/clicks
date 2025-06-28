@@ -1,0 +1,13 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "sjunlee.g502xplus",
+    "version": 1,
+    "packgen": true,
+    "type": "Useful",
+    "name": "g502xplus",
+    "authors": [
+        {
+            "name": "sjunlee"
+        }
+    ]
+}
