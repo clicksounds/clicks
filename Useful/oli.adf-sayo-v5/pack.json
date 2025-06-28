@@ -1,0 +1,14 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "oli.adf-sayo-v5",
+    "version": 1,
+    "packgen": true,
+    "type": "Useful",
+    "name": "adf-sayo V5",
+    "description": "the best zcb clickpack yet!",
+    "authors": [
+        {
+            "name": "oli"
+        }
+    ]
+}
