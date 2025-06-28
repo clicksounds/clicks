@@ -1,6 +1,14 @@
 {
   "Useful": [
     {
+      "name": "0pacitys Clicks V2",
+      "id": "0pacity.0pacitys-clicks-v2",
+      "version": 1,
+      "type": "Useful",
+      "authors": [{"name":"0pacity","type":"Main"}],
+      "folders": ["Clicks","Releases"]
+    },
+    {
       "name": "Akko Keyboard",
       "id": "nywalll.akko-keyboard",
       "version": 1,
@@ -471,6 +479,15 @@
       "folders": ["Clicks","Releases"]
     },
     {
+      "name": "Keychron K4 Up Arrow",
+      "id": "andarian.keychron-k4-up-arrow",
+      "version": 1,
+      "type": "Useful",
+      "description": "another keyboard clickpack by me. i don't know what was im doing, but im bored. ",
+      "authors": [{"name":"Andarian","gdAccountID":27823067,"type":"Main"}],
+      "folders": ["Clicks","Releases"]
+    },
+    {
       "name": "Klick mishi",
       "id": "ne-znay.klick-mishi",
       "version": 1,
@@ -572,6 +589,14 @@
     },
     {
       "name": "Logitech MX Anywhere 2S",
+      "id": "andarian.logitech-mx-anywhere-2s",
+      "version": 1,
+      "type": "Useful",
+      "authors": [{"name":"Andarian","gdAccountID":27823067,"type":"Main"}],
+      "folders": ["Clicks","Releases"]
+    },
+    {
+      "name": "Logitech MX Anywhere 2S",
       "id": "main.logitech-mx-anywhere-2s",
       "version": 1,
       "type": "Useful",
@@ -592,6 +617,14 @@
       "version": 1,
       "type": "Useful",
       "authors": [{"name":"lolwut","type":"Main"}],
+      "folders": ["Clicks","Releases"]
+    },
+    {
+      "name": "M4rkViper5",
+      "id": "m4rk.m4rkviper5",
+      "version": 1,
+      "type": "Useful",
+      "authors": [{"name":"M4rk","type":"Main"}],
       "folders": ["Clicks","Releases"]
     },
     {
@@ -704,6 +737,31 @@
     {
       "name": "NicNicBoss G502",
       "id": "nicnicboss.nicnicboss-g502",
+      "version": 1,
+      "type": "Useful",
+      "authors": [{"name":"NicNicBoss","type":"Main"}],
+      "folders": ["Clicks","Releases"]
+    },
+    {
+      "name": "NicNicBoss Logitech G502 V2",
+      "id": "nicnicboss.nicnicboss-logitech-g502-v2",
+      "version": 2,
+      "type": "Useful",
+      "description": "remake of nicnicboss g502! ",
+      "authors": [{"name":"NicNicBoss","type":"Main"}],
+      "folders": ["Clicks","Releases"]
+    },
+    {
+      "name": "NicNicBoss Logitech G-Pro x Superlight",
+      "id": "nicnicboss.nicnicboss-logitech-g-pro-x-superlight",
+      "version": 1,
+      "type": "Useful",
+      "authors": [{"name":"NicNicBoss","type":"Main"}],
+      "folders": ["Clicks","Releases"]
+    },
+    {
+      "name": "NicNicBoss Razer Basilisk V3",
+      "id": "nicnicboss.nicnicboss-razer-basilisk-v3",
       "version": 1,
       "type": "Useful",
       "authors": [{"name":"NicNicBoss","type":"Main"}],
@@ -883,6 +941,14 @@
       "version": 1,
       "type": "Useful",
       "authors": [{"name":"zWild","type":"Main"}],
+      "folders": ["Clicks","Releases"]
+    },
+    {
+      "name": "Razer Huntsman Black Analog Switches",
+      "id": "oli.razer-huntsman-black-analog-switches",
+      "version": 1,
+      "type": "Useful",
+      "authors": [{"name":"oli","type":"Main"}],
       "folders": ["Clicks","Releases"]
     },
     {
@@ -1393,6 +1459,15 @@
       "folders": ["Clicks","Releases"]
     },
     {
+      "name": "adf-sayo V5",
+      "id": "oli.adf-sayo-v5",
+      "version": 1,
+      "type": "Useful",
+      "description": "the best zcb clickpack yet! ",
+      "authors": [{"name":"oli","type":"Main"}],
+      "folders": ["Clicks","Releases"]
+    },
+    {
       "name": "adf-sayo no deskmat",
       "id": "oli.adf-sayo-no-deskmat",
       "version": 1,
@@ -1441,6 +1516,14 @@
       "version": 1,
       "type": "Useful",
       "authors": [{"name":"Fredus","gdAccountID":31214088,"type":"Main"}],
+      "folders": ["Clicks","Releases"]
+    },
+    {
+      "name": "g502xplus",
+      "id": "sjunlee.g502xplus",
+      "version": 1,
+      "type": "Useful",
+      "authors": [{"name":"sjunlee","type":"Main"}],
       "folders": ["Clicks","Releases"]
     },
     {
