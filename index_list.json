@@ -1628,6 +1628,14 @@
       "folders": ["Clicks","Releases"]
     },
     {
+      "name": "viperpack_v2_5",
+      "id": "unknown.viperpack_v2_5",
+      "version": 1,
+      "type": "Useful",
+      "authors": [{"name":"Unknown","type":"Main"}],
+      "folders": ["Clicks","Releases"]
+    },
+    {
       "name": "zxsetj up arrow pack",
       "id": "zxsetj.zxsetj-up-arrow-pack",
       "version": 1,
