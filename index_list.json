@@ -188,6 +188,15 @@
       "folders": ["Clicks","Releases"]
     },
     {
+      "name": "Cats Mouse",
+      "id": "catkgaming.cats-mouse",
+      "version": 1,
+      "type": "Useful",
+      "description": "Some click sounds I recorded with my mouse!!! I don't know what kind of mouse this is, it's just the one that came with my computer. ",
+      "authors": [{"name":"CatKGaming","gdAccountID":26670396,"type":"Main"}],
+      "folders": ["Clicks","Releases"]
+    },
+    {
       "name": "Cats Sayodevice",
       "id": "catkgaming.cats-sayodevice",
       "version": 1,
