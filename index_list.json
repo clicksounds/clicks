@@ -1137,6 +1137,15 @@
       "folders": ["Clicks"]
     },
     {
+      "name": "Trick Clicks",
+      "id": "trick.trick-clicks",
+      "version": 1,
+      "type": "Useful",
+      "description": "Sounds from the video \"[VERIFYING] Aeternus 79-100 + 71-93 (WR)\", from Tricks channel ",
+      "authors": [{"name":"Trick","type":"Main"}],
+      "folders": ["Clicks","Releases"]
+    },
+    {
       "name": "Trikehards controller click pack V2",
       "id": "trikehard.trikehards-controller-click-pack-v2",
       "version": 1,
