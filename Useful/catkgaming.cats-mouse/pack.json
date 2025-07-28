@@ -1,0 +1,14 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "catkgaming.cats-mouse",
+    "packgen": true,
+    "type": "Useful",
+    "name": "Cats Mouse",
+    "description": "Some click sounds I recorded with my mouse!!! I don't know what kind of mouse this is, it's just the one that came with my computer.",
+    "authors": [
+        {
+            "name": "CatKGaming",
+            "gdAccountID": 26670396
+        }
+    ]
+}
