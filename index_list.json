@@ -120,6 +120,14 @@
       "folders": ["Clicks","Releases"]
     },
     {
+      "name": "Ardor Gaming Phantom Pro V2",
+      "id": "sakatnex.ardor-gaming-phantom-pro-v2",
+      "version": 1,
+      "type": "Useful",
+      "authors": [{"name":"Sakatnex","gdAccountID":33529679,"type":"Main"}],
+      "folders": ["Clicks","Releases"]
+    },
+    {
       "name": "Aula F75 Up Arrow",
       "id": "andarian.aula-f75-up-arrow",
       "version": 1,
