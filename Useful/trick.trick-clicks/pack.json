@@ -1,0 +1,14 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "trick.trick-clicks",
+    "version": 1,
+    "packgen": true,
+    "type": "Useful",
+    "name": "Trick Clicks",
+    "description": "Sounds from the video \"[VERIFYING] Aeternus 79-100 + 71-93 (WR)\", from Tricks channel",
+    "authors": [
+        {
+            "name": "Trick"
+        }
+    ]
+}
