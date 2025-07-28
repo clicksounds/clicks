@@ -1,0 +1,14 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "sakatnex.ardor-gaming-phantom-pro-v2",
+    "version": 1,
+    "packgen": true,
+    "type": "Useful",
+    "name": "Ardor Gaming Phantom Pro V2",
+    "authors": [
+        {
+            "name": "Sakatnex",
+            "gdAccountID": 33529679
+        }
+    ]
+}
