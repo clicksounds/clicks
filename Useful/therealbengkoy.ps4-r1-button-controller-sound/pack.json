@@ -1,0 +1,15 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "therealbengkoy.ps4-r1-button-controller-sound",
+    "version": 1,
+    "packgen": true,
+    "type": "Useful",
+    "name": "PS4 R1 Button Controller Sound",
+    "description": "This is the click noise of the R1 button on my PS4 Controller.",
+    "authors": [
+        {
+            "name": "therealbengkoy",
+            "gdAccountID": 34632587
+        }
+    ]
+}
