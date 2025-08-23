@@ -1,0 +1,13 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "tbmblueflame.noel-click",
+    "version": 1,
+    "packgen": true,
+    "type": "Useful",
+    "name": "Noel click",
+    "authors": [
+        {
+            "name": "TBMBlueflame"
+        }
+    ]
+}
