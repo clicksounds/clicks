@@ -1,0 +1,13 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "fluffygmd.fluffygmd-apexprotkl",
+    "version": 1,
+    "packgen": true,
+    "type": "Useful",
+    "name": "FluffyGMD-apexprotkl",
+    "authors": [
+        {
+            "name": "FluffyGMD"
+        }
+    ]
+}
