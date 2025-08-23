@@ -1,0 +1,15 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "beats.osu-hit-copy",
+    "version": 1,
+    "packgen": true,
+    "type": "Useful",
+    "name": "osu hit copy",
+    "description": "osu hit copy",
+    "authors": [
+        {
+            "name": "beats",
+            "gdAccountID": 35178912
+        }
+    ]
+}
