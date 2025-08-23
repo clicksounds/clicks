@@ -1036,6 +1036,15 @@
       "folders": ["Clicks","Releases"]
     },
     {
+      "name": "Roccat kone pro mouse sound",
+      "id": "qewel.roccat-kone-pro-mouse-sound",
+      "version": 1,
+      "type": "Useful",
+      "description": "just sound of my mouse ",
+      "authors": [{"name":"qewel","gdAccountID":33375352,"type":"Main"}],
+      "folders": ["Clicks"]
+    },
+    {
       "name": "Royal Kludge R75",
       "id": "m5pon4ik.royal-kludge-r75",
       "version": 1,
