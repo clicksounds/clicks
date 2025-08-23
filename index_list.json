@@ -395,6 +395,14 @@
       "folders": ["Clicks","Releases"]
     },
     {
+      "name": "FluffyGMD-apexprotkl",
+      "id": "fluffygmd.fluffygmd-apexprotkl",
+      "version": 1,
+      "type": "Useful",
+      "authors": [{"name":"FluffyGMD","type":"Main"}],
+      "folders": ["Clicks","Releases"]
+    },
+    {
       "name": "Flushymelons Yunzii x71",
       "id": "flushymelon.flushymelons-yunzii-x71",
       "version": 1,
@@ -883,6 +891,15 @@
       "type": "Useful",
       "description": "Old Office's Mouse click sounds. ",
       "authors": [{"name":"Lazai","gdAccountID":25147015,"type":"Main"}],
+      "folders": ["Clicks","Releases"]
+    },
+    {
+      "name": "PS4 R1 Button Controller Sound",
+      "id": "therealbengkoy.ps4-r1-button-controller-sound",
+      "version": 1,
+      "type": "Useful",
+      "description": "This is the click noise of the R1 button on my PS4 Controller. ",
+      "authors": [{"name":"therealbengkoy","gdAccountID":34632587,"type":"Main"}],
       "folders": ["Clicks","Releases"]
     },
     {
