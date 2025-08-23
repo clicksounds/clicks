@@ -1637,6 +1637,15 @@
       "folders": ["Clicks","Releases"]
     },
     {
+      "name": "osu hit copy",
+      "id": "beats.osu-hit-copy",
+      "version": 1,
+      "type": "Useful",
+      "description": "osu hit copy ",
+      "authors": [{"name":"beats","gdAccountID":35178912,"type":"Main"}],
+      "folders": ["Clicks"]
+    },
+    {
       "name": "osu! Hit Sound",
       "id": "peppy.osuhit",
       "version": 1,
