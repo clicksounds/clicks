@@ -1,0 +1,15 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "qewel.roccat-kone-pro-mouse-sound",
+    "version": 1,
+    "packgen": true,
+    "type": "Useful",
+    "name": "Roccat kone pro mouse sound",
+    "description": "just sound of my mouse",
+    "authors": [
+        {
+            "name": "qewel",
+            "gdAccountID": 33375352
+        }
+    ]
+}
