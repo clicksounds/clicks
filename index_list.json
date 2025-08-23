@@ -853,6 +853,14 @@
       "folders": ["Clicks","Releases"]
     },
     {
+      "name": "Noel click",
+      "id": "tbmblueflame.noel-click",
+      "version": 1,
+      "type": "Useful",
+      "authors": [{"name":"TBMBlueflame","type":"Main"}],
+      "folders": ["Clicks"]
+    },
+    {
       "name": "Norfolk's Bloody A70 Click Pack",
       "id": "norfolk.norfolks-bloody-a70x-clickpack",
       "version": 1,
