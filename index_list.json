@@ -1999,6 +1999,15 @@
       "folders": ["Clicks"]
     },
     {
+      "name": "gfmeowpack",
+      "id": "minecraftweed.gfmeowpack",
+      "version": 1,
+      "type": "Meme",
+      "description": "meowww(5) ",
+      "authors": [{"name":"minecraftweed","type":"Main"}],
+      "folders": ["Clicks"]
+    },
+    {
       "name": "goofypack",
       "id": "fluffyzeo.goofypack",
       "version": 1,
