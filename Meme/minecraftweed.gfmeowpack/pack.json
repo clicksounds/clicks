@@ -1,0 +1,14 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "minecraftweed.gfmeowpack",
+    "version": 1,
+    "packgen": true,
+    "type": "Meme",
+    "name": "gfmeowpack",
+    "description": "meowww(5)",
+    "authors": [
+        {
+            "name": "minecraftweed"
+        }
+    ]
+}
