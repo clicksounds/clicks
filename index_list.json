@@ -1672,6 +1672,15 @@
       "folders": ["Clicks","Releases"]
     },
     {
+      "name": "sayodevice gateron jade pro",
+      "id": "fazessz.sayodevice-gateron-jade-pro",
+      "version": 1,
+      "type": "Useful",
+      "description": "the best clickpack, realistic clicks, very nice sounds. ",
+      "authors": [{"name":"fazessz","gdAccountID":null,"type":"Main"}],
+      "folders": ["Clicks","Releases"]
+    },
+    {
       "name": "sayodevice idk",
       "id": "unknown.sayodevice-idk",
       "version": 1,
