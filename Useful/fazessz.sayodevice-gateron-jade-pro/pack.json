@@ -1,0 +1,15 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "fazessz.sayodevice-gateron-jade-pro",
+    "version": 1,
+    "packgen": true,
+    "type": "Useful",
+    "name": "sayodevice gateron jade pro",
+    "description": "the best clickpack, realistic clicks, very nice sounds.",
+    "authors": [
+        {
+            "name": "fazessz",
+            "gdAccountID": null
+        }
+    ]
+}
