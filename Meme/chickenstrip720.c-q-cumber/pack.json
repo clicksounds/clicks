@@ -1,0 +1,14 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "chickenstrip720.c-q-cumber",
+    "version": 1,
+    "packgen": true,
+    "type": "Meme",
+    "name": "c q cumber",
+    "description": "yes",
+    "authors": [
+        {
+            "name": "chickenstrip720"
+        }
+    ]
+}
