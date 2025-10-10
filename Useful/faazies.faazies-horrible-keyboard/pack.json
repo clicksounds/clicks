@@ -1,0 +1,14 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "faazies.faazies-horrible-keyboard",
+    "version": 1,
+    "type": "Useful",
+    "name": "Faazies Horrible Keyboard",
+    "description": "The releases sound like clicks. That is how bad this keyboard is. Cut and packed by Beat (creator of Click Sounds)",
+    "authors": [
+        {
+            "name": "Faazies",
+            "gdAccountID": 18134882
+        }
+    ]
+}
