@@ -387,6 +387,15 @@
       "folders": ["Clicks","Releases"]
     },
     {
+      "name": "Faazies Horrible Keyboard",
+      "id": "faazies.faazies-horrible-keyboard",
+      "version": 1,
+      "type": "Useful",
+      "description": "The releases sound like clicks. That is how bad this keyboard is. Cut and packed by Beat (creator of Click Sounds) ",
+      "authors": [{"name":"Faazies","gdAccountID":18134882,"type":"Main"}],
+      "folders": ["Clicks","Releases"]
+    },
+    {
       "name": "Faze Clicks",
       "id": "swim1x.faze",
       "version": 1,
