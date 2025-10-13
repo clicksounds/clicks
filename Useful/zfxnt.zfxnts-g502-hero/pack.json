@@ -1,0 +1,15 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "zfxnt.zfxnts-g502-hero",
+    "version": 1,
+    "packgen": true,
+    "type": "Useful",
+    "name": "zfxnts G502 Hero",
+    "description": "i was bored lmao",
+    "authors": [
+        {
+            "name": "zfxnt",
+            "gdAccountID": 140120269
+        }
+    ]
+}
