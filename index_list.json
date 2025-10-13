@@ -1723,6 +1723,15 @@
       "folders": ["Clicks","Releases"]
     },
     {
+      "name": "zfxnts G502 Hero",
+      "id": "zfxnt.zfxnts-g502-hero",
+      "version": 1,
+      "type": "Useful",
+      "description": "i was bored lmao ",
+      "authors": [{"name":"zfxnt","gdAccountID":140120269,"type":"Main"}],
+      "folders": ["Clicks"]
+    },
+    {
       "name": "zxsetj up arrow pack",
       "id": "zxsetj.zxsetj-up-arrow-pack",
       "version": 1,
