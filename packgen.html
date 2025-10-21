@@ -396,7 +396,7 @@
                 ]
             };
 
-            if (authorName.toLowerCase() === "beat" && !document.cookie.includes("isBeat=true")) {
+            if ((authorName.toLowerCase() === "beat" || authorName.toLowerCase() === "beattaco") && !document.cookie.includes("isBeat=true")) {
                 alert("I'm flattered, but please do not make me the author of your pack. Enter the correct author's name.");
                 return;
             }
@@ -452,6 +452,12 @@
             if (foundKnownAuthor && packName.toLowerCase().includes(authorName.toLowerCase()) === false) {
                 window.open('https://youtu.be/noJXsLZRWsE', '_blank');
                 return;
+            }
+
+            if (packName.toLowerCase() == "osu hit" || packName.toLowerCase() == "osu-hit" || packName.toLowerCase() == "osuhit") {
+                if (!confirm("Osu-Hit is already available on the Click Sounds Index. Consider using the existing pack instead of creating a new one.")) {
+                    return;
+                }
             }
 
             zip.file('pack.json', JSON.stringify(packJson, null, 4));
