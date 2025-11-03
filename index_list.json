@@ -9,6 +9,15 @@
       "folders": ["Clicks","Releases"]
     },
     {
+      "name": "ANKER Mouse 1",
+      "id": "hor1zon-gd.anker-mouse-1",
+      "version": 1,
+      "type": "Useful",
+      "description": "For legit players only !!! (Made In Ukraine) ",
+      "authors": [{"name":"Hor1zon GD","type":"Main"}],
+      "folders": ["Clicks","Releases"]
+    },
+    {
       "name": "Akko Keyboard",
       "id": "nywalll.akko-keyboard",
       "version": 1,
