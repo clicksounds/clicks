@@ -1,0 +1,14 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "hor1zon-gd.anker-mouse-1",
+    "version": 1,
+    "packgen": true,
+    "type": "Useful",
+    "name": "ANKER Mouse 1",
+    "description": "For legit players only !!! (Made In Ukraine)",
+    "authors": [
+        {
+            "name": "Hor1zon GD"
+        }
+    ]
+}
