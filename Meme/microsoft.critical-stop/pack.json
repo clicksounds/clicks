@@ -1,0 +1,13 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "microsoft.critical-stop",
+    "packgen": true,
+    "type": "Meme",
+    "name": "Critical Stop",
+    "description": "This Sound Is Used In Windows Vista to Windows 7.",
+    "authors": [
+        {
+            "name": "Microsoft"
+        }
+    ]
+}
