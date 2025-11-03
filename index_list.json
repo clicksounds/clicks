@@ -1816,6 +1816,15 @@
       "folders": ["Clicks"]
     },
     {
+      "name": "Critical Stop",
+      "id": "microsoft.critical-stop",
+      "version": 1,
+      "type": "Meme",
+      "description": "This Sound Is Used In Windows Vista to Windows 7. ",
+      "authors": [{"name":"Microsoft","type":"Main"}],
+      "folders": ["Clicks","Releases"]
+    },
+    {
       "name": "Dash",
       "id": "mdk.dash",
       "version": 1,
