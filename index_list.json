@@ -1080,15 +1080,6 @@
       "folders": ["Clicks","Releases"]
     },
     {
-      "name": "SDslayer Click Pack",
-      "id": "sdslayer.sdslayer-click-pack",
-      "version": 1,
-      "type": "Useful",
-      "description": "The up arrow of SDslayer's keyboard. Recorded by SDslayer for the click sounds index and cut by click sounds' creator, Beat. ",
-      "authors": [{"name":"SDSlayer","gdAccountID":199031,"type":"Main"}],
-      "folders": ["Clicks","Releases"]
-    },
-    {
       "name": "Samsung AA-MR1D9TB Mouse",
       "id": "imsgdo.aa-mr1d9tb",
       "version": 1,
@@ -1136,6 +1127,15 @@
       "type": "Useful",
       "authors": [{"name":"Unknown","type":"Main"}],
       "folders": ["Clicks"]
+    },
+    {
+      "name": "Sdslayer Click Pack",
+      "id": "sdslayer.sdslayer-click-pack",
+      "version": 1,
+      "type": "Useful",
+      "description": "The up arrow of SDslayer's keyboard. Recorded by SDslayer for the click sounds index and cut by click sounds' creator, Beat. ",
+      "authors": [{"name":"Sdslayer","gdAccountID":199031,"type":"Main"}],
+      "folders": ["Clicks","Releases"]
     },
     {
       "name": "Secants Mouse Click",
