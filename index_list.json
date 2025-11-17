@@ -121,6 +121,14 @@
       "folders": ["Clicks","Releases"]
     },
     {
+      "name": "Andarian's up arrow",
+      "id": "andarian.andarians-up-arrow",
+      "version": 1,
+      "type": "Useful",
+      "authors": [{"name":"Andarian","gdAccountID":"27823067","type":"Main"}],
+      "folders": ["Clicks","Releases"]
+    },
+    {
       "name": "Anthonys SayoDevice O3C Click",
       "id": "anthony.anthonys-sayodevice-o3c-click",
       "version": 1,
