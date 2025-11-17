@@ -1,0 +1,14 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "andarian.andarians-up-arrow",
+    "version": 1,
+    "packgen": true,
+    "type": "Useful",
+    "name": "Andarian's up arrow",
+    "authors": [
+        {
+            "name": "Andarian",
+            "gdAccountID": "27823067"
+        }
+    ]
+}
