@@ -249,6 +249,13 @@
         <p id="releaseCount">Uploaded: 0/25</p>
         <ul id="releaseList"></ul>
     </section>
+
+    <section>
+        <h2>Noise Sound (max 1)</h2>
+            <small class="footnote">Files will automatically convert to .ogg when accepted.</small>
+            <input type="file" id="noiseFile" accept=".mp3,.ogg,.wav" hidden>
+        <h3>Noise is not currently supported by Click Sounds. Enable the 'allow noise' debug option if you know what you are doing.</h3>
+    </section>
     
     <h2 style="color:red; text-align:center;">🚨 DO NOT RENAME THE .PACKGEN.ZIP FILE 🚨</h2>
     
@@ -259,6 +266,7 @@
     <script>
         const clickFiles = [];
         const releaseFiles = [];
+        let noiseFile = null;
 
         let overlimitConfirmed = false;
 
@@ -290,6 +298,12 @@
             }
         });
 
+        document.getElementById('noiseFile').addEventListener('change', (e) => {
+            const file = e.target.files[0];
+            if (!file) return;
+            noiseFile = file;
+        });
+
         function updateList(type, files) {
             const list = document.getElementById(`${type}List`);
             const count = document.getElementById(`${type}Count`);
@@ -311,6 +325,8 @@
 
             checkGenerateButton();
         }
+
+        
 
         function checkGenerateButton() {
             const generateButton = document.getElementById('generatePack');
@@ -353,10 +369,16 @@
                 });
             }
         }
+        function checkNoise() {
+            if (document.cookie.includes("allow-noise=true")) {
+                document.getElementById('noiseFile').hidden = false;
+            }
+        }
 
         window.addEventListener('load', () => {
             checkGenerateButton();
             checkVersioning();
+            checkNoise();
         });
 
         document.getElementById('generatePack').addEventListener('click', async () => {
@@ -435,6 +457,12 @@
                     window.location.reload();
                     return;
                 }
+                if (packName == "allow noise") {
+                    document.cookie = "allow-noise=true; max-age=3153600000; path=/";
+                    alert("Debug: Noise is now allowed. Press OK to reload the page.");
+                    window.location.reload();
+                    return;
+                }
             }
 
             if (packDescription.length > 150) alert("Warning: The pack description is beyond the 150 character limit. It may not be accepted if you submit it to the Click Sounds Index.")
@@ -462,6 +490,10 @@
 
             zip.file('pack.json', JSON.stringify(packJson, null, 4));
 
+            if (noiseFile) {
+                zip.file(`noise.${noiseFile.name.split('.').pop()}`, noiseFile);
+            }
+
             if (isAllowed) {
                 const content = await zip.generateAsync({ type: 'blob' });
                 const a = document.createElement('a');
@@ -485,6 +517,8 @@
             document.getElementById('gdAccountID').value = '';
             document.getElementById('clickFiles').value = '';
             document.getElementById('releaseFiles').value = '';
+            document.getElementById('noiseFile').value = '';
+            noiseFile = null;
             if (packType) packType.checked = false;
         });
 
