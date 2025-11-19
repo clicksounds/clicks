@@ -1,0 +1,13 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "activision.hit-marker-cod",
+    "version": 1,
+    "type": "Meme",
+    "name": "Hit marker COD",
+    "description": "Hit marker sound from the game Call of Duty",
+    "authors": [
+        {
+            "name": "Activision"
+        }
+    ]
+}
