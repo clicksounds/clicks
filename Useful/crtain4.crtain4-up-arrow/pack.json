@@ -1,0 +1,14 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "crtain4.crtain4-up-arrow",
+    "version": 1,
+    "packgen": true,
+    "type": "Useful",
+    "name": "Crtain4 Up Arrow",
+    "description": "Crtain4 Up Arrow",
+    "authors": [
+        {
+            "name": "Crtain4"
+        }
+    ]
+}
