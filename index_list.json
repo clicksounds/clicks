@@ -1211,7 +1211,7 @@
       "version": 1,
       "type": "Useful",
       "description": "Sounds from the video \"[VERIFYING] Aeternus 79-100 + 71-93 (WR)\", from Tricks channel ",
-      "authors": [{"name":"Trick","type":"Main"}],
+      "authors": [{"name":"Trick","type":"Main"},{"name":"StreetyYT","type":"Provider"}],
       "folders": ["Clicks","Releases"]
     },
     {
