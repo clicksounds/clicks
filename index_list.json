@@ -1890,6 +1890,15 @@
       "folders": ["Clicks"]
     },
     {
+      "name": "Hit marker COD",
+      "id": "activision.hit-marker-cod",
+      "version": 1,
+      "type": "Meme",
+      "description": "Hit marker sound from the game Call of Duty ",
+      "authors": [{"name":"Activision","type":"Main"}],
+      "folders": ["Clicks"]
+    },
+    {
       "name": "KingSammelot Boing",
       "id": "kingsammelot.kingsammelot-boing",
       "version": 1,
