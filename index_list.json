@@ -313,6 +313,15 @@
       "folders": ["Clicks","Releases"]
     },
     {
+      "name": "Crtain4 Up Arrow",
+      "id": "crtain4.crtain4-up-arrow",
+      "version": 1,
+      "type": "Useful",
+      "description": "Crtain4 Up Arrow ",
+      "authors": [{"name":"Crtain4","type":"Main"}],
+      "folders": ["Clicks","Releases"]
+    },
+    {
       "name": "Cursed Clicks 2023",
       "id": "cursed.cursed-clicks-2023",
       "version": 1,
