@@ -971,6 +971,15 @@
       "folders": ["Clicks"]
     },
     {
+      "name": "PlayStation 5 Dualsense Controller",
+      "id": "beat.playstation-5-dualsense-controller",
+      "version": 1,
+      "type": "Useful",
+      "description": "The cross button of the Dualsense controller. ",
+      "authors": [{"name":"Beat","type":"Main"}],
+      "folders": ["Clicks","Releases"]
+    },
+    {
       "name": "Questionable Mouse",
       "id": "nobody.questionable-mouse",
       "version": 1,
