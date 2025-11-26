@@ -1,0 +1,14 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "beat.playstation-5-dualsense-controller",
+    "version": 1,
+    "packgen": true,
+    "type": "Useful",
+    "name": "PlayStation 5 Dualsense Controller",
+    "description": "The cross button of the Dualsense controller.",
+    "authors": [
+        {
+            "name": "Beat"
+        }
+    ]
+}
