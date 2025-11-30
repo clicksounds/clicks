@@ -1,14 +1,13 @@
 {
     "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
-    "id": "beat.default",
+    "id": "clicksounds.default",
     "packgen": true,
     "type": "Useful",
     "name": "Default",
-    "description": "Default sound of the Click Sounds mod. Made with help from zxset.",
+    "description": "Default sound of the Click Sounds mod.",
     "authors": [
         {
-            "name": "Beat",
-            "gdAccountID": 13873867
+            "name": "Click Sounds"
         }
     ]
 }

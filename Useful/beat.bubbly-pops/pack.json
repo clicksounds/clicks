@@ -1,0 +1,14 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "beat.bubbly-pops",
+    "packgen": true,
+    "type": "Useful",
+    "name": "Bubbly Pops",
+    "description": "Former default pack of the Click Sounds mod. Made with help from zxset.",
+    "authors": [
+        {
+            "name": "Beat",
+            "gdAccountID": 13873867
+        }
+    ]
+}
