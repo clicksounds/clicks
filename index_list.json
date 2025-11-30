@@ -213,6 +213,15 @@
       "folders": ["Clicks","Releases"]
     },
     {
+      "name": "Bubbly Pops",
+      "id": "beat.bubbly-pops",
+      "version": 1,
+      "type": "Useful",
+      "description": "Former default pack of the Click Sounds mod. Made with help from zxset. ",
+      "authors": [{"name":"Beat","gdAccountID":13873867,"type":"Main"}],
+      "folders": ["Clicks"]
+    },
+    {
       "name": "Cats Mouse",
       "id": "catkgaming.cats-mouse",
       "version": 1,
@@ -356,11 +365,11 @@
     },
     {
       "name": "Default",
-      "id": "beat.default",
+      "id": "clicksounds.default",
       "version": 1,
       "type": "Useful",
-      "description": "Default sound of the Click Sounds mod. Made with help from zxset. ",
-      "authors": [{"name":"Beat","gdAccountID":13873867,"type":"Main"}],
+      "description": "Default sound of the Click Sounds mod. ",
+      "authors": [{"name":"Click Sounds","type":"Main"}],
       "folders": ["Clicks"]
     },
     {
