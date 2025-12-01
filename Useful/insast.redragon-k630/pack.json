@@ -1,0 +1,13 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "insast.redragon-k630",
+    "version": 1,
+    "packgen": true,
+    "type": "Useful",
+    "name": "Redragon K630",
+    "authors": [
+        {
+            "name": "Insast"
+        }
+    ]
+}
