@@ -381,6 +381,14 @@
       "folders": ["Clicks","Releases"]
     },
     {
+      "name": "Doggie Clicks December 2025",
+      "id": "doggie.doggie-clicks-december-2025",
+      "version": 1,
+      "type": "Useful",
+      "authors": [{"name":"Doggie","type":"Main"}],
+      "folders": ["Clicks","Releases"]
+    },
+    {
       "name": "Doggie Click Pack",
       "id": "doggie.doggie-click-pack",
       "version": 1,
