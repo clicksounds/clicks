@@ -1,0 +1,12 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "doggie.doggie-clicks-december-2025",
+    "packcon": true,
+    "type": "Useful",
+    "name": "Doggie Clicks December 2025",
+    "authors": [
+        {
+            "name": "Doggie"
+        }
+    ]
+}
