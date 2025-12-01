@@ -1080,6 +1080,14 @@
       "folders": ["Clicks","Releases"]
     },
     {
+      "name": "Redragon K630",
+      "id": "insast.redragon-k630",
+      "version": 1,
+      "type": "Useful",
+      "authors": [{"name":"Insast","type":"Main"}],
+      "folders": ["Clicks","Releases"]
+    },
+    {
       "name": "Redragon Kumara K552-2",
       "id": "lulildo.redragon-kumara-k552-2",
       "version": 1,
