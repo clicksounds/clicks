@@ -2014,6 +2014,15 @@
       "folders": ["Clicks","Releases"]
     },
     {
+      "name": "SND Mystery",
+      "id": "unknown.snd-mystery",
+      "version": 1,
+      "type": "Meme",
+      "description": "Added for ratrayce ",
+      "authors": [{"name":"Unknown","type":"Main"}],
+      "folders": ["Clicks"]
+    },
+    {
       "name": "Soda",
       "id": "unknown.soda",
       "version": 1,
