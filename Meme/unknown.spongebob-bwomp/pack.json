@@ -1,0 +1,14 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "unknown.spongebob-bwomp",
+    "version": 1,
+    "packgen": true,
+    "type": "Meme",
+    "name": "Spongebob Bwomp",
+    "description": "Uploaded for raytrayce",
+    "authors": [
+        {
+            "name": "Unknown"
+        }
+    ]
+}
