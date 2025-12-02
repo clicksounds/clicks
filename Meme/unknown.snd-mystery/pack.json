@@ -1,0 +1,14 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "unknown.snd-mystery",
+    "version": 1,
+    "packgen": true,
+    "type": "Meme",
+    "name": "SND Mystery",
+    "description": "Added for ratrayce",
+    "authors": [
+        {
+            "name": "Unknown"
+        }
+    ]
+}
