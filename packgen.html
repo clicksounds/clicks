@@ -418,6 +418,16 @@
                 ]
             };
 
+            fetch('index_list.json')
+                .then(response => response.json())
+                .then(data => {
+                    ids = Object.values(data).flat().map(x => x.id.toLowerCase());
+                    if (ids.includes(id.toLowerCase())) {
+                        alert("A pack with this ID already exists on the Click Sounds Index. If you submit it, it will likely be rejected.");
+                        return;
+                    }
+                })
+
             if ((authorName.toLowerCase() === "beat" || authorName.toLowerCase() === "beattaco") && !document.cookie.includes("isBeat=true")) {
                 alert("I'm flattered, but please do not make me the author of your pack. Enter the correct author's name.");
                 return;
