@@ -1708,6 +1708,14 @@
       "folders": ["Clicks","Releases"]
     },
     {
+      "name": "monsgeek fun 60 pro",
+      "id": "loliklee.monsgeek-fun-60-pro",
+      "version": 1,
+      "type": "Useful",
+      "authors": [{"name":"loliklee","type":"Main"}],
+      "folders": ["Clicks"]
+    },
+    {
       "name": "npesta",
       "id": "npesta.clicks",
       "version": 1,
