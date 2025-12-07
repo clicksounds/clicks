@@ -1,0 +1,13 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "loliklee.monsgeek-fun-60-pro",
+    "version": 1,
+    "packgen": true,
+    "type": "Useful",
+    "name": "monsgeek fun 60 pro",
+    "authors": [
+        {
+            "name": "loliklee"
+        }
+    ]
+}
