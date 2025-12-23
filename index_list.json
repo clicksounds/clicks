@@ -1005,6 +1005,14 @@
       "folders": ["Clicks","Releases"]
     },
     {
+      "name": "R75",
+      "id": "unknown.r75",
+      "version": 1,
+      "type": "Useful",
+      "authors": [{"name":"Unknown","type":"Main"}],
+      "folders": ["Clicks","Releases"]
+    },
+    {
       "name": "RK61 Up Arrow",
       "id": "bitah.rk61-up-arrow",
       "version": 1,
