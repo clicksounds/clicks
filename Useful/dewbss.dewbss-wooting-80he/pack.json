@@ -1,0 +1,15 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "dewbss.dewbss-wooting-80he",
+    "version": 1,
+    "packgen": true,
+    "type": "Useful",
+    "name": "Dewbss Wooting 80HE",
+    "description": "Recorded for Click Sounds by Dewbbs, cut by Beat.",
+    "authors": [
+        {
+            "name": "Dewbss",
+            "gdAccountID": 28092014
+        }
+    ]
+}
