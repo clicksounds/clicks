@@ -373,6 +373,15 @@
       "folders": ["Clicks"]
     },
     {
+      "name": "Dewbss Wooting 80HE",
+      "id": "dewbss.dewbss-wooting-80he",
+      "version": 1,
+      "type": "Useful",
+      "description": "Recorded for Click Sounds by Dewbbs, cut by Beat. ",
+      "authors": [{"name":"Dewbss","gdAccountID":28092014,"type":"Main"}],
+      "folders": ["Clicks","Releases"]
+    },
+    {
       "name": "Doggie",
       "id": "doggie.clicks",
       "version": 1,
@@ -553,6 +562,15 @@
       "type": "Useful",
       "description": "moderator note: this pack is amazing ",
       "authors": [{"name":"Vornex","gdAccountID":32054372,"type":"Main"}],
+      "folders": ["Clicks"]
+    },
+    {
+      "name": "Hator keyboard arrows click",
+      "id": "nemcefilik.hator-keyboard-arrows-click",
+      "version": 1,
+      "type": "Useful",
+      "description": "arrows clicks from hator rockfall mech tkl2 ",
+      "authors": [{"name":"Nemcefilik","gdAccountID":32968549,"type":"Main"}],
       "folders": ["Clicks"]
     },
     {
