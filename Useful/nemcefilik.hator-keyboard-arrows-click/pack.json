@@ -1,0 +1,15 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "nemcefilik.hator-keyboard-arrows-click",
+    "version": 1,
+    "packgen": true,
+    "type": "Useful",
+    "name": "Hator keyboard arrows click",
+    "description": "arrows clicks from hator rockfall mech tkl2",
+    "authors": [
+        {
+            "name": "Nemcefilik",
+            "gdAccountID": 32968549
+        }
+    ]
+}
