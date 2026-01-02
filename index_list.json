@@ -368,9 +368,9 @@
       "id": "clicksounds.default",
       "version": 1,
       "type": "Useful",
-      "description": "Default sound of the Click Sounds mod. ",
+      "description": "Default pack of the Click Sounds mod. Selected by supporter UberTallCats for January to March 2026. Originally 'CherryMX Linear Red' by cut1eee. ",
       "authors": [{"name":"Click Sounds","type":"Main"}],
-      "folders": ["Clicks"]
+      "folders": ["Clicks","Releases"]
     },
     {
       "name": "Dewbss Wooting 80HE",
