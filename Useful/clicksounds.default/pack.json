@@ -1,10 +1,9 @@
 {
     "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
     "id": "clicksounds.default",
-    "packgen": true,
     "type": "Useful",
     "name": "Default",
-    "description": "Default sound of the Click Sounds mod.",
+    "description": "Default pack of the Click Sounds mod. Selected by supporter UberTallCats for January to March 2026. Originally 'CherryMX Linear Red' by cut1eee.",
     "authors": [
         {
             "name": "Click Sounds"
