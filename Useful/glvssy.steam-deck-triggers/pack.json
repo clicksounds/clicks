@@ -1,0 +1,14 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "glvssy.steam-deck-triggers",
+    "packcon": true,
+    "type": "Useful",
+    "name": "Steam Deck Triggers",
+    "description": "ehh steam deck user… second retry :p",
+    "authors": [
+        {
+            "name": "Glvssy",
+            "gdAccountID": 36186588
+        }
+    ]
+}
