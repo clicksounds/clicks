@@ -1266,6 +1266,15 @@
       "folders": ["Clicks","Releases"]
     },
     {
+      "name": "Steam Deck Triggers",
+      "id": "glvssy.steam-deck-triggers",
+      "version": 1,
+      "type": "Useful",
+      "description": "ehh steam deck user… second retry :p ",
+      "authors": [{"name":"Glvssy","gdAccountID":36186588,"type":"Main"}],
+      "folders": ["Clicks","Releases"]
+    },
+    {
       "name": "TV Controller Click",
       "id": "verdantis.tv-controller-click",
       "version": 1,
