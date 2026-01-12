@@ -415,6 +415,15 @@
       "folders": ["Clicks","Releases"]
     },
     {
+      "name": "Doggie New clicks 2026",
+      "id": "doggie.doggie-new-clicks-2026",
+      "version": 1,
+      "type": "Useful",
+      "description": "Doogie ",
+      "authors": [{"name":"Doggie","type":"Main"}],
+      "folders": ["Clicks","Releases"]
+    },
+    {
       "name": "Electro Mouse",
       "id": "lofracotestinogd.electro-mouse",
       "version": 1,
