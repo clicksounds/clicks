@@ -364,6 +364,15 @@
       "folders": ["Clicks","Releases"]
     },
     {
+      "name": "Deepwooting spam version",
+      "id": "andarian.deepwooting-spam-version",
+      "version": 1,
+      "type": "Useful",
+      "description": "very good clickpack for spam souns very well ",
+      "authors": [{"name":"Andarian","gdAccountID":null,"type":"Main"}],
+      "folders": ["Clicks","Releases"]
+    },
+    {
       "name": "Default",
       "id": "clicksounds.default",
       "version": 1,
