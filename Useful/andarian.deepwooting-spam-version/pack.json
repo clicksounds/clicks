@@ -1,0 +1,14 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "andarian.deepwooting-spam-version",
+    "packcon": true,
+    "type": "Useful",
+    "name": "Deepwooting spam version",
+    "description": "very good clickpack for spam souns very well",
+    "authors": [
+        {
+            "name": "Andarian",
+            "gdAccountID": null
+        }
+    ]
+}
