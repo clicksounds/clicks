@@ -1,0 +1,15 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "unknown.sweet-kitty-meow",
+    "version": 1,
+    "packgen": true,
+    "type": "Meme",
+    "name": "Sweet kitty meow",
+    "description": "just for cat sound",
+    "authors": [
+        {
+            "name": "Unknown",
+            "gdAccountID": 37717746
+        }
+    ]
+}
