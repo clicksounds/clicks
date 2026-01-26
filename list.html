@@ -371,7 +371,67 @@
             displaySounds(filteredSounds);
         }
 
-        window.onload = filterSounds;
+        // New: allow direct download via query string:
+        // Examples:
+        //   list.html?useful=author.packid
+        //   list.html?meme=author.packid
+        async function handleDirectDownloadFromQuery() {
+            try {
+                const params = new URLSearchParams(window.location.search);
+                // check for keys 'useful' or 'meme' (case-insensitive)
+                let foundKey = null;
+                let rawId = null;
+                for (const key of params.keys()) {
+                    const lk = key.toLowerCase();
+                    if (lk === "useful" || lk === "meme") {
+                        foundKey = lk; // 'useful' or 'meme'
+                        rawId = params.get(key);
+                        break;
+                    }
+                }
+                if (!foundKey || !rawId) return; // nothing to do
+
+                const category = foundKey === "useful" ? "Useful" : "Meme";
+                const id = rawId.trim();
+
+                if (!id) return;
+
+                // Ensure index data is loaded
+                const soundsData = await getCachedSoundsData();
+
+                // Check for the requested pack in the specified category
+                const categoryList = soundsData[category];
+                if (!categoryList) {
+                    alert(`Category "${category}" not found.`);
+                    return;
+                }
+
+                const match = categoryList.find((s) => s.id === id || (s.fully_qualified_id && s.fully_qualified_id === id));
+                if (!match) {
+                    // If there's no exact id match, try a fallback: find by name or author.packid formed differently
+                    const fuzzy = categoryList.find((s) => s.id === id || s.name === id || `${s.author}.${s.id}` === id || `${s.author}.${s.packid}` === id);
+                    if (fuzzy) {
+                        await downloadPack(category, fuzzy.id);
+                        return;
+                    }
+                    alert(`Pack "${id}" not found in category "${category}".`);
+                    console.warn("Direct download failed: pack not found", { category, id });
+                    return;
+                }
+
+                // Trigger the download
+                await downloadPack(category, match.id);
+            } catch (err) {
+                console.error("Error handling direct download from query:", err);
+            }
+        }
+
+        // Run initial UI population and then check for direct-download query params.
+        window.onload = async () => {
+            await filterSounds();
+            // If the user navigated here with ?useful=... or ?meme=..., attempt direct download.
+            handleDirectDownloadFromQuery();
+        };
     </script>
 </body>
 </html>
