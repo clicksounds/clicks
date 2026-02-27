@@ -1,0 +1,15 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "luke.lukes-toy-gun",
+    "version": 1,
+    "packgen": true,
+    "type": "Useful",
+    "name": "Lukes Toy Gun",
+    "description": "Cut by Beat from Click Sounds Geode",
+    "authors": [
+        {
+            "name": "Luke",
+            "gdAccountID": 39021138
+        }
+    ]
+}
