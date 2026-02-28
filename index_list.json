@@ -600,6 +600,15 @@
       "folders": ["Clicks","Releases"]
     },
     {
+      "name": "KazaGDs Sayo",
+      "id": "kazagd.kazagds-sayo",
+      "version": 1,
+      "type": "Useful",
+      "description": "Cut by Beat from Click Sounds Geode. ",
+      "authors": [{"name":"KazaGD","gdAccountID":6273125,"type":"Main"}],
+      "folders": ["Clicks","Releases"]
+    },
+    {
       "name": "Keychron K4 Up Arrow",
       "id": "andarian.keychron-k4-up-arrow",
       "version": 1,
