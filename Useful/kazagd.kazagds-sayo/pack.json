@@ -1,0 +1,15 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "kazagd.kazagds-sayo",
+    "version": 1,
+    "packgen": true,
+    "type": "Useful",
+    "name": "KazaGDs Sayo",
+    "description": "Cut by Beat from Click Sounds Geode.",
+    "authors": [
+        {
+            "name": "KazaGD",
+            "gdAccountID": 6273125
+        }
+    ]
+}
