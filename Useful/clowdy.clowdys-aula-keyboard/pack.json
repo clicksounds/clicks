@@ -1,0 +1,15 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "clowdy.clowdys-aula-keyboard",
+    "version": 1,
+    "packgen": true,
+    "type": "Useful",
+    "name": "clowdys aula keyboard",
+    "description": "all sounds are recorded and polished on FL Studio",
+    "authors": [
+        {
+            "name": "clowdy",
+            "gdAccountID": 6026057
+        }
+    ]
+}
