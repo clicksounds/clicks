@@ -1720,6 +1720,15 @@
       "folders": ["Clicks","Releases"]
     },
     {
+      "name": "clowdys aula keyboard",
+      "id": "clowdy.clowdys-aula-keyboard",
+      "version": 1,
+      "type": "Useful",
+      "description": "all sounds are recorded and polished on FL Studio ",
+      "authors": [{"name":"clowdy","gdAccountID":6026057,"type":"Main"}],
+      "folders": ["Clicks","Releases"]
+    },
+    {
       "name": "fredus clicks",
       "id": "fredus.fredus-clicks",
       "version": 1,
