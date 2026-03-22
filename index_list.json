@@ -1534,6 +1534,15 @@
       "folders": ["Clicks","Releases"]
     },
     {
+      "name": "Wooting 80he sound",
+      "id": "simonyzz.wooting-80he-sound",
+      "version": 1,
+      "type": "Useful",
+      "description": "Wooting up arrow sounds ",
+      "authors": [{"name":"simonyzz","type":"Main"}],
+      "folders": ["Clicks","Releases"]
+    },
+    {
       "name": "Wooting Two HE",
       "id": "plastic.wooting-two-he",
       "version": 1,
