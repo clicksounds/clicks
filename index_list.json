@@ -1418,6 +1418,14 @@
       "folders": ["Clicks","Releases"]
     },
     {
+      "name": "Uyla Spam",
+      "id": "uyla.uyla-spam",
+      "version": 1,
+      "type": "Useful",
+      "authors": [{"name":"Uyla","type":"Main"}],
+      "folders": ["Clicks","Releases"]
+    },
+    {
       "name": "VXE R1 Pro Max",
       "id": "fluffyzeo.vxe-r1-pro-max",
       "version": 1,
