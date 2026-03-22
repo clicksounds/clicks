@@ -1729,6 +1729,14 @@
       "folders": ["Clicks","Releases"]
     },
     {
+      "name": "cherrymx linear",
+      "id": "unknown.cherrymx-linear",
+      "version": 1,
+      "type": "Useful",
+      "authors": [{"name":"unknown","gdAccountID":39709158,"type":"Main"}],
+      "folders": ["Clicks","Releases"]
+    },
+    {
       "name": "clowdys aula keyboard",
       "id": "clowdy.clowdys-aula-keyboard",
       "version": 1,
