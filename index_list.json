@@ -776,6 +776,14 @@
       "folders": ["Clicks","Releases"]
     },
     {
+      "name": "MCHOSE Ace 60 Pro Spacebar",
+      "id": "therealbengkoy.mchose-ace-60-pro-spacebar",
+      "version": 1,
+      "type": "Useful",
+      "authors": [{"name":"THEREALBENGKOY","gdAccountID":34632587,"type":"Main"}],
+      "folders": ["Clicks","Releases"]
+    },
+    {
       "name": "Metronome",
       "id": "unknown.metronome",
       "version": 1,
