@@ -1,0 +1,12 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "uyla.uyla-spam",
+    "packcon": true,
+    "type": "Useful",
+    "name": "Uyla Spam",
+    "authors": [
+        {
+            "name": "Uyla"
+        }
+    ]
+}
