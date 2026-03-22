@@ -1,0 +1,14 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "unknown.cherrymx-linear",
+    "version": 1,
+    "packgen": true,
+    "type": "Useful",
+    "name": "cherrymx linear",
+    "authors": [
+        {
+            "name": "unknown",
+            "gdAccountID": 39709158
+        }
+    ]
+}
