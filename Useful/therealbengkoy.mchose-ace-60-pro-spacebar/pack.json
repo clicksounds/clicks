@@ -1,0 +1,14 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "therealbengkoy.mchose-ace-60-pro-spacebar",
+    "version": 1,
+    "packgen": true,
+    "type": "Useful",
+    "name": "MCHOSE Ace 60 Pro Spacebar",
+    "authors": [
+        {
+            "name": "THEREALBENGKOY",
+            "gdAccountID": 34632587
+        }
+    ]
+}
