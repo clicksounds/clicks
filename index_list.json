@@ -809,6 +809,15 @@
       "folders": ["Clicks"]
     },
     {
+      "name": "Model F77",
+      "id": "maddiemewmews.model-f77",
+      "version": 2,
+      "type": "Useful",
+      "description": "Model F Labs Model F77 Reproduction buckling spring key click sounds ",
+      "authors": [{"name":"MaddieMewmews","gdAccountID":19292937,"type":"Main"}],
+      "folders": ["Clicks","Releases"]
+    },
+    {
       "name": "Montys-Clicks",
       "id": "montypie.montys-clicks",
       "version": 1,
