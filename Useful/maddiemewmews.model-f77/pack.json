@@ -1,0 +1,15 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "maddiemewmews.model-f77",
+    "version": 2,
+    "packgen": true,
+    "type": "Useful",
+    "name": "Model F77",
+    "description": "Model F Labs Model F77 Reproduction buckling spring key click sounds",
+    "authors": [
+        {
+            "name": "MaddieMewmews",
+            "gdAccountID": 19292937
+        }
+    ]
+}
