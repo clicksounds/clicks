@@ -1251,6 +1251,14 @@
       "folders": ["Clicks","Releases"]
     },
     {
+      "name": "Sayo clicks",
+      "id": "asyo.sayo-clicks",
+      "version": 1,
+      "type": "Useful",
+      "authors": [{"name":"Asyo","type":"Main"}],
+      "folders": ["Clicks","Releases"]
+    },
+    {
       "name": "Screen Tap 1",
       "id": "unknown.screen-tap-1",
       "version": 1,
