@@ -1,0 +1,13 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "asyo.sayo-clicks",
+    "version": 1,
+    "packgen": true,
+    "type": "Useful",
+    "name": "Sayo clicks",
+    "authors": [
+        {
+            "name": "Asyo"
+        }
+    ]
+}
