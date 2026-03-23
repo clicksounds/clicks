@@ -1,0 +1,13 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "surge.sayo-click-pack-v4",
+    "version": 1,
+    "packgen": true,
+    "type": "Useful",
+    "name": "Sayo Click pack V4",
+    "authors": [
+        {
+            "name": "Surge"
+        }
+    ]
+}
