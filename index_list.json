@@ -1243,6 +1243,14 @@
       "folders": ["Clicks","Releases"]
     },
     {
+      "name": "Sayo Click pack V4",
+      "id": "surge.sayo-click-pack-v4",
+      "version": 1,
+      "type": "Useful",
+      "authors": [{"name":"Surge","type":"Main"}],
+      "folders": ["Clicks","Releases"]
+    },
+    {
       "name": "Sayo Device",
       "id": "unknown.sayo-device",
       "version": 1,
