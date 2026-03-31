@@ -1,0 +1,12 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "clicksounds.default",
+    "type": "Useful",
+    "name": "Default",
+    "description": "Default pack of the Click Sounds mod. Selected by supporter MXGaming01 for April to June 2026. Originally 'alices SayoDevice O3C' by alicemiku.",
+    "authors": [
+        {
+            "name": "Click Sounds"
+        }
+    ]
+}
