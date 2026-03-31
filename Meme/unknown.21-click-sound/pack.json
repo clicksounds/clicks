@@ -1,0 +1,13 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "unknown.21-click-sound",
+    "version": 1,
+    "packgen": true,
+    "type": "Meme",
+    "name": "21 Click Sound",
+    "authors": [
+        {
+            "name": "Unknown"
+        }
+    ]
+}
