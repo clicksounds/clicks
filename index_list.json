@@ -1948,6 +1948,14 @@
   ],
   "Meme": [
     {
+      "name": "21 Click Sound",
+      "id": "unknown.21-click-sound",
+      "version": 1,
+      "type": "Meme",
+      "authors": [{"name":"Unknown","type":"Main"}],
+      "folders": ["Clicks"]
+    },
+    {
       "name": "Abyss of Darkness dash orb",
       "id": "shadowbeatz.abyss-of-darkness-dash-orb",
       "version": 1,
