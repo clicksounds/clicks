@@ -1,5 +1,3 @@
-# i havent been hacked tap!
-
 # Clicks Repository
 This repository is where all the click sounds are stored!
 - The source of the mod is at https://github.com/clicksounds/geode-clicksound
