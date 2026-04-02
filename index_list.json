@@ -1353,6 +1353,14 @@
       "folders": ["Clicks"]
     },
     {
+      "name": "TheGGx SayoDevice 03C",
+      "id": "theggx.theggx-sayodevice-03c",
+      "version": 1,
+      "type": "Useful",
+      "authors": [{"name":"TheGGx","gdAccountID":140602803,"type":"Main"}],
+      "folders": ["Clicks","Releases"]
+    },
+    {
       "name": "Trick Clicks",
       "id": "trick.trick-clicks",
       "version": 1,
