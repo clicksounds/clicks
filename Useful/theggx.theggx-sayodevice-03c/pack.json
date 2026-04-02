@@ -1,0 +1,14 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "theggx.theggx-sayodevice-03c",
+    "version": 1,
+    "packgen": true,
+    "type": "Useful",
+    "name": "TheGGx SayoDevice 03C",
+    "authors": [
+        {
+            "name": "TheGGx",
+            "gdAccountID": 140602803
+        }
+    ]
+}
