@@ -1,0 +1,12 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "andarianwx.andarians-sayo-no-deskmat-alpha",
+    "packcon": true,
+    "type": "Useful",
+    "name": "Andarians sayo no deskmat alpha",
+    "authors": [
+        {
+            "name": "andarianwx"
+        }
+    ]
+}
