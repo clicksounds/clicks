@@ -121,6 +121,14 @@
       "folders": ["Clicks","Releases"]
     },
     {
+      "name": "Andarians sayo no deskmat alpha",
+      "id": "andarianwx.andarians-sayo-no-deskmat-alpha",
+      "version": 1,
+      "type": "Useful",
+      "authors": [{"name":"andarianwx","type":"Main"}],
+      "folders": ["Clicks","Releases"]
+    },
+    {
       "name": "Andarian's up arrow",
       "id": "andarian.andarians-up-arrow",
       "version": 1,
