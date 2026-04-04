@@ -112,6 +112,14 @@
       "folders": ["Clicks","Releases"]
     },
     {
+      "name": "Andarians minus key",
+      "id": "andarianwx.andarians-minus-key",
+      "version": 1,
+      "type": "Useful",
+      "authors": [{"name":"Andarianwx","type":"Main"}],
+      "folders": ["Clicks","Releases"]
+    },
+    {
       "name": "Andarians mobile taps",
       "id": "andarian.andarians-mobile-taps",
       "version": 1,
