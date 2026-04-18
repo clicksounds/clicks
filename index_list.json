@@ -129,6 +129,14 @@
       "folders": ["Clicks","Releases"]
     },
     {
+      "name": "Andarians sayo device v3",
+      "id": "andarianwx.andarians-sayo-device-v3",
+      "version": 1,
+      "type": "Useful",
+      "authors": [{"name":"Andarianwx","type":"Main"}],
+      "folders": ["Clicks","Releases"]
+    },
+    {
       "name": "Andarians sayo no deskmat alpha",
       "id": "andarianwx.andarians-sayo-no-deskmat-alpha",
       "version": 1,
