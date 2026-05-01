@@ -1715,6 +1715,14 @@
       "folders": ["Clicks","Releases"]
     },
     {
+      "name": "Zoink newest",
+      "id": "zoink.zoink-newest",
+      "version": 1,
+      "type": "Useful",
+      "authors": [{"name":"Zoink","type":"Main"}],
+      "folders": ["Clicks","Releases"]
+    },
+    {
       "name": "Zoink's Wooting 80HE",
       "id": "zoink.zoinks-wooting-80he",
       "version": 1,
