@@ -1,0 +1,14 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "baguettegun.aula-f75-pack",
+    "packcon": true,
+    "type": "Useful",
+    "name": "Aula F75 Pack",
+    "description": "Brah",
+    "authors": [
+        {
+            "name": "BaguetteGun",
+            "gdAccountID": 38327293
+        }
+    ]
+}
