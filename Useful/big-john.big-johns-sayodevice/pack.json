@@ -1,0 +1,13 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "big-john.big-johns-sayodevice",
+    "version": 1,
+    "packgen": true,
+    "type": "Useful",
+    "name": "Big Johns SayoDevice",
+    "authors": [
+        {
+            "name": "big john"
+        }
+    ]
+}
