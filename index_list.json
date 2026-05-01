@@ -169,6 +169,15 @@
       "folders": ["Clicks","Releases"]
     },
     {
+      "name": "Aula F75 Pack",
+      "id": "baguettegun.aula-f75-pack",
+      "version": 1,
+      "type": "Useful",
+      "description": "Brah ",
+      "authors": [{"name":"BaguetteGun","gdAccountID":38327293,"type":"Main"}],
+      "folders": ["Clicks","Releases"]
+    },
+    {
       "name": "Aula F75 Up Arrow",
       "id": "andarian.aula-f75-up-arrow",
       "version": 1,
@@ -199,6 +208,14 @@
       "version": 1,
       "type": "Useful",
       "authors": [{"name":"Movistar","gdAccountID":30159959,"type":"Main"}],
+      "folders": ["Clicks","Releases"]
+    },
+    {
+      "name": "Big Johns SayoDevice",
+      "id": "big-john.big-johns-sayodevice",
+      "version": 1,
+      "type": "Useful",
+      "authors": [{"name":"big john","type":"Main"}],
       "folders": ["Clicks","Releases"]
     },
     {
