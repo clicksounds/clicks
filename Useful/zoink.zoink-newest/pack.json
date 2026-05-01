@@ -1,0 +1,12 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "zoink.zoink-newest",
+    "packcon": true,
+    "type": "Useful",
+    "name": "Zoink newest",
+    "authors": [
+        {
+            "name": "Zoink"
+        }
+    ]
+}
