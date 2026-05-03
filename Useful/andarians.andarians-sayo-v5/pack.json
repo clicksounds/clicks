@@ -1,0 +1,13 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "andarians.andarians-sayo-v5",
+    "version": 1,
+    "packgen": true,
+    "type": "Useful",
+    "name": "Andarians sayo v5",
+    "authors": [
+        {
+            "name": "Andarians"
+        }
+    ]
+}
