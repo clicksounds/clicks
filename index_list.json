@@ -18,6 +18,15 @@
       "folders": ["Clicks","Releases"]
     },
     {
+      "name": "Acer Spare Mouse",
+      "id": "acer.acer-spare-mouse",
+      "version": 1,
+      "type": "Useful",
+      "description": "Acer Spare Mouse From ZCB Live (2026 Version) ",
+      "authors": [{"name":"Acer","type":"Main"}],
+      "folders": ["Clicks","Releases"]
+    },
+    {
       "name": "Akko Keyboard",
       "id": "nywalll.akko-keyboard",
       "version": 1,
@@ -192,6 +201,14 @@
       "type": "Useful",
       "description": "up arrow of my new best keyboard (aula f75)!!! it comes with stock reaper switches and they do sounds very gud (thocky lol). ",
       "authors": [{"name":"Andarian","gdAccountID":27823067,"type":"Main"}],
+      "folders": ["Clicks","Releases"]
+    },
+    {
+      "name": "Aula Hero 68 He",
+      "id": "yesimapotato.aula-hero-68-he",
+      "version": 1,
+      "type": "Useful",
+      "authors": [{"name":"yesimapotato","gdAccountID":null,"type":"Main"}],
       "folders": ["Clicks","Releases"]
     },
     {
