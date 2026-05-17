@@ -1,0 +1,13 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "acer.acer-spare-mouse",
+    "packcon": true,
+    "type": "Useful",
+    "name": "Acer Spare Mouse",
+    "description": "Acer Spare Mouse From ZCB Live (2026 Version)",
+    "authors": [
+        {
+            "name": "Acer"
+        }
+    ]
+}
