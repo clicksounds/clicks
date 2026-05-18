@@ -674,6 +674,15 @@
       "folders": ["Clicks","Releases"]
     },
     {
+      "name": "Icedaggers KeyPad 0 Click",
+      "id": "icedagger.icedaggers-keypad-0-click",
+      "version": 1,
+      "type": "Useful",
+      "description": "I made this for fun because I have nothing else to do in my spare time. Also half the sounds are different because my key is broken. ",
+      "authors": [{"name":"Icedagger","gdAccountID":26554354,"type":"Main"}],
+      "folders": ["Clicks","Releases"]
+    },
+    {
       "name": "KazaGDs Sayo",
       "id": "kazagd.kazagds-sayo",
       "version": 1,
