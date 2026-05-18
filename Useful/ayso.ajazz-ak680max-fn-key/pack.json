@@ -1,0 +1,12 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "ayso.ajazz-ak680max-fn-key",
+    "packcon": true,
+    "type": "Useful",
+    "name": "Ajazz ak680max fn key",
+    "authors": [
+        {
+            "name": "Ayso"
+        }
+    ]
+}
