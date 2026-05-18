@@ -27,6 +27,14 @@
       "folders": ["Clicks","Releases"]
     },
     {
+      "name": "Ajazz ak680max fn key",
+      "id": "ayso.ajazz-ak680max-fn-key",
+      "version": 1,
+      "type": "Useful",
+      "authors": [{"name":"Ayso","type":"Main"}],
+      "folders": ["Clicks","Releases"]
+    },
+    {
       "name": "Akko Keyboard",
       "id": "nywalll.akko-keyboard",
       "version": 1,
