@@ -1,0 +1,3920 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="color-scheme" content="dark">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Packmak</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js" integrity="sha512-XMVd28F1oH/O71fzwBnV7HucLxVwtxf26XV8P4wPk26EDxuGZ91N8bsOttmnomcCD3CS5ZMRL50H0GgOHvegtg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wavesurfer.js/7.10.3/wavesurfer.min.js" integrity="sha512-m656G613DjhTIQ13jStfPSGeOLVbW0S3JoqDP9Zr3GY5TRUQjWI+wqmX+CGQe4226EH0vfVmMJ3Gc9moPwnPSA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wavesurfer.js/7.10.3/plugins/regions.min.js" integrity="sha512-2T++BPXI8bCzneM5Jk+ZjfaIRsun+xcRlFZ/kwrGg6Z4y/fBFnnHPyOOSax0pYRO2pCL+VEeh5IiAZG+IENn6Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+    <meta content="Packmak" property="og:title" />
+    <meta content="ZCB clickpack maker" property="og:description" />
+    <meta content="https://db.zeo.lol/packmak/" property="og:url" />
+    <meta content="#007BFF" data-react-helmet="true" name="theme-color" />
+
+    <link rel="icon" type="image/png" href="/media/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/media/favicon.svg" />
+    <link rel="shortcut icon" href="/media/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/media/apple-touch-icon.png" />
+
+    <style>
+body {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    padding-top: 60px;
+}
+    /* ensure navbar and its dropdowns sit above all panels */
+    #navbar {
+        position: relative;
+        z-index: 100;
+    }
+    #navbar .navbar {
+        position: fixed !important;
+        z-index: 100 !important;
+    }
+    #navbar .dropdown-content {
+        z-index: 200 !important;
+    }
+    /* prevent Home link from wrapping */
+    #navbar .navbar a,
+    #navbar .navbar .dropdown-toggle {
+        white-space: nowrap;
+    }
+
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.glass-panel {
+    background: linear-gradient(180deg, rgba(20, 20, 25, 0.8), rgba(12, 16, 24, 0.72));
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.landing-vignette {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    background:
+        radial-gradient(circle at 20% 10%, rgba(34, 211, 238, 0.08), transparent 28%),
+        radial-gradient(circle at 80% 0%, rgba(245, 158, 11, 0.07), transparent 24%),
+        radial-gradient(circle at 50% 100%, rgba(14, 165, 233, 0.08), transparent 35%);
+    box-shadow: inset 0 0 240px rgba(14, 165, 233, 0.08);
+    mix-blend-mode: screen;
+}
+
+.vignette-overlay {
+    background: radial-gradient(circle, transparent 40%, rgba(0, 0, 0, 0.8) 90%);
+    box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.9);
+}
+
+.vignette-click {
+    background: radial-gradient(circle, transparent 40%, rgba(14, 165, 233, 0.42) 90%);
+}
+
+.vignette-release {
+    background: radial-gradient(circle, transparent 40%, rgba(251, 191, 36, 0.36) 90%);
+}
+
+.vignette-prepare {
+    background: radial-gradient(circle, transparent 40%, rgba(234, 179, 8, 0.34) 90%);
+}
+
+.option-tile {
+    display: block;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
+.choice-card {
+    display: block;
+}
+
+.pack-readme-input {
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.04),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.02);
+    scrollbar-width: thin;
+    scrollbar-color: rgba(148, 163, 184, 0.28) transparent;
+}
+
+.pack-readme-input::-webkit-scrollbar {
+    width: 10px;
+}
+
+.pack-readme-input::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.pack-readme-input::-webkit-scrollbar-thumb {
+    background: rgba(148, 163, 184, 0.22);
+    border-radius: 999px;
+}
+
+.pack-readme-input::-webkit-scrollbar-thumb:hover {
+    background: rgba(148, 163, 184, 0.34);
+}
+
+.summary-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    padding: 0.45rem 0.8rem;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    color: #ecfeff;
+    background: rgba(34, 211, 238, 0.14);
+    border: 1px solid rgba(34, 211, 238, 0.22);
+}
+
+.summary-chip-muted {
+    color: #d1d5db;
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(255, 255, 255, 0.08);
+}
+
+.review-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.85rem;
+    padding: 0.7rem 0.95rem;
+    background: rgba(255, 255, 255, 0.07);
+    color: #e5e7eb;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: background-color 140ms ease, color 140ms ease, border-color 140ms ease;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.review-btn:hover {
+    background: rgba(255, 255, 255, 0.12);
+    color: #ffffff;
+}
+
+.review-btn-small {
+    min-height: 2.75rem;
+    padding: 0.66rem 0.95rem;
+    font-size: 0.82rem;
+}
+
+.review-btn-danger {
+    color: #fecaca;
+    border-color: rgba(248, 113, 113, 0.18);
+}
+
+.review-btn-danger:hover {
+    background: rgba(239, 68, 68, 0.18);
+    color: #ffffff;
+}
+
+.review-select {
+    appearance: none;
+    border-radius: 1rem;
+    padding: 0 2.4rem 0 0.95rem;
+    background: rgba(255, 255, 255, 0.07);
+    color: #e5e7eb;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    font-size: 0.88rem;
+    line-height: 1.1;
+    min-height: 2.75rem;
+    min-width: 88px;
+}
+
+.review-select:focus {
+    outline: none;
+    border-color: rgba(56, 189, 248, 0.4);
+}
+
+.review-select option {
+    background: #111827;
+    color: #e5e7eb;
+}
+
+.review-select-compact {
+    min-width: 7rem;
+}
+
+.review-list-grid {
+    display: grid;
+    gap: 0.85rem;
+}
+
+.review-row {
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: 1.2rem;
+    padding: 1rem 1.1rem;
+    transition: border-color 140ms ease, background-color 140ms ease;
+}
+
+.review-row:hover {
+    border-color: rgba(56, 189, 248, 0.24);
+    background: rgba(255, 255, 255, 0.06);
+}
+
+.review-row.is-selected {
+    border-color: rgba(56, 189, 248, 0.45);
+    background: linear-gradient(180deg, rgba(14, 165, 233, 0.14), rgba(255, 255, 255, 0.06));
+    box-shadow: 0 0 0 1px rgba(56, 189, 248, 0.08) inset;
+}
+
+.review-row-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 1rem;
+    align-items: center;
+}
+
+.review-row-main {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.review-row-pathline {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    min-width: 0;
+}
+
+.review-row-path {
+    min-width: 0;
+    flex: 1 1 auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.92rem;
+    line-height: 1.3;
+    color: #ffffff;
+}
+
+.review-row-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+}
+
+.review-row-controls {
+    display: flex;
+    align-items: stretch;
+    justify-content: flex-end;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.review-tag {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 999px;
+    padding: 0.25rem 0.55rem;
+    font-size: 0.72rem;
+    line-height: 1;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: #d1d5db;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.review-tag-accent {
+    color: #cffafe;
+    background: rgba(34, 211, 238, 0.12);
+    border-color: rgba(34, 211, 238, 0.2);
+}
+
+.review-tag-warn {
+    color: #fde68a;
+    background: rgba(245, 158, 11, 0.14);
+    border-color: rgba(245, 158, 11, 0.2);
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+    width: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+#import-drop-overlay {
+    pointer-events: none;
+}
+
+.drop-overlay-card {
+    width: min(560px, 100%);
+    padding: 2rem 2.2rem;
+    border-radius: 1.75rem;
+    border: 1px solid rgba(56, 189, 248, 0.24);
+    background:
+        radial-gradient(circle at top, rgba(14, 165, 233, 0.18), transparent 52%),
+        rgba(7, 17, 27, 0.94);
+    box-shadow:
+        0 30px 80px rgba(0, 0, 0, 0.45),
+        inset 0 0 0 1px rgba(56, 189, 248, 0.08);
+    text-align: center;
+    pointer-events: none;
+}
+
+.drop-overlay-title {
+    color: #f8fafc;
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+}
+
+.drop-overlay-copy {
+    margin-top: 0.65rem;
+    color: #94a3b8;
+    font-size: 0.96rem;
+}
+
+.mapping-dropzone {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    gap: 0.65rem;
+    transition: border-color 140ms ease, background-color 140ms ease, box-shadow 140ms ease;
+}
+
+.mapping-dropzone.is-active {
+    border-color: rgba(56, 189, 248, 0.45);
+    background: rgba(14, 165, 233, 0.08);
+    box-shadow: inset 0 0 0 1px rgba(56, 189, 248, 0.12);
+}
+
+.mapping-dropzone.is-targeted {
+    border-color: rgba(56, 189, 248, 0.28);
+}
+
+.mapping-dropzone.is-empty::after {
+    content: attr(data-empty-label);
+    color: #64748b;
+    font-size: 0.85rem;
+}
+
+.mapping-chip {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 2.4rem;
+    padding: 0.55rem 0.85rem;
+    border-radius: 999px;
+    border: 1px solid rgba(56, 189, 248, 0.2);
+    background: rgba(14, 165, 233, 0.1);
+    color: #e0f2fe;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.78rem;
+    cursor: grab;
+    user-select: none;
+}
+
+.mapping-chip:active {
+    cursor: grabbing;
+}
+
+.mapping-chip.is-selected {
+    border-color: rgba(103, 232, 249, 0.75);
+    background: rgba(14, 165, 233, 0.24);
+    box-shadow: 0 0 0 1px rgba(103, 232, 249, 0.22) inset;
+}
+
+.mapping-chip[data-zone="releases"] {
+    border-color: rgba(148, 163, 184, 0.22);
+    background: rgba(71, 85, 105, 0.22);
+    color: #e2e8f0;
+}
+
+#waveform {
+    min-height: 240px;
+    position: relative;
+    width: 100%;
+}
+
+#waveform-viewport {
+    scrollbar-width: thin;
+    cursor: grab;
+    touch-action: pan-y;
+}
+
+#waveform-viewport.is-panning {
+    cursor: grabbing;
+}
+
+#waveform-viewport::-webkit-scrollbar {
+    height: 10px;
+}
+
+#waveform-viewport::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.06);
+}
+
+#waveform-viewport::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.18);
+    border-radius: 999px;
+}
+
+#waveform::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent 25%),
+        repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.045) 0, rgba(255, 255, 255, 0.045) 1px, transparent 1px, transparent 64px);
+    z-index: 1;
+}
+
+#waveform ::part(cursor) {
+    border-left: 2px solid rgba(255, 255, 255, 0.85);
+}
+
+#waveform ::part(region) {
+    border-radius: 0.6rem;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    background: rgba(255, 255, 255, 0.12);
+    box-shadow: 0 0 0 1px rgba(56, 189, 248, 0.05) inset;
+}
+
+#waveform ::part(region-handle) {
+    width: 3px;
+    background: rgba(255, 255, 255, 0.3);
+}
+
+@keyframes spin-reverse {
+    from {
+        transform: rotate(360deg);
+    }
+
+    to {
+        transform: rotate(0deg);
+    }
+}
+
+.animate-spin-reverse {
+    animation: spin-reverse 1s linear infinite;
+}
+
+@media (max-width: 900px) {
+    .review-row-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .review-row-controls {
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width: 767px) {
+    body {
+        background: #050508;
+    }
+
+    .landing-vignette {
+        display: none;
+    }
+
+    #main-container {
+        padding: 0;
+        align-items: stretch;
+        justify-content: flex-start;
+        min-height: 100vh;
+    }
+
+    #config-panel,
+    #result-panel {
+        width: 100%;
+        max-width: none;
+        min-height: 100vh;
+        border: 0;
+        border-radius: 0;
+        box-shadow: none;
+        background: transparent;
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+        padding: 1.25rem 1rem 1.5rem;
+    }
+
+    #config-panel > .absolute.top-0,
+    #result-panel > .absolute.top-0 {
+        display: none;
+    }
+}
+
+</style>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Rubik', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                    colors: {
+                        gray: {
+                            850: '#1f2937',
+                            900: '#111827',
+                            950: '#030712',
+                        },
+                        brand: {
+                            300: '#67e8f9',
+                            400: '#38bdf8',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                        },
+                        amber: {
+                            350: '#fcd34d',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <script src="/.navbar/navbarFetch.js"></script>
+</head>
+
+<body class="bg-[#050508] text-gray-200 min-h-screen flex flex-col font-sans overflow-x-hidden">
+
+    <div id="navbar"></div>
+
+    <div class="landing-vignette"></div>
+
+    <div id="main-container"
+        class="relative z-10 flex-grow flex flex-col items-center justify-center p-5 md:p-8 transition-opacity duration-500">
+
+        <div id="config-panel"
+            class="glass-panel p-7 md:p-10 rounded-[2rem] w-full max-w-6xl shadow-2xl border border-white/5 relative">
+
+            <div class="absolute top-0 left-0 right-0 h-32 bg-brand-500/10 blur-3xl -z-10 pointer-events-none"></div>
+
+            <div class="mb-8 text-center">
+                <h1 class="text-4xl font-bold tracking-tight text-white mb-2">Packmak by Zeo</h1>
+                <p class="text-gray-300">Automatic click pack maker for Click Sounds Full</p>
+                <p class="text-gray-400">Fork created by Beat. Original available <a href="https://db.ruikasa.lol/packmak/" target="_blank" rel="noopener noreferrer" class="text-brand-500 hover:text-brand-400">here</a>.</p>
+            </div>
+
+            <div class="space-y-6">
+                <div class="space-y-6">
+                    <div class="space-y-2">
+                        <label class="block text-sm font-medium text-gray-400">Clickpack Name</label>
+                        <input type="text" id="pack-name" value="MyClickpack" placeholder="Enter clickpack name..."
+                            class="w-full bg-white/5 border border-white/10 text-white rounded-xl px-4 py-3 focus:border-brand-500 focus:bg-white/10 focus:ring-0 focus:outline-none transition-all placeholder-gray-600">
+                    </div>
+
+                    <div class="space-y-3">
+                        <label class="block text-sm font-medium text-gray-400">Audio Source</label>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                            <label class="mode-card cursor-pointer">
+                                <input type="radio" name="source-mode" value="record" checked class="peer sr-only">
+                                <div
+                                    class="rounded-2xl border border-white/10 bg-white/5 p-4 transition-all peer-checked:border-brand-500 peer-checked:bg-brand-500/10 hover:bg-white/10">
+                                    <div class="flex items-center gap-3.5 mb-1">
+                                        <svg class="w-[18px] h-[18px] text-white/90 shrink-0" fill="none" stroke="currentColor"
+                                            viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"></path>
+                                        </svg>
+                                        <div class="text-white font-medium">Record In Browser</div>
+                                    </div>
+                                    <p class="text-sm text-gray-400">Guided click / release prompts.</p>
+                                </div>
+                            </label>
+                            <label class="mode-card cursor-pointer">
+                                <input type="radio" name="source-mode" value="import" class="peer sr-only">
+                                <div
+                                    class="rounded-2xl border border-white/10 bg-white/5 p-4 transition-all peer-checked:border-brand-500 peer-checked:bg-brand-500/10 hover:bg-white/10">
+                                    <div class="flex items-center gap-3.5 mb-1">
+                                        <svg class="w-[18px] h-[18px] text-white/90 shrink-0" fill="none" stroke="currentColor"
+                                            viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path>
+                                        </svg>
+                                        <div class="text-white font-medium">Import Existing Audio</div>
+                                    </div>
+                                    <p class="text-sm text-gray-400">Bring in a recording to let Packmak auto-cut it.</p>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div id="import-panel" class="hidden space-y-3 rounded-2xl border border-white/10 bg-white/5 p-4">
+                        <div class="flex items-center justify-between gap-4 flex-wrap">
+                            <div>
+                                <h2 class="text-white font-medium">Import Audio</h2>
+                                <p class="text-sm text-gray-400">Packmak will detect clicks and releases from the recording.</p>
+                            </div>
+                            <label
+                                class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white/10 hover:bg-white/15 text-white cursor-pointer transition-colors">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path>
+                                </svg>
+                                Choose File
+                                <input type="file" id="import-file" accept="audio/*" class="hidden">
+                            </label>
+                        </div>
+                        <div id="import-file-display"
+                            class="rounded-xl border border-dashed border-white/10 px-4 py-3 text-sm text-gray-500 font-mono">
+                            No audio selected
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <div class="space-y-2">
+                            <label class="block text-sm font-medium text-gray-400">Players</label>
+                            <div class="relative group">
+                                <select id="num-players"
+                                    class="w-full bg-white/5 border border-white/10 text-white rounded-xl px-4 py-3 focus:border-brand-500 focus:bg-white/10 focus:ring-0 focus:outline-none transition-all appearance-none cursor-pointer">
+                                    <option value="1" class="bg-gray-900">1 Player</option>
+                                    <option value="2" class="bg-gray-900">2 Players</option>
+                                </select>
+                                <div
+                                    class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-gray-500 group-hover:text-white transition-colors">
+                                    <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M19 9l-7 7-7-7"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="bpm-group" class="space-y-2">
+                            <label class="block text-sm font-medium text-gray-400">Recording BPM</label>
+                            <input type="number" id="bpm" value="50" min="5" max="240"
+                                class="w-full bg-white/5 border border-white/10 text-white rounded-xl px-4 py-3 focus:border-brand-500 focus:bg-white/10 focus:ring-0 focus:outline-none transition-all placeholder-gray-600">
+                        </div>
+
+                        <div class="space-y-2">
+                            <label class="block text-sm font-medium text-gray-400">Click Pad (ms)</label>
+                            <input type="number" id="transient-pad" value="1.5" min="0" max="25" step="0.5"
+                                class="w-full bg-white/5 border border-white/10 text-white rounded-xl px-4 py-3 focus:border-brand-500 focus:bg-white/10 focus:ring-0 focus:outline-none transition-all placeholder-gray-600">
+                        </div>
+                    </div>
+
+                    <div id="recording-options" class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                        <label class="option-tile">
+                            <div class="flex items-start gap-3">
+                                <div class="relative mt-1">
+                                    <input type="checkbox" id="record-noise" class="peer sr-only">
+                                    <div
+                                        class="w-12 h-7 bg-white/10 rounded-full peer-checked:bg-brand-600 after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:h-6 after:w-6 after:rounded-full after:bg-gray-300 after:border after:border-gray-300 after:transition-all peer-checked:after:translate-x-full">
+                                    </div>
+                                </div>
+                                    <div>
+                                        <div class="text-white font-medium">Record Noise Profile</div>
+                                        <p class="text-sm text-gray-400">Adds a 5 second noise.wav file and optionally uses it for denoising.</p>
+                                    </div>
+                                </div>
+                        </label>
+
+
+
+                        <label class="option-tile">
+                            <div class="flex items-start gap-3">
+                                <div class="relative mt-1">
+                                    <input type="checkbox" id="mute-metronome" class="peer sr-only">
+                                    <div
+                                        class="w-12 h-7 bg-white/10 rounded-full peer-checked:bg-brand-600 after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:h-6 after:w-6 after:rounded-full after:bg-gray-300 after:border after:border-gray-300 after:transition-all peer-checked:after:translate-x-full">
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="text-white font-medium">Mute Metronome</div>
+                                    <p class="text-sm text-gray-400">Use this if you are on speaker / mobile.</p>
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                        <label class="option-tile">
+                            <div class="flex items-start gap-3">
+                                <div class="relative mt-1">
+                                    <input type="checkbox" id="normalize-audio" checked class="peer sr-only">
+                                    <div
+                                        class="w-12 h-7 bg-white/10 rounded-full peer-checked:bg-brand-600 after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:h-6 after:w-6 after:rounded-full after:bg-gray-300 after:border after:border-gray-300 after:transition-all peer-checked:after:translate-x-full">
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="text-white font-medium">Normalize</div>
+                                    <p class="text-sm text-gray-400">Constant audio volume</p>
+                                </div>
+                            </div>
+                        </label>
+
+                        <div class="rounded-2xl border border-white/10 bg-white/5 p-4">
+                            <label class="block text-sm font-medium text-gray-400 mb-3">Denoising Mode</label>
+                            <div class="space-y-3">
+                                <label class="choice-card cursor-pointer">
+                                    <input type="radio" name="denoise-mode" value="none" checked class="peer sr-only">
+                                    <div
+                                        class="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-gray-300 transition-all peer-checked:border-brand-500 peer-checked:bg-brand-500/10 peer-checked:text-white hover:bg-white/10">
+                                        None
+                                    </div>
+                                </label>
+                                <label class="choice-card cursor-pointer" id="browser-denoise-row">
+                                    <input type="radio" name="denoise-mode" value="browser" class="peer sr-only">
+                                    <div
+                                        class="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-gray-300 transition-all peer-checked:border-brand-500 peer-checked:bg-brand-500/10 peer-checked:text-white hover:bg-white/10">
+                                        Browser Noise Suppression (live)
+                                    </div>
+                                </label>
+                                <label class="choice-card cursor-pointer opacity-50 pointer-events-none"
+                                    id="adaptive-denoise-row">
+                                    <input type="radio" name="denoise-mode" value="adaptive" id="adaptive-denoise" disabled
+                                        class="peer sr-only">
+                                    <div
+                                        class="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-gray-300 transition-all peer-checked:border-brand-500 peer-checked:bg-brand-500/10 peer-checked:text-white hover:bg-white/10">
+                                        Denoiser (post, uses the recorded noise profile)
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="space-y-6">
+                    <div class="rounded-[1.75rem] border border-white/10 bg-white/5 p-5">
+                        <div class="flex items-center justify-between gap-3 mb-4">
+                            <div>
+                                <h2 class="text-lg font-semibold text-white">Click Sounds Version</h2>
+                                <p class="text-sm text-gray-400">Determines available click categories and folder structure.</p>
+                            </div>
+                        </div>
+
+                        <div class="grid gap-3 md:grid-cols-2 mb-6">
+                            <label class="choice-card cursor-pointer">
+                                <input type="radio" name="cs-version" value="v3" checked class="peer sr-only">
+                                <div class="rounded-2xl border border-white/10 bg-white/5 p-4 transition-all peer-checked:border-brand-500 peer-checked:bg-brand-500/10 hover:bg-white/10">
+                                    <div class="text-white font-medium">Click Sounds v3+</div>
+                                    <p class="mt-1 text-sm text-gray-400">Hard, Normal & Soft clicks/releases. Optional noise file.</p>
+                                </div>
+                            </label>
+                            <label class="choice-card cursor-pointer">
+                                <input type="radio" name="cs-version" value="v2" class="peer sr-only">
+                                <div class="rounded-2xl border border-white/10 bg-white/5 p-4 transition-all peer-checked:border-brand-500 peer-checked:bg-brand-500/10 hover:bg-white/10">
+                                    <div class="text-white font-medium">Click Sounds v2</div>
+                                    <p class="mt-1 text-sm text-gray-400">Normal clicks and releases only. No noise file.</p>
+                                </div>
+                            </label>
+                        </div>
+
+                        <div class="flex items-center justify-between gap-3 mb-4">
+                            <div>
+                                <h2 class="text-lg font-semibold text-white">Pack Layout</h2>
+                                <p class="text-sm text-gray-400">Amount of actions for every click / release pair.</p>
+                            </div>
+                            <div class="px-3 py-1 rounded-full bg-brand-500/10 text-brand-300 text-xs font-mono">
+                                click + release pairs
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                            <div id="count-hard-wrap" class="bg-white/5 p-4 rounded-2xl border border-white/5 hover:border-white/10 transition-colors">
+                                <label class="block text-xs font-medium text-gray-400 mb-2">Hard Clicks</label>
+                                <input type="number" id="count-hard" value="10" min="0"
+                                    class="w-full bg-transparent border-none text-2xl font-light text-white p-0 focus:ring-0">
+                            </div>
+                            <div class="bg-white/5 p-4 rounded-2xl border border-white/5 hover:border-white/10 transition-colors">
+                                <label class="block text-xs font-medium text-gray-400 mb-2">Normal Clicks</label>
+                                <input type="number" id="count-normal" value="10" min="1"
+                                    class="w-full bg-transparent border-none text-2xl font-light text-white p-0 focus:ring-0">
+                            </div>
+                            <div id="count-soft-wrap" class="bg-white/5 p-4 rounded-2xl border border-white/5 hover:border-white/10 transition-colors">
+                                <label class="block text-xs font-medium text-gray-400 mb-2">Soft Clicks</label>
+                                <input type="number" id="count-soft" value="10" min="0"
+                                    class="w-full bg-transparent border-none text-2xl font-light text-white p-0 focus:ring-0">
+                            </div>
+
+                        </div>
+                        <div class="pt-5 mt-5 border-t border-white/10">
+                            <button id="start-btn"
+                                class="w-full bg-gradient-to-r from-brand-500 to-cyan-400 hover:from-brand-400 hover:to-cyan-300 text-slate-950 font-semibold px-6 py-4 rounded-2xl transition-all duration-200 flex items-center justify-center gap-2 shadow-[0_12px_50px_rgba(14,165,233,0.25)]">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z">
+                                    </path>
+                                </svg>
+                                Start Recording
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="result-panel"
+            class="hidden glass-panel p-6 md:p-8 rounded-[2rem] w-full max-w-7xl border border-white/5 text-center shadow-2xl relative z-20">
+            <div id="processing-state">
+                <div class="relative w-16 h-16 mx-auto mb-6">
+                    <div class="absolute inset-0 border-t-2 border-brand-500 rounded-full animate-spin"></div>
+                    <div class="absolute inset-2 border-b-2 border-gray-700 rounded-full animate-spin-reverse"></div>
+                </div>
+                <h2 id="processing-title" class="text-2xl font-bold text-white mb-2">Processing</h2>
+                <p id="processing-copy" class="text-gray-400">Analyzing audio...</p>
+            </div>
+
+            <div id="review-panel" class="hidden text-left">
+                <div class="mb-6 text-center">
+                    <h2 class="text-3xl font-bold text-white mb-2">Review Sounds</h2>
+                </div>
+
+                <div class="space-y-6">
+                    <div class="rounded-[1.75rem] border border-white/10 bg-white/5 p-4 md:p-5">
+                        <div class="flex flex-col gap-4 md:flex-row md:items-center md:justify-between mb-4">
+                            <div id="review-summary" class="flex flex-wrap gap-2">
+                                <span id="summary-detected" class="summary-chip">0 detected</span>
+                                <span id="summary-expected" class="summary-chip">0 expected</span>
+                                <span id="summary-missing" class="summary-chip summary-chip-muted">0 missing</span>
+                                <span id="summary-extra" class="summary-chip summary-chip-muted">0 extra</span>
+                            </div>
+                            <div class="flex flex-wrap items-center gap-2">
+                                <label
+                                    class="inline-flex h-[2.75rem] items-center gap-3 rounded-xl border border-white/10 bg-white/5 px-4 text-sm text-gray-300 transition-colors hover:bg-white/10 cursor-pointer">
+                                    <input type="checkbox" id="reorder-markers" class="peer sr-only">
+                                    <span
+                                        class="relative h-5 w-9 rounded-full bg-white/10 transition-colors peer-checked:bg-brand-600 after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:h-4 after:w-4 after:rounded-full after:bg-gray-300 after:transition-all peer-checked:after:translate-x-4"></span>
+                                    <span class="font-medium text-white/90">Reorder</span>
+                                </label>
+                                <button id="play-pause-btn" class="review-btn">Play Audio</button>
+                                <button id="add-marker-btn" class="review-btn">Add Marker At Cursor</button>
+                                <button id="delete-marker-btn" class="review-btn review-btn-danger">Remove Selected</button>
+                            </div>
+                        </div>
+
+                        <div id="waveform-viewport"
+                            class="mt-4 rounded-[1.5rem] border border-white/10 bg-[#07111b] overflow-hidden">
+                            <div id="waveform" class="w-full"></div>
+                        </div>
+                    </div>
+
+                    <div class="rounded-[1.75rem] border border-white/10 bg-white/5 p-4 md:p-5">
+                        <div class="flex items-center justify-between gap-3 mb-4">
+                            <div>
+                                <h3 class="text-lg font-semibold text-white">Detected Regions</h3>
+                            </div>
+                            <div id="selection-status" class="text-xs font-mono text-gray-500"></div>
+                        </div>
+
+                        <div id="review-list" class="review-list-grid max-h-[540px] overflow-y-auto pr-2 custom-scrollbar">
+                        </div>
+                    </div>
+
+                    <div id="clicksounds-export-panel"
+                        class="rounded-[1.75rem] border border-white/10 bg-white/5 p-4 md:p-5 space-y-5">
+                        <div>
+                            <h3 class="text-lg font-semibold text-white">Click Sounds Metadata</h3>
+                            <p class="text-sm text-gray-400">These fields are written into <span class="font-mono">pack.json</span>.</p>
+                        </div>
+
+                        <div class="grid gap-4 md:grid-cols-2">
+                            <div class="space-y-2 md:col-span-2">
+                                <label class="block text-sm font-medium text-gray-400">Clickpack Name</label>
+                                <input type="text" id="clicksounds-pack-name" placeholder="Required"
+                                    class="w-full bg-white/5 border border-white/10 text-white rounded-xl px-4 py-3 focus:border-brand-500 focus:bg-white/10 focus:ring-0 focus:outline-none transition-all placeholder-gray-600">
+                            </div>
+
+                            <div class="space-y-2 md:col-span-2">
+                                <label class="block text-sm font-medium text-gray-400">Pack Description</label>
+                                <textarea id="clicksounds-description" rows="4" spellcheck="false"
+                                    class="pack-readme-input w-full min-h-[120px] rounded-[1.35rem] border border-white/10 bg-[#0b1219] px-4 py-4 text-sm text-gray-200 placeholder:text-gray-600 focus:border-brand-500 focus:bg-[#0d1620] focus:outline-none resize-y font-mono leading-6"
+                                    placeholder="Recommended for Click Sounds export, without a good description this pack may not be accepted to the Click Sounds index."></textarea>
+                            </div>
+
+                            <div class="space-y-2">
+                                <label class="block text-sm font-medium text-gray-400">Author Name</label>
+                                <input type="text" id="clicksounds-author" placeholder="Required"
+                                    class="w-full bg-white/5 border border-white/10 text-white rounded-xl px-4 py-3 focus:border-brand-500 focus:bg-white/10 focus:ring-0 focus:outline-none transition-all placeholder-gray-600">
+                            </div>
+
+                            <div class="space-y-2">
+                                <label class="block text-sm font-medium text-gray-400">GD Account ID</label>
+                                <input type="number" id="clicksounds-gd-account-id" min="0" step="1" placeholder="Optional"
+                                    class="w-full bg-white/5 border border-white/10 text-white rounded-xl px-4 py-3 focus:border-brand-500 focus:bg-white/10 focus:ring-0 focus:outline-none transition-all placeholder-gray-600">
+                            </div>
+                        </div>
+
+                        <div class="space-y-3">
+                            <label class="block text-sm font-medium text-gray-400">Type</label>
+                            <div class="grid gap-3 md:grid-cols-2">
+                                <label class="choice-card cursor-pointer">
+                                    <input type="radio" name="clicksounds-type" value="Useful" checked class="peer sr-only">
+                                    <div
+                                        class="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-gray-300 transition-all peer-checked:border-brand-500 peer-checked:bg-brand-500/10 peer-checked:text-white hover:bg-white/10">
+                                        Useful
+                                    </div>
+                                </label>
+                                <label class="choice-card cursor-pointer">
+                                    <input type="radio" name="clicksounds-type" value="Meme" class="peer sr-only">
+                                    <div
+                                        class="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-gray-300 transition-all peer-checked:border-brand-500 peer-checked:bg-brand-500/10 peer-checked:text-white hover:bg-white/10">
+                                        Meme
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div id="save-noise-row" class="hidden">
+                            <label class="option-tile cursor-pointer">
+                                <div class="flex items-start gap-3">
+                                    <div class="relative mt-1">
+                                        <input type="checkbox" id="save-noise" class="peer sr-only">
+                                        <div
+                                            class="w-12 h-7 bg-white/10 rounded-full peer-checked:bg-brand-600 after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:h-6 after:w-6 after:rounded-full after:bg-gray-300 after:border after:border-gray-300 after:transition-all peer-checked:after:translate-x-full">
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="text-white font-medium">Save noise.wav in pack</div>
+                                        <p class="text-sm text-gray-400">Includes the recorded noise profile in the exported ZIP.</p>
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
+                </div>
+
+                <div class="flex flex-col sm:flex-row gap-4 justify-center mt-8">
+                    <button id="download-btn"
+                        class="bg-brand-500 hover:bg-brand-400 text-white font-bold py-3 px-8 rounded-xl shadow-lg transition-all flex items-center justify-center gap-2">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+                        </svg>
+                        Download ZIP
+                    </button>
+                    <button onclick="location.reload()"
+                        class="bg-white/5 hover:bg-white/10 text-white font-medium py-3 px-6 rounded-xl transition-all">
+                        Discard & Restart
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="import-drop-overlay"
+        class="hidden fixed inset-0 z-[60] bg-black/75 backdrop-blur-sm items-center justify-center p-6">
+        <div class="drop-overlay-card">
+            <div class="drop-overlay-title">Drop Audio To Import</div>
+            <div class="drop-overlay-copy">Release to switch Packmak into import mode and attach the file.</div>
+        </div>
+    </div>
+
+    <div id="recording-overlay"
+        class="fixed inset-0 bg-black z-50 hidden flex flex-col items-center justify-center cursor-none select-none">
+
+        <div class="absolute inset-0 pointer-events-none vignette-overlay transition-colors duration-200" id="vignette">
+        </div>
+
+        <div id="visual-cue"
+            class="relative z-10 w-64 h-64 rounded-full border-4 border-gray-800 flex items-center justify-center transition-all duration-100 transform">
+            <div id="inner-cue" class="w-4 h-4 rounded-full bg-brand-500 shadow-[0_0_20px_rgba(14,165,233,0.5)]"></div>
+        </div>
+
+        <div class="relative z-10 mt-12 text-center">
+            <h2 id="instruction-main" class="text-4xl font-bold text-white mb-4 tracking-wider">GET READY</h2>
+            <p id="instruction-sub" class="text-xl text-gray-400">Recording starts in 3...</p>
+        </div>
+
+        <div class="absolute bottom-10 left-0 right-0 px-8 md:px-20 z-20">
+            <div id="progress-container" class="w-full bg-gray-800 h-2 relative rounded-full overflow-hidden">
+                <div id="progress-bar" class="bg-brand-500 h-full transition-all duration-300 relative z-10"
+                    style="width: 0%"></div>
+            </div>
+            <div class="flex justify-between mt-2 text-xs text-gray-500 font-mono">
+                <span id="progress-text">0/0</span>
+                <span id="current-phase">Initializing</span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+/*
+This is free and unencumbered software released into the public domain.
+
+Anyone is free to copy, modify, publish, use, compile, sell, or
+distribute this software, either in source code form or as a compiled
+binary, for any purpose, commercial or non-commercial, and by any
+means.
+
+In jurisdictions that recognize copyright laws, the author or authors
+of this software dedicate any and all copyright interest in the
+software to the public domain. We make this dedication for the benefit
+of the public at large and to the detriment of our heirs and
+successors. We intend this dedication to be an overt act of
+relinquishment in perpetuity of all present and future rights to this
+software under copyright law.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR
+OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+OTHER DEALINGS IN THE SOFTWARE.
+
+For more information, please refer to <https://unlicense.org>
+*/
+
+const DSP = {
+  FFT: function (bufferSize) {
+    this.bufferSize = bufferSize;
+    this.reverseTable = new Uint32Array(bufferSize);
+
+    let limit = 1;
+    let bit = bufferSize >> 1;
+
+    while (limit < bufferSize) {
+      for (let i = 0; i < limit; i++) {
+        this.reverseTable[i + limit] = this.reverseTable[i] + bit;
+      }
+      limit <<= 1;
+      bit >>= 1;
+    }
+
+    this.calculate = (real, imag, dir) => {
+      const n = this.bufferSize;
+
+      for (let i = 0; i < n; i++) {
+        const j = this.reverseTable[i];
+        if (i < j) {
+          let tmp = real[i];
+          real[i] = real[j];
+          real[j] = tmp;
+
+          tmp = imag[i];
+          imag[i] = imag[j];
+          imag[j] = tmp;
+        }
+      }
+
+      for (let halfSize = 1; halfSize < n; halfSize <<= 1) {
+        const phaseStepReal = Math.cos((dir * Math.PI) / halfSize);
+        const phaseStepImag = Math.sin((dir * Math.PI) / halfSize);
+
+        let currentReal = 1;
+        let currentImag = 0;
+
+        for (let fftStep = 0; fftStep < halfSize; fftStep++) {
+          for (let i = fftStep; i < n; i += halfSize << 1) {
+            const off = i + halfSize;
+            const tr = currentReal * real[off] - currentImag * imag[off];
+            const ti = currentReal * imag[off] + currentImag * real[off];
+
+            real[off] = real[i] - tr;
+            imag[off] = imag[i] - ti;
+            real[i] += tr;
+            imag[i] += ti;
+          }
+
+          const nextReal =
+            currentReal * phaseStepReal - currentImag * phaseStepImag;
+          currentImag =
+            currentReal * phaseStepImag + currentImag * phaseStepReal;
+          currentReal = nextReal;
+        }
+      }
+
+      if (dir === -1) {
+        for (let i = 0; i < n; i++) {
+          real[i] /= n;
+          imag[i] /= n;
+        }
+      }
+    };
+  },
+
+  createHanningWindow(size) {
+    const win = new Float32Array(size);
+    for (let i = 0; i < size; i++) {
+      win[i] = 0.5 * (1 - Math.cos((2 * Math.PI * i) / (size - 1)));
+    }
+    return win;
+  },
+
+  clamp(value, min, max) {
+    return Math.min(max, Math.max(min, value));
+  },
+
+  smoothArray(input, radius = 2) {
+    const output = new Float32Array(input.length);
+    for (let i = 0; i < input.length; i++) {
+      let total = 0;
+      let weight = 0;
+      for (let j = -radius; j <= radius; j++) {
+        const idx = i + j;
+        if (idx < 0 || idx >= input.length) continue;
+        const currentWeight = radius + 1 - Math.abs(j);
+        total += input[idx] * currentWeight;
+        weight += currentWeight;
+      }
+      output[i] = weight > 0 ? total / weight : input[i];
+    }
+    return output;
+  },
+
+  removeDC(source) {
+    const output = new Float32Array(source.length);
+    let prevX = 0;
+    let prevY = 0;
+    const pole = 0.995;
+
+    for (let i = 0; i < source.length; i++) {
+      const y = source[i] - prevX + pole * prevY;
+      output[i] = y;
+      prevX = source[i];
+      prevY = y;
+    }
+
+    return output;
+  },
+
+  highpass(source, sampleRate, cutoff = 75) {
+    if (!source.length) return new Float32Array(0);
+
+    const output = new Float32Array(source.length);
+    const rc = 1 / (2 * Math.PI * cutoff);
+    const dt = 1 / sampleRate;
+    const alpha = rc / (rc + dt);
+    output[0] = source[0];
+
+    for (let i = 1; i < source.length; i++) {
+      output[i] = alpha * (output[i - 1] + source[i] - source[i - 1]);
+    }
+
+    return output;
+  },
+
+  getPeak(source) {
+    let peak = 0;
+    for (let i = 0; i < source.length; i++) {
+      const value = Math.abs(source[i]);
+      if (value > peak) peak = value;
+    }
+    return peak;
+  },
+
+  normalizePeak(source, targetPeak = 0.92) {
+    const peak = this.getPeak(source);
+    if (peak <= 0) return source.slice();
+
+    const gain = targetPeak / peak;
+    const output = new Float32Array(source.length);
+    for (let i = 0; i < source.length; i++) {
+      output[i] = source[i] * gain;
+    }
+    return output;
+  },
+
+  denoise(source, noiseProfile, amount = 1.0) {
+    if (!noiseProfile || noiseProfile.length < 1024 || source.length < 256) {
+      return source.slice();
+    }
+
+    const fftSize = 1024;
+    const hopSize = 256;
+    const halfSize = fftSize >> 1;
+    const fft = new this.FFT(fftSize);
+    const window = this.createHanningWindow(fftSize);
+
+    const noiseMagnitude = new Float32Array(halfSize + 1);
+    const frameReal = new Float32Array(fftSize);
+    const frameImag = new Float32Array(fftSize);
+    let noiseFrames = 0;
+
+    for (let frameStart = 0; frameStart + fftSize <= noiseProfile.length; frameStart += hopSize) {
+      for (let i = 0; i < fftSize; i++) {
+        frameReal[i] = noiseProfile[frameStart + i] * window[i];
+        frameImag[i] = 0;
+      }
+
+      fft.calculate(frameReal, frameImag, 1);
+
+      for (let bin = 0; bin <= halfSize; bin++) {
+        noiseMagnitude[bin] += Math.hypot(frameReal[bin], frameImag[bin]);
+      }
+      noiseFrames++;
+    }
+
+    if (noiseFrames === 0) {
+      return source.slice();
+    }
+
+    for (let bin = 0; bin <= halfSize; bin++) {
+      noiseMagnitude[bin] /= noiseFrames;
+    }
+
+    const output = new Float32Array(source.length);
+    const weight = new Float32Array(source.length);
+    const gains = new Float32Array(halfSize + 1);
+    const prevGains = new Float32Array(halfSize + 1).fill(1);
+    const magnitudes = new Float32Array(halfSize + 1);
+    let prevFrameEnergy = 0;
+
+    for (let frameStart = 0; frameStart < source.length; frameStart += hopSize) {
+      for (let i = 0; i < fftSize; i++) {
+        const idx = frameStart + i;
+        frameReal[i] = (idx < source.length ? source[idx] : 0) * window[i];
+        frameImag[i] = 0;
+      }
+
+      fft.calculate(frameReal, frameImag, 1);
+
+      let frameEnergy = 0;
+      for (let bin = 0; bin <= halfSize; bin++) {
+        const mag = Math.hypot(frameReal[bin], frameImag[bin]);
+        magnitudes[bin] = mag;
+        frameEnergy += mag;
+
+        const noise = noiseMagnitude[bin] + 1e-7;
+        const snr = mag / noise;
+        const oversubtract = 0.85 + amount * 0.35;
+        const rawGain = (mag - oversubtract * noise) / (mag + 1e-7);
+        gains[bin] = this.clamp(rawGain, 0.06, 1);
+
+        if (snr > 4) {
+          gains[bin] = Math.max(gains[bin], 0.8);
+        }
+      }
+
+      const smoothed = this.smoothArray(gains, 2);
+      const transientFrame = frameEnergy > prevFrameEnergy * 1.2;
+
+      for (let bin = 0; bin <= halfSize; bin++) {
+        const targetGain = transientFrame
+          ? Math.max(smoothed[bin], 0.24)
+          : smoothed[bin];
+        const attack = 0.32;
+        const release = 0.9;
+
+        const nextGain =
+          targetGain > prevGains[bin]
+            ? prevGains[bin] * attack + targetGain * (1 - attack)
+            : prevGains[bin] * release + targetGain * (1 - release);
+
+        prevGains[bin] = nextGain;
+
+        frameReal[bin] *= nextGain;
+        frameImag[bin] *= nextGain;
+
+        if (bin > 0 && bin < halfSize) {
+          const mirrored = fftSize - bin;
+          frameReal[mirrored] *= nextGain;
+          frameImag[mirrored] *= nextGain;
+        }
+      }
+
+      prevFrameEnergy = frameEnergy;
+
+      fft.calculate(frameReal, frameImag, -1);
+
+      for (let i = 0; i < fftSize; i++) {
+        const idx = frameStart + i;
+        if (idx >= source.length) break;
+
+        const value = frameReal[i] * window[i];
+        output[idx] += value;
+        weight[idx] += window[i] * window[i];
+      }
+    }
+
+    for (let i = 0; i < output.length; i++) {
+      if (weight[i] > 1e-6) {
+        output[i] /= weight[i];
+      }
+      output[i] = output[i] * 0.92 + source[i] * 0.08;
+    }
+
+    return output;
+  },
+};
+
+</script>
+    <script>
+let audioContext;
+let mediaStream;
+let mediaRecorder;
+let recordedChunks = [];
+let config = {};
+let sequence = [];
+let currentStepIndex = 0;
+let isRecording = false;
+let nextNoteTime = 0;
+let previewAudio = null;
+let previewAudioUrl = null;
+let markerIdCounter = 0;
+const AUDIO_FILE_PATTERN = /\.(wav|mp3|ogg|flac|m4a|aac|aiff?|opus|webm)$/i;
+const CLICK_REGION_STYLE = {
+  fill: "linear-gradient(180deg, rgba(56, 189, 248, 0.3) 0%, rgba(34, 211, 238, 0.16) 100%)",
+  selectedFill: "linear-gradient(180deg, rgba(125, 211, 252, 0.76) 0%, rgba(34, 211, 238, 0.38) 100%)",
+  border: "rgba(103, 232, 249, 0.35)",
+  selectedBorder: "rgba(186, 230, 253, 0.95)",
+  selectedGlow: "0 0 0 1px rgba(255,255,255,0.1) inset, 0 0 0 1px rgba(125,211,252,0.35), 0 10px 24px rgba(14,165,233,0.22)",
+};
+const RELEASE_REGION_STYLE = {
+  fill: "linear-gradient(180deg, rgba(120, 128, 142, 0.26) 0%, rgba(73, 80, 93, 0.18) 100%)",
+  selectedFill: "linear-gradient(180deg, rgba(209, 213, 219, 0.52) 0%, rgba(107, 114, 128, 0.34) 100%)",
+  border: "rgba(209, 213, 219, 0.18)",
+  selectedBorder: "rgba(243, 244, 246, 0.62)",
+  selectedGlow: "0 0 0 1px rgba(255,255,255,0.08) inset, 0 0 0 1px rgba(229,231,235,0.18), 0 10px 24px rgba(15,23,42,0.2)",
+};
+const RELEASE_REVIEW_STYLE = {
+  bg: "rgba(100, 116, 139, 0.16)",
+  bgStrong: "rgba(71, 85, 105, 0.28)",
+  border: "rgba(148, 163, 184, 0.26)",
+  text: "#e5e7eb",
+};
+
+const reviewState = {
+  sourceKind: "record",
+  importedFile: null,
+  sourceData: null,
+  detectionData: null,
+  envelope: null,
+  sampleRate: 44100,
+  duration: 0,
+  noiseProfile: null,
+  expectedExports: [],
+  markers: [],
+  selectedMarkerId: null,
+  waveformUrl: null,
+  wavesurfer: null,
+  regionsPlugin: null,
+  regionMap: new Map(),
+  zoomPxPerSec: 0,
+  panSession: null,
+  waveUiCleanup: null,
+  waveScrollRaf: null,
+  suppressWaveClick: false,
+  reorderMarkers: false,
+  importDefaultsApplied: false,
+  clickSoundsPackNameDirty: false,
+  clickSoundsDescriptionDirty: false,
+};
+
+const els = {
+  startBtn: document.getElementById("start-btn"),
+  configPanel: document.getElementById("config-panel"),
+  resultPanel: document.getElementById("result-panel"),
+  recordingOverlay: document.getElementById("recording-overlay"),
+  vignette: document.getElementById("vignette"),
+  visualCue: document.getElementById("visual-cue"),
+  innerCue: document.getElementById("inner-cue"),
+  instructionMain: document.getElementById("instruction-main"),
+  instructionSub: document.getElementById("instruction-sub"),
+  progressBar: document.getElementById("progress-bar"),
+  progressText: document.getElementById("progress-text"),
+  progressContainer: document.getElementById("progress-container"),
+  currentPhase: document.getElementById("current-phase"),
+  processingState: document.getElementById("processing-state"),
+  processingTitle: document.getElementById("processing-title"),
+  processingCopy: document.getElementById("processing-copy"),
+  reviewPanel: document.getElementById("review-panel"),
+  reviewList: document.getElementById("review-list"),
+  downloadBtn: document.getElementById("download-btn"),
+  playPauseBtn: document.getElementById("play-pause-btn"),
+  addMarkerBtn: document.getElementById("add-marker-btn"),
+  deleteMarkerBtn: document.getElementById("delete-marker-btn"),
+  reorderMarkers: document.getElementById("reorder-markers"),
+  waveformViewport: document.getElementById("waveform-viewport"),
+  waveform: document.getElementById("waveform"),
+  selectionStatus: document.getElementById("selection-status"),
+  summaryDetected: document.getElementById("summary-detected"),
+  summaryExpected: document.getElementById("summary-expected"),
+  summaryMissing: document.getElementById("summary-missing"),
+  summaryExtra: document.getElementById("summary-extra"),
+  sourceModeInputs: Array.from(document.querySelectorAll('input[name="source-mode"]')),
+  importPanel: document.getElementById("import-panel"),
+  importFile: document.getElementById("import-file"),
+  importFileDisplay: document.getElementById("import-file-display"),
+  importDropOverlay: document.getElementById("import-drop-overlay"),
+  readmeInput: document.getElementById("pack-readme"),
+  bpmGroup: document.getElementById("bpm-group"),
+  recordingOptions: document.getElementById("recording-options"),
+  recordNoise: document.getElementById("record-noise"),
+  normalizeAudio: document.getElementById("normalize-audio"),
+  browserDenoiseRow: document.getElementById("browser-denoise-row"),
+  adaptiveDenoiseRow: document.getElementById("adaptive-denoise-row"),
+  adaptiveDenoise: document.getElementById("adaptive-denoise"),
+  exportFormatInputs: Array.from(document.querySelectorAll('input[name="export-format"]')),
+  clickSoundsPanel: document.getElementById("clicksounds-export-panel"),
+  clickSoundsPackName: document.getElementById("clicksounds-pack-name"),
+  clickSoundsDescription: document.getElementById("clicksounds-description"),
+  clickSoundsAuthor: document.getElementById("clicksounds-author"),
+  clickSoundsGdAccountId: document.getElementById("clicksounds-gd-account-id"),
+  clickSoundsTypeInputs: Array.from(document.querySelectorAll('input[name="clicksounds-type"]')),
+};
+
+const CLICK_TYPES = [
+  { id: "hard", name: "Hard Click", folder: "hardclicks", relFolder: "hardreleases" },
+  { id: "normal", name: "Normal Click", folder: "clicks", relFolder: "releases" },
+  { id: "soft", name: "Soft Click", folder: "softclicks", relFolder: "softreleases" },
+];
+
+const CLICK_SOUNDS_ROUTING_LABELS = {
+  hardclicks: "hardclicks",
+  clicks: "clicks",
+  softclicks: "softclicks",
+  microclicks: "microclicks",
+  hardreleases: "hardreleases",
+  releases: "releases",
+  softreleases: "softreleases",
+  microreleases: "microreleases",
+};
+
+const CATEGORY_THEMES = {
+  hard: {
+    region: "rgba(239, 68, 68, 0.22)",
+    regionSelected: "rgba(239, 68, 68, 0.34)",
+    waveRegionFill: "linear-gradient(180deg, rgba(239, 68, 68, 0.32) 0%, rgba(127, 29, 29, 0.22) 100%)",
+    waveRegionSelectedFill: "linear-gradient(180deg, rgba(248, 113, 113, 0.48) 0%, rgba(153, 27, 27, 0.34) 100%)",
+    waveRegionBorder: "rgba(252, 165, 165, 0.55)",
+    badge: "rgba(127, 29, 29, 0.75)",
+    releaseRegion: "rgba(68, 12, 12, 0.64)",
+    releaseRegionSelected: "rgba(48, 8, 8, 0.82)",
+    waveReleaseFill: "linear-gradient(180deg, rgba(68, 12, 12, 0.88) 0%, rgba(32, 5, 5, 0.72) 100%)",
+    waveReleaseSelectedFill: "linear-gradient(180deg, rgba(82, 14, 14, 0.96) 0%, rgba(24, 4, 4, 0.84) 100%)",
+    waveReleaseBorder: "rgba(248, 113, 113, 0.42)",
+    releaseBadge: "rgba(32, 5, 5, 0.95)",
+    text: "#fee2e2",
+  },
+  normal: {
+    region: "rgba(56, 189, 248, 0.22)",
+    regionSelected: "rgba(56, 189, 248, 0.34)",
+    waveRegionFill: "linear-gradient(180deg, rgba(56, 189, 248, 0.32) 0%, rgba(8, 145, 178, 0.2) 100%)",
+    waveRegionSelectedFill: "linear-gradient(180deg, rgba(103, 232, 249, 0.48) 0%, rgba(14, 116, 144, 0.3) 100%)",
+    waveRegionBorder: "rgba(103, 232, 249, 0.52)",
+    badge: "rgba(8, 47, 73, 0.75)",
+    releaseRegion: "rgba(8, 30, 42, 0.66)",
+    releaseRegionSelected: "rgba(5, 20, 31, 0.84)",
+    waveReleaseFill: "linear-gradient(180deg, rgba(8, 30, 42, 0.88) 0%, rgba(3, 12, 20, 0.72) 100%)",
+    waveReleaseSelectedFill: "linear-gradient(180deg, rgba(10, 40, 56, 0.96) 0%, rgba(2, 10, 17, 0.84) 100%)",
+    waveReleaseBorder: "rgba(56, 189, 248, 0.36)",
+    releaseBadge: "rgba(3, 12, 20, 0.96)",
+    text: "#ecfeff",
+  },
+  soft: {
+    region: "rgba(245, 158, 11, 0.22)",
+    regionSelected: "rgba(245, 158, 11, 0.34)",
+    waveRegionFill: "linear-gradient(180deg, rgba(245, 158, 11, 0.32) 0%, rgba(180, 83, 9, 0.22) 100%)",
+    waveRegionSelectedFill: "linear-gradient(180deg, rgba(251, 191, 36, 0.46) 0%, rgba(194, 65, 12, 0.3) 100%)",
+    waveRegionBorder: "rgba(253, 230, 138, 0.5)",
+    badge: "rgba(120, 53, 15, 0.75)",
+    releaseRegion: "rgba(84, 39, 10, 0.66)",
+    releaseRegionSelected: "rgba(61, 26, 6, 0.84)",
+    waveReleaseFill: "linear-gradient(180deg, rgba(84, 39, 10, 0.88) 0%, rgba(37, 16, 3, 0.72) 100%)",
+    waveReleaseSelectedFill: "linear-gradient(180deg, rgba(99, 44, 9, 0.96) 0%, rgba(29, 12, 2, 0.84) 100%)",
+    waveReleaseBorder: "rgba(251, 191, 36, 0.34)",
+    releaseBadge: "rgba(37, 16, 3, 0.95)",
+    text: "#fffbeb",
+  },
+};
+
+els.startBtn.addEventListener("click", startSession);
+els.downloadBtn.addEventListener("click", downloadZip);
+els.playPauseBtn.addEventListener("click", toggleWaveformPlayback);
+els.addMarkerBtn.addEventListener("click", addMarkerAtCursor);
+els.deleteMarkerBtn.addEventListener("click", deleteSelectedMarker);
+els.importFile.addEventListener("change", handleImportFileChange);
+els.reorderMarkers?.addEventListener("change", () => {
+  reviewState.reorderMarkers = Boolean(els.reorderMarkers.checked);
+});
+reviewState.reorderMarkers = Boolean(els.reorderMarkers?.checked);
+els.recordNoise.addEventListener("change", syncSourceModeUI);
+document.getElementById("pack-name")?.addEventListener("input", syncClickSoundsPackNameFromMain);
+els.clickSoundsPackName?.addEventListener("input", () => {
+  reviewState.clickSoundsPackNameDirty = true;
+});
+els.clickSoundsDescription?.addEventListener("input", () => {
+  reviewState.clickSoundsDescriptionDirty = true;
+});
+document.addEventListener("keydown", handleGlobalReviewKeydown);
+els.sourceModeInputs.forEach((input) =>
+  input.addEventListener("change", syncSourceModeUI),
+);
+els.exportFormatInputs.forEach((input) =>
+  input.addEventListener("change", syncReviewExportUI),
+);
+document.querySelectorAll('input[name="cs-version"]').forEach((input) =>
+  input.addEventListener("change", () => { syncVersionUI(); syncSourceModeUI(); syncSaveNoiseRow(); }),
+);
+
+syncSourceModeUI();
+syncVersionUI();
+syncReviewExportUI();
+bindWaveformViewportInteractions();
+bindImportDragOverlay();
+
+function bindWaveformViewportInteractions() {
+  const viewport = els.waveformViewport;
+  if (!viewport) return;
+
+  viewport.addEventListener(
+    "wheel",
+    (event) => {
+      if (!reviewState.wavesurfer) return;
+
+      if (event.ctrlKey) {
+        event.preventDefault();
+        const zoomFactor = event.deltaY < 0 ? 1.15 : 1 / 1.15;
+        const anchorPoint = getWaveformPointerPosition(event);
+        setWaveformZoom(reviewState.zoomPxPerSec * zoomFactor, anchorPoint.time, anchorPoint.ratio);
+        return;
+      }
+
+      const delta = Math.abs(event.deltaX) > Math.abs(event.deltaY)
+        ? event.deltaX
+        : event.deltaY;
+
+      if (delta !== 0) {
+        event.preventDefault();
+        const currentScroll = reviewState.wavesurfer.getScroll
+          ? reviewState.wavesurfer.getScroll()
+          : 0;
+        reviewState.wavesurfer.setScroll(currentScroll + delta);
+      }
+    },
+    { passive: false },
+  );
+}
+
+function isRegionInteraction(event) {
+  return event
+    .composedPath()
+    .some((node) => {
+      if (!(node instanceof Element)) return false;
+      const part = node.getAttribute("part");
+      return part?.includes("region");
+    });
+}
+
+function getSourceMode() {
+  return document.querySelector('input[name="source-mode"]:checked').value;
+}
+
+function syncSourceModeUI() {
+  const sourceMode = getSourceMode();
+  const isImport = sourceMode === "import";
+  reviewState.sourceKind = sourceMode;
+
+  if (isImport && !reviewState.importDefaultsApplied) {
+    applyImportDefaults();
+    reviewState.importDefaultsApplied = true;
+  }
+
+  els.importPanel.classList.toggle("hidden", !isImport);
+  els.bpmGroup.classList.toggle("opacity-50", isImport);
+  els.recordingOptions.classList.toggle("opacity-50", isImport);
+
+  document.getElementById("bpm").disabled = isImport;
+  document.getElementById("mute-metronome").disabled = isImport;
+  els.recordNoise.disabled = isImport;
+
+  if (isImport) {
+    els.recordNoise.checked = false;
+  }
+
+  const browserRadio = document.querySelector('input[name="denoise-mode"][value="browser"]');
+  const adaptiveRadio = els.adaptiveDenoise;
+  const noneRadio = document.querySelector('input[name="denoise-mode"][value="none"]');
+  const selectedDenoise = document.querySelector('input[name="denoise-mode"]:checked');
+
+  const browserAvailable = !isImport;
+  const adaptiveAvailable = !isImport && els.recordNoise.checked;
+
+  browserRadio.disabled = !browserAvailable;
+  adaptiveRadio.disabled = !adaptiveAvailable;
+  els.browserDenoiseRow.classList.toggle("opacity-50", !browserAvailable);
+  els.browserDenoiseRow.classList.toggle("pointer-events-none", !browserAvailable);
+  els.adaptiveDenoiseRow.classList.toggle("opacity-50", !adaptiveAvailable);
+  els.adaptiveDenoiseRow.classList.toggle("pointer-events-none", !adaptiveAvailable);
+
+  if (
+    selectedDenoise &&
+    ((selectedDenoise.value === "browser" && !browserAvailable) ||
+      (selectedDenoise.value === "adaptive" && !adaptiveAvailable))
+  ) {
+    noneRadio.checked = true;
+  }
+
+  els.startBtn.innerHTML = isImport
+    ? `<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path></svg>Analyze Imported Audio`
+    : `<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"></path></svg>Start Recording`;
+}
+
+function applyImportDefaults() {
+  document.getElementById("count-normal").value = "10";
+  const isV3 = getCsVersion() === "v3";
+  if (isV3) {
+    document.getElementById("count-hard").value = "0";
+    document.getElementById("count-soft").value = "0";
+  }
+}
+
+function handleImportFileChangeLegacy(event) {
+  const file = event.target.files?.[0] || null;
+  reviewState.importedFile = file;
+  els.importFileDisplay.textContent = file
+    ? `${file.name} • ${(file.size / (1024 * 1024)).toFixed(2)} MB`
+    : "No audio selected";
+}
+
+function getSelectedExportFormat() {
+  return "clicksounds";
+}
+
+function getCsVersion() {
+  return document.querySelector('input[name="cs-version"]:checked')?.value || "v3";
+}
+
+function syncVersionUI() {
+  const isV3 = getCsVersion() === "v3";
+  const hardWrap = document.getElementById("count-hard-wrap");
+  const softWrap = document.getElementById("count-soft-wrap");
+
+  if (hardWrap) {
+    hardWrap.classList.toggle("opacity-40", !isV3);
+    hardWrap.classList.toggle("pointer-events-none", !isV3);
+  }
+  if (softWrap) {
+    softWrap.classList.toggle("opacity-40", !isV3);
+    softWrap.classList.toggle("pointer-events-none", !isV3);
+  }
+
+  // Re-sync source mode so adaptive denoiser availability reflects record-noise state
+  syncSourceModeUI();
+}
+
+function getSelectedClickSoundsType() {
+  return document.querySelector('input[name="clicksounds-type"]:checked')?.value || "Useful";
+}
+
+function syncClickSoundsPackNameFromMain() {
+  if (!els.clickSoundsPackName || reviewState.clickSoundsPackNameDirty) return;
+  els.clickSoundsPackName.value = document.getElementById("pack-name")?.value || "";
+}
+
+function syncClickSoundsDescriptionFromMain() {
+  // description is entered directly; no auto-sync from readme
+}
+
+function syncReviewExportUI() {
+  syncClickSoundsPackNameFromMain();
+  syncSaveNoiseRow();
+}
+
+function syncSaveNoiseRow() {
+  const row = document.getElementById("save-noise-row");
+  if (!row) return;
+  const isV3 = getCsVersion() === "v3";
+  const hasNoise = Boolean(reviewState.noiseProfile?.length);
+  const visible = isV3 && hasNoise;
+  row.classList.toggle("hidden", !visible);
+  if (!visible) {
+    const cb = document.getElementById("save-noise");
+    if (cb) cb.checked = false;
+  }
+}
+
+function readConfig() {
+  const isV3 = getCsVersion() === "v3";
+  return {
+    packName: document.getElementById("pack-name").value.trim() || "Clickpack",
+    readme: "",
+    csVersion: getCsVersion(),
+    sourceMode: getSourceMode(),
+    players: parseInt(document.getElementById("num-players").value, 10),
+    bpm: parseInt(document.getElementById("bpm").value, 10) || 50,
+    transientPadMs: parseFloat(document.getElementById("transient-pad").value) || 1.5,
+    recordNoise: els.recordNoise.checked,
+    saveNoise: isV3 && (document.getElementById("save-noise")?.checked || false),
+    normalize: els.normalizeAudio.checked,
+    denoiseMode: document.querySelector('input[name="denoise-mode"]:checked').value,
+    muteMetronome: document.getElementById("mute-metronome").checked,
+    counts: {
+      hard: isV3 ? (parseInt(document.getElementById("count-hard").value, 10) || 0) : 0,
+      normal: parseInt(document.getElementById("count-normal").value, 10) || 0,
+      soft: isV3 ? (parseInt(document.getElementById("count-soft").value, 10) || 0) : 0,
+    },
+  };
+}
+
+function handleImportFileChange(event) {
+  const file = event.target.files?.[0] || null;
+  setImportedFile(file);
+}
+
+function bindImportDragOverlay() {
+  if (!els.importDropOverlay) return;
+
+  let dragDepth = 0;
+
+  const handleDragEnter = (event) => {
+    if (!canAcceptDroppedImport() || !eventHasFiles(event)) return;
+    event.preventDefault();
+    dragDepth += 1;
+    showImportDropOverlay();
+  };
+
+  const handleDragOver = (event) => {
+    if (!canAcceptDroppedImport() || !eventHasFiles(event)) return;
+    event.preventDefault();
+    if (event.dataTransfer) {
+      event.dataTransfer.dropEffect = "copy";
+    }
+    showImportDropOverlay();
+  };
+
+  const handleDragLeave = (event) => {
+    if (!eventHasFiles(event)) return;
+    dragDepth = Math.max(0, dragDepth - 1);
+    if (dragDepth === 0) {
+      hideImportDropOverlay();
+    }
+  };
+
+  const handleDrop = (event) => {
+    if (!eventHasFiles(event)) return;
+    event.preventDefault();
+    dragDepth = 0;
+    hideImportDropOverlay();
+
+    const files = Array.from(event.dataTransfer?.files || []);
+    const audioFile = files.find(isAudioFile);
+    if (!audioFile) return;
+
+    stopPreviewAudio();
+    showConfig();
+    switchToImportMode();
+    setImportedFile(audioFile);
+  };
+
+  window.addEventListener("dragenter", handleDragEnter);
+  window.addEventListener("dragover", handleDragOver);
+  window.addEventListener("dragleave", handleDragLeave);
+  window.addEventListener("drop", handleDrop);
+  window.addEventListener("dragend", () => {
+    dragDepth = 0;
+    hideImportDropOverlay();
+  });
+  window.addEventListener("blur", () => {
+    dragDepth = 0;
+    hideImportDropOverlay();
+  });
+}
+
+function canAcceptDroppedImport() {
+  return els.recordingOverlay?.classList.contains("hidden");
+}
+
+function eventHasFiles(event) {
+  const types = Array.from(event.dataTransfer?.types || []);
+  if (types.includes("Files")) return true;
+  return Array.from(event.dataTransfer?.items || []).some((item) => item.kind === "file");
+}
+
+function isAudioFile(file) {
+  if (!file) return false;
+  if (typeof file.type === "string" && file.type.startsWith("audio/")) {
+    return true;
+  }
+  return AUDIO_FILE_PATTERN.test(file.name || "");
+}
+
+function showImportDropOverlay() {
+  els.importDropOverlay?.classList.remove("hidden");
+  els.importDropOverlay?.classList.add("flex");
+}
+
+function hideImportDropOverlay() {
+  els.importDropOverlay?.classList.add("hidden");
+  els.importDropOverlay?.classList.remove("flex");
+}
+
+function switchToImportMode() {
+  const importModeInput = els.sourceModeInputs.find((input) => input.value === "import");
+  if (!importModeInput) return;
+
+  if (!importModeInput.checked) {
+    importModeInput.checked = true;
+  }
+
+  syncSourceModeUI();
+}
+
+function setImportedFile(file) {
+  reviewState.importedFile = file;
+  els.importFileDisplay.textContent = file
+    ? `${file.name} - ${(file.size / (1024 * 1024)).toFixed(2)} MB`
+    : "No audio selected";
+
+  if (!els.importFile) return;
+
+  if (!file) {
+    els.importFile.value = "";
+    return;
+  }
+
+  if (typeof DataTransfer !== "function") return;
+
+  try {
+    const transfer = new DataTransfer();
+    transfer.items.add(file);
+    els.importFile.files = transfer.files;
+  } catch (error) {
+    console.warn("Could not mirror dropped file into the file input.", error);
+  }
+}
+
+async function startSession() {
+  config = readConfig();
+  reviewState.clickSoundsPackNameDirty = false;
+  reviewState.clickSoundsDescriptionDirty = false;
+  syncClickSoundsPackNameFromMain();
+  buildSequence();
+  reviewState.expectedExports = buildExpectedExports();
+
+  if (reviewState.expectedExports.length === 0) {
+    alert("Please configure at least one click so Packmak has something to export.");
+    return;
+  }
+
+  stopPreviewAudio();
+  destroyWaveform();
+
+  if (config.sourceMode === "import") {
+    if (!reviewState.importedFile) {
+      alert("Choose an audio file to import first.");
+      return;
+    }
+
+    showProcessing("Importing Audio", "Decoding the file and detecting click regions...");
+
+    try {
+      await ensureAudioContext();
+      const bytes = await reviewState.importedFile.arrayBuffer();
+      const decoded = await audioContext.decodeAudioData(bytes.slice(0));
+      await processAudioBuffer(decoded, "import");
+    } catch (error) {
+      console.error(error);
+      alert("Could not decode that audio file. Try WAV, MP3, FLAC, or OGG.");
+      showConfig();
+    }
+    return;
+  }
+
+  try {
+    mediaStream = await navigator.mediaDevices.getUserMedia({
+      audio: {
+        echoCancellation: false,
+        noiseSuppression: config.denoiseMode === "browser",
+        autoGainControl: false,
+      },
+    });
+  } catch (error) {
+    alert("Microphone access was denied.");
+    return;
+  }
+
+  await ensureAudioContext();
+  mediaRecorder = new MediaRecorder(mediaStream);
+  recordedChunks = [];
+
+  mediaRecorder.ondataavailable = (event) => {
+    if (event.data.size > 0) recordedChunks.push(event.data);
+  };
+
+  els.configPanel.classList.add("hidden");
+  els.resultPanel.classList.add("hidden");
+  els.recordingOverlay.classList.remove("hidden");
+  els.recordingOverlay.classList.add("flex");
+
+  try {
+    await document.documentElement.requestFullscreen();
+  } catch (error) {
+    console.log("Fullscreen denied");
+  }
+
+  renderProgressMarkers();
+  startCountdown();
+}
+
+async function ensureAudioContext() {
+  if (!audioContext) {
+    audioContext = new (window.AudioContext || window.webkitAudioContext)();
+  }
+
+  if (audioContext.state === "suspended") {
+    await audioContext.resume();
+  }
+}
+
+function showConfig() {
+  els.resultPanel.classList.add("hidden");
+  els.reviewPanel.classList.add("hidden");
+  els.processingState.classList.remove("hidden");
+  els.configPanel.classList.remove("hidden");
+}
+
+function showProcessing(title, copy) {
+  els.configPanel.classList.add("hidden");
+  els.resultPanel.classList.remove("hidden");
+  els.processingState.classList.remove("hidden");
+  els.reviewPanel.classList.add("hidden");
+  els.processingTitle.textContent = title;
+  els.processingCopy.textContent = copy;
+}
+
+function buildSequence() {
+  sequence = [];
+  const beatDuration = 60 / config.bpm;
+
+  if (config.recordNoise) {
+    sequence.push({
+      type: "prep",
+      text: "Noise",
+      sub: "Prepare to stay silent for 5 seconds...",
+      duration: 2,
+    });
+
+    sequence.push({
+      type: "noise",
+      text: "RECORDING NOISE",
+      sub: "Stay silent for the cleanup profile.",
+      duration: Math.ceil(5 / beatDuration),
+    });
+  }
+
+  for (let player = 1; player <= config.players; player++) {
+    const playerPrefix = config.players > 1 ? `Player ${player}: ` : "";
+
+    CLICK_TYPES.forEach((type) => {
+      const count = config.counts[type.id];
+      if (count <= 0) return;
+
+      sequence.push({
+        type: "prep",
+        text: `${playerPrefix}${type.name}s`,
+        sub: `Get ready for ${count} clicks...`,
+        duration: 2,
+      });
+
+      for (let index = 1; index <= count; index++) {
+        sequence.push({
+          type: "click",
+          cat: type.id,
+          player,
+          index,
+          action: "down",
+          text: "CLICK",
+          sub: `${playerPrefix}${type.name} ${index}/${count}`,
+          duration: 1,
+        });
+
+        sequence.push({
+          type: "release",
+          cat: type.id,
+          player,
+          index,
+          action: "up",
+          text: "RELEASE",
+          sub: `${playerPrefix}${type.name} ${index}/${count}`,
+          duration: 1,
+        });
+      }
+    });
+  }
+}
+
+function buildExpectedExports() {
+  const expected = [];
+
+  sequence.forEach((step) => {
+    if (step.type !== "click" && step.type !== "release") return;
+
+    expected.push({
+      category: step.cat,
+      action: step.action,
+      player: step.player,
+      index: step.index,
+      path: buildPackPath(step.cat, step.action, step.player, step.index),
+      label: `${getClickType(step.cat).name} ${step.action === "down" ? "Down" : "Release"} ${step.index}`,
+    });
+  });
+
+  return expected;
+}
+
+function getClickType(categoryId) {
+  return CLICK_TYPES.find((type) => type.id === categoryId) || CLICK_TYPES[1];
+}
+
+function buildPackPath(categoryId, action, player, index) {
+  const typeInfo = getClickType(categoryId);
+  const targetFolder = action === "down" ? typeInfo.folder : typeInfo.relFolder;
+  let path = "";
+
+  if (config.players > 1) {
+    path += `player${player}/`;
+  }
+
+  path += `${targetFolder}/${index}.wav`;
+  return path;
+}
+
+function renderProgressMarkers() {
+  const existing = els.progressContainer.querySelectorAll(".progress-marker");
+  existing.forEach((marker) => marker.remove());
+
+  sequence.forEach((step, index) => {
+    if (step.type !== "prep") return;
+
+    const left = (index / sequence.length) * 100;
+    const marker = document.createElement("div");
+    marker.className =
+      "progress-marker absolute top-0 bottom-0 w-0.5 bg-white/50 z-20";
+    marker.style.left = `${left}%`;
+
+    const label = document.createElement("div");
+    label.className =
+      "progress-marker absolute -top-6 text-[10px] text-gray-400 font-mono transform whitespace-nowrap";
+    label.style.left = `${left}%`;
+    label.textContent = step.text.replace("Player 1: ", "").replace("Player 2: ", "");
+
+    els.progressContainer.appendChild(marker);
+    els.progressContainer.appendChild(label);
+  });
+}
+
+function startCountdown() {
+  let count = 3;
+  els.instructionMain.textContent = String(count);
+  els.instructionSub.textContent = "Lock in...";
+
+  const countdown = setInterval(() => {
+    count--;
+    if (count > 0) {
+      els.instructionMain.textContent = String(count);
+      playMetronomeClick(800);
+      return;
+    }
+
+    clearInterval(countdown);
+    els.instructionMain.textContent = "GO!";
+    playMetronomeClick(1000);
+    startRecording();
+  }, 1000);
+}
+
+function startRecording() {
+  mediaRecorder.start();
+  isRecording = true;
+  currentStepIndex = 0;
+  nextNoteTime = audioContext.currentTime;
+  scheduler();
+}
+
+function scheduler() {
+  while (
+    nextNoteTime < audioContext.currentTime + 0.1 &&
+    currentStepIndex < sequence.length
+  ) {
+    scheduleStep(sequence[currentStepIndex], nextNoteTime);
+    nextNoteTime += sequence[currentStepIndex].duration * (60 / config.bpm);
+    currentStepIndex++;
+  }
+
+  if (
+    currentStepIndex < sequence.length ||
+    audioContext.currentTime < nextNoteTime + 0.75
+  ) {
+    if (isRecording) requestAnimationFrame(scheduler);
+  } else {
+    finishRecording();
+  }
+}
+
+function scheduleStep(step, time) {
+  const timeToEvent = (time - audioContext.currentTime) * 1000;
+  setTimeout(() => {
+    updateRecordingUI(step);
+    if (step.type === "click") playMetronomeClick(600);
+    if (step.type === "release") playMetronomeClick(420);
+    if (step.type === "prep") playMetronomeClick(800);
+  }, Math.max(0, timeToEvent));
+}
+
+function updateRecordingUI(step) {
+  els.instructionMain.textContent = step.text;
+  els.instructionSub.textContent = step.sub;
+  els.progressText.textContent = `${currentStepIndex + 1}/${sequence.length}`;
+  els.progressBar.style.width = `${(currentStepIndex / sequence.length) * 100}%`;
+  els.currentPhase.textContent = "Recording";
+
+  els.vignette.className =
+    "absolute inset-0 pointer-events-none vignette-overlay transition-colors duration-200";
+  els.visualCue.classList.remove("scale-110", "scale-90");
+  void els.visualCue.offsetWidth;
+
+  if (step.type === "click") {
+    els.vignette.classList.add("vignette-click");
+    els.visualCue.classList.add("scale-110");
+    els.innerCue.style.backgroundColor = "#0ea5e9";
+  } else if (step.type === "release") {
+    els.vignette.classList.add("vignette-release");
+    els.visualCue.classList.add("scale-90");
+    els.innerCue.style.backgroundColor = "#f59e0b";
+  } else if (step.type === "noise") {
+    els.vignette.classList.add("vignette-prepare");
+    els.innerCue.style.backgroundColor = "#ef4444";
+  } else {
+    els.vignette.classList.add("vignette-prepare");
+    els.innerCue.style.backgroundColor = "#eab308";
+  }
+}
+
+function playMetronomeClick(freq) {
+  if (config.muteMetronome || !audioContext) return;
+
+  const osc = audioContext.createOscillator();
+  const gain = audioContext.createGain();
+  osc.connect(gain);
+  gain.connect(audioContext.destination);
+  osc.frequency.value = freq;
+  gain.gain.value = 0.08;
+  osc.start();
+  gain.gain.exponentialRampToValueAtTime(0.001, audioContext.currentTime + 0.08);
+  osc.stop(audioContext.currentTime + 0.08);
+}
+
+function finishRecording() {
+  isRecording = false;
+
+  if (document.fullscreenElement) {
+    document.exitFullscreen().catch(() => {});
+  }
+
+  els.recordingOverlay.classList.add("hidden");
+  els.recordingOverlay.classList.remove("flex");
+  showProcessing("Processing Recording", "Analyzing click onsets and building editable regions...");
+
+  mediaRecorder.onstop = async () => {
+    try {
+      const mimeType = recordedChunks[0]?.type || mediaRecorder.mimeType || "audio/webm";
+      const blob = new Blob(recordedChunks, { type: mimeType });
+      const arrayBuffer = await blob.arrayBuffer();
+      const decoded = await audioContext.decodeAudioData(arrayBuffer);
+      await processAudioBuffer(decoded, "record");
+    } catch (error) {
+      console.error(error);
+      alert("Recording finished, but the browser could not decode the captured audio.");
+      showConfig();
+    } finally {
+      stopMediaStream();
+    }
+  };
+
+  mediaRecorder.stop();
+}
+
+function stopMediaStream() {
+  if (!mediaStream) return;
+  mediaStream.getTracks().forEach((track) => track.stop());
+  mediaStream = null;
+}
+
+async function processAudioBuffer(buffer, sourceKind) {
+  const monoData = mixToMono(buffer);
+  const sampleRate = buffer.sampleRate;
+  const detectionData = DSP.highpass(DSP.removeDC(monoData), sampleRate, 90);
+  const envelope = buildEnvelope(detectionData, sampleRate);
+
+  reviewState.sourceKind = sourceKind;
+  reviewState.sourceData = monoData;
+  reviewState.detectionData = detectionData;
+  reviewState.envelope = envelope;
+  reviewState.sampleRate = sampleRate;
+  reviewState.duration = monoData.length / sampleRate;
+  reviewState.selectedMarkerId = null;
+
+  const detection =
+    sourceKind === "record"
+      ? detectGuidedMarkers(monoData, sampleRate)
+      : detectImportedMarkers(monoData, envelope, sampleRate, reviewState.expectedExports.length);
+
+  reviewState.markers = detection.markers;
+  reviewState.noiseProfile = detection.noiseRange
+    ? monoData.slice(detection.noiseRange.start, detection.noiseRange.end)
+    : null;
+
+  await createWaveformPreview(monoData, sampleRate);
+  els.processingState.classList.add("hidden");
+  els.reviewPanel.classList.remove("hidden");
+  syncReviewExportUI();
+
+  renderReviewList();
+  syncWaveformRegions();
+}
+
+function mixToMono(buffer) {
+  if (buffer.numberOfChannels === 1) {
+    return buffer.getChannelData(0).slice();
+  }
+
+  const mono = new Float32Array(buffer.length);
+  for (let channel = 0; channel < buffer.numberOfChannels; channel++) {
+    const channelData = buffer.getChannelData(channel);
+    for (let i = 0; i < buffer.length; i++) {
+      mono[i] += channelData[i] / buffer.numberOfChannels;
+    }
+  }
+  return mono;
+}
+
+function buildEnvelope(samples, sampleRate) {
+  const envelope = new Float32Array(samples.length);
+  let current = 0;
+  const attack = Math.exp(-1 / (sampleRate * 0.00025));
+  const release = Math.exp(-1 / (sampleRate * 0.004));
+
+  for (let i = 0; i < samples.length; i++) {
+    const value = Math.abs(samples[i]);
+    const coeff = value > current ? attack : release;
+    current = coeff * current + (1 - coeff) * value;
+    envelope[i] = current;
+  }
+
+  return envelope;
+}
+
+function detectGuidedMarkers(samples, sampleRate) {
+  const beatDuration = 60 / config.bpm;
+  const markers = [];
+  let currentTime = 0;
+  let noiseRange = null;
+
+  sequence.forEach((step) => {
+    const duration = step.duration * beatDuration;
+
+    if (step.type === "noise") {
+      noiseRange = {
+        start: Math.max(0, Math.floor(currentTime * sampleRate)),
+        end: Math.min(samples.length, Math.floor((currentTime + duration) * sampleRate)),
+      };
+    }
+
+    if (step.type === "click" || step.type === "release") {
+      const windowStart = config.muteMetronome ? currentTime - 0.15 : currentTime + 0.11;
+      const windowEnd = currentTime + 0.5;
+      const startSample = Math.max(0, Math.floor(windowStart * sampleRate));
+      const endSample = Math.min(samples.length, Math.floor(windowEnd * sampleRate));
+      const peakIndex = findPeakInRange(samples, startSample, endSample, 0.001);
+
+      if (peakIndex !== null) {
+        markers.push(
+          createPeakMarker(
+            samples,
+            peakIndex,
+            config.muteMetronome ? 0 : startSample,
+            sampleRate,
+            "auto",
+            step.cat,
+            step.action,
+          ),
+        );
+      }
+    }
+
+    currentTime += duration;
+  });
+
+  return {
+    markers: finalizeMarkers(markers, true),
+    noiseRange,
+  };
+}
+
+function detectImportedMarkers(samples, envelope, sampleRate, expectedCount) {
+  const peakReference = percentileFromRange(
+    Float32Array.from(samples, (value) => Math.abs(value)),
+    0,
+    samples.length,
+    0.998,
+  );
+  let threshold = Math.max(peakReference * 0.18, 0.008);
+  let peaks = findImportedPeaks(samples, threshold, sampleRate);
+
+  for (let attempt = 0; attempt < 8 && expectedCount > 0; attempt++) {
+    if (peaks.length > expectedCount * 1.2) {
+      threshold *= 1.15;
+      peaks = findImportedPeaks(samples, threshold, sampleRate);
+      continue;
+    }
+
+    if (peaks.length < expectedCount * 0.8 && threshold > 0.0025) {
+      threshold *= 0.88;
+      peaks = findImportedPeaks(samples, threshold, sampleRate);
+      continue;
+    }
+
+    break;
+  }
+
+  peaks = collapseImportedDecayPeaks(peaks, envelope, sampleRate);
+
+  const markers = peaks.map((peakIndex, index) =>
+    createPeakMarker(
+      samples,
+      peakIndex,
+      0,
+      sampleRate,
+      "auto",
+      null,
+      reviewState.expectedExports[index]?.action || null,
+    ),
+  );
+
+  return {
+    markers: finalizeMarkers(markers, true),
+    noiseRange: null,
+  };
+}
+
+function findImportedPeaks(samples, threshold, sampleRate) {
+  const peaks = [];
+  const minGap = Math.max(1, Math.floor(sampleRate * 0.045));
+  const lookahead = Math.max(1, Math.floor(sampleRate * 0.018));
+  let lastPeak = -minGap;
+
+  for (let i = 1; i < samples.length - 1; i++) {
+    const current = Math.abs(samples[i]);
+    if (current < threshold) continue;
+
+    if (current < Math.abs(samples[i - 1]) || current < Math.abs(samples[i + 1])) {
+      continue;
+    }
+
+    let peakIndex = i;
+    const limit = Math.min(samples.length, i + lookahead);
+    for (let j = i; j < limit; j++) {
+      if (Math.abs(samples[j]) > Math.abs(samples[peakIndex])) {
+        peakIndex = j;
+      }
+    }
+
+    if (peakIndex - lastPeak >= minGap) {
+      peaks.push(peakIndex);
+      lastPeak = peakIndex;
+    } else if (peaks.length && Math.abs(samples[peakIndex]) > Math.abs(samples[peaks[peaks.length - 1]])) {
+      peaks[peaks.length - 1] = peakIndex;
+      lastPeak = peakIndex;
+    }
+
+    i = peakIndex + Math.floor(sampleRate * 0.01);
+  }
+
+  return peaks;
+}
+
+function collapseImportedDecayPeaks(peaks, envelope, sampleRate) {
+  if (peaks.length < 2) return peaks;
+
+  const merged = [peaks[0]];
+  const noiseFloor = percentileFromRange(envelope, 0, envelope.length, 0.35);
+
+  for (let i = 1; i < peaks.length; i++) {
+    const currentPeak = peaks[i];
+    const previousPeak = merged[merged.length - 1];
+    const gapSeconds = (currentPeak - previousPeak) / sampleRate;
+    const previousStrength = envelope[previousPeak] || 0;
+    const currentStrength = envelope[currentPeak] || 0;
+    const valley = getMinValueInRange(envelope, previousPeak, currentPeak);
+    const quietGapThreshold = Math.max(
+      noiseFloor * 2.4,
+      Math.min(previousStrength, currentStrength) * 0.1,
+    );
+    const hasQuietGap = valley < quietGapThreshold;
+
+    const continuousDecay =
+      gapSeconds < 0.24 &&
+      !hasQuietGap &&
+      currentStrength < previousStrength * 0.9;
+
+    const rapidDuplicate =
+      gapSeconds < 0.08 &&
+      currentStrength <= previousStrength * 1.2;
+
+    if (continuousDecay || rapidDuplicate) {
+      continue;
+    }
+
+    merged.push(currentPeak);
+  }
+
+  return merged;
+}
+
+function getMinValueInRange(values, startIndex, endIndex) {
+  const start = clamp(Math.floor(startIndex), 0, values.length - 1);
+  const end = clamp(Math.floor(endIndex), start + 1, values.length);
+  let min = values[start];
+
+  for (let i = start; i < end; i++) {
+    if (values[i] < min) {
+      min = values[i];
+    }
+  }
+
+  return min;
+}
+
+function findPeakInRange(samples, startSample, endSample, threshold) {
+  const clampedStart = clamp(startSample, 0, samples.length - 1);
+  const clampedEnd = clamp(endSample, clampedStart + 1, samples.length);
+  let maxValue = 0;
+  let maxIndex = clampedStart;
+
+  for (let i = clampedStart; i < clampedEnd; i++) {
+    const value = Math.abs(samples[i]);
+    if (value > maxValue) {
+      maxValue = value;
+      maxIndex = i;
+    }
+  }
+
+  return maxValue > threshold ? maxIndex : null;
+}
+
+function createPeakMarker(
+  samples,
+  peakIndex,
+  minStartSample,
+  sampleRate,
+  source,
+  category = null,
+  action = null,
+) {
+  const prePeakSamples = Math.floor((config.transientPadMs / 1000) * sampleRate);
+  const start = Math.max(minStartSample, peakIndex - prePeakSamples);
+  const end = Math.min(samples.length, peakIndex + Math.floor(0.3 * sampleRate));
+
+  return {
+    id: nextMarkerId(),
+    start: start / sampleRate,
+    end: end / sampleRate,
+    peak: peakIndex / sampleRate,
+    peakStrength: Math.abs(samples[peakIndex]) || 0,
+    category,
+    action,
+    source,
+  };
+}
+
+function detectWindowTransient(samples, envelope, startSample, endSample) {
+  if (endSample <= startSample) return null;
+
+  const clampedStart = clamp(startSample, 0, envelope.length - 1);
+  const clampedEnd = clamp(endSample, clampedStart + 1, envelope.length);
+
+  let peakIndex = clampedStart;
+  let peakValue = 0;
+
+  for (let i = clampedStart; i < clampedEnd; i++) {
+    if (envelope[i] > peakValue) {
+      peakValue = envelope[i];
+      peakIndex = i;
+    }
+  }
+
+  const localFloor = percentileFromRange(
+    envelope,
+    clampedStart,
+    Math.min(clampedEnd, clampedStart + Math.floor(reviewState.sampleRate * 0.05)),
+    0.3,
+  );
+
+  if (peakValue < Math.max(localFloor * 3.2, 0.0011)) {
+    return null;
+  }
+
+  return { peakIndex, peakValue };
+}
+
+function createMarkerFromPeak(
+  samples,
+  envelope,
+  sampleRate,
+  peakIndex,
+  minIndex,
+  maxIndex,
+  source,
+  category = null,
+  action = null,
+) {
+  const startIndex = Math.max(
+    minIndex,
+    findTransientStart(samples, envelope, peakIndex, minIndex, sampleRate) -
+      Math.floor((config.transientPadMs / 1000) * sampleRate),
+  );
+
+  const endIndex = Math.min(
+    maxIndex,
+    findTransientEnd(samples, envelope, peakIndex, maxIndex, sampleRate) +
+      Math.floor(sampleRate * 0.008),
+  );
+
+  const safeEnd = Math.max(endIndex, startIndex + Math.floor(sampleRate * 0.012));
+
+  return {
+    id: nextMarkerId(),
+    start: startIndex / sampleRate,
+    end: safeEnd / sampleRate,
+    peak: peakIndex / sampleRate,
+    peakStrength: envelope[peakIndex] || 0,
+    category,
+    action,
+    source,
+  };
+}
+
+function findTransientStart(samples, envelope, peakIndex, minIndex, sampleRate) {
+  const scanStart = Math.max(minIndex, peakIndex - Math.floor(sampleRate * 0.03));
+  const localFloor = percentileFromRange(envelope, scanStart, peakIndex, 0.25);
+  const threshold = Math.max(localFloor * 2.2, envelope[peakIndex] * 0.08, 0.0005);
+  const quietSpan = Math.max(4, Math.floor(sampleRate * 0.0008));
+  let best = Math.max(scanStart, peakIndex - Math.floor(sampleRate * 0.003));
+
+  for (let i = peakIndex; i >= scanStart + quietSpan; i--) {
+    let quiet = true;
+    for (let j = 0; j < quietSpan; j++) {
+      if (envelope[i - j] > threshold) {
+        quiet = false;
+        break;
+      }
+    }
+    if (quiet) {
+      best = i;
+      break;
+    }
+  }
+
+  return snapToZeroCrossing(samples, best, -1, minIndex);
+}
+
+function findTransientEnd(samples, envelope, peakIndex, maxIndex, sampleRate) {
+  const searchStart = Math.min(maxIndex, peakIndex + Math.floor(sampleRate * 0.012));
+  const searchEnd = Math.min(maxIndex, peakIndex + Math.floor(sampleRate * 0.18));
+  const localFloor = percentileFromRange(envelope, peakIndex, searchEnd, 0.35);
+  const threshold = Math.max(localFloor * 1.8, envelope[peakIndex] * 0.05, 0.00035);
+  const quietSpan = Math.max(6, Math.floor(sampleRate * 0.0016));
+  let best = Math.min(searchEnd, peakIndex + Math.floor(sampleRate * 0.05));
+
+  for (let i = searchStart; i <= searchEnd - quietSpan; i++) {
+    let quiet = true;
+    for (let j = 0; j < quietSpan; j++) {
+      if (envelope[i + j] > threshold) {
+        quiet = false;
+        break;
+      }
+    }
+    if (quiet) {
+      best = i;
+      break;
+    }
+  }
+
+  return snapToZeroCrossing(samples, best, 1, maxIndex);
+}
+
+function snapToZeroCrossing(samples, startIndex, direction, limit) {
+  let bestIndex = clamp(startIndex, 0, samples.length - 1);
+  let bestAbs = Math.abs(samples[bestIndex]) || Infinity;
+  const maxSearch = 160;
+
+  for (let step = 0; step < maxSearch; step++) {
+    const current = startIndex + step * direction;
+    if (direction < 0 && current < limit) break;
+    if (direction > 0 && current > limit) break;
+    if (current <= 0 || current >= samples.length) break;
+
+    const prev = current - direction;
+    const abs = Math.abs(samples[current]);
+    if (abs < bestAbs) {
+      bestAbs = abs;
+      bestIndex = current;
+    }
+
+    if (samples[current] === 0 || samples[current] * samples[prev] <= 0) {
+      return current;
+    }
+  }
+
+  return bestIndex;
+}
+
+function finalizeMarkers(markers, trimOverlaps = false) {
+  const sorted = [...markers].sort((a, b) => a.start - b.start);
+  const minDuration = 0.012;
+
+  for (let i = 0; i < sorted.length; i++) {
+    const current = sorted[i];
+    current.start = clamp(current.start, 0, reviewState.duration);
+    current.end = clamp(current.end, current.start + minDuration, reviewState.duration);
+
+    if (!trimOverlaps || i === 0) continue;
+
+    const prev = sorted[i - 1];
+    if (current.start < prev.end) {
+      const targetPrevEnd = current.start - 0.001;
+      const prevMinEnd = prev.start + minDuration;
+
+      if (targetPrevEnd >= prevMinEnd) {
+        prev.end = clamp(targetPrevEnd, prevMinEnd, reviewState.duration);
+      } else {
+        prev.end = clamp(prevMinEnd, prevMinEnd, reviewState.duration);
+        current.start = clamp(prev.end + 0.001, 0, current.end - minDuration);
+        current.end = clamp(current.end, current.start + minDuration, reviewState.duration);
+      }
+    }
+  }
+
+  return sorted;
+}
+
+function percentileFromRange(data, start, end, percentile) {
+  const from = clamp(Math.floor(start), 0, data.length);
+  const to = clamp(Math.floor(end), from + 1, data.length);
+  const values = [];
+  const step = Math.max(1, Math.floor((to - from) / 2048));
+
+  for (let i = from; i < to; i += step) {
+    values.push(data[i]);
+  }
+
+  values.sort((a, b) => a - b);
+  const index = Math.min(
+    values.length - 1,
+    Math.max(0, Math.floor((values.length - 1) * percentile)),
+  );
+
+  return values[index] || 0;
+}
+
+function nextMarkerId() {
+  markerIdCounter += 1;
+  return `marker-${markerIdCounter}`;
+}
+
+async function createWaveformPreview(monoData, sampleRate) {
+  destroyWaveform();
+
+  const wavBuffer = encodeWAV(monoData, sampleRate);
+  reviewState.waveformUrl = URL.createObjectURL(new Blob([wavBuffer], { type: "audio/wav" }));
+  reviewState.zoomPxPerSec = getInitialZoomPxPerSec();
+
+  if (!window.WaveSurfer || !window.WaveSurfer.Regions) {
+    return;
+  }
+
+  reviewState.regionsPlugin = window.WaveSurfer.Regions.create();
+  reviewState.wavesurfer = window.WaveSurfer.create({
+    container: els.waveform,
+    url: reviewState.waveformUrl,
+    height: 240,
+    waveColor: "#67e8f9",
+    progressColor: "#f59e0b",
+    cursorColor: "#ffffff",
+    minPxPerSec: reviewState.zoomPxPerSec,
+    fillParent: false,
+    dragToSeek: false,
+    autoScroll: true,
+    autoCenter: false,
+    normalize: true,
+    plugins: [reviewState.regionsPlugin],
+  });
+
+  if (typeof reviewState.regionsPlugin.on === "function") {
+    reviewState.regionsPlugin.on("region-clicked", (region, event) => {
+      if (event?.stopPropagation) event.stopPropagation();
+      selectMarker(region.id, true);
+    });
+  }
+
+  reviewState.wavesurfer.on("ready", () => {
+    bindWaveformUi();
+    syncWaveformRegions();
+    updatePlaybackLabel();
+  });
+
+  reviewState.wavesurfer.on("play", updatePlaybackLabel);
+  reviewState.wavesurfer.on("pause", updatePlaybackLabel);
+  reviewState.wavesurfer.on("finish", updatePlaybackLabel);
+}
+
+function destroyWaveform() {
+  if (reviewState.waveScrollRaf !== null) {
+    cancelAnimationFrame(reviewState.waveScrollRaf);
+    reviewState.waveScrollRaf = null;
+  }
+
+  if (typeof reviewState.waveUiCleanup === "function") {
+    reviewState.waveUiCleanup();
+    reviewState.waveUiCleanup = null;
+  }
+
+  if (reviewState.wavesurfer) {
+    reviewState.wavesurfer.destroy();
+    reviewState.wavesurfer = null;
+  }
+
+  reviewState.panSession = null;
+  els.waveformViewport?.classList.remove("is-panning");
+  reviewState.regionMap.clear();
+  reviewState.regionsPlugin = null;
+  els.waveform.innerHTML = "";
+
+  if (reviewState.waveformUrl) {
+    URL.revokeObjectURL(reviewState.waveformUrl);
+    reviewState.waveformUrl = null;
+  }
+}
+
+function syncWaveformRegions() {
+  if (!reviewState.regionsPlugin) return;
+
+  reviewState.regionMap.forEach((region) => region.remove());
+  reviewState.regionMap.clear();
+
+  const markers = getSortedMarkers();
+  markers.forEach((marker, index) => {
+    const assignment = getMarkerAssignment(index, marker, markers);
+    const theme = getCategoryTheme(getMarkerCategory(index, marker));
+    const isRelease = assignment.action === "up";
+    const isSelected = marker.id === reviewState.selectedMarkerId;
+    const region = reviewState.regionsPlugin.addRegion({
+      id: marker.id,
+      start: marker.start,
+      end: marker.end,
+      drag: true,
+      resize: true,
+      color: isSelected
+        ? (isRelease ? theme.releaseRegionSelected : theme.regionSelected)
+        : (isRelease ? theme.releaseRegion : theme.region),
+      content: buildRegionBadge(index + 1, assignment.extra, theme, isRelease),
+    });
+
+    styleWaveformRegion(region, theme, isRelease, isSelected);
+    bindRegionEvents(region);
+    reviewState.regionMap.set(marker.id, region);
+  });
+}
+
+function styleWaveformRegion(region, theme, isRelease, isSelected, attempt = 0) {
+  const element = region?.element;
+  if (!element) {
+    if (attempt >= 3) return;
+    requestAnimationFrame(() => styleWaveformRegion(region, theme, isRelease, isSelected, attempt + 1));
+    return;
+  }
+
+  const palette = isRelease ? RELEASE_REGION_STYLE : CLICK_REGION_STYLE;
+  element.style.setProperty("border-radius", "0.6rem", "important");
+  element.style.setProperty(
+    "border",
+    `1px solid ${isSelected ? palette.selectedBorder : palette.border}`,
+    "important",
+  );
+  element.style.setProperty(
+    "background",
+    isSelected ? palette.selectedFill : palette.fill,
+    "important",
+  );
+  element.style.setProperty(
+    "box-shadow",
+    isSelected
+      ? palette.selectedGlow
+      : "0 0 0 1px rgba(255,255,255,0.04) inset",
+    "important",
+  );
+}
+
+function buildRegionBadge(index, isExtra, theme, isRelease) {
+  const badge = document.createElement("span");
+  badge.style.display = "inline-flex";
+  badge.style.alignItems = "center";
+  badge.style.justifyContent = "center";
+  badge.style.minWidth = "24px";
+  badge.style.height = "24px";
+  badge.style.padding = "0 8px";
+  badge.style.borderRadius = "999px";
+  badge.style.pointerEvents = "none";
+  badge.style.fontSize = "11px";
+  badge.style.fontWeight = "700";
+  badge.style.fontFamily = "JetBrains Mono, monospace";
+  badge.style.color = isExtra ? "#fde68a" : theme.text;
+  badge.style.background = isExtra
+    ? "rgba(245,158,11,0.2)"
+    : (isRelease ? theme.releaseBadge : theme.badge);
+  badge.textContent = String(index);
+  return badge;
+}
+
+function bindRegionEvents(region) {
+  if (!region || typeof region.on !== "function") return;
+
+  region.on("click", (event) => {
+    if (event?.stopPropagation) event.stopPropagation();
+    selectMarker(region.id, true);
+  });
+
+  region.on("update-end", () => syncMarkerFromRegion(region));
+}
+
+function syncMarkerFromRegion(region) {
+  const marker = reviewState.markers.find((item) => item.id === region.id);
+  if (!marker) return;
+
+  marker.start = clamp(region.start, 0, reviewState.duration);
+  marker.end = clamp(region.end, marker.start + 0.012, reviewState.duration);
+  reviewState.markers = finalizeMarkers(reviewState.markers);
+  if (reviewState.reorderMarkers) {
+    applyMarkerReorder(region.id);
+  }
+  selectMarker(region.id, false);
+}
+
+function applyMarkerReorder(anchorMarkerId) {
+  const markers = getSortedMarkers();
+  const anchorIndex = markers.findIndex((marker) => marker.id === anchorMarkerId);
+  if (anchorIndex < 0) return;
+
+  let action = getMarkerAction(anchorIndex, markers[anchorIndex]);
+  if (action !== "down" && action !== "up") {
+    action = anchorIndex % 2 === 0 ? "down" : "up";
+  }
+
+  for (let i = anchorIndex + 1; i < markers.length; i++) {
+    action = action === "down" ? "up" : "down";
+    markers[i].action = action;
+  }
+
+  reviewState.markers = markers;
+}
+
+function getSortedMarkers() {
+  return [...reviewState.markers].sort((a, b) => a.start - b.start);
+}
+
+function getMarkerCategory(index, marker) {
+  const expected = reviewState.expectedExports[index];
+  return marker?.category || expected?.category || "normal";
+}
+
+function getMarkerAction(index, marker) {
+  const expected = reviewState.expectedExports[index];
+  if (marker?.action) return marker.action;
+  if (expected?.action) return expected.action;
+  return index % 2 === 0 ? "down" : "up";
+}
+
+function getCategoryTheme(category) {
+  return CATEGORY_THEMES[category] || CATEGORY_THEMES.normal;
+}
+
+function getExpectedActionCount(action) {
+  return reviewState.expectedExports.filter((expected) => expected.action === action).length;
+}
+
+function getExtraMarkerPath(index, action, markers) {
+  const extraStartIndex = reviewState.expectedExports.length;
+  const baseCount = getExpectedActionCount(action);
+  let extraOrdinal = 0;
+
+  for (let i = extraStartIndex; i <= index; i++) {
+    if (getMarkerAction(i, markers[i]) === action) {
+      extraOrdinal += 1;
+    }
+  }
+
+  const folder = action === "up" ? "releases" : "clicks";
+  return `${folder}/${baseCount + extraOrdinal}.wav`;
+}
+
+function getMarkerAssignment(index, marker, markers = null) {
+  const sortedMarkers = markers || getSortedMarkers();
+  const category = getMarkerCategory(index, marker);
+  const action = getMarkerAction(index, marker);
+  const expected = reviewState.expectedExports[index];
+  if (expected) {
+    return {
+      path: buildPackPath(category, action, expected.player, expected.index),
+      extra: false,
+      category,
+      action,
+      player: expected.player,
+      index: expected.index,
+    };
+  }
+
+  return {
+    path: getExtraMarkerPath(index, action, sortedMarkers),
+    extra: true,
+    category,
+    action,
+  };
+}
+
+function renderReviewList() {
+  syncClickSoundsRoutingAvailableFolders();
+  renderClickSoundsRouting();
+  const markers = getSortedMarkers();
+  const stats = getReviewStats(markers.length);
+  const selectedIndex = markers.findIndex((marker) => marker.id === reviewState.selectedMarkerId);
+  const selectedAssignment = selectedIndex >= 0
+    ? getMarkerAssignment(selectedIndex, markers[selectedIndex], markers)
+    : null;
+
+  els.summaryDetected.textContent = `${stats.detected} detected`;
+  els.summaryExpected.textContent = `${stats.expected} expected`;
+  els.summaryMissing.textContent = `${stats.missing} missing`;
+  els.summaryExtra.textContent = `${stats.extra} extra`;
+  els.selectionStatus.textContent = selectedAssignment
+    ? `Selected: ${selectedAssignment.path}`
+    : "";
+
+  if (!markers.length) {
+    els.reviewList.innerHTML =
+      '<div class="rounded-2xl border border-white/10 bg-white/5 px-4 py-6 text-center text-gray-500">No regions were detected. Add markers manually on the waveform.</div>';
+  } else {
+    els.reviewList.innerHTML = "";
+
+    markers.forEach((marker, index) => {
+      const assignment = getMarkerAssignment(index, marker, markers);
+      const category = getMarkerCategory(index, marker);
+      const action = getMarkerAction(index, marker);
+      const categoryTheme = getCategoryTheme(category);
+      const categoryLabel = CLICK_TYPES.find((type) => type.id === category)?.name.replace(" Click", "") || category;
+      const isRelease = action === "up";
+      const actionLabel = assignment.extra
+        ? "extra"
+        : (isRelease ? "release" : "click");
+      const row = document.createElement("div");
+      row.className = `review-row ${marker.id === reviewState.selectedMarkerId ? "is-selected" : ""}`;
+      row.dataset.markerId = marker.id;
+      row.addEventListener("click", () => selectMarker(marker.id, true));
+
+      const layout = document.createElement("div");
+      layout.className = "review-row-layout";
+
+      const main = document.createElement("div");
+      main.className = "review-row-main";
+
+      const pathLine = document.createElement("div");
+      pathLine.className = "review-row-pathline";
+
+      const title = document.createElement("div");
+      title.className = "review-row-path";
+      title.textContent = assignment.path;
+
+      const meta = document.createElement("div");
+      meta.className = "review-row-meta";
+
+      const actionTag = document.createElement("span");
+      actionTag.className = "review-tag";
+      actionTag.textContent = actionLabel;
+      actionTag.style.color = assignment.extra
+        ? "#fde68a"
+        : (isRelease ? RELEASE_REVIEW_STYLE.text : categoryTheme.text);
+      actionTag.style.background = assignment.extra
+        ? "rgba(146, 64, 14, 0.28)"
+        : (isRelease ? RELEASE_REVIEW_STYLE.bgStrong : categoryTheme.badge);
+      actionTag.style.borderColor = assignment.extra
+        ? "rgba(245, 158, 11, 0.28)"
+        : (isRelease ? RELEASE_REVIEW_STYLE.border : categoryTheme.regionSelected);
+
+      const categoryTag = document.createElement("span");
+      categoryTag.className = "review-tag";
+      categoryTag.textContent = categoryLabel;
+      categoryTag.style.color = isRelease ? RELEASE_REVIEW_STYLE.text : categoryTheme.text;
+      categoryTag.style.background = isRelease ? RELEASE_REVIEW_STYLE.bg : categoryTheme.region;
+      categoryTag.style.borderColor = isRelease
+        ? RELEASE_REVIEW_STYLE.border
+        : categoryTheme.regionSelected;
+
+      const durationTag = document.createElement("span");
+      durationTag.className = "review-tag";
+      durationTag.textContent = `${Math.round((marker.end - marker.start) * 1000)} ms`;
+
+      const startTag = document.createElement("span");
+      startTag.className = "review-tag review-tag-accent";
+      startTag.textContent = `${marker.start.toFixed(3)}s`;
+
+      meta.appendChild(actionTag);
+      meta.appendChild(categoryTag);
+      meta.appendChild(durationTag);
+      meta.appendChild(startTag);
+
+      pathLine.appendChild(title);
+      main.appendChild(pathLine);
+      main.appendChild(meta);
+
+      const actions = document.createElement("div");
+      actions.className = "review-row-controls";
+
+      const actionSelect = document.createElement("select");
+      actionSelect.className = "review-select review-select-compact";
+      actionSelect.style.color = isRelease ? RELEASE_REVIEW_STYLE.text : categoryTheme.text;
+      actionSelect.style.borderColor = isRelease
+        ? RELEASE_REVIEW_STYLE.border
+        : categoryTheme.regionSelected;
+      actionSelect.style.background = isRelease
+        ? RELEASE_REVIEW_STYLE.bgStrong
+        : categoryTheme.region;
+      [
+        { value: "down", label: "Click" },
+        { value: "up", label: "Release" },
+      ].forEach((optionInfo) => {
+        const option = document.createElement("option");
+        option.value = optionInfo.value;
+        option.textContent = optionInfo.label;
+        option.selected = optionInfo.value === action;
+        actionSelect.appendChild(option);
+      });
+      actionSelect.addEventListener("click", (event) => event.stopPropagation());
+      actionSelect.addEventListener("change", (event) => {
+        event.stopPropagation();
+        marker.action = actionSelect.value;
+        if (reviewState.reorderMarkers) {
+          applyMarkerReorder(marker.id);
+        }
+        renderReviewList();
+        syncWaveformRegions();
+      });
+
+      const categorySelect = document.createElement("select");
+      categorySelect.className = "review-select review-select-compact";
+      categorySelect.style.color = isRelease ? RELEASE_REVIEW_STYLE.text : categoryTheme.text;
+      categorySelect.style.borderColor = isRelease
+        ? RELEASE_REVIEW_STYLE.border
+        : categoryTheme.regionSelected;
+      categorySelect.style.background = isRelease
+        ? RELEASE_REVIEW_STYLE.bgStrong
+        : categoryTheme.region;
+      const availableTypes = (config.csVersion || "v3") === "v3"
+        ? CLICK_TYPES
+        : CLICK_TYPES.filter((t) => t.id === "normal");
+      availableTypes.forEach((type) => {
+        const option = document.createElement("option");
+        option.value = type.id;
+        option.textContent = type.name.replace(" Click", "");
+        option.selected = type.id === category;
+        categorySelect.appendChild(option);
+      });
+      // hide the dropdown entirely for v2 since there's only one choice
+      if ((config.csVersion || "v3") === "v2") {
+        categorySelect.style.display = "none";
+      }
+      categorySelect.addEventListener("click", (event) => event.stopPropagation());
+      categorySelect.addEventListener("change", (event) => {
+        event.stopPropagation();
+        marker.category = categorySelect.value;
+        renderReviewList();
+        syncWaveformRegions();
+      });
+
+      const previewBtn = document.createElement("button");
+      previewBtn.className = "review-btn review-btn-small";
+      previewBtn.textContent = "Preview";
+      previewBtn.addEventListener("click", (event) => {
+        event.stopPropagation();
+        playMarkerPreview(marker);
+      });
+
+      const removeBtn = document.createElement("button");
+      removeBtn.className = "review-btn review-btn-danger review-btn-small";
+      removeBtn.textContent = "Remove";
+      removeBtn.addEventListener("click", (event) => {
+        event.stopPropagation();
+        removeMarker(marker.id);
+      });
+
+      actions.appendChild(actionSelect);
+      actions.appendChild(categorySelect);
+      actions.appendChild(previewBtn);
+      actions.appendChild(removeBtn);
+      layout.appendChild(main);
+      layout.appendChild(actions);
+      row.appendChild(layout);
+      els.reviewList.appendChild(row);
+    });
+  }
+
+  if (reviewState.selectedMarkerId) {
+    requestAnimationFrame(scrollSelectedReviewRowIntoView);
+  }
+}
+
+function getReviewStats(detectedCount) {
+  return {
+    detected: detectedCount,
+    expected: reviewState.expectedExports.length,
+    missing: Math.max(0, reviewState.expectedExports.length - detectedCount),
+    extra: Math.max(0, detectedCount - reviewState.expectedExports.length),
+  };
+}
+
+function selectMarker(markerId, centerWaveform) {
+  reviewState.selectedMarkerId = markerId;
+  renderReviewList();
+  syncWaveformRegions();
+
+  if (!centerWaveform || !reviewState.wavesurfer) return;
+
+  const marker = reviewState.markers.find((item) => item.id === markerId);
+  if (marker) {
+    reviewState.wavesurfer.setTime(Math.max(0, marker.start));
+    scrollWaveformToTime(marker.start, "smooth");
+  }
+}
+
+function scrollSelectedReviewRowIntoView() {
+  const container = els.reviewList;
+  if (!container || !reviewState.selectedMarkerId) return;
+
+  const selectedRow = container.querySelector(`[data-marker-id="${reviewState.selectedMarkerId}"]`);
+  if (!selectedRow) return;
+
+  const containerRect = container.getBoundingClientRect();
+  const rowRect = selectedRow.getBoundingClientRect();
+  const isAbove = rowRect.top < containerRect.top;
+  const isBelow = rowRect.bottom > containerRect.bottom;
+
+  if (isAbove || isBelow) {
+    selectedRow.scrollIntoView({ block: "nearest", behavior: "smooth" });
+  }
+}
+
+function removeMarker(markerId) {
+  const removedIndex = getSortedMarkers().findIndex((marker) => marker.id === markerId);
+  reviewState.markers = reviewState.markers.filter((marker) => marker.id !== markerId);
+  if (reviewState.selectedMarkerId === markerId) {
+    reviewState.selectedMarkerId = null;
+  }
+  reviewState.markers = finalizeMarkers(reviewState.markers);
+  if (reviewState.reorderMarkers && reviewState.markers.length) {
+    const anchorMarker = reviewState.markers[Math.max(0, removedIndex - 1)];
+    if (anchorMarker) {
+      applyMarkerReorder(anchorMarker.id);
+    }
+  }
+  renderReviewList();
+  syncWaveformRegions();
+}
+
+function addMarkerAtCursor() {
+  if (!reviewState.sourceData) return;
+
+  const currentTime = reviewState.wavesurfer?.getCurrentTime
+    ? reviewState.wavesurfer.getCurrentTime()
+    : 0;
+
+  const marker = createManualMarkerNearTime(currentTime);
+  reviewState.markers.push(marker);
+  reviewState.markers = finalizeMarkers(reviewState.markers);
+  if (reviewState.reorderMarkers) {
+    applyMarkerReorder(marker.id);
+  }
+  selectMarker(marker.id, true);
+}
+
+function createManualMarkerNearTime(time) {
+  const center = Math.floor(time * reviewState.sampleRate);
+  const searchRadius = Math.floor(reviewState.sampleRate * 0.04);
+  const selectedMarker = reviewState.selectedMarkerId
+    ? reviewState.markers.find((marker) => marker.id === reviewState.selectedMarkerId)
+    : null;
+  const selectedIndex = selectedMarker
+    ? reviewState.markers.findIndex((marker) => marker.id === selectedMarker.id)
+    : -1;
+  const peakIndex = findPeakInRange(
+    reviewState.sourceData,
+    center - searchRadius,
+    center + searchRadius,
+    0.002,
+  );
+
+  if (peakIndex !== null) {
+    return createPeakMarker(
+      reviewState.sourceData,
+      peakIndex,
+      Math.max(0, peakIndex - searchRadius),
+      reviewState.sampleRate,
+      "manual",
+      selectedMarker ? getMarkerCategory(selectedIndex, selectedMarker) : null,
+      selectedMarker ? getMarkerAction(selectedIndex, selectedMarker) : null,
+    );
+  }
+
+  return {
+    id: nextMarkerId(),
+    start: clamp(time - 0.012, 0, reviewState.duration),
+    end: clamp(time + 0.04, 0.012, reviewState.duration),
+    peak: time,
+    category: selectedMarker ? getMarkerCategory(selectedIndex, selectedMarker) : null,
+    action: selectedMarker ? getMarkerAction(selectedIndex, selectedMarker) : null,
+    source: "manual",
+  };
+}
+
+function deleteSelectedMarker() {
+  if (!reviewState.selectedMarkerId) {
+    alert("Select a region first.");
+    return;
+  }
+
+  removeMarker(reviewState.selectedMarkerId);
+}
+
+function toggleWaveformPlayback() {
+  if (!reviewState.wavesurfer) return;
+  reviewState.wavesurfer.playPause();
+}
+
+function handleGlobalReviewKeydown(event) {
+  if (event.code !== "Space") return;
+  if (els.reviewPanel.classList.contains("hidden")) return;
+  if (isTypingTarget(event.target)) return;
+
+  event.preventDefault();
+  toggleWaveformPlayback();
+}
+
+function isTypingTarget(target) {
+  if (!(target instanceof Element)) return false;
+  if (target.closest("input, textarea, select, button")) return true;
+  return target.hasAttribute("contenteditable");
+}
+
+function updatePlaybackLabel() {
+  if (!reviewState.wavesurfer) {
+    els.playPauseBtn.textContent = "Play Audio";
+    return;
+  }
+
+  els.playPauseBtn.textContent = reviewState.wavesurfer.isPlaying()
+    ? "Pause Audio"
+    : "Play Audio";
+}
+
+function getInitialZoomPxPerSec() {
+  const viewportWidth = els.waveformViewport?.clientWidth || 900;
+  if (!reviewState.duration) return 120;
+  return Math.max(140, (viewportWidth / reviewState.duration) * 1.8);
+}
+
+function bindWaveformUi() {
+  if (!reviewState.wavesurfer || typeof reviewState.wavesurfer.getWrapper !== "function") {
+    return;
+  }
+
+  if (typeof reviewState.waveUiCleanup === "function") {
+    reviewState.waveUiCleanup();
+    reviewState.waveUiCleanup = null;
+  }
+
+  const wrapper = reviewState.wavesurfer.getWrapper();
+  const viewport = els.waveformViewport;
+  if (!wrapper || !viewport) {
+    return;
+  }
+
+  let isPanning = false;
+  let moved = false;
+  let startX = 0;
+  let startScroll = 0;
+  let pinchSession = null;
+
+  const swallowClick = (event) => {
+    if (!reviewState.suppressWaveClick) return;
+    reviewState.suppressWaveClick = false;
+    event.preventDefault();
+    event.stopImmediatePropagation();
+  };
+
+  const onMouseMove = (event) => {
+    if (!isPanning) return;
+    const deltaX = event.clientX - startX;
+    if (Math.abs(deltaX) > 2) {
+      moved = true;
+      viewport.classList.add("is-panning");
+    }
+    if (moved) {
+      event.preventDefault();
+      reviewState.wavesurfer.setScroll(startScroll - deltaX);
+    }
+  };
+
+  const onMouseUp = () => {
+    if (!isPanning) return;
+
+    isPanning = false;
+    viewport.classList.remove("is-panning");
+    window.removeEventListener("mousemove", onMouseMove);
+    window.removeEventListener("mouseup", onMouseUp);
+
+    if (moved) {
+      reviewState.suppressWaveClick = true;
+      wrapper.addEventListener("click", swallowClick, true);
+      setTimeout(() => wrapper.removeEventListener("click", swallowClick, true), 0);
+    }
+  };
+
+  const onMouseDown = (event) => {
+    if (event.button !== 0 || isRegionInteraction(event)) return;
+    isPanning = true;
+    moved = false;
+    startX = event.clientX;
+    startScroll = reviewState.wavesurfer.getScroll ? reviewState.wavesurfer.getScroll() : 0;
+    window.addEventListener("mousemove", onMouseMove);
+    window.addEventListener("mouseup", onMouseUp);
+  };
+
+  const getTouchDistance = (touchA, touchB) => {
+    const deltaX = touchA.clientX - touchB.clientX;
+    const deltaY = touchA.clientY - touchB.clientY;
+    return Math.hypot(deltaX, deltaY);
+  };
+
+  const getTouchMidpoint = (touchA, touchB) => ({
+    clientX: (touchA.clientX + touchB.clientX) / 2,
+    clientY: (touchA.clientY + touchB.clientY) / 2,
+  });
+
+  const startPinchSession = (event) => {
+    if (event.touches.length !== 2 || isRegionInteraction(event)) return;
+
+    const [touchA, touchB] = event.touches;
+    const midpoint = getTouchMidpoint(touchA, touchB);
+    const anchorPoint = getWaveformPointerPosition(midpoint);
+
+    pinchSession = {
+      startDistance: Math.max(1, getTouchDistance(touchA, touchB)),
+      startZoom: reviewState.zoomPxPerSec,
+      anchorTime: anchorPoint.time,
+      focusRatio: anchorPoint.ratio,
+    };
+
+    reviewState.suppressWaveClick = true;
+    viewport.classList.add("is-panning");
+  };
+
+  const onTouchStart = (event) => {
+    if (event.touches.length === 2) {
+      event.preventDefault();
+      startPinchSession(event);
+    }
+  };
+
+  const onTouchMove = (event) => {
+    if (!pinchSession || event.touches.length !== 2) return;
+
+    event.preventDefault();
+    const [touchA, touchB] = event.touches;
+    const midpoint = getTouchMidpoint(touchA, touchB);
+    const currentDistance = Math.max(1, getTouchDistance(touchA, touchB));
+    const scale = currentDistance / pinchSession.startDistance;
+    const anchorPoint = getWaveformPointerPosition(midpoint);
+
+    setWaveformZoom(
+      pinchSession.startZoom * scale,
+      anchorPoint.time ?? pinchSession.anchorTime,
+      anchorPoint.ratio ?? pinchSession.focusRatio,
+    );
+  };
+
+  const finishPinchSession = () => {
+    if (!pinchSession) return;
+    pinchSession = null;
+    viewport.classList.remove("is-panning");
+    reviewState.suppressWaveClick = true;
+    wrapper.addEventListener("click", swallowClick, true);
+    setTimeout(() => wrapper.removeEventListener("click", swallowClick, true), 0);
+  };
+
+  const onTouchEnd = (event) => {
+    if (pinchSession && event.touches.length < 2) {
+      finishPinchSession();
+    }
+  };
+
+  const onWaveformClick = (event) => {
+    if (reviewState.suppressWaveClick) {
+      reviewState.suppressWaveClick = false;
+      return;
+    }
+
+    if (isRegionInteraction(event)) return;
+
+    const { time, ratio } = getWaveformPointerPosition(event);
+    reviewState.wavesurfer.setTime(time);
+
+    const focusRatio = ratio >= 0.35 && ratio <= 0.65
+      ? 0.5
+      : clamp(ratio, 0.15, 0.85);
+    scrollWaveformToTime(time, "auto", focusRatio);
+  };
+
+  wrapper.addEventListener("mousedown", onMouseDown, true);
+  wrapper.addEventListener("click", onWaveformClick);
+  wrapper.addEventListener("touchstart", onTouchStart, { passive: false });
+  wrapper.addEventListener("touchmove", onTouchMove, { passive: false });
+  wrapper.addEventListener("touchend", onTouchEnd, { passive: false });
+  wrapper.addEventListener("touchcancel", onTouchEnd, { passive: false });
+
+  reviewState.waveUiCleanup = () => {
+    isPanning = false;
+    moved = false;
+    pinchSession = null;
+    viewport.classList.remove("is-panning");
+    wrapper.removeEventListener("mousedown", onMouseDown, true);
+    wrapper.removeEventListener("click", onWaveformClick);
+    wrapper.removeEventListener("touchstart", onTouchStart);
+    wrapper.removeEventListener("touchmove", onTouchMove);
+    wrapper.removeEventListener("touchend", onTouchEnd);
+    wrapper.removeEventListener("touchcancel", onTouchEnd);
+    wrapper.removeEventListener("click", swallowClick, true);
+    window.removeEventListener("mousemove", onMouseMove);
+    window.removeEventListener("mouseup", onMouseUp);
+  };
+}
+
+function getWaveformPointerPosition(event) {
+  const viewport = els.waveformViewport;
+  if (!viewport || !reviewState.duration || !reviewState.zoomPxPerSec) {
+    return {
+      time: reviewState.wavesurfer?.getCurrentTime?.() || 0,
+      ratio: 0.5,
+    };
+  }
+
+  const rect = viewport.getBoundingClientRect();
+  const localX = clamp(event.clientX - rect.left, 0, rect.width);
+  const ratio = rect.width > 0 ? localX / rect.width : 0.5;
+  const scroll = reviewState.wavesurfer?.getScroll ? reviewState.wavesurfer.getScroll() : 0;
+
+  return {
+    time: clamp((scroll + localX) / reviewState.zoomPxPerSec, 0, reviewState.duration),
+    ratio,
+  };
+}
+
+function setWaveformZoom(nextZoom, anchorTime = null, focusRatio = 0.5) {
+  if (!reviewState.wavesurfer?.zoom || !reviewState.duration) return;
+
+  const targetZoom = clamp(nextZoom, 16, 1000000);
+  reviewState.zoomPxPerSec = targetZoom;
+
+  const targetTime =
+    anchorTime ??
+    (reviewState.wavesurfer.getCurrentTime ? reviewState.wavesurfer.getCurrentTime() : 0);
+
+  reviewState.wavesurfer.zoom(targetZoom);
+  requestAnimationFrame(() => scrollWaveformToTime(targetTime, "auto", focusRatio));
+}
+
+function scrollWaveformToTime(time, behavior = "auto", focusRatio = 0.35) {
+  if (!reviewState.wavesurfer || !reviewState.duration) return;
+
+  const viewportWidth = els.waveformViewport?.clientWidth || 0;
+  const visibleDuration =
+    reviewState.zoomPxPerSec > 0 && viewportWidth > 0
+      ? viewportWidth / reviewState.zoomPxPerSec
+      : 0;
+
+  const targetStartTime = clamp(
+    time - visibleDuration * clamp(focusRatio, 0.05, 0.95),
+    0,
+    Math.max(0, reviewState.duration - visibleDuration),
+  );
+
+  if (behavior !== "smooth") {
+    if (reviewState.waveScrollRaf !== null) {
+      cancelAnimationFrame(reviewState.waveScrollRaf);
+      reviewState.waveScrollRaf = null;
+    }
+    reviewState.wavesurfer.setScrollTime(targetStartTime);
+    return;
+  }
+
+  const currentScrollPx = reviewState.wavesurfer.getScroll ? reviewState.wavesurfer.getScroll() : 0;
+  const startTime = reviewState.zoomPxPerSec > 0 ? currentScrollPx / reviewState.zoomPxPerSec : targetStartTime;
+  const durationMs = 220;
+  const startAt = performance.now();
+
+  if (reviewState.waveScrollRaf !== null) {
+    cancelAnimationFrame(reviewState.waveScrollRaf);
+    reviewState.waveScrollRaf = null;
+  }
+
+  const step = (now) => {
+    if (!reviewState.wavesurfer) {
+      reviewState.waveScrollRaf = null;
+      return;
+    }
+
+    const progress = clamp((now - startAt) / durationMs, 0, 1);
+    const eased = 1 - Math.pow(1 - progress, 3);
+    const nextStartTime = startTime + (targetStartTime - startTime) * eased;
+    reviewState.wavesurfer.setScrollTime(nextStartTime);
+
+    if (progress < 1) {
+      reviewState.waveScrollRaf = requestAnimationFrame(step);
+      return;
+    }
+
+    reviewState.waveScrollRaf = null;
+  };
+
+  reviewState.waveScrollRaf = requestAnimationFrame(step);
+}
+
+function playMarkerPreview(marker) {
+  selectMarker(marker.id, true);
+  const slice = extractPreviewClip(marker);
+  const wavBuffer = encodeWAV(slice, reviewState.sampleRate);
+
+  stopPreviewAudio();
+
+  previewAudioUrl = URL.createObjectURL(new Blob([wavBuffer], { type: "audio/wav" }));
+  previewAudio = new Audio(previewAudioUrl);
+  previewAudio.onended = stopPreviewAudio;
+  previewAudio.play();
+}
+
+function stopPreviewAudio() {
+  if (previewAudio) {
+    previewAudio.pause();
+    previewAudio = null;
+  }
+
+  if (previewAudioUrl) {
+    URL.revokeObjectURL(previewAudioUrl);
+    previewAudioUrl = null;
+  }
+}
+
+function extractProcessedClip(marker) {
+  const startSample = clamp(
+    Math.floor(marker.start * reviewState.sampleRate),
+    0,
+    reviewState.sourceData.length,
+  );
+  const endSample = clamp(
+    Math.ceil(marker.end * reviewState.sampleRate),
+    startSample + 1,
+    reviewState.sourceData.length,
+  );
+
+  let slice = reviewState.sourceData.slice(startSample, endSample);
+  const rawPeak = DSP.getPeak(slice);
+  slice = DSP.removeDC(slice);
+
+  if (config.denoiseMode === "adaptive" && reviewState.noiseProfile?.length > 2048) {
+    const filteredSlice = DSP.highpass(slice, reviewState.sampleRate, 75);
+    const filteredNoise = DSP.highpass(reviewState.noiseProfile, reviewState.sampleRate, 75);
+    slice = DSP.denoise(filteredSlice, filteredNoise, 1);
+
+    if (!config.normalize) {
+      const cleanedPeak = DSP.getPeak(slice);
+      if (cleanedPeak > 0 && rawPeak > cleanedPeak) {
+        const makeUp = Math.min(1.45, rawPeak / cleanedPeak);
+        for (let i = 0; i < slice.length; i++) {
+          slice[i] *= makeUp;
+        }
+      }
+    }
+  }
+
+  if (config.normalize) {
+    slice = DSP.normalizePeak(slice, 0.92);
+  }
+
+  applyEdgeFades(slice, reviewState.sampleRate);
+  return slice;
+}
+
+function extractPreviewClip(marker) {
+  const startSample = clamp(
+    Math.floor(marker.start * reviewState.sampleRate),
+    0,
+    reviewState.sourceData.length,
+  );
+  const endSample = clamp(
+    Math.ceil(marker.end * reviewState.sampleRate),
+    startSample + 1,
+    reviewState.sourceData.length,
+  );
+
+  const slice = reviewState.sourceData.slice(startSample, endSample);
+  applyPreviewFades(slice, reviewState.sampleRate);
+  return slice;
+}
+
+function applyPreviewFades(samples, sampleRate) {
+  const fadeIn = Math.min(samples.length, Math.max(8, Math.floor(sampleRate * 0.00025)));
+  const fadeOut = Math.min(samples.length, Math.max(16, Math.floor(sampleRate * 0.0005)));
+
+  for (let i = 0; i < fadeIn; i++) {
+    samples[i] *= i / fadeIn;
+  }
+
+  for (let i = 0; i < fadeOut; i++) {
+    const idx = samples.length - 1 - i;
+    if (idx < 0) break;
+    samples[idx] *= i / fadeOut;
+  }
+}
+
+function applyEdgeFades(samples, sampleRate) {
+  const fadeIn = Math.min(samples.length, Math.max(24, Math.floor(sampleRate * 0.001)));
+  const fadeOut = Math.min(samples.length, Math.max(120, Math.floor(sampleRate * 0.008)));
+
+  for (let i = 0; i < fadeIn; i++) {
+    samples[i] *= i / fadeIn;
+  }
+
+  for (let i = 0; i < fadeOut; i++) {
+    const idx = samples.length - 1 - i;
+    if (idx < 0) break;
+    samples[idx] *= i / fadeOut;
+  }
+}
+
+function slugifyClickSoundsPart(value, fallback) {
+  const asciiValue = String(value || "")
+    .normalize("NFKD")
+    .replace(/[^\x00-\x7F]/g, "");
+  const slug = asciiValue
+    .replace(/[^A-Za-z0-9._-]+/g, "-")
+    .replace(/-+/g, "-")
+    .replace(/^[.-]+|[.-]+$/g, "");
+  return slug || fallback;
+}
+
+function getClickSoundsSourceFolder(assignment) {
+  const typeInfo = getClickType(assignment.category);
+  return assignment.action === "up" ? typeInfo.relFolder : typeInfo.folder;
+}
+
+function getClickSoundsExportConfig() {
+  const exportPackName = els.clickSoundsPackName?.value.trim() || "";
+  const description = els.clickSoundsDescription?.value.trim() || "";
+  const authorName = els.clickSoundsAuthor?.value.trim() || "";
+  const gdAccountIdRaw = els.clickSoundsGdAccountId?.value.trim() || "";
+  const packName = exportPackName || config.packName.trim() || "Clickpack";
+  const packSlug = slugifyClickSoundsPart(packName, "pack");
+  const authorSlug = slugifyClickSoundsPart(authorName, "author");
+  const id = `${authorSlug}.${packSlug}`;
+
+  return {
+    description,
+    authorName,
+    gdAccountId: gdAccountIdRaw ? Number.parseInt(gdAccountIdRaw, 10) : null,
+    packName,
+    packSlug,
+    authorSlug,
+    id,
+    archiveName: `${id}.packgen.zip`,
+    type: getSelectedClickSoundsType(),
+  };
+}
+
+function validateClickSoundsExport(clickSoundsConfig) {
+  if (!clickSoundsConfig.packName) {
+    alert("Click Sounds export requires a clickpack name.");
+    return false;
+  }
+
+  if (!clickSoundsConfig.authorName) {
+    alert("Click Sounds export requires an author name.");
+    return false;
+  }
+
+  if (
+    els.clickSoundsGdAccountId?.value.trim() &&
+    !Number.isFinite(clickSoundsConfig.gdAccountId)
+  ) {
+    alert("GD Account ID must be a valid whole number.");
+    return false;
+  }
+
+  return true;
+}
+
+function createClickSoundsPackJson(clickSoundsConfig) {
+  const packJson = {
+    $schema: "https://clicksounds.github.io/clicks/pack.schema.json",
+    id: clickSoundsConfig.id,
+    version: 1,
+    packmak: true,
+    type: clickSoundsConfig.type,
+    name: clickSoundsConfig.packName,
+    description: clickSoundsConfig.description,
+    authors: [
+      {
+        name: clickSoundsConfig.authorName,
+      },
+    ],
+  };
+
+  if (Number.isFinite(clickSoundsConfig.gdAccountId)) {
+    packJson.authors[0].gdAccountID = clickSoundsConfig.gdAccountId;
+  }
+
+  return `${JSON.stringify(packJson, null, 4)}\n`;
+}
+
+async function buildZcbZip() {
+  const zip = new JSZip();
+  const markers = getSortedMarkers();
+
+  markers.forEach((marker, index) => {
+    const assignment = getMarkerAssignment(index, marker, markers);
+    const clip = extractProcessedClip(marker);
+    if (clip.length > 0) {
+      zip.file(assignment.path, encodeWAV(clip, reviewState.sampleRate));
+    }
+  });
+
+  if (reviewState.noiseProfile?.length) {
+    zip.file("noise.wav", encodeWAV(reviewState.noiseProfile, reviewState.sampleRate));
+  }
+
+  const content = await zip.generateAsync({ type: "blob" });
+  return {
+    content,
+    filename: `${config.packName}.zip`,
+  };
+}
+
+// Map ZCB category+action to Click Sounds folder based on version
+function getClickSoundsFolderForMarker(assignment) {
+  const isV3 = (config.csVersion || "v3") === "v3";
+  const action = assignment.action; // "down" or "up"
+  const cat = assignment.category || "normal";
+
+  if (isV3) {
+    if (action === "down") {
+      if (cat === "hard") return "hardclicks";
+      if (cat === "soft") return "softclicks";
+      return "clicks";
+    } else {
+      if (cat === "hard") return "hardreleases";
+      if (cat === "soft") return "softreleases";
+      return "releases";
+    }
+  } else {
+    // v2: only clicks / releases
+    return action === "down" ? "clicks" : "releases";
+  }
+}
+
+async function buildClickSoundsZip() {
+  const clickSoundsConfig = getClickSoundsExportConfig();
+  if (!validateClickSoundsExport(clickSoundsConfig)) {
+    return null;
+  }
+
+  const zip = new JSZip();
+  const markers = getSortedMarkers();
+  // Per-folder counters
+  const folderCounts = {};
+
+  markers.forEach((marker, index) => {
+    const assignment = getMarkerAssignment(index, marker, markers);
+    const folder = getClickSoundsFolderForMarker(assignment);
+    if (!folder) return;
+
+    const clip = extractProcessedClip(marker);
+    if (!clip.length) return;
+
+    folderCounts[folder] = (folderCounts[folder] || 0) + 1;
+    zip.file(
+      `${folder}/${folderCounts[folder]}.wav`,
+      encodeWAV(clip, reviewState.sampleRate),
+    );
+  });
+
+  const totalFiles = Object.values(folderCounts).reduce((a, b) => a + b, 0);
+  if (totalFiles === 0) {
+    alert("No sounds were exported. Make sure you have markers assigned.");
+    return null;
+  }
+
+  // Include noise.wav only if user opted in (v3+ only option)
+  if (config.saveNoise && reviewState.noiseProfile?.length) {
+    zip.file("noise.wav", encodeWAV(reviewState.noiseProfile, reviewState.sampleRate));
+  }
+
+  zip.file("pack.json", createClickSoundsPackJson(clickSoundsConfig));
+
+  const content = await zip.generateAsync({ type: "blob" });
+  return {
+    content,
+    filename: clickSoundsConfig.archiveName,
+  };
+}
+
+async function downloadZip() {
+  if (!reviewState.sourceData || !reviewState.markers.length) {
+    return;
+  }
+  config = readConfig();
+  const result = await buildClickSoundsZip();
+
+  if (!result) {
+    return;
+  }
+
+  const { content, filename } = result;
+  const url = URL.createObjectURL(content);
+  const anchor = document.createElement("a");
+  anchor.href = url;
+  anchor.download = filename;
+  anchor.click();
+  setTimeout(() => URL.revokeObjectURL(url), 1000);
+}
+
+function encodeWAV(samples, sampleRate) {
+  const buffer = new ArrayBuffer(44 + samples.length * 2);
+  const view = new DataView(buffer);
+
+  writeString(view, 0, "RIFF");
+  view.setUint32(4, 36 + samples.length * 2, true);
+  writeString(view, 8, "WAVE");
+  writeString(view, 12, "fmt ");
+  view.setUint32(16, 16, true);
+  view.setUint16(20, 1, true);
+  view.setUint16(22, 1, true);
+  view.setUint32(24, sampleRate, true);
+  view.setUint32(28, sampleRate * 2, true);
+  view.setUint16(32, 2, true);
+  view.setUint16(34, 16, true);
+  writeString(view, 36, "data");
+  view.setUint32(40, samples.length * 2, true);
+
+  floatTo16BitPCM(view, 44, samples);
+  return buffer;
+}
+
+function floatTo16BitPCM(output, offset, input) {
+  for (let i = 0; i < input.length; i++, offset += 2) {
+    let sample = Math.max(-1, Math.min(1, input[i]));
+    sample = sample < 0 ? sample * 0x8000 : sample * 0x7fff;
+    output.setInt16(offset, sample, true);
+  }
+}
+
+function writeString(view, offset, string) {
+  for (let i = 0; i < string.length; i++) {
+    view.setUint8(offset + i, string.charCodeAt(i));
+  }
+}
+
+function normalizeLineEndings(value) {
+  return value.replace(/\r\n?/g, "\n");
+}
+
+function clamp(value, min, max) {
+  return Math.min(max, Math.max(min, value));
+}
+
+</script>
+</body>
+
+</html>
