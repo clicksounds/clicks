@@ -1,0 +1,14 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "yesimapotato.yesimapotatos-sayo-device-no-deskmat",
+    "version": 1,
+    "packgen": true,
+    "type": "Useful",
+    "name": "yesimapotatos sayo device no deskmat",
+    "authors": [
+        {
+            "name": "yesimapotato",
+            "gdAccountID": null
+        }
+    ]
+}
