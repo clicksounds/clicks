@@ -647,37 +647,8 @@ input[type=number]::-webkit-outer-spin-button {
                         </div>
                     </div>
 
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                        <div class="space-y-2">
-                            <label class="block text-sm font-medium text-gray-400">Players</label>
-                            <div class="relative group">
-                                <select id="num-players"
-                                    class="w-full bg-white/5 border border-white/10 text-white rounded-xl px-4 py-3 focus:border-brand-500 focus:bg-white/10 focus:ring-0 focus:outline-none transition-all appearance-none cursor-pointer">
-                                    <option value="1" class="bg-gray-900">1 Player</option>
-                                    <option value="2" class="bg-gray-900">2 Players</option>
-                                </select>
-                                <div
-                                    class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-gray-500 group-hover:text-white transition-colors">
-                                    <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M19 9l-7 7-7-7"></path>
-                                    </svg>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div id="bpm-group" class="space-y-2">
-                            <label class="block text-sm font-medium text-gray-400">Recording BPM</label>
-                            <input type="number" id="bpm" value="50" min="5" max="240"
-                                class="w-full bg-white/5 border border-white/10 text-white rounded-xl px-4 py-3 focus:border-brand-500 focus:bg-white/10 focus:ring-0 focus:outline-none transition-all placeholder-gray-600">
-                        </div>
-
-                        <div class="space-y-2">
-                            <label class="block text-sm font-medium text-gray-400">Click Pad (ms)</label>
-                            <input type="number" id="transient-pad" value="1.5" min="0" max="25" step="0.5"
-                                class="w-full bg-white/5 border border-white/10 text-white rounded-xl px-4 py-3 focus:border-brand-500 focus:bg-white/10 focus:ring-0 focus:outline-none transition-all placeholder-gray-600">
-                        </div>
-                    </div>
+                    <input type="hidden" id="bpm" value="50">
+                    <input type="hidden" id="transient-pad" value="1.5">
 
                     <div id="recording-options" class="grid grid-cols-1 md:grid-cols-2 gap-3">
                         <label class="option-tile">
@@ -941,22 +912,7 @@ input[type=number]::-webkit-outer-spin-button {
                             </div>
                         </div>
 
-                        <div id="save-noise-row" class="hidden">
-                            <label class="option-tile cursor-pointer">
-                                <div class="flex items-start gap-3">
-                                    <div class="relative mt-1">
-                                        <input type="checkbox" id="save-noise" class="peer sr-only">
-                                        <div
-                                            class="w-12 h-7 bg-white/10 rounded-full peer-checked:bg-brand-600 after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:h-6 after:w-6 after:rounded-full after:bg-gray-300 after:border after:border-gray-300 after:transition-all peer-checked:after:translate-x-full">
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div class="text-white font-medium">Save noise.wav in pack</div>
-                                        <p class="text-sm text-gray-400">Includes the recorded noise profile in the exported ZIP.</p>
-                                    </div>
-                                </div>
-                            </label>
-                        </div>
+                    </div>
                 </div>
 
                 <div class="flex flex-col sm:flex-row gap-4 justify-center mt-8">
@@ -1414,7 +1370,6 @@ const els = {
   importFileDisplay: document.getElementById("import-file-display"),
   importDropOverlay: document.getElementById("import-drop-overlay"),
   readmeInput: document.getElementById("pack-readme"),
-  bpmGroup: document.getElementById("bpm-group"),
   recordingOptions: document.getElementById("recording-options"),
   recordNoise: document.getElementById("record-noise"),
   normalizeAudio: document.getElementById("normalize-audio"),
@@ -1521,7 +1476,7 @@ els.exportFormatInputs.forEach((input) =>
   input.addEventListener("change", syncReviewExportUI),
 );
 document.querySelectorAll('input[name="cs-version"]').forEach((input) =>
-  input.addEventListener("change", () => { syncVersionUI(); syncSourceModeUI(); syncSaveNoiseRow(); }),
+  input.addEventListener("change", () => { syncVersionUI(); syncSourceModeUI(); }),
 );
 
 syncSourceModeUI();
@@ -1591,7 +1546,6 @@ function syncSourceModeUI() {
   els.bpmGroup.classList.toggle("opacity-50", isImport);
   els.recordingOptions.classList.toggle("opacity-50", isImport);
 
-  document.getElementById("bpm").disabled = isImport;
   document.getElementById("mute-metronome").disabled = isImport;
   els.recordNoise.disabled = isImport;
 
@@ -1656,6 +1610,8 @@ function syncVersionUI() {
   const isV3 = getCsVersion() === "v3";
   const hardWrap = document.getElementById("count-hard-wrap");
   const softWrap = document.getElementById("count-soft-wrap");
+  const noiseRow = document.getElementById("record-noise")?.closest("label.option-tile");
+  const adaptiveRow = els.adaptiveDenoiseRow;
 
   if (hardWrap) {
     hardWrap.classList.toggle("opacity-40", !isV3);
@@ -1666,8 +1622,21 @@ function syncVersionUI() {
     softWrap.classList.toggle("pointer-events-none", !isV3);
   }
 
-  // Re-sync source mode so adaptive denoiser availability reflects record-noise state
-  syncSourceModeUI();
+  if (!isV3) {
+    if (els.recordNoise) { els.recordNoise.checked = false; els.recordNoise.disabled = true; }
+    if (noiseRow) noiseRow.classList.add("opacity-50", "pointer-events-none");
+    if (adaptiveRow) adaptiveRow.classList.add("opacity-50", "pointer-events-none");
+    const adaptiveRadio = els.adaptiveDenoise;
+    if (adaptiveRadio) adaptiveRadio.disabled = true;
+    const noneRadio = document.querySelector('input[name="denoise-mode"][value="none"]');
+    const selectedDenoise = document.querySelector('input[name="denoise-mode"]:checked');
+    if (selectedDenoise?.value === "adaptive" && noneRadio) noneRadio.checked = true;
+  } else {
+    if (els.recordNoise) els.recordNoise.disabled = false;
+    if (noiseRow) noiseRow.classList.remove("opacity-50", "pointer-events-none");
+    if (adaptiveRow) adaptiveRow.classList.remove("opacity-50", "pointer-events-none");
+    syncSourceModeUI();
+  }
 }
 
 function getSelectedClickSoundsType() {
@@ -1685,20 +1654,6 @@ function syncClickSoundsDescriptionFromMain() {
 
 function syncReviewExportUI() {
   syncClickSoundsPackNameFromMain();
-  syncSaveNoiseRow();
-}
-
-function syncSaveNoiseRow() {
-  const row = document.getElementById("save-noise-row");
-  if (!row) return;
-  const isV3 = getCsVersion() === "v3";
-  const hasNoise = Boolean(reviewState.noiseProfile?.length);
-  const visible = isV3 && hasNoise;
-  row.classList.toggle("hidden", !visible);
-  if (!visible) {
-    const cb = document.getElementById("save-noise");
-    if (cb) cb.checked = false;
-  }
 }
 
 function readConfig() {
@@ -1708,11 +1663,10 @@ function readConfig() {
     readme: "",
     csVersion: getCsVersion(),
     sourceMode: getSourceMode(),
-    players: parseInt(document.getElementById("num-players").value, 10),
+    players: 1,
     bpm: parseInt(document.getElementById("bpm").value, 10) || 50,
     transientPadMs: parseFloat(document.getElementById("transient-pad").value) || 1.5,
-    recordNoise: els.recordNoise.checked,
-    saveNoise: isV3 && (document.getElementById("save-noise")?.checked || false),
+    recordNoise: isV3 && els.recordNoise.checked,
     normalize: els.normalizeAudio.checked,
     denoiseMode: document.querySelector('input[name="denoise-mode"]:checked').value,
     muteMetronome: document.getElementById("mute-metronome").checked,
@@ -1902,7 +1856,16 @@ async function startSession() {
   }
 
   await ensureAudioContext();
-  mediaRecorder = new MediaRecorder(mediaStream);
+  const preferredTypes = [
+    "audio/webm;codecs=pcm",
+    "audio/webm;codecs=opus",
+    "audio/webm",
+    "audio/ogg;codecs=opus",
+    "audio/ogg",
+    "audio/mp4",
+  ];
+  const supportedType = preferredTypes.find((t) => MediaRecorder.isTypeSupported(t)) || "";
+  mediaRecorder = new MediaRecorder(mediaStream, supportedType ? { mimeType: supportedType } : undefined);
   recordedChunks = [];
 
   mediaRecorder.ondataavailable = (event) => {
@@ -2037,14 +2000,7 @@ function getClickType(categoryId) {
 function buildPackPath(categoryId, action, player, index) {
   const typeInfo = getClickType(categoryId);
   const targetFolder = action === "down" ? typeInfo.folder : typeInfo.relFolder;
-  let path = "";
-
-  if (config.players > 1) {
-    path += `player${player}/`;
-  }
-
-  path += `${targetFolder}/${index}.wav`;
-  return path;
+  return `${targetFolder}/${index}.wav`;
 }
 
 function renderProgressMarkers() {
@@ -2185,14 +2141,22 @@ function finishRecording() {
 
   mediaRecorder.onstop = async () => {
     try {
-      const mimeType = recordedChunks[0]?.type || mediaRecorder.mimeType || "audio/webm";
+      const mimeType = mediaRecorder.mimeType || recordedChunks[0]?.type || "audio/webm";
+      console.log("[packmak] onstop fired");
+      console.log("[packmak] mimeType:", mimeType);
+      console.log("[packmak] chunks:", recordedChunks.length, "total size:", recordedChunks.reduce((a, c) => a + c.size, 0));
       const blob = new Blob(recordedChunks, { type: mimeType });
+      console.log("[packmak] blob size:", blob.size, "type:", blob.type);
       const arrayBuffer = await blob.arrayBuffer();
-      const decoded = await audioContext.decodeAudioData(arrayBuffer);
+      console.log("[packmak] arrayBuffer byteLength:", arrayBuffer.byteLength);
+      console.log("[packmak] audioContext state:", audioContext.state, "sampleRate:", audioContext.sampleRate);
+      const decoded = await audioContext.decodeAudioData(arrayBuffer.slice(0));
+      console.log("[packmak] decoded OK — duration:", decoded.duration, "channels:", decoded.numberOfChannels);
       await processAudioBuffer(decoded, "record");
     } catch (error) {
-      console.error(error);
-      alert("Recording finished, but the browser could not decode the captured audio.");
+      console.error("[packmak] decode error:", error);
+      console.error("[packmak] error name:", error.name, "message:", error.message);
+      alert("Recording finished, but the browser could not decode the captured audio.\n\nCheck the browser console (F12) for details.");
       showConfig();
     } finally {
       stopMediaStream();
@@ -2950,8 +2914,6 @@ function getMarkerAssignment(index, marker, markers = null) {
 }
 
 function renderReviewList() {
-  syncClickSoundsRoutingAvailableFolders();
-  renderClickSoundsRouting();
   const markers = getSortedMarkers();
   const stats = getReviewStats(markers.length);
   const selectedIndex = markers.findIndex((marker) => marker.id === reviewState.selectedMarkerId);
@@ -3686,10 +3648,6 @@ function slugifyClickSoundsPart(value, fallback) {
   return slug || fallback;
 }
 
-function getClickSoundsSourceFolder(assignment) {
-  const typeInfo = getClickType(assignment.category);
-  return assignment.action === "up" ? typeInfo.relFolder : typeInfo.folder;
-}
 
 function getClickSoundsExportConfig() {
   const exportPackName = els.clickSoundsPackName?.value.trim() || "";
@@ -3836,8 +3794,8 @@ async function buildClickSoundsZip() {
     return null;
   }
 
-  // Include noise.wav only if user opted in (v3+ only option)
-  if (config.saveNoise && reviewState.noiseProfile?.length) {
+  // Include noise.wav only for v3+
+  if (config.csVersion !== "v2" && reviewState.noiseProfile?.length) {
     zip.file("noise.wav", encodeWAV(reviewState.noiseProfile, reviewState.sampleRate));
   }
 
