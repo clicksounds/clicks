@@ -1,0 +1,14 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "yesimapotato.yesimapotatos-laptop-left-ctrl",
+    "version": 1,
+    "packmak": true,
+    "type": "Useful",
+    "name": "yesimapotato’s laptop left ctrl",
+    "description": "",
+    "authors": [
+        {
+            "name": "yesimapotato"
+        }
+    ]
+}
