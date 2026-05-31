@@ -2044,6 +2044,14 @@
       "folders": ["Clicks","Releases"]
     },
     {
+      "name": "yesimapotato’s awful keyboard up arrow",
+      "id": "yesimapotato.yesimapotatos-awful-keyboard-up-arrow",
+      "version": 1,
+      "type": "Useful",
+      "authors": [{"name":"yesimapotato","type":"Main"}],
+      "folders": ["Clicks","Releases"]
+    },
+    {
       "name": "yesimapotato’s laptop left ctrl",
       "id": "yesimapotato.yesimapotatos-laptop-left-ctrl",
       "version": 1,
