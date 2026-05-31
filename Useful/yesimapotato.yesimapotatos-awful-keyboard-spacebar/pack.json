@@ -1,0 +1,14 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "yesimapotato.yesimapotatos-awful-keyboard-spacebar",
+    "version": 1,
+    "packgen": true,
+    "type": "Useful",
+    "name": "yesimapotatos awful keyboard spacebar",
+    "authors": [
+        {
+            "name": "yesimapotato",
+            "gdAccountID": null
+        }
+    ]
+}
