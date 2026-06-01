@@ -1877,6 +1877,15 @@
       "folders": ["Clicks","Releases"]
     },
     {
+      "name": "fin3k clickpack 2026",
+      "id": "fin3k.fin3k-clickpack-2026",
+      "version": 1,
+      "type": "Useful",
+      "description": "fin3k's clickpack's from 2026 ",
+      "authors": [{"name":"fin3k","type":"Main"}],
+      "folders": ["Clicks","Releases"]
+    },
+    {
       "name": "fredus clicks",
       "id": "fredus.fredus-clicks",
       "version": 1,
