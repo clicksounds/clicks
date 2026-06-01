@@ -1,0 +1,14 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "fin3k.fin3k-clickpack-2026",
+    "version": 1,
+    "packgen": true,
+    "type": "Useful",
+    "name": "fin3k clickpack 2026",
+    "description": "fin3k's clickpack's from 2026",
+    "authors": [
+        {
+            "name": "fin3k"
+        }
+    ]
+}
