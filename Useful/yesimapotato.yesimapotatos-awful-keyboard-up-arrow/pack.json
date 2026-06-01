@@ -1,0 +1,14 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "yesimapotato.yesimapotatos-awful-keyboard-up-arrow",
+    "version": 1,
+    "packmak": true,
+    "type": "Useful",
+    "name": "yesimapotato’s awful keyboard up arrow",
+    "description": "",
+    "authors": [
+        {
+            "name": "yesimapotato"
+        }
+    ]
+}
