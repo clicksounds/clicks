@@ -1774,6 +1774,14 @@
       "folders": ["Clicks","Releases"]
     },
     {
+      "name": "Zortes ZA Wooting 80HE",
+      "id": "zorte.zortes-za-wooting-80he",
+      "version": 1,
+      "type": "Useful",
+      "authors": [{"name":"zorte","type":"Main"}],
+      "folders": ["Clicks","Releases"]
+    },
+    {
       "name": "adf-ViperMini",
       "id": "oli.adf-vipermini",
       "version": 1,
