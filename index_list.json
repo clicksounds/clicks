@@ -1774,6 +1774,14 @@
       "folders": ["Clicks","Releases"]
     },
     {
+      "name": "Zortes ZA Wooting 80HE",
+      "id": "zorte.zortes-za-wooting-80he",
+      "version": 1,
+      "type": "Useful",
+      "authors": [{"name":"zorte","type":"Main"}],
+      "folders": ["Clicks","Releases"]
+    },
+    {
       "name": "adf-ViperMini",
       "id": "oli.adf-vipermini",
       "version": 1,
@@ -1874,6 +1882,15 @@
       "type": "Useful",
       "description": "all sounds are recorded and polished on FL Studio ",
       "authors": [{"name":"clowdy","gdAccountID":6026057,"type":"Main"}],
+      "folders": ["Clicks","Releases"]
+    },
+    {
+      "name": "fin3k clickpack 2026",
+      "id": "fin3k.fin3k-clickpack-2026",
+      "version": 1,
+      "type": "Useful",
+      "description": "fin3k's clickpack's from 2026 ",
+      "authors": [{"name":"fin3k","type":"Main"}],
       "folders": ["Clicks","Releases"]
     },
     {

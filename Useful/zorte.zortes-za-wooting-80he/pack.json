@@ -1,0 +1,12 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "zorte.zortes-za-wooting-80he",
+    "packcon": true,
+    "type": "Useful",
+    "name": "Zortes ZA Wooting 80HE",
+    "authors": [
+        {
+            "name": "zorte"
+        }
+    ]
+}
