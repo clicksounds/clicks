@@ -220,6 +220,15 @@
       "folders": ["Clicks","Releases"]
     },
     {
+      "name": "Aula Hero 68 He v2",
+      "id": "yesimapotato.aula-hero-68-he-v2",
+      "version": 1,
+      "type": "Useful",
+      "description": "Second version of my aula hero 68 he:) ",
+      "authors": [{"name":"yesimapotato","gdAccountID":null,"type":"Main"}],
+      "folders": ["Clicks","Releases"]
+    },
+    {
       "name": "Average Mouse Click",
       "id": "whimsyy.average-mouse-click",
       "version": 1,
