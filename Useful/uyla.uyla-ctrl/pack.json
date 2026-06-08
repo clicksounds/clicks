@@ -1,0 +1,13 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "uyla.uyla-ctrl",
+    "packcon": true,
+    "type": "Useful",
+    "name": "uyla ctrl",
+    "description": "\"uyla ctrl\" another wooting 80he clickpack as per usual - the specifications of my wooting - PBR ABS Plastic Case - Double Shot PBT Keycaps - Lekker V2 L60 Linear Switches - pros and cons of my clickpack - pros - performs well in spams in my opinion - one of my better sounding / higher quality clickpacks - cons - i think it sounds quite similar other clickpacks ive made in the past - some of the hardclicks are way too loud / strong - lmk about any other issues regarding the clickpack so i can (maybe) fix it",
+    "authors": [
+        {
+            "name": "uyla"
+        }
+    ]
+}
