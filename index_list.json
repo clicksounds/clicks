@@ -2046,6 +2046,15 @@
       "folders": ["Clicks","Releases"]
     },
     {
+      "name": "uyla ctrl",
+      "id": "uyla.uyla-ctrl",
+      "version": 1,
+      "type": "Useful",
+      "description": "\"uyla ctrl\" another wooting 80he clickpack as per usual - the specifications of my wooting - PBR ABS Plastic Case - Double Shot PBT Keycaps - Lekker V2 L60 Linear Switches - pros and cons of my clickpack - pros - performs well in spams in my opinion - one of my better sounding / higher quality clickpacks - cons - i think it sounds quite similar other clickpacks ive made in the past - some of the hardclicks are way too loud / strong - lmk about any other issues regarding the clickpack so i can (maybe) fix it ",
+      "authors": [{"name":"uyla","type":"Main"}],
+      "folders": ["Clicks","Releases"]
+    },
+    {
       "name": "viperpack_v2_5",
       "id": "unknown.viperpack_v2_5",
       "version": 1,
@@ -2416,6 +2425,15 @@
       "type": "Meme",
       "authors": [{"name":"Vine (RIP)","type":"Main"},{"name":"Beat","gdAccountID":13873867,"type":"Provider"}],
       "folders": ["Clicks"]
+    },
+    {
+      "name": "WINDOWS XP BOOTUP",
+      "id": "gdiefer.windows-xp-bootup",
+      "version": 1,
+      "type": "Meme",
+      "description": "windows XP bootup ",
+      "authors": [{"name":"Gdiefer","type":"Main"}],
+      "folders": ["Clicks","Releases"]
     },
     {
       "name": "Water on the Hill",
