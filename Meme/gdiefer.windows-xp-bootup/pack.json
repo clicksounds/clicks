@@ -1,0 +1,14 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "gdiefer.windows-xp-bootup",
+    "version": 1,
+    "packgen": true,
+    "type": "Meme",
+    "name": "WINDOWS XP BOOTUP",
+    "description": "windows XP bootup",
+    "authors": [
+        {
+            "name": "Gdiefer"
+        }
+    ]
+}
