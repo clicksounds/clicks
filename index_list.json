@@ -305,6 +305,15 @@
       "folders": ["Clicks"]
     },
     {
+      "name": "Cap Gun Clicks",
+      "id": "xenithael.cap-gun-clicks",
+      "version": 1,
+      "type": "Useful",
+      "description": "Click sounds from a cap gun. 5 click sounds, 5 release sounds. ",
+      "authors": [{"name":"Xenithael","gdAccountID":15069729,"type":"Main"}],
+      "folders": ["Clicks","Releases"]
+    },
+    {
       "name": "Cats Mouse",
       "id": "catkgaming.cats-mouse",
       "version": 1,
@@ -848,6 +857,15 @@
       "type": "Useful",
       "description": "Cut by Beat from Click Sounds Geode ",
       "authors": [{"name":"Luke","gdAccountID":39021138,"type":"Main"}],
+      "folders": ["Clicks","Releases"]
+    },
+    {
+      "name": "Lus Clicks",
+      "id": "unami.lus-clicks",
+      "version": 1,
+      "type": "Useful",
+      "description": "Keyboard: Nano 68 Pro ",
+      "authors": [{"name":"Unami","type":"Main"}],
       "folders": ["Clicks","Releases"]
     },
     {
