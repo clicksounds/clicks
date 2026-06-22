@@ -1,0 +1,14 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "hilol.hilols-wooting-60-he-v2",
+    "version": 1,
+    "packmak": true,
+    "type": "Useful",
+    "name": "HiLol’s Wooting 60 He v2",
+    "description": "edited by yesimapotato",
+    "authors": [
+        {
+            "name": "HiLol"
+        }
+    ]
+}
