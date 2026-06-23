@@ -684,6 +684,15 @@
       "folders": ["Clicks"]
     },
     {
+      "name": "HiLol’s Wooting 60 He v2",
+      "id": "hilol.hilols-wooting-60-he-v2",
+      "version": 1,
+      "type": "Useful",
+      "description": "edited by yesimapotato ",
+      "authors": [{"name":"HiLol","type":"Main"}],
+      "folders": ["Clicks","Releases"]
+    },
+    {
       "name": "Ians Mobile Taps",
       "id": "ian.ians-mobile-taps",
       "version": 1,
