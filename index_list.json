@@ -469,9 +469,9 @@
       "id": "clicksounds.default",
       "version": 1,
       "type": "Useful",
-      "description": "Default pack of the Click Sounds mod. Selected by supporter MXGaming01 for April to June 2026. Originally 'alices SayoDevice O3C' by alicemiku. ",
+      "description": "Default pack of the Click Sounds mod. Originally 'Bubbly Pops' by Beat. ",
       "authors": [{"name":"Click Sounds","type":"Main"}],
-      "folders": ["Clicks","Releases"]
+      "folders": ["Clicks"]
     },
     {
       "name": "Dewbss Wooting 80HE",
