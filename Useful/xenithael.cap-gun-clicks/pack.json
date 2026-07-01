@@ -1,0 +1,15 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "xenithael.cap-gun-clicks",
+    "version": 1,
+    "packgen": true,
+    "type": "Useful",
+    "name": "Cap Gun Clicks",
+    "description": "Click sounds from a cap gun. 5 click sounds, 5 release sounds.",
+    "authors": [
+        {
+            "name": "Xenithael",
+            "gdAccountID": 15069729
+        }
+    ]
+}

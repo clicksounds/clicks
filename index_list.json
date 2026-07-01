@@ -220,6 +220,15 @@
       "folders": ["Clicks","Releases"]
     },
     {
+      "name": "Aula Hero 68 He v2",
+      "id": "yesimapotato.aula-hero-68-he-v2",
+      "version": 1,
+      "type": "Useful",
+      "description": "Second version of my aula hero 68 he:) ",
+      "authors": [{"name":"yesimapotato","gdAccountID":null,"type":"Main"}],
+      "folders": ["Clicks","Releases"]
+    },
+    {
       "name": "Average Mouse Click",
       "id": "whimsyy.average-mouse-click",
       "version": 1,
@@ -294,6 +303,15 @@
       "description": "Former default pack of the Click Sounds mod. Made with help from zxset. ",
       "authors": [{"name":"Beat","gdAccountID":13873867,"type":"Main"}],
       "folders": ["Clicks"]
+    },
+    {
+      "name": "Cap Gun Clicks",
+      "id": "xenithael.cap-gun-clicks",
+      "version": 1,
+      "type": "Useful",
+      "description": "Click sounds from a cap gun. 5 click sounds, 5 release sounds. ",
+      "authors": [{"name":"Xenithael","gdAccountID":15069729,"type":"Main"}],
+      "folders": ["Clicks","Releases"]
     },
     {
       "name": "Cats Mouse",
@@ -666,6 +684,15 @@
       "folders": ["Clicks"]
     },
     {
+      "name": "HiLol’s Wooting 60 He v2",
+      "id": "hilol.hilols-wooting-60-he-v2",
+      "version": 1,
+      "type": "Useful",
+      "description": "edited by yesimapotato ",
+      "authors": [{"name":"HiLol","type":"Main"}],
+      "folders": ["Clicks","Releases"]
+    },
+    {
       "name": "Ians Mobile Taps",
       "id": "ian.ians-mobile-taps",
       "version": 1,
@@ -839,6 +866,15 @@
       "type": "Useful",
       "description": "Cut by Beat from Click Sounds Geode ",
       "authors": [{"name":"Luke","gdAccountID":39021138,"type":"Main"}],
+      "folders": ["Clicks","Releases"]
+    },
+    {
+      "name": "Lus Clicks",
+      "id": "unami.lus-clicks",
+      "version": 1,
+      "type": "Useful",
+      "description": "Keyboard: Nano 68 Pro ",
+      "authors": [{"name":"Unami","type":"Main"}],
       "folders": ["Clicks","Releases"]
     },
     {
@@ -2037,6 +2073,15 @@
       "folders": ["Clicks","Releases"]
     },
     {
+      "name": "uyla ctrl",
+      "id": "uyla.uyla-ctrl",
+      "version": 1,
+      "type": "Useful",
+      "description": "\"uyla ctrl\" another wooting 80he clickpack as per usual - the specifications of my wooting - PBR ABS Plastic Case - Double Shot PBT Keycaps - Lekker V2 L60 Linear Switches - pros and cons of my clickpack - pros - performs well in spams in my opinion - one of my better sounding / higher quality clickpacks - cons - i think it sounds quite similar other clickpacks ive made in the past - some of the hardclicks are way too loud / strong - lmk about any other issues regarding the clickpack so i can (maybe) fix it ",
+      "authors": [{"name":"uyla","type":"Main"}],
+      "folders": ["Clicks","Releases"]
+    },
+    {
       "name": "viperpack_v2_5",
       "id": "unknown.viperpack_v2_5",
       "version": 1,
@@ -2407,6 +2452,15 @@
       "type": "Meme",
       "authors": [{"name":"Vine (RIP)","type":"Main"},{"name":"Beat","gdAccountID":13873867,"type":"Provider"}],
       "folders": ["Clicks"]
+    },
+    {
+      "name": "WINDOWS XP BOOTUP",
+      "id": "gdiefer.windows-xp-bootup",
+      "version": 1,
+      "type": "Meme",
+      "description": "windows XP bootup ",
+      "authors": [{"name":"Gdiefer","type":"Main"}],
+      "folders": ["Clicks","Releases"]
     },
     {
       "name": "Water on the Hill",

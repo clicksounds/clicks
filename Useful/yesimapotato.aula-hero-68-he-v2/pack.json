@@ -1,0 +1,15 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "yesimapotato.aula-hero-68-he-v2",
+    "version": 1,
+    "packgen": true,
+    "type": "Useful",
+    "name": "Aula Hero 68 He v2",
+    "description": "Second version of my aula hero 68 he:)",
+    "authors": [
+        {
+            "name": "yesimapotato",
+            "gdAccountID": null
+        }
+    ]
+}

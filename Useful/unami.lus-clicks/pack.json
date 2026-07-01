@@ -1,0 +1,13 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "unami.lus-clicks",
+    "packcon": true,
+    "type": "Useful",
+    "name": "Lus Clicks",
+    "description": "Keyboard: Nano 68 Pro",
+    "authors": [
+        {
+            "name": "Unami"
+        }
+    ]
+}

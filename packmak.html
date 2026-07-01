@@ -688,7 +688,7 @@ input[type=number]::-webkit-outer-spin-button {
                         <label class="option-tile">
                             <div class="flex items-start gap-3">
                                 <div class="relative mt-1">
-                                    <input type="checkbox" id="normalize-audio" checked class="peer sr-only">
+                                    <input type="checkbox" id="normalize-audio" class="peer sr-only">
                                     <div
                                         class="w-12 h-7 bg-white/10 rounded-full peer-checked:bg-brand-600 after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:h-6 after:w-6 after:rounded-full after:bg-gray-300 after:border after:border-gray-300 after:transition-all peer-checked:after:translate-x-full">
                                     </div>
@@ -3642,9 +3642,10 @@ function slugifyClickSoundsPart(value, fallback) {
     .normalize("NFKD")
     .replace(/[^\x00-\x7F]/g, "");
   const slug = asciiValue
-    .replace(/[^A-Za-z0-9._-]+/g, "-")
+    .toLowerCase()
+    .replace(/[^a-z0-9\-_]+/g, "-")
     .replace(/-+/g, "-")
-    .replace(/^[.-]+|[.-]+$/g, "");
+    .replace(/^-+|-+$/g, ""); 
   return slug || fallback;
 }
 
