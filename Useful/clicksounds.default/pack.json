@@ -1,0 +1,12 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "clicksounds.default",
+    "type": "Useful",
+    "name": "Default",
+    "description": "Default pack of the Click Sounds Full mod. Always available as 'yesimapotato's sayo pink switches' by yesimapotato.",
+    "authors": [
+        {
+            "name": "Click Sounds"
+        }
+    ]
+}
