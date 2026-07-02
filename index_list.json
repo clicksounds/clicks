@@ -465,6 +465,15 @@
       "folders": ["Clicks","Releases"]
     },
     {
+      "name": "Default",
+      "id": "clicksounds.default",
+      "version": 1,
+      "type": "Useful",
+      "description": "Default pack of the Click Sounds Full mod. Always available as 'yesimapotato's sayo pink switches' by yesimapotato. ",
+      "authors": [{"name":"Click Sounds","type":"Main"}],
+      "folders": ["Clicks","Releases"]
+    },
+    {
       "name": "Dewbss Wooting 80HE",
       "id": "dewbss.dewbss-wooting-80he",
       "version": 1,
