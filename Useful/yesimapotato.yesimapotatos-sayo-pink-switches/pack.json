@@ -1,0 +1,14 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "yesimapotato.yesimapotatos-sayo-pink-switches",
+    "version": 1,
+    "packmak": true,
+    "type": "Useful",
+    "name": "yesimapotato’s sayo pink switches",
+    "description": "",
+    "authors": [
+        {
+            "name": "yesimapotato"
+        }
+    ]
+}
