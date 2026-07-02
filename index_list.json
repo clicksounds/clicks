@@ -2122,6 +2122,14 @@
       "folders": ["Clicks","Releases"]
     },
     {
+      "name": "yesimapotato’s sayo pink switches",
+      "id": "yesimapotato.yesimapotatos-sayo-pink-switches",
+      "version": 1,
+      "type": "Useful",
+      "authors": [{"name":"yesimapotato","type":"Main"}],
+      "folders": ["Clicks","Releases"]
+    },
+    {
       "name": "zfxnts G502 Hero",
       "id": "zfxnt.zfxnts-g502-hero",
       "version": 1,
