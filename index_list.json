@@ -1187,6 +1187,15 @@
       "folders": ["Clicks","Releases"]
     },
     {
+      "name": "PureL’s clicks",
+      "id": "purel.purels-clicks",
+      "version": 1,
+      "type": "Useful",
+      "description": "OMG THANK YOU PUREL   edited by yesimapotato ",
+      "authors": [{"name":"PureL","type":"Main"}],
+      "folders": ["Clicks","Releases"]
+    },
+    {
       "name": "Questionable Mouse",
       "id": "nobody.questionable-mouse",
       "version": 1,
@@ -1310,6 +1319,15 @@
       "description": "just sound of my mouse ",
       "authors": [{"name":"qewel","gdAccountID":33375352,"type":"Main"}],
       "folders": ["Clicks"]
+    },
+    {
+      "name": "Rokrs Razer BlackWidow V4 Pro",
+      "id": "rokr.rokrs-razer-blackwidow-v4-pro",
+      "version": 1,
+      "type": "Useful",
+      "description": "Rokrs Razer BlackWidow V4 Pro With Green Switches ",
+      "authors": [{"name":"Rokr","type":"Main"}],
+      "folders": ["Clicks","Releases"]
     },
     {
       "name": "Royal Kludge R75",
