@@ -1,0 +1,14 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "rokr.rokrs-razer-blackwidow-v4-pro",
+    "version": 1,
+    "packmak": true,
+    "type": "Useful",
+    "name": "Rokrs Razer BlackWidow V4 Pro",
+    "description": "Rokrs Razer BlackWidow V4 Pro With Green Switches",
+    "authors": [
+        {
+            "name": "Rokr"
+        }
+    ]
+}
