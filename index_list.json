@@ -1347,6 +1347,15 @@
       "folders": ["Clicks","Releases"]
     },
     {
+      "name": "Rokrs Sayodevice O3C",
+      "id": "rokr.rokrs-sayodevice-o3c",
+      "version": 1,
+      "type": "Useful",
+      "description": "Sayo Device O3C With Only Changed Key Kaps From A Razer BlackWiddow V4 ",
+      "authors": [{"name":"Rokr","type":"Main"}],
+      "folders": ["Clicks","Releases"]
+    },
+    {
       "name": "Royal Kludge R75",
       "id": "m5pon4ik.royal-kludge-r75",
       "version": 1,
