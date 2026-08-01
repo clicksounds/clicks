@@ -1,0 +1,13 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "mrzarii.mrzariis-sayo-o3c",
+    "version": 1,
+    "packgen": true,
+    "type": "Useful",
+    "name": "MrZariis Sayo O3C",
+    "authors": [
+        {
+            "name": "MrZarii"
+        }
+    ]
+}
