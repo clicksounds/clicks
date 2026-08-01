@@ -1,0 +1,14 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "rokr.rokrs-sayodevice-o3c",
+    "version": 1,
+    "packmak": true,
+    "type": "Useful",
+    "name": "Rokrs Sayodevice O3C",
+    "description": "Sayo Device O3C With Only Changed Key Kaps From A Razer BlackWiddow V4",
+    "authors": [
+        {
+            "name": "Rokr"
+        }
+    ]
+}
