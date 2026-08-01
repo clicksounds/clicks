@@ -969,6 +969,14 @@
       "folders": ["Clicks","Releases"]
     },
     {
+      "name": "MrZariis Sayo O3C",
+      "id": "mrzarii.mrzariis-sayo-o3c",
+      "version": 1,
+      "type": "Useful",
+      "authors": [{"name":"MrZarii","type":"Main"}],
+      "folders": ["Clicks","Releases"]
+    },
+    {
       "name": "Msterbran",
       "id": "nhay.msterbran",
       "version": 1,
