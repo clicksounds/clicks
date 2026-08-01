@@ -1,0 +1,13 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "soapy.optical-t2-mouse",
+    "packcon": true,
+    "type": "Useful",
+    "name": "Optical T2 Mouse",
+    "description": "My optical mouse!",
+    "authors": [
+        {
+            "name": "Soapy"
+        }
+    ]
+}
