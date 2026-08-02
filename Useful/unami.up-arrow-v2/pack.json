@@ -1,0 +1,13 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "unami.up-arrow-v2",
+    "packcon": true,
+    "type": "Useful",
+    "name": "Up arrow v2",
+    "description": "Up arrow",
+    "authors": [
+        {
+            "name": "Unami"
+        }
+    ]
+}
