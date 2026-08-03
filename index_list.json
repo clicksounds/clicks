@@ -194,6 +194,15 @@
       "folders": ["Clicks","Releases"]
     },
     {
+      "name": "Aula 0 key",
+      "id": "unami.aula-0-key",
+      "version": 1,
+      "type": "Useful",
+      "description": "AULLAAAA ",
+      "authors": [{"name":"Unami","type":"Main"}],
+      "folders": ["Clicks","Releases"]
+    },
+    {
       "name": "Aula F75 Pack",
       "id": "baguettegun.aula-f75-pack",
       "version": 1,
@@ -973,6 +982,15 @@
       "id": "mrzarii.mrzariis-sayo-o3c",
       "version": 1,
       "type": "Useful",
+      "authors": [{"name":"MrZarii","type":"Main"}],
+      "folders": ["Clicks","Releases"]
+    },
+    {
+      "name": "MrZariis TOKB T68 Up Arrow",
+      "id": "mrzarii.mrzariis-tokb-t68-up-arrow",
+      "version": 1,
+      "type": "Useful",
+      "description": "TOKB T68 Keyboard Up arrow From MrZarii ",
       "authors": [{"name":"MrZarii","type":"Main"}],
       "folders": ["Clicks","Releases"]
     },
