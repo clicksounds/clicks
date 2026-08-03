@@ -1483,6 +1483,15 @@
       "folders": ["Clicks","Releases"]
     },
     {
+      "name": "Soapy up arrow",
+      "id": "soapy.soapy-up-arrow",
+      "version": 1,
+      "type": "Useful",
+      "description": "Zornwee! (Ts sounds kinda buns imo but hope you like this pack) ",
+      "authors": [{"name":"Soapy","type":"Main"}],
+      "folders": ["Clicks","Releases"]
+    },
+    {
       "name": "Soft Keyboard",
       "id": "unknown.soft-keyboard",
       "version": 1,
