@@ -1,0 +1,14 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "mrzarii.mrzariis-tokb-t68-up-arrow",
+    "version": 1,
+    "packmak": true,
+    "type": "Useful",
+    "name": "MrZariis TOKB T68 Up Arrow",
+    "description": "TOKB T68 Keyboard Up arrow From MrZarii",
+    "authors": [
+        {
+            "name": "MrZarii"
+        }
+    ]
+}
