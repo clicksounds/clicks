@@ -1,0 +1,13 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "unami.aula-0-key",
+    "packcon": true,
+    "type": "Useful",
+    "name": "Aula 0 key",
+    "description": "AULLAAAA",
+    "authors": [
+        {
+            "name": "Unami"
+        }
+    ]
+}
