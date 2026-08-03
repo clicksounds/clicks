@@ -1,0 +1,14 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "soapy.soapy-up-arrow",
+    "version": 1,
+    "packmak": true,
+    "type": "Useful",
+    "name": "Soapy up arrow",
+    "description": "Zornwee! (Ts sounds kinda buns imo but hope you like this pack)",
+    "authors": [
+        {
+            "name": "Soapy"
+        }
+    ]
+}
