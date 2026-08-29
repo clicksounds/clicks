@@ -1222,6 +1222,15 @@
       "folders": ["Clicks","Releases"]
     },
     {
+      "name": "PureL’s Up Arrow",
+      "id": "purel.purels-up-arrow",
+      "version": 1,
+      "type": "Useful",
+      "description": "Thank you for this awesome opportunity PureL :) ",
+      "authors": [{"name":"PureL","type":"Main"}],
+      "folders": ["Clicks","Releases"]
+    },
+    {
       "name": "Questionable Mouse",
       "id": "nobody.questionable-mouse",
       "version": 1,
