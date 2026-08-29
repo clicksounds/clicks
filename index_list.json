@@ -1222,15 +1222,6 @@
       "folders": ["Clicks","Releases"]
     },
     {
-      "name": "PureL’s clicks",
-      "id": "purel.purels-clicks",
-      "version": 1,
-      "type": "Useful",
-      "description": "OMG THANK YOU PUREL   edited by yesimapotato ",
-      "authors": [{"name":"PureL","type":"Main"}],
-      "folders": ["Clicks","Releases"]
-    },
-    {
       "name": "Questionable Mouse",
       "id": "nobody.questionable-mouse",
       "version": 1,
