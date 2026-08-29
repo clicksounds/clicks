@@ -1,0 +1,14 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "purel.purels-up-arrow",
+    "version": 1,
+    "packmak": true,
+    "type": "Useful",
+    "name": "PureL’s Up Arrow",
+    "description": "Thank you for this awesome opportunity PureL :)",
+    "authors": [
+        {
+            "name": "PureL"
+        }
+    ]
+}
