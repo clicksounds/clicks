@@ -129,6 +129,14 @@
       "folders": ["Clicks","Releases"]
     },
     {
+      "name": "Andarians SayoDevice no deskmat v3",
+      "id": "andarian.andarians-sayodevice-no-deskmat-v3",
+      "version": 1,
+      "type": "Useful",
+      "authors": [{"name":"Andarian","type":"Main"}],
+      "folders": ["Clicks","Releases"]
+    },
+    {
       "name": "Andarians Spacebar",
       "id": "andarian.andarians-spacebar",
       "version": 1,
