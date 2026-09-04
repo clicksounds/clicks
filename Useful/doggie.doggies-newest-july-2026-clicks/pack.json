@@ -1,0 +1,13 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "doggie.doggies-newest-july-2026-clicks",
+    "version": 1,
+    "packgen": true,
+    "type": "Useful",
+    "name": "doggies NEWEST july 2026 clicks",
+    "authors": [
+        {
+            "name": "Doggie"
+        }
+    ]
+}
