@@ -2025,6 +2025,14 @@
       "folders": ["Clicks","Releases"]
     },
     {
+      "name": "doggies NEWEST july 2026 clicks",
+      "id": "doggie.doggies-newest-july-2026-clicks",
+      "version": 1,
+      "type": "Useful",
+      "authors": [{"name":"Doggie","type":"Main"}],
+      "folders": ["Clicks","Releases"]
+    },
+    {
       "name": "fin3k clickpack 2026",
       "id": "fin3k.fin3k-clickpack-2026",
       "version": 1,
