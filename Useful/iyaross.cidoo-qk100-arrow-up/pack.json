@@ -1,0 +1,15 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "iyaross.cidoo-qk100-arrow-up",
+    "version": 1,
+    "packmak": true,
+    "type": "Useful",
+    "name": "Cidoo QK100 Arrow up",
+    "description": "",
+    "authors": [
+        {
+            "name": "iyaross",
+            "gdAccountID": 14674618
+        }
+    ]
+}
