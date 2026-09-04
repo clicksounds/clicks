@@ -375,6 +375,14 @@
       "folders": ["Clicks","Releases"]
     },
     {
+      "name": "Cidoo QK100 Arrow up",
+      "id": "iyaross.cidoo-qk100-arrow-up",
+      "version": 1,
+      "type": "Useful",
+      "authors": [{"name":"iyaross","gdAccountID":14674618,"type":"Main"}],
+      "folders": ["Clicks","Releases"]
+    },
+    {
       "name": "Click 1",
       "id": "unknown.click-1",
       "version": 1,
