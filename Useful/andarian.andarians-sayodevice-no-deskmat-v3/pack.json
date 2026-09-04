@@ -1,0 +1,13 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "andarian.andarians-sayodevice-no-deskmat-v3",
+    "version": 1,
+    "packgen": true,
+    "type": "Useful",
+    "name": "Andarians SayoDevice no deskmat v3",
+    "authors": [
+        {
+            "name": "Andarian"
+        }
+    ]
+}
