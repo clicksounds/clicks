@@ -1,0 +1,15 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "iyaross.atk-a9-plus-2-0",
+    "version": 1,
+    "packmak": true,
+    "type": "Useful",
+    "name": "ATK A9 Plus 2.0",
+    "description": "",
+    "authors": [
+        {
+            "name": "iyaross",
+            "gdAccountID": 14674618
+        }
+    ]
+}
