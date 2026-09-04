@@ -18,6 +18,14 @@
       "folders": ["Clicks","Releases"]
     },
     {
+      "name": "ATK A9 Plus 2.0",
+      "id": "iyaross.atk-a9-plus-2-0",
+      "version": 1,
+      "type": "Useful",
+      "authors": [{"name":"iyaross","gdAccountID":14674618,"type":"Main"}],
+      "folders": ["Clicks","Releases"]
+    },
+    {
       "name": "Acer Spare Mouse",
       "id": "acer.acer-spare-mouse",
       "version": 1,
