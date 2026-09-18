@@ -1246,6 +1246,14 @@
       "folders": ["Clicks","Releases"]
     },
     {
+      "name": "Puckl Sayodevice O3C V3",
+      "id": "puckl.puckl-sayodevice-o3c-v3",
+      "version": 1,
+      "type": "Useful",
+      "authors": [{"name":"Puckl","type":"Main"}],
+      "folders": ["Clicks","Releases"]
+    },
+    {
       "name": "PureL’s Up Arrow",
       "id": "purel.purels-up-arrow",
       "version": 1,
