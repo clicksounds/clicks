@@ -1,0 +1,14 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "puckl.puckl-sayodevice-o3c-v3",
+    "version": 1,
+    "packmak": true,
+    "type": "Useful",
+    "name": "Puckl Sayodevice O3C V3",
+    "description": "",
+    "authors": [
+        {
+            "name": "Puckl"
+        }
+    ]
+}
