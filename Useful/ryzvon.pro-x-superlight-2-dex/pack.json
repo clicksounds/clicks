@@ -1,0 +1,15 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "ryzvon.pro-x-superlight-2-dex",
+    "version": 1,
+    "packmak": true,
+    "type": "Useful",
+    "name": "Pro X Superlight 2 DEX",
+    "description": "Recorded the clicks directly from my Superlight 2 DEX. It uses those LIGHTFORCE hybrid switches, so the sound is pretty sharp and tactile. Audio is cleaned up, no background noise.",
+    "authors": [
+        {
+            "name": "Ryzvon",
+            "gdAccountID": 42231145
+        }
+    ]
+}
