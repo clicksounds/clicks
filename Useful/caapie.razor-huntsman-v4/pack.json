@@ -1,0 +1,13 @@
+{
+    "$schema": "https://clicksounds.github.io/clicks/pack.schema.json",
+    "id": "caapie.razor-huntsman-v4",
+    "version": 1,
+    "packgen": true,
+    "type": "Useful",
+    "name": "razor huntsman v4",
+    "authors": [
+        {
+            "name": "caapie"
+        }
+    ]
+}
