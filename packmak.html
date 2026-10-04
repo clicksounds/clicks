@@ -684,6 +684,21 @@ input[type=number]::-webkit-outer-spin-button {
                         </label>
                     </div>
 
+                    <label class="option-tile">
+                        <div class="flex items-start gap-3">
+                            <div class="relative mt-1">
+                                <input type="checkbox" id="disable-auto-detect" class="peer sr-only">
+                                <div
+                                    class="w-12 h-7 bg-white/10 rounded-full peer-checked:bg-brand-600 after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:h-6 after:w-6 after:rounded-full after:bg-gray-300 after:border after:border-gray-300 after:transition-all peer-checked:after:translate-x-full">
+                                </div>
+                            </div>
+                            <div>
+                                <div class="text-white font-medium">Disable Automatic Region Detection</div>
+                                <p class="text-sm text-gray-400">Skip auto-cutting. You'll place every region manually on the waveform.</p>
+                            </div>
+                        </div>
+                    </label>
+
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
                         <label class="option-tile">
                             <div class="flex items-start gap-3">
@@ -1373,6 +1388,7 @@ const els = {
   recordingOptions: document.getElementById("recording-options"),
   recordNoise: document.getElementById("record-noise"),
   normalizeAudio: document.getElementById("normalize-audio"),
+  disableAutoDetect: document.getElementById("disable-auto-detect"),
   browserDenoiseRow: document.getElementById("browser-denoise-row"),
   adaptiveDenoiseRow: document.getElementById("adaptive-denoise-row"),
   adaptiveDenoise: document.getElementById("adaptive-denoise"),
@@ -1668,6 +1684,7 @@ function readConfig() {
     transientPadMs: parseFloat(document.getElementById("transient-pad").value) || 1.5,
     recordNoise: isV3 && els.recordNoise.checked,
     normalize: els.normalizeAudio.checked,
+    disableAutoDetect: Boolean(els.disableAutoDetect?.checked),
     denoiseMode: document.querySelector('input[name="denoise-mode"]:checked').value,
     muteMetronome: document.getElementById("mute-metronome").checked,
     counts: {
@@ -1827,7 +1844,7 @@ async function startSession() {
       return;
     }
 
-    showProcessing("Importing Audio", "Decoding the file and detecting click regions...");
+    showProcessing("Importing Audio", config.disableAutoDetect ? "Decoding the file..." : "Decoding the file and detecting click regions...");
 
     try {
       await ensureAudioContext();
@@ -2137,7 +2154,7 @@ function finishRecording() {
 
   els.recordingOverlay.classList.add("hidden");
   els.recordingOverlay.classList.remove("flex");
-  showProcessing("Processing Recording", "Analyzing click onsets and building editable regions...");
+  showProcessing("Processing Recording", config.disableAutoDetect ? "Preparing the waveform..." : "Analyzing click onsets and building editable regions...");
 
   mediaRecorder.onstop = async () => {
     try {
@@ -2191,7 +2208,9 @@ async function processAudioBuffer(buffer, sourceKind) {
       ? detectGuidedMarkers(monoData, sampleRate)
       : detectImportedMarkers(monoData, envelope, sampleRate, reviewState.expectedExports.length);
 
-  reviewState.markers = detection.markers;
+  // When auto detection is disabled, discard detected markers (the noise
+  // profile range is still kept) so the user places every region manually.
+  reviewState.markers = config.disableAutoDetect ? [] : detection.markers;
   reviewState.noiseProfile = detection.noiseRange
     ? monoData.slice(detection.noiseRange.start, detection.noiseRange.end)
     : null;
@@ -2931,7 +2950,7 @@ function renderReviewList() {
 
   if (!markers.length) {
     els.reviewList.innerHTML =
-      '<div class="rounded-2xl border border-white/10 bg-white/5 px-4 py-6 text-center text-gray-500">No regions were detected. Add markers manually on the waveform.</div>';
+      `<div class="rounded-2xl border border-white/10 bg-white/5 px-4 py-6 text-center text-gray-500">${config.disableAutoDetect ? "Automatic detection is disabled." : "No regions were detected."} Add markers manually on the waveform.</div>`;
   } else {
     els.reviewList.innerHTML = "";
 
