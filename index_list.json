@@ -1699,6 +1699,14 @@
       "folders": ["Clicks","Releases"]
     },
     {
+      "name": "Viper 8K",
+      "id": "unknown.viper-8k",
+      "version": 1,
+      "type": "Useful",
+      "authors": [{"name":"Unknown","type":"Main"}],
+      "folders": ["Clicks","Releases"]
+    },
+    {
       "name": "Viper 8K but Sounds different",
       "id": "svenwastaken.viper-8k-but-sounds-different",
       "version": 1,
